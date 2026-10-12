@@ -1,8 +1,22 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/LiveDiscoveryBench-Tasks",
-  "updatedAt": "2026-10-12T19:15:02.191808Z",
+  "updatedAt": "2026-10-12T20:26:58.825280Z",
   "proposals": [
+    {
+      "number": 27,
+      "title": "Executable OpenFOAM case generation for unseen geometries and turbulence-model changes (FoamBench Advanced)",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/27",
+      "author": {
+        "name": "lingyue404",
+        "githubLogin": "lingyue404",
+        "image": "https://avatars.githubusercontent.com/u/32598525?u=3b530e26dad7c2bd69e464d6d5ef5297868454e2&v=4",
+        "githubUrl": "https://github.com/lingyue404"
+      },
+      "reviewers": [],
+      "status": "submitted",
+      "updatedAt": "2026-10-12T20:26:49Z"
+    },
     {
       "number": 11,
       "title": "从初始结构预测大尺寸 MOF 中 CO₂/H₂O 的弛豫吸附能",
@@ -65,20 +79,6 @@
       ],
       "status": "needs_reapproval",
       "updatedAt": "2026-10-12T13:11:37Z"
-    },
-    {
-      "number": 27,
-      "title": "Physically accurate OpenFOAM case generation from natural-language specifications (FoamBench)",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/27",
-      "author": {
-        "name": "lingyue404",
-        "githubLogin": "lingyue404",
-        "image": "https://avatars.githubusercontent.com/u/32598525?u=3b530e26dad7c2bd69e464d6d5ef5297868454e2&v=4",
-        "githubUrl": "https://github.com/lingyue404"
-      },
-      "reviewers": [],
-      "status": "submitted",
-      "updatedAt": "2026-10-12T07:11:50Z"
     },
     {
       "number": 23,
