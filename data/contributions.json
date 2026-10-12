@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/LiveDiscoveryBench-Tasks",
-  "updatedAt": "2026-10-12T13:11:38.969458Z",
+  "updatedAt": "2026-10-12T13:12:32.925059Z",
   "proposals": [
     {
-      "number": 9,
-      "title": "初始晶体结构的形成能与零温热力学稳定性预测",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/9",
+      "number": 11,
+      "title": "从初始结构预测大尺寸 MOF 中 CO₂/H₂O 的弛豫吸附能",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/11",
       "author": {
         "name": "Zhy-NJU",
         "githubLogin": "Zhy-NJU",
@@ -22,7 +22,7 @@
         }
       ],
       "status": "needs_reapproval",
-      "updatedAt": "2026-10-12T13:11:37Z"
+      "updatedAt": "2026-10-12T13:12:22Z"
     },
     {
       "number": 10,
@@ -43,7 +43,28 @@
         }
       ],
       "status": "needs_reapproval",
-      "updatedAt": "2026-10-12T13:11:31Z"
+      "updatedAt": "2026-10-12T13:11:48Z"
+    },
+    {
+      "number": 9,
+      "title": "初始晶体结构的形成能与零温热力学稳定性预测",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/9",
+      "author": {
+        "name": "Zhy-NJU",
+        "githubLogin": "Zhy-NJU",
+        "image": "https://avatars.githubusercontent.com/u/324487898?v=4",
+        "githubUrl": "https://github.com/Zhy-NJU"
+      },
+      "reviewers": [
+        {
+          "name": "vaporhug",
+          "githubLogin": "vaporhug",
+          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
+          "githubUrl": "https://github.com/vaporhug"
+        }
+      ],
+      "status": "needs_reapproval",
+      "updatedAt": "2026-10-12T13:11:37Z"
     },
     {
       "number": 27,
@@ -163,27 +184,6 @@
       ],
       "status": "approved",
       "updatedAt": "2026-09-28T02:25:31Z"
-    },
-    {
-      "number": 11,
-      "title": "从初始吸附构型预测陌生 MOF 中 CO₂／H₂O 的弛豫吸附能",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/11",
-      "author": {
-        "name": "Zhy-NJU",
-        "githubLogin": "Zhy-NJU",
-        "image": "https://avatars.githubusercontent.com/u/324487898?v=4",
-        "githubUrl": "https://github.com/Zhy-NJU"
-      },
-      "reviewers": [
-        {
-          "name": "vaporhug",
-          "githubLogin": "vaporhug",
-          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
-          "githubUrl": "https://github.com/vaporhug"
-        }
-      ],
-      "status": "approved",
-      "updatedAt": "2026-09-22T02:07:57Z"
     },
     {
       "number": 17,
@@ -388,7 +388,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [
         {
           "role": "domain",
@@ -425,7 +425,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [
         {
           "role": "domain",
