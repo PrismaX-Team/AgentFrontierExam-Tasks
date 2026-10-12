@@ -1,8 +1,22 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/LiveDiscoveryBench-Tasks",
-  "updatedAt": "2026-10-12T06:10:28.338547Z",
+  "updatedAt": "2026-10-12T07:12:00.578948Z",
   "proposals": [
+    {
+      "number": 27,
+      "title": "Physically accurate OpenFOAM case generation from natural-language specifications (FoamBench)",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/27",
+      "author": {
+        "name": "lingyue404",
+        "githubLogin": "lingyue404",
+        "image": "https://avatars.githubusercontent.com/u/32598525?u=3b530e26dad7c2bd69e464d6d5ef5297868454e2&v=4",
+        "githubUrl": "https://github.com/lingyue404"
+      },
+      "reviewers": [],
+      "status": "submitted",
+      "updatedAt": "2026-10-12T07:11:50Z"
+    },
     {
       "number": 23,
       "title": "跨靶标泛化的核酸适配体计算筛选 （Cross-target generalization in computational aptamer screening）",
