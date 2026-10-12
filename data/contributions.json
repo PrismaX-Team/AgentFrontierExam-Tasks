@@ -1,8 +1,36 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/LiveDiscoveryBench-Tasks",
-  "updatedAt": "2026-10-12T20:26:58.825280Z",
+  "updatedAt": "2026-10-12T20:27:58.024423Z",
   "proposals": [
+    {
+      "number": 29,
+      "title": "Executable OpenFOAM case generation for turbulent flow over a backward-facing step (FoamBench pitzDaily)",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/29",
+      "author": {
+        "name": "lingyue404",
+        "githubLogin": "lingyue404",
+        "image": "https://avatars.githubusercontent.com/u/32598525?u=3b530e26dad7c2bd69e464d6d5ef5297868454e2&v=4",
+        "githubUrl": "https://github.com/lingyue404"
+      },
+      "reviewers": [],
+      "status": "submitted",
+      "updatedAt": "2026-10-12T20:27:49Z"
+    },
+    {
+      "number": 28,
+      "title": "Executable OpenFOAM case generation for laminar lid-driven cavity flow (FoamBench Cavity)",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/28",
+      "author": {
+        "name": "lingyue404",
+        "githubLogin": "lingyue404",
+        "image": "https://avatars.githubusercontent.com/u/32598525?u=3b530e26dad7c2bd69e464d6d5ef5297868454e2&v=4",
+        "githubUrl": "https://github.com/lingyue404"
+      },
+      "reviewers": [],
+      "status": "submitted",
+      "updatedAt": "2026-10-12T20:27:28Z"
+    },
     {
       "number": 27,
       "title": "Executable OpenFOAM case generation for unseen geometries and turbulence-model changes (FoamBench Advanced)",
