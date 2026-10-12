@@ -1,8 +1,50 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/LiveDiscoveryBench-Tasks",
-  "updatedAt": "2026-10-12T09:30:33.936891Z",
+  "updatedAt": "2026-10-12T13:11:38.969458Z",
   "proposals": [
+    {
+      "number": 9,
+      "title": "初始晶体结构的形成能与零温热力学稳定性预测",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/9",
+      "author": {
+        "name": "Zhy-NJU",
+        "githubLogin": "Zhy-NJU",
+        "image": "https://avatars.githubusercontent.com/u/324487898?v=4",
+        "githubUrl": "https://github.com/Zhy-NJU"
+      },
+      "reviewers": [
+        {
+          "name": "vaporhug",
+          "githubLogin": "vaporhug",
+          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
+          "githubUrl": "https://github.com/vaporhug"
+        }
+      ],
+      "status": "needs_reapproval",
+      "updatedAt": "2026-10-12T13:11:37Z"
+    },
+    {
+      "number": 10,
+      "title": "二元晶体的 300 K 总晶格热导率预测",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/10",
+      "author": {
+        "name": "Zhy-NJU",
+        "githubLogin": "Zhy-NJU",
+        "image": "https://avatars.githubusercontent.com/u/324487898?v=4",
+        "githubUrl": "https://github.com/Zhy-NJU"
+      },
+      "reviewers": [
+        {
+          "name": "vaporhug",
+          "githubLogin": "vaporhug",
+          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
+          "githubUrl": "https://github.com/vaporhug"
+        }
+      ],
+      "status": "needs_reapproval",
+      "updatedAt": "2026-10-12T13:11:31Z"
+    },
     {
       "number": 27,
       "title": "Physically accurate OpenFOAM case generation from natural-language specifications (FoamBench)",
@@ -270,48 +312,6 @@
       "updatedAt": "2026-09-22T02:04:50Z"
     },
     {
-      "number": 10,
-      "title": "无机二元晶体的室温总晶格热导率预测",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/10",
-      "author": {
-        "name": "Zhy-NJU",
-        "githubLogin": "Zhy-NJU",
-        "image": "https://avatars.githubusercontent.com/u/324487898?v=4",
-        "githubUrl": "https://github.com/Zhy-NJU"
-      },
-      "reviewers": [
-        {
-          "name": "vaporhug",
-          "githubLogin": "vaporhug",
-          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
-          "githubUrl": "https://github.com/vaporhug"
-        }
-      ],
-      "status": "approved",
-      "updatedAt": "2026-09-22T02:04:13Z"
-    },
-    {
-      "number": 9,
-      "title": "从未弛豫结构预测新无机晶体的热力学稳定性",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/9",
-      "author": {
-        "name": "Zhy-NJU",
-        "githubLogin": "Zhy-NJU",
-        "image": "https://avatars.githubusercontent.com/u/324487898?v=4",
-        "githubUrl": "https://github.com/Zhy-NJU"
-      },
-      "reviewers": [
-        {
-          "name": "vaporhug",
-          "githubLogin": "vaporhug",
-          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
-          "githubUrl": "https://github.com/vaporhug"
-        }
-      ],
-      "status": "approved",
-      "updatedAt": "2026-09-22T02:03:45Z"
-    },
-    {
       "number": 6,
       "title": "保留关键药效团与口袋相互作用的可合成骨架跃迁",
       "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/6",
@@ -388,7 +388,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
@@ -425,7 +425,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
