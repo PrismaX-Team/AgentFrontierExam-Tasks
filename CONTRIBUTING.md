@@ -35,6 +35,7 @@ tasks/<task-id>/
 | --- | --- |
 | 空的合法任务包模板 | [`tasks/_template/`](tasks/_template/) |
 | 给 AI 编程助手（Cursor、Codex、Claude Code）的 Skill | [`contributor/build-sie-task-package/`](contributor/build-sie-task-package/) |
+| 默认镜像已包含的软件 | [`contributor/build-sie-task-package/base-images.md`](contributor/build-sie-task-package/base-images.md) |
 | 额外软件示例（Containerfile） | [`contributor/build-sie-task-package/examples/environment-containerfile/`](contributor/build-sie-task-package/examples/environment-containerfile/) |
 | 本地结构检查 | [`contributor/build-sie-task-package/scripts/check_package.py`](contributor/build-sie-task-package/scripts/check_package.py) |
 
@@ -53,7 +54,7 @@ cp -r tasks/_template tasks/<task-id>
 - 任务包内文本为英文，即使 Proposal 是中文。
 - `input/` 只放 Agent 可见数据与提交模板；隐藏评分数据放在 `verifier/test/` 下，validation 与 test 必须自包含。
 - `verifier/validation/run/main.py` 与 `verifier/test/run/main.py` 均必需，须离线、确定性运行。
-- 除非每个额外软件都有固定版本，否则保持默认镜像；需要时再把 `environment/` 换成 Containerfile 示例。
+- 默认镜像已包含的软件见 [base-images.md](contributor/build-sie-task-package/base-images.md)，无需在任务包中重复声明。除非每个额外软件都有固定版本，否则保持默认镜像；需要时再把 `environment/` 换成 Containerfile 示例。
 - 不编造隐藏标签、评分公式、baseline 数值或许可；未确认时 `metric.type` 写 `null`，`limitation` 写 `{}`。
 - 只提交可再分发的材料；仓库和 PR 均公开。
 

@@ -57,8 +57,8 @@
       "id": "professionalUrl",
       "attributes": {
         "label": "Academic or professional profile",
-        "description": "学术或职业主页  \nhttps:// 学术或职业主页",
-        "placeholder": "https:// — profile or ORCID"
+        "description": "学术或职业主页  \nhttp(s):// 学术或职业主页",
+        "placeholder": "http(s):// — profile or ORCID"
       },
       "validations": {
         "required": true
@@ -300,7 +300,7 @@
       "attributes": {
         "label": "References",
         "description": "参考材料",
-        "placeholder": "Optional: up to 20 stable HTTPS links, one per line.\n选填：最多 20 条稳定 HTTPS 链接，每行一条。"
+        "placeholder": "Optional: up to 20 http or https links, one per line.\n选填：最多 20 条 http 或 https 链接，每行一条。"
       },
       "validations": {
         "required": false

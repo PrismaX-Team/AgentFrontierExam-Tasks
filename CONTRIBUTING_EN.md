@@ -35,6 +35,7 @@ Fork this repository and clone your fork. Everything you need is already inside 
 | --- | --- |
 | Empty, structurally valid package | [`tasks/_template/`](tasks/_template/) |
 | Skill for an AI coding agent (Cursor, Codex, Claude Code) | [`contributor/build-sie-task-package/`](contributor/build-sie-task-package/) |
+| What the default image already contains | [`contributor/build-sie-task-package/base-images.md`](contributor/build-sie-task-package/base-images.md) |
 | Extra-software example (Containerfile) | [`contributor/build-sie-task-package/examples/environment-containerfile/`](contributor/build-sie-task-package/examples/environment-containerfile/) |
 | Local structural check | [`contributor/build-sie-task-package/scripts/check_package.py`](contributor/build-sie-task-package/scripts/check_package.py) |
 
@@ -53,7 +54,7 @@ To let an agent help, copy the skill directory into your agent's skills folder (
 - The package is English, even if the Proposal is Chinese.
 - `input/` holds only agent-visible data and submission templates. Hidden scoring data lives under `verifier/test/`; validation and test must be self-contained.
 - Both `verifier/validation/run/main.py` and `verifier/test/run/main.py` are required and must run offline and deterministically.
-- Keep the default image unless every extra package has a pinned version; then switch `environment/` to the Containerfile example.
+- The default image's contents are listed in [base-images.md](contributor/build-sie-task-package/base-images.md); do not redeclare them in the package. Keep the default image unless every extra package has a pinned version; then switch `environment/` to the Containerfile example.
 - Do not invent hidden labels, scoring formulas, baseline numbers or licences. Leave `metric.type` as `null` and `limitation` as `{}` when not confirmed.
 - Commit only redistributable material; the repository and every PR are public.
 

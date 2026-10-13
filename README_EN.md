@@ -9,7 +9,7 @@
 
 [简体中文](README.md) | **English**
 
-[What is SIE](#-what-is-science-innovation-exam) · [How to contribute](#-how-to-contribute) · [Task package](#-task-package) · [Repository map](#%EF%B8%8F-repository-map)
+[What is SIE](#-what-is-science-innovation-exam) · [How to contribute](#-how-to-contribute) · [Task package](#-task-package) · [Repository map](#%EF%B8%8F-repository-map) · [Community](#-contributor-community)
 
 </div>
 
@@ -46,23 +46,23 @@ A task enters SIE in two steps: a public **Proposal** reviewed by a domain exper
 
 ```mermaid
 flowchart LR
-    A["📝 Submit Proposal<br/>(Discussion)"] --> B["🧑‍🔬 Domain expert review"]
-    B -->|approved| C["🧩 Build task package<br/>template / AI skill"]
-    C --> D["✅ Local check<br/>check_package.py"]
-    D --> E["🔀 Open task PR"]
-    E --> F["🤖 CI structure & governance"]
+    A["1️⃣ 📝 Submit Proposal<br/>(Discussion)"] --> B["🧑‍🔬 Domain expert review"]
+    B -->|approved| C["2️⃣ 🧩 Build task package<br/>template / AI skill"]
+    C --> E["3️⃣ 🔀 Open task PR"]
+    E --> F["🤖 Automated checks"]
     F --> G["👥 Dual review<br/>domain + technical"]
     G -->|merged| H["🌐 Live on portal, credited"]
 
-    style A fill:#e0f2fe,stroke:#0284c7
-    style B fill:#fef3c7,stroke:#f59e0b
-    style C fill:#f0fdf4,stroke:#22c55e
-    style D fill:#f0fdf4,stroke:#22c55e
-    style E fill:#f5f3ff,stroke:#8b5cf6
-    style F fill:#f5f3ff,stroke:#8b5cf6
-    style G fill:#fef3c7,stroke:#f59e0b
-    style H fill:#e0f2fe,stroke:#0284c7
+    style A fill:#dcfce7,stroke:#16a34a,stroke-width:3px
+    style C fill:#dcfce7,stroke:#16a34a,stroke-width:3px
+    style E fill:#dcfce7,stroke:#16a34a,stroke-width:3px
+    style B fill:#fef3c7,stroke:#f59e0b,stroke-dasharray:4 3
+    style F fill:#f5f3ff,stroke:#8b5cf6,stroke-dasharray:4 3
+    style G fill:#fef3c7,stroke:#f59e0b,stroke-dasharray:4 3
+    style H fill:#e0f2fe,stroke:#0284c7,stroke-dasharray:4 3
 ```
+
+> Numbered green solid boxes 1️⃣ 2️⃣ 3️⃣ are **the three steps you do**; dashed boxes are handled by maintainers (yellow), CI (purple) and the portal (blue).
 
 | Step | What you do | Where |
 | --- | --- | --- |
@@ -125,3 +125,11 @@ Field-by-field explanations with an annotated full example are on the portal's [
 - Problems with or fixes for an existing task: open a `type:task-fix` PR or comment on the task's Proposal thread
 
 The repository, Proposals, PRs and review records are all public. Commit only redistributable material.
+
+## 💬 Contributor community
+
+Scan the code to join the **SIE contributor WeChat group** and discuss task ideas, task-package building and review questions with maintainers and other contributors.
+
+<p align="center"><img src="community/wechat-group.jpg" alt="WeChat QR code for the SIE contributor group" width="280"></p>
+
+WeChat group codes expire periodically. If the code no longer works, email **vaporhugz@gmail.com** and we will send you the current invitation.

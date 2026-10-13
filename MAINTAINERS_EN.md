@@ -10,6 +10,8 @@ Proposals arrive as Discussions in the Proposals category. GitHub accounts ident
 
 A maintainer other than the author runs **Proposal review** on `main`, supplying the Discussion number, the decision and a public reason (20–5000 characters). The Action checks permission and records the actor, decision, exact content fingerprint and run link. Labels display status only and are not approval evidence. Editing approved content, including reverting an edit, requires renewed approval. The original author then opens the task PR; there is no website binding step.
 
+**Force** applies only when the decision is `approve`. It skips form-field checks. Permission, the ban on self-approval, category, an open proposal and the public reason still apply. The decision comment states that form checks were skipped. A professional profile and each reference line may be either `http://` or `https://`. Form parsing converts Windows newlines before reading fields.
+
 Always use **Run workflow** for a new decision. **Re-run jobs** is rejected, even for the original reviewer; after a failure, check the current proposal and start a new dispatch. Re-running a previously successful decision invalidates that run as approval evidence.
 
 ## PR types and reviews

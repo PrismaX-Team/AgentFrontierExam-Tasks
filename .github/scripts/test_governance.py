@@ -28,6 +28,30 @@ class GovernanceTests(unittest.TestCase):
         g.validate_proposal(row)
         row['body'] = base + '\n\n### References / 参考材料\n\nhttps://example.org/0\n\nsee the paper above\n'
         with self.assertRaises(ValueError): g.validate_proposal(row)
+    def test_windows_newlines_and_http_links(self):
+        row = self.proposal()
+        row['body'] = row['body'].replace('https://example.org/profile', 'http://example.org/profile').replace('\n', '\r\n')
+        row['body'] += '\r\n\r\n### References\r\n\r\nhttp://example.org/paper\r\n'
+        g.validate_proposal(row)
+        row['body'] = self.proposal()['body'] + '\n\n### References\n\nftp://example.org/paper\n'
+        with self.assertRaises(ValueError): g.validate_proposal(row)
+    def test_force_approve_skips_form_checks(self):
+        row = self.proposal()
+        row.update(id='D1', url=g.ROOT+'/discussions/1', labels={'nodes':[]}, body='not a form', closed=True)
+        env = {'GITHUB_REF':'refs/heads/main', 'GITHUB_RUN_ATTEMPT':'1', 'GITHUB_ACTOR':'maintainer', 'GITHUB_TRIGGERING_ACTOR':'maintainer', 'DISCUSSION_NUMBER':'1', 'DECISION':'approve', 'REASON':'Checked the proposal and found no issues; approved.', 'FORCE':'true', 'GITHUB_RUN_ID':'99'}
+        with patch.dict(os.environ, env), patch.object(g, 'can_maintain', return_value=True), patch.object(g, 'discussion', return_value=row), patch.object(g, 'rest_pages', return_value=[]), patch.object(g, 'gql') as gql, patch.object(g, 'api', return_value={'node_id':'L1'}):
+            with self.assertRaisesRegex(ValueError, 'must be open'): g.decide()
+            gql.assert_not_called()
+            row['closed'] = False
+            g.decide()
+            body = next(call.kwargs['body'] for call in gql.call_args_list if 'body' in call.kwargs)
+            self.assertIn('"force": true', body)
+            self.assertIn('跳过了表单校验', body)
+            self.assertIn('Next steps', body)
+        env['FORCE'] = 'false'
+        with patch.dict(os.environ, env), patch.object(g, 'can_maintain', return_value=True), patch.object(g, 'discussion', return_value=row), patch.object(g, 'gql') as gql:
+            with self.assertRaisesRegex(ValueError, 'Required field missing'): g.decide()
+            gql.assert_not_called()
     def test_missing_consent(self):
         row = self.proposal(); row['body'] = row['body'].replace('- [X]', '- [ ]')
         with self.assertRaises(ValueError): g.validate_proposal(row)
@@ -110,6 +134,10 @@ class GovernanceTests(unittest.TestCase):
         g._run_cache.clear()
         with patch.object(g,'api',side_effect=RuntimeError('unavailable')):
             with self.assertRaises(RuntimeError): g.decision_record(row)
+    def test_proposal_title_prefers_form_field(self):
+        self.assertEqual(g.proposal_title(dict(title='[Proposal]', body='### Name\n\nA\n\n### Task title\n\nPredicting stability\n\n### Scientific domain\n\nX\n')), 'Predicting stability')
+        self.assertEqual(g.proposal_title(dict(title='[Proposal] Typed title', body='### Task title\n\n_No response_\n')), 'Typed title')
+        self.assertEqual(g.proposal_title(dict(title='[Proposal]', body='')), '[Proposal]')
     def test_acceptance_excluded(self):
         self.assertTrue(g.acceptance(dict(title='[ACCEPTANCE] Test',labels=[])))
         self.assertTrue(g.acceptance(dict(title='Test',labels={'nodes':[{'name':'acceptance'}]})))

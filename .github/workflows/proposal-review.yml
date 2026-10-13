@@ -15,6 +15,11 @@ on:
         description: 'Public reason, 20–5000 characters / 公开理由，20–5000 字符'
         required: true
         type: string
+      force:
+        description: 'Force approve: skip form checks / 硬性通过：跳过表单校验'
+        required: false
+        type: boolean
+        default: false
 permissions:
   contents: read
   discussions: write
@@ -40,4 +45,5 @@ jobs:
           DISCUSSION_NUMBER: ${{ inputs.discussion }}
           DECISION: ${{ inputs.decision }}
           REASON: ${{ inputs.reason }}
+          FORCE: ${{ inputs.force }}
         run: python3 -I .github/scripts/governance.py decide

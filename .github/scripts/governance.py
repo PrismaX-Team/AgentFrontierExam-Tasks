@@ -79,6 +79,8 @@ def digest(row):
     return hashlib.sha256(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
 
 def fields(body):
+    # GitHub preserves CRLF from Windows browsers; headings would otherwise keep a trailing CR.
+    body = body.replace("\r\n", "\n").replace("\r", "\n")
     result = {}
     for match in re.finditer(r"^### (.+)\n([\s\S]*?)(?=^### |\Z)", body, re.M):
         label, value = match.groups()
@@ -98,7 +100,7 @@ def validate_proposal(row):
         require(not field["required"] or bool(value), f"Required field missing: {field['id']}")
         require(len(value) <= field["max"], f"Field too long: {field['id']}")
         if field["id"] == "professionalUrl":
-            require(re.fullmatch(r"https://[^\s]+", value), "Professional profile must be HTTPS")
+            require(re.fullmatch(r"https?://\S+", value), "Professional profile must be one http or https URL")
     metric = values.get("Metric type", "").split(" · ")[0]
     require(metric in schema["metrics"], "Invalid metric type")
     if metric in ("custom", "raw_only", "null"):
@@ -108,7 +110,7 @@ def validate_proposal(row):
     if sources and sources != "_No response_":
         # Authors often separate links with blank lines; only non-empty lines count.
         links = [line.strip() for line in sources.splitlines() if line.strip()]
-        require(len(links) <= 20 and all(re.fullmatch(r"https://[^\s]+", line) for line in links), "References must be up to 20 HTTPS links, one per line")
+        require(len(links) <= 20 and all(re.fullmatch(r"https?://\S+", line) for line in links), "References must be up to 20 http or https links, one per line")
     consent_body = values.get("Permissions", "")
     # Markdown checkboxes may wrap onto multiple lines after bilingual layout changes.
     checked = re.findall(r"^- \[[xX]\] ([\s\S]*?)(?=^- \[[ xX]\] |\Z)", consent_body, re.M)
@@ -346,11 +348,19 @@ def decide():
     require(row["category"]["slug"] == "proposals", "Wrong category")
     reason = os.environ["REASON"].strip()
     require(20 <= len(reason) <= 5000, "Decision reason must contain 20–5000 characters")
+    # Force skips field checks only. Permission, authorship, category and the public reason still apply.
+    force = decision == "approve" and os.environ.get("FORCE", "") == "true"
     if decision == "approve":
-        validate_proposal(row)
+        require(not row["closed"], "Proposal must be open in Proposals")
+        if not force:
+            validate_proposal(row)
     record = {"discussion": row["number"], "actor": actor, "decision": decision, "digest": digest(row), "run": os.environ["GITHUB_RUN_ID"]}
+    if force:
+        record["force"] = True
     body = MARKER + json.dumps(record) + " -->\n"
     body += f"@{row['author']['login']} Decision / 审核决定: **{decision}** by @{actor}\n\n{reason}\n\n"
+    if force:
+        body += "Form checks were skipped at the reviewer's request. / 应审核者要求，本次跳过了表单校验。\n\n"
     body += f"[Audit run / 审核运行]({ROOT}/actions/runs/{record['run']})"
     if decision == "approve":
         body += next_steps(row["url"])
@@ -376,6 +386,17 @@ def identity(user):
         image = _avatars[login]
     return {"name": login, "githubLogin": login, "image": image, "githubUrl": f"https://github.com/{login}"}
 
+def proposal_title(row):
+    """Portal display title: the form's Task title field, else the Discussion title without the form prefix."""
+    try:
+        form = fields(row.get("body") or "")
+    except ValueError:
+        form = {}
+    title = form.get("Task title", "").splitlines()[0].strip() if form.get("Task title") else ""
+    if title and title != "_No response_":
+        return title
+    return re.sub(r"^\[Proposal\]\s*", "", row["title"]).strip() or row["title"]
+
 def acceptance(row):
     return row["title"].startswith("[ACCEPTANCE]") or any(label["name"] == "acceptance" for label in (row["labels"]["nodes"] if isinstance(row["labels"], dict) else row["labels"]))
 
@@ -391,7 +412,7 @@ def snapshot():
             if acceptance(row):
                 continue
             state, record = proposal_status(row)
-            result["proposals"].append({"number": row["number"], "title": row["title"], "url": row["url"], "author": identity(row["author"]), "reviewers": [identity({"login": record["actor"]})] if record else [], "status": state, "updatedAt": row["updatedAt"]})
+            result["proposals"].append({"number": row["number"], "title": proposal_title(row), "url": row["url"], "author": identity(row["author"]), "reviewers": [identity({"login": record["actor"]})] if record else [], "status": state, "updatedAt": row["updatedAt"]})
         if not page["pageInfo"]["hasNextPage"]:
             break
         cursor = page["pageInfo"]["endCursor"]

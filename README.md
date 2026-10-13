@@ -9,7 +9,7 @@
 
 **简体中文** | [English](README_EN.md)
 
-[什么是 SIE](#-什么是-science-innovation-exam) · [共建流程](#-共建流程) · [任务包](#-任务包) · [仓库导航](#%EF%B8%8F-仓库导航)
+[什么是 SIE](#-什么是-science-innovation-exam) · [共建流程](#-共建流程) · [任务包](#-任务包) · [仓库导航](#%EF%B8%8F-仓库导航) · [交流群](#-共建者交流群)
 
 </div>
 
@@ -46,23 +46,23 @@ Science Innovation Exam（SIE）评测研究 Agent 能否面向**真实、尚未
 
 ```mermaid
 flowchart LR
-    A["📝 提交 Proposal<br/>(Discussion)"] --> B["🧑‍🔬 领域专家审核"]
-    B -->|获批| C["🧩 构建任务包<br/>模板 / AI Skill"]
-    C --> D["✅ 本地检查<br/>check_package.py"]
-    D --> E["🔀 提交任务 PR"]
-    E --> F["🤖 CI 结构与治理检查"]
+    A["1️⃣ 📝 提交 Proposal<br/>(Discussion)"] --> B["🧑‍🔬 领域专家审核"]
+    B -->|获批| C["2️⃣ 🧩 构建任务包<br/>模板 / AI Skill"]
+    C --> E["3️⃣ 🔀 提交任务 PR"]
+    E --> F["🤖 自动化检查"]
     F --> G["👥 双审<br/>领域 + 技术"]
     G -->|合并| H["🌐 官网上线并署名"]
 
-    style A fill:#e0f2fe,stroke:#0284c7
-    style B fill:#fef3c7,stroke:#f59e0b
-    style C fill:#f0fdf4,stroke:#22c55e
-    style D fill:#f0fdf4,stroke:#22c55e
-    style E fill:#f5f3ff,stroke:#8b5cf6
-    style F fill:#f5f3ff,stroke:#8b5cf6
-    style G fill:#fef3c7,stroke:#f59e0b
-    style H fill:#e0f2fe,stroke:#0284c7
+    style A fill:#dcfce7,stroke:#16a34a,stroke-width:3px
+    style C fill:#dcfce7,stroke:#16a34a,stroke-width:3px
+    style E fill:#dcfce7,stroke:#16a34a,stroke-width:3px
+    style B fill:#fef3c7,stroke:#f59e0b,stroke-dasharray:4 3
+    style F fill:#f5f3ff,stroke:#8b5cf6,stroke-dasharray:4 3
+    style G fill:#fef3c7,stroke:#f59e0b,stroke-dasharray:4 3
+    style H fill:#e0f2fe,stroke:#0284c7,stroke-dasharray:4 3
 ```
+
+> 带序号的绿色粗实框 1️⃣ 2️⃣ 3️⃣ 是**你需要做的三步**；虚框由维护者（黄）、CI（紫）与官网（蓝）完成，无需你操作。
 
 | 步骤 | 你要做的 | 入口 |
 | --- | --- | --- |
@@ -125,3 +125,11 @@ tasks/<task-id>/
 - 对现有任务的问题或修复建议：提交 `type:task-fix` PR，或在对应 Proposal 讨论串中留言
 
 仓库、Proposal、PR 与审核记录均公开，请只提交可再分发的材料。
+
+## 💬 共建者交流群
+
+欢迎扫码加入 **SIE 共建者交流群**，与维护者和其他共建者讨论任务选题、任务包构建和审核中遇到的问题。
+
+<p align="center"><img src="community/wechat-group.jpg" alt="SIE 共建者交流群微信二维码" width="280"></p>
+
+微信群二维码会定期过期。如果扫码提示已失效，请发邮件至 **vaporhugz@gmail.com**，我们会发送最新的入群方式。
