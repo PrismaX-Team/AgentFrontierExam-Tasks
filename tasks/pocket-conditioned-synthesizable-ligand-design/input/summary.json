@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "target_summaries": [
+    {"target_id": "trypsin_3ptb", "submitted_count": 0},
+    {"target_id": "abl1_1iep", "submitted_count": 0},
+    {"target_id": "brd4_3mxf", "submitted_count": 0}
+  ],
+  "budget_usage": [
+    {"target_id": "trypsin_3ptb", "property_evaluation_used": 0, "route_validation_used": 0, "docking_evaluation_used": 0},
+    {"target_id": "abl1_1iep", "property_evaluation_used": 0, "route_validation_used": 0, "docking_evaluation_used": 0},
+    {"target_id": "brd4_3mxf", "property_evaluation_used": 0, "route_validation_used": 0, "docking_evaluation_used": 0}
+  ],
+  "notes": ""
+}
