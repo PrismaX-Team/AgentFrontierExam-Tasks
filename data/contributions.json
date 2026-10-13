@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/LiveDiscoveryBench-Tasks",
-  "updatedAt": "2026-10-13T04:42:09.935432Z",
+  "updatedAt": "2026-10-13T04:43:18.986702Z",
   "proposals": [
     {
       "number": 11,
@@ -437,7 +437,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-13T03:13:19Z"
     },
@@ -453,7 +453,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-13T03:13:18Z"
     },
@@ -469,7 +469,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-13T03:13:17Z"
     },
@@ -522,7 +522,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [
         {
           "role": "domain",
