@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/LiveDiscoveryBench-Tasks",
-  "updatedAt": "2026-10-13T03:38:44.998348Z",
+  "updatedAt": "2026-10-13T04:42:09.935432Z",
   "proposals": [
     {
       "number": 11,
@@ -437,7 +437,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-13T03:13:19Z"
     },
@@ -453,7 +453,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-13T03:13:18Z"
     },
@@ -469,7 +469,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-13T03:13:17Z"
     },
@@ -484,7 +484,7 @@
         "githubUrl": "https://github.com/lulaiao"
       },
       "kind": "new_task",
-      "state": "open",
+      "state": "merged",
       "gate": "success",
       "assignments": [
         {
@@ -508,7 +508,7 @@
           "approved": true
         }
       ],
-      "updatedAt": "2026-10-13T02:48:42Z"
+      "updatedAt": "2026-10-13T04:41:56Z"
     },
     {
       "number": 8,
@@ -522,7 +522,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
@@ -549,6 +549,35 @@
     }
   ],
   "tasks": [
+    {
+      "id": "pocket-conditioned-synthesizable-ligand-design",
+      "title": "Protein-Pocket-Conditioned 3D Ligand Design with Verifiable Synthesis Routes",
+      "domain": "biomedicine",
+      "source": "pull_request",
+      "pullRequest": 18,
+      "authors": [
+        {
+          "name": "lulaiao",
+          "githubLogin": "lulaiao",
+          "image": "https://avatars.githubusercontent.com/u/75672201?v=4",
+          "githubUrl": "https://github.com/lulaiao"
+        }
+      ],
+      "reviewers": [
+        {
+          "name": "DrugD",
+          "githubLogin": "DrugD",
+          "image": "https://avatars.githubusercontent.com/u/37626451?v=4",
+          "githubUrl": "https://github.com/DrugD"
+        },
+        {
+          "name": "vaporhug",
+          "githubLogin": "vaporhug",
+          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
+          "githubUrl": "https://github.com/vaporhug"
+        }
+      ]
+    },
     {
       "id": "protein_stability_campaign",
       "title": "Protein stability three-round mutation screening",
