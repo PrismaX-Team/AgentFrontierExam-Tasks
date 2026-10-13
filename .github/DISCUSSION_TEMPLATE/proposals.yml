@@ -13,7 +13,7 @@
     {
       "type": "markdown",
       "attributes": {
-        "value": "## 01 Contributor information<br>\n贡献者信息\n\nYour GitHub identity and professional background.  \n确认 GitHub 身份并提供专业背景。"
+        "value": "## 01 Proposing team<br>\n命题团队\n\nThe team proposing this question and its research background.  \n命题团队信息及与本题相关的研究背景。"
       }
     },
     {
@@ -21,8 +21,8 @@
       "id": "fullName",
       "attributes": {
         "label": "Name",
-        "description": "姓名  \n用于贡献署名的姓名",
-        "placeholder": "Your name for contribution credit"
+        "description": "姓名  \n用于命题署名的姓名",
+        "placeholder": "Your name for proposal credit"
       },
       "validations": {
         "required": true
@@ -42,26 +42,14 @@
     },
     {
       "type": "input",
-      "id": "position",
+      "id": "researchArea",
       "attributes": {
-        "label": "Position",
-        "description": "职位  \n例如：博士生、研究员或研究工程师",
-        "placeholder": "For example: PhD student or research engineer"
+        "label": "Research area",
+        "description": "研究方向  \n本题所属的具体研究方向，例如：蛋白热稳定性设计、钙钛矿光伏材料",
+        "placeholder": "For example: protein thermostability design or perovskite photovoltaics"
       },
       "validations": {
         "required": false
-      }
-    },
-    {
-      "type": "input",
-      "id": "professionalUrl",
-      "attributes": {
-        "label": "Academic or professional profile",
-        "description": "学术或职业主页  \nhttp(s):// 学术或职业主页",
-        "placeholder": "http(s):// — profile or ORCID"
-      },
-      "validations": {
-        "required": true
       }
     },
     {
