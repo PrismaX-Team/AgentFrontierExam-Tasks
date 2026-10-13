@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/LiveDiscoveryBench-Tasks",
-  "updatedAt": "2026-10-13T02:50:45.070567Z",
+  "updatedAt": "2026-10-13T03:13:33.465129Z",
   "proposals": [
     {
       "number": 11,
@@ -426,6 +426,54 @@
   ],
   "pullRequests": [
     {
+      "number": 26,
+      "title": "[task] evo_search_budget_allocation",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/pull/26",
+      "author": {
+        "name": "xingsixue123",
+        "githubLogin": "xingsixue123",
+        "image": "https://avatars.githubusercontent.com/u/99207361?v=4",
+        "githubUrl": "https://github.com/xingsixue123"
+      },
+      "kind": "new_task",
+      "state": "open",
+      "gate": "failure",
+      "assignments": [],
+      "updatedAt": "2026-10-13T03:13:19Z"
+    },
+    {
+      "number": 25,
+      "title": "[task] clinical_trial_failure_reasoning",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/pull/25",
+      "author": {
+        "name": "xingsixue123",
+        "githubLogin": "xingsixue123",
+        "image": "https://avatars.githubusercontent.com/u/99207361?v=4",
+        "githubUrl": "https://github.com/xingsixue123"
+      },
+      "kind": "new_task",
+      "state": "open",
+      "gate": "pending",
+      "assignments": [],
+      "updatedAt": "2026-10-13T03:13:18Z"
+    },
+    {
+      "number": 24,
+      "title": "[task] eeg_mi_selective_gating",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/pull/24",
+      "author": {
+        "name": "xingsixue123",
+        "githubLogin": "xingsixue123",
+        "image": "https://avatars.githubusercontent.com/u/99207361?v=4",
+        "githubUrl": "https://github.com/xingsixue123"
+      },
+      "kind": "new_task",
+      "state": "open",
+      "gate": "pending",
+      "assignments": [],
+      "updatedAt": "2026-10-13T03:13:17Z"
+    },
+    {
       "number": 18,
       "title": "[task] pocket-conditioned-synthesizable-ligand-design",
       "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/pull/18",
@@ -437,7 +485,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "success",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
@@ -474,7 +522,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
