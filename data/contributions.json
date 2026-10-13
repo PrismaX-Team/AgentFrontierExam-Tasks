@@ -1,8 +1,50 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/LiveDiscoveryBench-Tasks",
-  "updatedAt": "2026-10-13T02:47:05.551549Z",
+  "updatedAt": "2026-10-13T02:47:59.996405Z",
   "proposals": [
+    {
+      "number": 9,
+      "title": "初始晶体结构的形成能与零温热力学稳定性预测",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/9",
+      "author": {
+        "name": "Zhy-NJU",
+        "githubLogin": "Zhy-NJU",
+        "image": "https://avatars.githubusercontent.com/u/324487898?v=4",
+        "githubUrl": "https://github.com/Zhy-NJU"
+      },
+      "reviewers": [
+        {
+          "name": "vaporhug",
+          "githubLogin": "vaporhug",
+          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
+          "githubUrl": "https://github.com/vaporhug"
+        }
+      ],
+      "status": "needs_reapproval",
+      "updatedAt": "2026-10-13T02:47:58Z"
+    },
+    {
+      "number": 29,
+      "title": "Executable OpenFOAM case generation for turbulent flow over a backward-facing step (FoamBench pitzDaily)",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/29",
+      "author": {
+        "name": "lingyue404",
+        "githubLogin": "lingyue404",
+        "image": "https://avatars.githubusercontent.com/u/32598525?u=3b530e26dad7c2bd69e464d6d5ef5297868454e2&v=4",
+        "githubUrl": "https://github.com/lingyue404"
+      },
+      "reviewers": [
+        {
+          "name": "vaporhug",
+          "githubLogin": "vaporhug",
+          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
+          "githubUrl": "https://github.com/vaporhug"
+        }
+      ],
+      "status": "approved",
+      "updatedAt": "2026-10-13T02:47:11Z"
+    },
     {
       "number": 28,
       "title": "Executable OpenFOAM case generation for laminar lid-driven cavity flow (FoamBench Cavity)",
@@ -46,20 +88,6 @@
       "updatedAt": "2026-10-13T02:45:52Z"
     },
     {
-      "number": 29,
-      "title": "Executable OpenFOAM case generation for turbulent flow over a backward-facing step (FoamBench pitzDaily)",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/29",
-      "author": {
-        "name": "lingyue404",
-        "githubLogin": "lingyue404",
-        "image": "https://avatars.githubusercontent.com/u/32598525?u=3b530e26dad7c2bd69e464d6d5ef5297868454e2&v=4",
-        "githubUrl": "https://github.com/lingyue404"
-      },
-      "reviewers": [],
-      "status": "submitted",
-      "updatedAt": "2026-10-12T20:27:49Z"
-    },
-    {
       "number": 11,
       "title": "从初始结构预测大尺寸 MOF 中 CO₂/H₂O 的弛豫吸附能",
       "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/11",
@@ -100,27 +128,6 @@
       ],
       "status": "needs_reapproval",
       "updatedAt": "2026-10-12T13:11:48Z"
-    },
-    {
-      "number": 9,
-      "title": "初始晶体结构的形成能与零温热力学稳定性预测",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/9",
-      "author": {
-        "name": "Zhy-NJU",
-        "githubLogin": "Zhy-NJU",
-        "image": "https://avatars.githubusercontent.com/u/324487898?v=4",
-        "githubUrl": "https://github.com/Zhy-NJU"
-      },
-      "reviewers": [
-        {
-          "name": "vaporhug",
-          "githubLogin": "vaporhug",
-          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
-          "githubUrl": "https://github.com/vaporhug"
-        }
-      ],
-      "status": "needs_reapproval",
-      "updatedAt": "2026-10-12T13:11:37Z"
     },
     {
       "number": 23,
