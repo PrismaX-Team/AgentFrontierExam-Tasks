@@ -1,0 +1,41 @@
+{
+  "instructions": "Budgeted Active Discovery of Near-Degenerate Spin-State Candidates\n\nDevelop a frozen sequential strategy that confirms unique candidates with abs(adiabatic E_HS(R_HS)-E_LS(R_LS))<5 kcal/mol. data/ supplies 190 target-free development candidate graphs and 50 initial labels. representation.json defines the features and parent grouping; protocol.json defines the JSON-lines interface.\n\nSubmit solution/ containing solution/main.py, model assets and configuration. The program acknowledges initialize with status ready and returns candidate_id for each choose request. A null candidate_id stops normally. Use supplied structures, initial labels and authorized feedback, and reset strategy state for each final condition. Final-reference lookups and target-derived features are prohibited.\n\nDevelopment requests contain exactly one string candidate_id. Accepted responses provide the signed gap, remaining new-query budget and cache status. Initial and repeated queries return cached labels; they count toward the 1000 accepted-request limit and spend zero new-query budget. Malformed requests and unknown IDs return an error without changing query state or spending scientific budget.\n\nFinal replay starts ten independent sessions on a 419-candidate pool disjoint from development and P3 parents. Each session supplies 50 initial labels, permits 100 unique new queries and allows 1000 selection attempts, including rejected and cached requests. Exceeding that attempt limit, a crash or a transport violation invalidates the submission. The verifier computes mean discoveries from its trusted accepted unique-query history and exports query_log.jsonl. Initial labels, cache hits and submitted discovery counts contribute zero discoveries. The strict threshold excludes gaps equal to either -5 or +5 kcal/mol.\n\nScope: references are deposited adiabatic spin differences under the reported B3LYP protocol. The screen compares the specified two spin states; intermediate states and experimental spin crossover fall outside its target. Ten conditions vary initial labels on one dataset. Parent equivalence uses whole-ligand molecular formula, element adjacency and integer charge, pooling donor choices and geometric isomers. This retrospective evaluation uses public source targets; original test labels were inspected during partition design. The MIT license and attribution are in verifier/NOTICE.txt.",
+  "input": [
+    {
+      "path": "data",
+      "format": "directory",
+      "description": "Target-free development candidates and the 50 allowed initial labels."
+    },
+    {
+      "path": "representation.json",
+      "format": "json",
+      "description": "Scientific graph, grouping, feature and target generation definitions."
+    },
+    {
+      "path": "protocol.json",
+      "format": "json",
+      "description": "Frozen development query and final isolated execution protocol."
+    },
+    {
+      "path": "solution/main.py",
+      "format": "python",
+      "description": "Executable JSON-lines protocol starter; replace with frozen inference."
+    }
+  ],
+  "submission": [
+    {
+      "path": "solution",
+      "format": "directory",
+      "description": "Frozen JSON-lines Python entry, model assets and configuration.",
+      "has_template": false
+    }
+  ],
+  "environment": [],
+  "requirement": [
+    "Use only the supplied structural inputs, initial labels and authorized query feedback.",
+    "Initial labels never count as discoveries; cache hits never spend new-query budget.",
+    "Reset strategy state for every final condition; use a null candidate_id for normal early stopping.",
+    "Final inference must follow the JSON-lines CPU protocol and emit no additional stdout."
+  ],
+  "limitation": {}
+}
