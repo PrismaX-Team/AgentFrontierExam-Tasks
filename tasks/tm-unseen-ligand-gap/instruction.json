@@ -1,0 +1,41 @@
+{
+  "instructions": "Spin-Splitting Prediction for Transition-Metal Complexes with Unseen Ligands\n\nDevelop a frozen predictor of adiabatic E_HS(R_HS)-E_LS(R_LS) in kcal/mol for complexes whose every ligand is absent from training and development. data/ supplies 956 training and 235 development records. Final inference provides 127 target-free records containing 21 new ligand classes. representation.json defines the structural features; protocol.json defines the JSON-lines interface.\n\nSubmit solution/ containing solution/main.py, frozen weights, configuration and any pure-Python dependencies. Return exactly one finite JSON number for every final sample_id. The verifier exports predictions.csv and scores sample-weighted MAE, counting each final record once. Diagnostics report RMSE, per-ligand, macro and worst-group errors, two-state ordering and shared-ligand components. A record contributes once to each distinct ligand group it contains. Missing, duplicate or extra IDs, boolean or nonfinite predictions, and error overflow are invalid.\n\nUse the supplied topology, donor layout and precomputed structural autocorrelations with authorized training/development labels. Optimized Cartesian geometries, orbital energies and reference target fields are excluded from final inputs. Final-reference lookups, target-derived features and prediction-dependent record exclusion are prohibited. P2 parents are excluded from this task's training and development data.\n\nScope: whole-ligand molecular formula, element-labelled adjacency and integer charge define ligand equivalence. Donor choices, bond-order assignments and stereochemical variants are pooled under that criterion. A new ligand class may share a molecular scaffold with training ligands. References are deposited adiabatic spin differences under the reported B3LYP protocol and compare the specified high/low spin pair. This retrospective evaluation uses public source targets; original test labels were inspected during partition design. The paper's 4.00 kcal/mol result used different training conditions. The MIT license and attribution are in verifier/NOTICE.txt.",
+  "input": [
+    {
+      "path": "data",
+      "format": "directory",
+      "description": "Labelled training/development scientific records."
+    },
+    {
+      "path": "representation.json",
+      "format": "json",
+      "description": "Scientific graph, grouping, feature and target generation definitions."
+    },
+    {
+      "path": "protocol.json",
+      "format": "json",
+      "description": "Frozen final isolated model inference protocol."
+    },
+    {
+      "path": "solution/main.py",
+      "format": "python",
+      "description": "Executable JSON-lines protocol starter; replace with frozen inference."
+    }
+  ],
+  "submission": [
+    {
+      "path": "solution",
+      "format": "directory",
+      "description": "Frozen JSON-lines Python entry, model assets and configuration.",
+      "has_template": false
+    }
+  ],
+  "environment": [],
+  "requirement": [
+    "Use only target-free graph/structural inputs and allowed training/development labels.",
+    "All test ligands must remain absent from training/development; do not add P2 parent labels.",
+    "Predict every provided test ID exactly once with a finite JSON number.",
+    "Final inference must follow the JSON-lines CPU protocol and emit no additional stdout."
+  ],
+  "limitation": {}
+}
