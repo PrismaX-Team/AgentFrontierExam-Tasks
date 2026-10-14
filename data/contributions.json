@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/Science-Innovation-Exam-Tasks",
-  "updatedAt": "2026-10-14T07:30:33.427931Z",
+  "updatedAt": "2026-10-14T07:31:45.666155Z",
   "proposals": [
     {
       "number": 11,
@@ -437,7 +437,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-13T03:13:19Z"
     },
@@ -453,7 +453,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-13T03:13:18Z"
     },
@@ -543,7 +543,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [
         {
           "role": "domain",
@@ -570,6 +570,35 @@
     }
   ],
   "tasks": [
+    {
+      "id": "eeg_mi_selective_gating",
+      "title": "Risk-controlled selective gating for cross-session motor-imagery BCI",
+      "domain": "brain-computer interfaces / neural engineering",
+      "source": "pull_request",
+      "pullRequest": 24,
+      "authors": [
+        {
+          "name": "xingsixue123",
+          "githubLogin": "xingsixue123",
+          "image": "https://avatars.githubusercontent.com/u/99207361?v=4",
+          "githubUrl": "https://github.com/xingsixue123"
+        }
+      ],
+      "reviewers": [
+        {
+          "name": "xiaojuncheng87-sys",
+          "githubLogin": "xiaojuncheng87-sys",
+          "image": "https://avatars.githubusercontent.com/u/239080471?v=4",
+          "githubUrl": "https://github.com/xiaojuncheng87-sys"
+        },
+        {
+          "name": "vaporhug",
+          "githubLogin": "vaporhug",
+          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
+          "githubUrl": "https://github.com/vaporhug"
+        }
+      ]
+    },
     {
       "id": "pocket-conditioned-synthesizable-ligand-design",
       "title": "Protein-Pocket-Conditioned 3D Ligand Design with Verifiable Synthesis Routes",
