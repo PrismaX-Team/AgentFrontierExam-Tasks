@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/Science-Innovation-Exam-Tasks",
-  "updatedAt": "2026-10-14T02:27:54.613462Z",
+  "updatedAt": "2026-10-14T02:29:04.599265Z",
   "proposals": [
     {
       "number": 11,
@@ -453,7 +453,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-13T03:13:18Z"
     },
@@ -469,7 +469,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [
         {
           "role": "domain",
@@ -543,7 +543,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [
         {
           "role": "domain",
