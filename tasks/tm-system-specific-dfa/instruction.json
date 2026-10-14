@@ -1,0 +1,46 @@
+{
+  "instructions": "Select one of 45 density functional approximation (DFA) methods for each transition-metal complex. Minimize the complete-set mean absolute error (MAE), in kcal/mol, of selected vertical spin gaps against archived DLPNO-CCSD(T0) references.\n\nBuild a selector from the 117 labelled training records in data/training.json. Training supplies geometry, actual element symbols, charge, comparison multiplicities, 116 atom-local PBE0 density-difference channels, all 45 method gaps and the reference gap. Final inference supplies 58 records with structural and electronic inputs and opaque sample/formula IDs. The verifier retains candidate gaps, references, errors, ranks and source-quality labels. Fit new scaling on training data; the source's all-VSS atom-type scaling has already been inverted.\n\nSubmit solution/ with main.py and frozen inference assets. Follow protocol.json: process persistent UTF-8 JSON-lines requests and return exactly one allowed method string per sample. The verifier calculates errors from its own method/reference table. Every final record has equal weight in the primary MAE; oracle regret and formula averages are diagnostics. Missing, extra, duplicate or malformed recommendations invalidate the submission. Use the supplied inputs and training labels, without retrieving public final-reference answers or excluding final records.\n\nThe target is E_HS(R_HS)-E_LS(R_HS) at the source B3LYP high-spin geometry. Source pairs are doublet/quartet for d3/d7, singlet/quintet for d4/d6, and doublet/sextet for d5. The d4 pair omits the intermediate triplet. This comparison covers the stated states.\n\nThe 116 channels comprise 58 alpha and 58 beta values. The source fits D_HS-D_LS to a def2-TZVP JKFIT auxiliary basis and sums squared coefficients within each shell, preserving atom order and zero-padding each spin block. Identifiers, atom counts, group-code sequences and padding support geometry/feature association; shared P/N, S/O and Cl/F codes leave within-group element permutations and original wavefunction coordinates unverified. representation.json specifies the mapping.\n\nThe cohort contains author-generated VSS geometries and preserves source train/test flags, SCF/spin-contamination screening and HFX-curve cleaning (5 kcal/mol spline-change threshold and finite cleaned PBE HFX25 gap). Each record has an archived density, finite reference and all 45 finite method gaps. Elemental-formula exclusions remove P2/P3 records and training/final overlap, leaving 117 training and 57 final formula groups; P1/P5 final records can overlap. This is a retrospective benchmark built from public target tables. Electronic inputs require two PBE0 spin-state SCFs and prior B3LYP geometry preparation. Preparation cost is outside the inference metric; the reference is an approximate computational result.",
+  "input": [
+    {
+      "path": "data",
+      "format": "directory",
+      "description": "Training structures, raw116 features, all method gaps and reference."
+    },
+    {
+      "path": "representation.json",
+      "format": "json",
+      "description": "Electronic features, atom mapping and evaluation cohort."
+    },
+    {
+      "path": "methods.json",
+      "format": "json",
+      "description": "Closed method registry and reference definition."
+    },
+    {
+      "path": "protocol.json",
+      "format": "json",
+      "description": "Isolated selection and complete-set scoring."
+    },
+    {
+      "path": "solution/main.py",
+      "format": "python",
+      "description": "JSON-lines entry template."
+    }
+  ],
+  "submission": [
+    {
+      "path": "solution",
+      "format": "directory",
+      "description": "Frozen method selection entry and model assets.",
+      "has_template": false
+    }
+  ],
+  "environment": [],
+  "requirement": [
+    "Use allowed structural/electronic inputs and labelled training only.",
+    "Return one exact allowed method string for every final ID.",
+    "No final-reference lookup, target-derived features or output-based exclusions.",
+    "Offline single-process CPU inference."
+  ],
+  "limitation": {}
+}
