@@ -1,2 +1,2 @@
 :HL["/Science-Innovation-Exam-Tasks/_next/static/css/98ac0f7c1cdd7fb0.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"locale","param":{"type":"d","key":"zh","siblings":["_not-found","_global-error","icon.svg"]},"prefetchHints":4144,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}}}},"staleTime":300,"buildId":"dOoLr793uF5W2xZk2DqL1"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"locale","param":{"type":"d","key":"zh","siblings":["_not-found","_global-error","icon.svg"]},"prefetchHints":4144,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4224,"slots":null}}}}},"staleTime":300,"buildId":"Uv2NlkpBgscCI6zXSXdCw"}
