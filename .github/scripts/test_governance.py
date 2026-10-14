@@ -89,6 +89,22 @@ class GovernanceTests(unittest.TestCase):
     def test_edit_then_revert_changes_digest(self):
         row = self.proposal(); before = g.digest(row); row['lastEditedAt']='2026-09-08T00:00:00Z'
         self.assertNotEqual(before, g.digest(row))
+    def test_renamed_repository_accepts_existing_proposal_links(self):
+        for repo in (g.REPO, g.LEGACY_REPO):
+            self.assertEqual(g.proposal_number('Proposal: https://github.com/'+repo+'/discussions/27'), 27)
+
+    def test_rename_preserves_trusted_approval_records(self):
+        row = self.proposal()
+        data = dict(run='1', actor='maintainer', discussion=1, decision='approve', digest=g.digest(row))
+        run = dict(path='.github/workflows/proposal-review.yml', event='workflow_dispatch', head_branch='main', conclusion='success', actor={'login':'maintainer'}, triggering_actor={'login':'maintainer'}, run_attempt=1, created_at='2026-09-08T01:00:00Z', updated_at='2026-09-08T01:00:02Z')
+        for marker in (g.MARKER, g.LEGACY_MARKER):
+            row['comments'] = [dict(author={'login':'github-actions[bot]'}, lastEditedAt=None, createdAt='2026-09-08T01:00:01Z', body=marker+json.dumps(data)+' -->')]
+            for repo in (g.REPO, g.LEGACY_REPO, 'other/repo'):
+                g._run_cache.clear()
+                with patch.object(g, 'api', return_value={**run, 'head_repository':{'full_name':repo}}):
+                    self.assertEqual(g.proposal_status(row)[0], 'submitted' if repo == 'other/repo' else 'approved')
+        g._run_cache.clear()
+
     def test_cross_repo_proposal_rejected(self):
         for body in ['Proposal: https://github.com/other/repo/discussions/1', 'Proposal: '+g.ROOT+'/issues/1', 'Proposal: '+g.ROOT+'/discussions/1\nProposal: '+g.ROOT+'/discussions/2']:
             with self.assertRaises(ValueError): g.proposal_number(body)
