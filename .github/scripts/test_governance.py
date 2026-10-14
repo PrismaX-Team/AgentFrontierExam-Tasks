@@ -20,20 +20,20 @@ class GovernanceTests(unittest.TestCase):
         g.validate_proposal(row)
         row['body'] = row['body'].replace('### Additional explanation\n\nResearch evidence', '### Additional explanation\n\n_No response_')
         with self.assertRaises(ValueError): g.validate_proposal(row)
-    def test_references_allow_blank_lines_between_links(self):
+    def test_references_allow_links_and_explanatory_text(self):
         row = self.proposal()
         links = '\n\n'.join(f'https://example.org/{i}' for i in range(3))
         base = row['body']
         row['body'] = base + f'\n\n### References / 参考材料\n\n{links}\n'
         g.validate_proposal(row)
-        row['body'] = base + '\n\n### References / 参考材料\n\nhttps://example.org/0\n\nsee the paper above\n'
-        with self.assertRaises(ValueError): g.validate_proposal(row)
+        row['body'] = base + '\n\n### References / 参考材料\n\nDataset: `https://example.org/0`, [paper](https://example.org/1)\n\nDerived model outputs only.\n'
+        g.validate_proposal(row)
     def test_windows_newlines_and_http_links(self):
         row = self.proposal()
         row['body'] = row['body'].replace('https://example.org/profile', 'http://example.org/profile').replace('\n', '\r\n')
         row['body'] += '\r\n\r\n### References\r\n\r\nhttp://example.org/paper\r\n'
         g.validate_proposal(row)
-        row['body'] = self.proposal()['body'] + '\n\n### References\n\nftp://example.org/paper\n'
+        row['body'] = self.proposal()['body'].replace('https://example.org/profile', 'ftp://example.org/profile')
         with self.assertRaises(ValueError): g.validate_proposal(row)
     def test_force_approve_skips_form_checks(self):
         row = self.proposal()
