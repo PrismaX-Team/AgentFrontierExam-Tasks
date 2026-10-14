@@ -1,0 +1,118 @@
+{
+  "instructions": "Design and rank synthesizable three-dimensional ligands for three fixed protein pockets: trypsin_3ptb, abl1_1iep, and brd4_3mxf. Each target supplies a prepared receptor, a 22 Angstrom cubic docking box, public molecular-property bounds, an explicit required-interaction group, one task-authored amidation SMARTS, one target-oriented core, and a finite allowlist of compatible building blocks. Every submitted candidate must use the canonical evaluation SMILES produced by the frozen RDKit protocol and must be reachable by exactly one replayed reaction step from target-allowed starting materials. The public one-step product universe contains 20 trypsin, 35 ABL1, and 20 BRD4 products (75 total); this pilot tests selection under a scarcer docking budget rather than unrestricted molecular generation.\n\nThree validation request types are available. A property_evaluation request contains the common request fields shown in /input/validation_request.json. A route_validation request adds the exact route object and must use one step, ordered reactant roles, an allowed template/material pair, and a stable candidate_key matching cand_[a-z0-9_]{1,48}. A docking_evaluation request references accepted property_evaluation_id and route_evaluation_id values for the same target and molecular identity. Per target, at most 16 property evaluations, 16 route validations, and 12 docking evaluations are charged. Schema errors, invalid identifiers or SMILES, exhausted-budget requests, and exact/scientifically equivalent cache hits do not consume a scientific unit. A reaction execution that fails after replay begins and a docking tool failure after execution begins are charged and retained in trusted evidence.\n\nDocking is performed by the verifier, not by self-report: RDKit 2025.09.6 creates a deterministic ETKDGv3 conformer, Meeko 0.8.0 prepares the ligand, and AutoDock Vina 1.2.7 runs with one CPU, seed 20260916, exhaustiveness 4, and three modes in the target box. The selected pose and its identifiers, affinity, interaction evidence, fingerprints, and hashes are returned by validation. Preserve those identifiers and materialize the returned pose in the final SDF. The final verifier reparses all molecules, replays each route, checks trusted validation IDs and the complete charged-call history, verifies pose coordinates against validation and a deterministic rerun, and recomputes the required protein-ligand contacts. Self-reported scores, contacts, booleans, routes, or poses are never accepted as scientific proof.\n\nSubmit exactly six regular files using the supplied templates: candidates.csv, poses.sdf, synthesis_routes.json, interaction_evidence.json, evidence.jsonl, and summary.json. candidates.csv contains at most 10 ranked candidates per target and 30 total. Candidate keys are globally unique; ranks are contiguous from one within each represented target. Each CSV row must bind one canonical molecule to accepted property, route, and docking evaluations, one route, one pose, and one interaction record. evidence.jsonl exactly covers every charged evaluation in trusted global call order, including rejected route evaluations and docking tool failures; cached responses are not duplicated. summary.json reports all three targets and all three used-budget counters in the frozen target order. Do not submit code, archives, symlinks, extra files, external URLs, or path references.\n\nThe primary raw metric is macro-averaged verified-hit rate@10 in [0,1], higher is better. A row is a hit only if its molecule is valid and target-unique, all public property and forbidden-substructure constraints pass, its one-step route replays exactly, its Vina affinity meets the frozen target-specific test threshold, its required interaction group passes, and every artifact agrees with trusted state. Each target score is verified hits divided by 10, so missing positions contribute zero; the three target rates are averaged and rounded half-even to eight decimal places. Validation does not reveal hidden hit thresholds, witnesses, or the final score, and final test feedback cannot be used to revise a frozen submission.\n\nScientific boundary: route replay establishes graph reachability under one narrow task-authored SMARTS, not reagents, conditions, selectivity, yield, availability, safety, or laboratory synthesis. A frozen-receptor Vina score and geometric contact are benchmark surrogates, not evidence of affinity, potency, selectivity, pharmacokinetics, or physiological protonation. Read /input/scoring_and_protocol.md for the normative schema, standardization, cache, evidence, file-limit, interaction, and scoring rules. Evaluation is deterministic and uses only the supplied receptors and pinned local toolchain; external docking, retrosynthesis, private backends, and self-reported scientific values are outside this task contract.",
+  "input": [
+    {
+      "path": "targets.jsonl",
+      "format": "JSON Lines",
+      "description": "Three ordered public target contracts with receptor paths, pocket boxes, interaction groups, property bounds, one-step route constraints, allowlists, budgets, and frozen docking parameters."
+    },
+    {
+      "path": "starting_materials.json",
+      "format": "JSON",
+      "description": "Fifty-eight task-authored starting-material records with evaluation-canonical SMILES and reaction roles."
+    },
+    {
+      "path": "reaction_templates.json",
+      "format": "JSON",
+      "description": "The frozen task-authored primary-amine amidation SMARTS, ordered reactant roles, unique-product cap, and scientific-scope statement."
+    },
+    {
+      "path": "validation_request.json",
+      "format": "JSON",
+      "description": "An illustrative array containing exact property, route, and docking validation request examples; submit one array member per validation call, not the wrapper."
+    },
+    {
+      "path": "scoring_and_protocol.md",
+      "format": "Markdown",
+      "description": "Normative molecular identity, validation, route replay, docking, interaction, artifact, evidence, resource-limit, and scoring protocol."
+    },
+    {
+      "path": "receptors/3ptb_receptor.pdb",
+      "format": "PDB",
+      "description": "Prepared chain-A 3PTB receptor coordinates used for deterministic interaction geometry."
+    },
+    {
+      "path": "receptors/3ptb_receptor.pdbqt",
+      "format": "PDBQT",
+      "description": "Prepared chain-A 3PTB receptor with frozen atom types and charges used by AutoDock Vina."
+    },
+    {
+      "path": "receptors/1iep_receptor.pdb",
+      "format": "PDB",
+      "description": "Prepared chain-A 1IEP receptor coordinates used for deterministic interaction geometry."
+    },
+    {
+      "path": "receptors/1iep_receptor.pdbqt",
+      "format": "PDBQT",
+      "description": "Prepared chain-A 1IEP receptor with frozen atom types and charges used by AutoDock Vina."
+    },
+    {
+      "path": "receptors/3mxf_receptor.pdb",
+      "format": "PDB",
+      "description": "Prepared chain-A 3MXF receptor coordinates used for deterministic interaction geometry."
+    },
+    {
+      "path": "receptors/3mxf_receptor.pdbqt",
+      "format": "PDBQT",
+      "description": "Prepared chain-A 3MXF receptor with frozen atom types and charges used by AutoDock Vina."
+    }
+  ],
+  "submission": [
+      {
+        "path": "candidates.csv",
+        "format": "CSV",
+        "description": "At most 30 rows and 10 per target with exact header target_id,rank,candidate_key,canonical_smiles,reported_qed,reported_clogp,reported_vina_affinity_kcal_mol,route_id,pose_id,property_evaluation_id,route_evaluation_id,docking_evaluation_id; reported values are independently recomputed and never trusted as scoring oracles; file cap 128 KiB.",
+        "has_template": true
+      },
+      {
+        "path": "poses.sdf",
+        "format": "SDF",
+        "description": "Exactly zero bytes for a zero-row submission; otherwise exactly one finite 3D pose record per CSV row and an immediate final $$$$ terminator followed by EOF, LF, or CRLF, with no trailing bytes. Each pose has at most 256 total atoms and 80 heavy atoms, every coordinate is bounded in absolute value by 10,000 Angstrom, target_id/candidate_key/pose_id/docking_evaluation_id are bound to trusted validation, and submitted/validation/rerun coordinates agree pairwise within 0.05 Angstrom direct RMSD; file cap 5 MiB.",
+        "has_template": true
+      },
+      {
+        "path": "synthesis_routes.json",
+        "format": "JSON",
+        "description": "Top-level schema_version and routes array containing exactly one target-allowed, one-step, replayable canonical route per CSV row; file cap 1 MiB.",
+        "has_template": true
+      },
+      {
+        "path": "interaction_evidence.json",
+        "format": "JSON",
+        "description": "Top-level schema_version and records array containing one trusted docking-interaction record per CSV row with the exact documented seven fields; file cap 1 MiB.",
+        "has_template": true
+      },
+      {
+        "path": "evidence.jsonl",
+        "format": "JSON Lines",
+        "description": "Exact eight-field evidence projection for every charged evaluation in trusted global call order, including rejected and tool-failure records and excluding duplicate cache hits; file cap 2 MiB.",
+        "has_template": true
+      },
+      {
+        "path": "summary.json",
+        "format": "JSON",
+        "description": "All three ordered target_summaries, all three ordered budget_usage records with property/route/docking used counts, schema_version, and bounded notes; file cap 64 KiB.",
+        "has_template": true
+      }
+  ],
+  "environment": [
+    {"name": "NumPy", "version": "2.2.6", "description": "Pinned numerical array dependency."},
+    {"name": "SciPy", "version": "1.16.3", "description": "Pinned numerical dependency used by the molecular toolchain."},
+    {"name": "Pillow", "version": "12.3.0", "description": "Pinned Meeko runtime dependency."},
+    {"name": "RDKit", "version": "2025.9.6", "description": "Molecular standardization, properties, reactions, conformers, and SDF parsing."},
+    {"name": "Gemmi", "version": "0.7.4", "description": "Pinned structural-file dependency used by Meeko."},
+    {"name": "Meeko", "version": "0.8.0", "description": "Ligand preparation and Vina pose reconstruction."},
+    {"name": "Packaging", "version": "26.3", "description": "Pinned version-handling dependency."},
+    {"name": "Setuptools", "version": "84.0.0", "description": "Pinned Python runtime packaging dependency."},
+    {"name": "Wheel", "version": "0.48.0", "description": "Pinned Python runtime packaging dependency."},
+    {"name": "AutoDock Vina", "version": "1.2.7", "description": "Single-CPU frozen docking engine."}
+  ],
+  "requirement": [
+    "Use the exact validation request schemas and target identifiers; a request object is limited to 65,536 UTF-8 bytes and scientific budgets are independently enforced per target at 16 property, 16 route, and 12 docking evaluations.",
+    "Use only target-allowed starting-material and reaction-template identifiers, exactly one ordered reaction step, evaluation-canonical SMILES, and a candidate_key matching cand_[a-z0-9_]{1,48}; submit no participant SMARTS or executable code.",
+    "Reference accepted property, route, and docking evaluation IDs for every ranked row, preserve the verifier-returned pose and interaction bindings, and copy the complete charged evaluation history in trusted global order.",
+    "Submit exactly the six required regular artifacts within their byte, row, molecule, atom, JSON-depth, and identifier limits; do not use symlinks, archives, extra files, path traversal, NaN/Inf, or external file references.",
+    "Do not use online docking, online retrosynthesis, private molecular backends, or final-test output as scientific evidence for the frozen submission."
+  ],
+  "limitation": {}
+}

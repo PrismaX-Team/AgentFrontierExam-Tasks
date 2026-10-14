@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "task_id": "pocket-conditioned-synthesizable-ligand-design",
+  "primary_metric_name": "macro_verified_hit_rate_at_10",
+  "direction": "maximize",
+  "aggregation": "macro_average_zero_padded_at_10",
+  "target_order": [
+    "trypsin_3ptb",
+    "abl1_1iep",
+    "brd4_3mxf"
+  ],
+  "threshold_tolerance_kcal_mol": 0.001,
+  "invalid_raw_value": -1.0,
+  "targets": {
+    "trypsin_3ptb": {
+      "vina_affinity_threshold_kcal_mol": -7.9
+    },
+    "abl1_1iep": {
+      "vina_affinity_threshold_kcal_mol": -12.3
+    },
+    "brd4_3mxf": {
+      "vina_affinity_threshold_kcal_mol": -7.0
+    }
+  }
+}

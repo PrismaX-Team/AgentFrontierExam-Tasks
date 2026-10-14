@@ -1,0 +1,34 @@
+# The operator supplies the frozen Science Innovation Exam base image.
+ARG SIE_BASE_IMAGE
+FROM ${SIE_BASE_IMAGE}
+
+USER root
+
+LABEL org.opencontainers.image.title="LiveDiscoveryBench pocket-conditioned ligand-design environment"
+
+ENV LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONHASHSEED=0 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_ROOT_USER_ACTION=ignore \
+    OMP_NUM_THREADS=1 \
+    OPENBLAS_NUM_THREADS=1 \
+    MKL_NUM_THREADS=1
+
+COPY requirements.lock /opt/task-environment/requirements.lock
+
+RUN python -m pip install \
+        --only-binary=:all: \
+        --require-hashes \
+        --requirement /opt/task-environment/requirements.lock \
+    && python -c "from importlib.metadata import version; import gemmi; import meeko; import numpy; import scipy; import vina; from PIL import Image; from rdkit import Chem; from rdkit.Chem import AllChem, Descriptors, rdChemReactions; from vina import Vina; expected = {'gemmi': '0.7.4', 'meeko': '0.8.0', 'numpy': '2.2.6', 'packaging': '26.3', 'Pillow': '12.3.0', 'rdkit': '2025.9.6', 'scipy': '1.16.3', 'setuptools': '84.0.0', 'vina': '1.2.7', 'wheel': '0.48.0'}; assert all(version(name) == wanted for name, wanted in expected.items()); mol = Chem.AddHs(Chem.MolFromSmiles('CCO')); assert AllChem.EmbedMolecule(mol, randomSeed=20260916) == 0; assert rdChemReactions.ReactionFromSmarts('[C:1]>>[C:1]') is not None; assert Descriptors.MolWt(mol) > 0; assert Vina(sf_name='vina', cpu=1, seed=20260916, verbosity=0).info()['scoring_function'] == 'vina'"
+
+# Evaluation starts with every dependency installed. This makes accidental
+# runtime package resolution fail closed in the network-isolated sandbox.
+ENV PIP_NO_INDEX=1
+
+WORKDIR /workspace
+USER 65532:65532

@@ -1,0 +1,34 @@
+{
+  "id": "pocket-conditioned-synthesizable-ligand-design",
+  "title": "Protein-Pocket-Conditioned 3D Ligand Design with Verifiable Synthesis Routes",
+  "domain": "biomedicine",
+  "task_sources": [
+    {
+      "name": "Approved LiveDiscoveryBench Proposal #5",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/5"
+    },
+    {
+      "name": "RCSB PDB structure 3PTB",
+      "url": "https://www.rcsb.org/structure/3PTB"
+    },
+    {
+      "name": "RCSB PDB structure 1IEP",
+      "url": "https://www.rcsb.org/structure/1IEP"
+    },
+    {
+      "name": "RCSB PDB structure 3MXF",
+      "url": "https://www.rcsb.org/structure/3MXF"
+    }
+  ],
+  "metric": {
+    "description": "Macro-average across the three targets of verified hits among the submitted top ten divided by ten, with missing ranks scored as misses; higher is better.",
+    "type": "linear_maximize"
+  },
+  "baseline": {
+    "existing_baseline": true,
+    "name": "Reaction-constrained deterministic random search (seed 20260916)",
+    "source": "Local retained manifest SHA-256 c4c0f1de992954d9929986b79d697caa281ef5f63225a8de4ee635d3e0e2a044; public method URL pending contributor authorization.",
+    "score": 0.76666667,
+    "bottom_line_score": 0.0
+  }
+}
