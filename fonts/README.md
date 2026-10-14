@@ -1,6 +1,6 @@
 # Bundled display font
 
-`ldb-frontier-display.woff2` is derived from ByteDance's DouyinSans Bold
+`sie-frontier-display.woff2` is derived from ByteDance's DouyinSans Bold
 (`DouyinSansBold.ttf`, version 1.01) and is used only for large Simplified
 Chinese headings.
 

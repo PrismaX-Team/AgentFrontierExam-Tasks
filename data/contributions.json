@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "repository": "PrismaX-Team/LiveDiscoveryBench-Tasks",
+  "repository": "PrismaX-Team/Science-Innovation-Exam-Tasks",
   "updatedAt": "2026-10-14T02:15:59.548917Z",
   "proposals": [
     {
       "number": 11,
       "title": "从初始结构预测大尺寸 MOF 中 CO₂/H₂O 的弛豫吸附能",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/11",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/11",
       "author": {
         "name": "Zhy-NJU",
         "githubLogin": "Zhy-NJU",
@@ -27,7 +27,7 @@
     {
       "number": 10,
       "title": "二元晶体的 300 K 总晶格热导率预测",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/10",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/10",
       "author": {
         "name": "Zhy-NJU",
         "githubLogin": "Zhy-NJU",
@@ -48,7 +48,7 @@
     {
       "number": 9,
       "title": "初始晶体结构的形成能与零温热力学稳定性预测",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/9",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/9",
       "author": {
         "name": "Zhy-NJU",
         "githubLogin": "Zhy-NJU",
@@ -69,7 +69,7 @@
     {
       "number": 29,
       "title": "Executable OpenFOAM case generation for turbulent flow over a backward-facing step (FoamBench pitzDaily)",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/29",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/29",
       "author": {
         "name": "lingyue404",
         "githubLogin": "lingyue404",
@@ -90,7 +90,7 @@
     {
       "number": 28,
       "title": "Executable OpenFOAM case generation for laminar lid-driven cavity flow (FoamBench Cavity)",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/28",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/28",
       "author": {
         "name": "lingyue404",
         "githubLogin": "lingyue404",
@@ -111,7 +111,7 @@
     {
       "number": 27,
       "title": "Executable OpenFOAM case generation for unseen geometries and turbulence-model changes (FoamBench Advanced)",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/27",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/27",
       "author": {
         "name": "lingyue404",
         "githubLogin": "lingyue404",
@@ -132,7 +132,7 @@
     {
       "number": 23,
       "title": "跨靶标泛化的核酸适配体计算筛选 （Cross-target generalization in computational aptamer screening）",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/23",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/23",
       "author": {
         "name": "Rick-zhuang",
         "githubLogin": "Rick-zhuang",
@@ -153,7 +153,7 @@
     {
       "number": 22,
       "title": "固定 Au–Ti–O 参考数据上的能量与原子力预测",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/22",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/22",
       "author": {
         "name": "njuywj",
         "githubLogin": "njuywj",
@@ -174,7 +174,7 @@
     {
       "number": 21,
       "title": "Budget-constrained trajectory allocation for LLM evolutionary search",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/21",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/21",
       "author": {
         "name": "xingsixue123",
         "githubLogin": "xingsixue123",
@@ -195,7 +195,7 @@
     {
       "number": 20,
       "title": "Clinical Trial Protocols Failure Prediction",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/20",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/20",
       "author": {
         "name": "xingsixue123",
         "githubLogin": "xingsixue123",
@@ -216,7 +216,7 @@
     {
       "number": 19,
       "title": "Risk-controlled selective gating for cross-session motor-imagery BCI",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/19",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/19",
       "author": {
         "name": "xingsixue123",
         "githubLogin": "xingsixue123",
@@ -237,7 +237,7 @@
     {
       "number": 17,
       "title": "过渡金属自旋能隙计算的体系特异性密度泛函选择 / System-Specific DFA Selection for Transition-Metal Spin Splittings",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/17",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/17",
       "author": {
         "name": "solin-del",
         "githubLogin": "solin-del",
@@ -258,7 +258,7 @@
     {
       "number": 16,
       "title": "有限能量—梯度查询预算下双自旋势能面的局部最低能量交叉点搜索 / Budgeted Local MECP Search on Fixed Spin-Diabatic Surfaces",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/16",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/16",
       "author": {
         "name": "solin-del",
         "githubLogin": "solin-del",
@@ -279,7 +279,7 @@
     {
       "number": 15,
       "title": "面向新配体的过渡金属配合物自旋能隙外推预测 / Spin-Splitting Prediction for Transition-Metal Complexes with Unseen Ligands",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/15",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/15",
       "author": {
         "name": "solin-del",
         "githubLogin": "solin-del",
@@ -300,7 +300,7 @@
     {
       "number": 14,
       "title": "有限标签查询预算下近简并多自旋过渡金属候选的主动发现 / Budgeted Active Discovery of Near-Degenerate Spin-State Candidates",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/14",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/14",
       "author": {
         "name": "solin-del",
         "githubLogin": "solin-del",
@@ -321,7 +321,7 @@
     {
       "number": 13,
       "title": "固定电子结构协议下过渡金属配合物自旋能隙的代理预测 / Spin-Splitting Surrogate Prediction under a Fixed Electronic-Structure Protocol",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/13",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/13",
       "author": {
         "name": "solin-del",
         "githubLogin": "solin-del",
@@ -342,7 +342,7 @@
     {
       "number": 12,
       "title": "从反应物与产物结构预测未知有机反应的 DFT 活化势垒",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/12",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/12",
       "author": {
         "name": "Zhy-NJU",
         "githubLogin": "Zhy-NJU",
@@ -363,7 +363,7 @@
     {
       "number": 6,
       "title": "保留关键药效团与口袋相互作用的可合成骨架跃迁",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/6",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/6",
       "author": {
         "name": "lulaiao",
         "githubLogin": "lulaiao",
@@ -384,7 +384,7 @@
     {
       "number": 5,
       "title": "蛋白质口袋条件下具有可验证合成路径的三维配体设计",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/5",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/5",
       "author": {
         "name": "lulaiao",
         "githubLogin": "lulaiao",
@@ -405,7 +405,7 @@
     {
       "number": 4,
       "title": "Synthesis-Constrained Multi-Objective Molecular Optimization under a Limited Evaluation Budget",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/4",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/4",
       "author": {
         "name": "lulaiao",
         "githubLogin": "lulaiao",
@@ -428,7 +428,7 @@
     {
       "number": 26,
       "title": "[task] evo_search_budget_allocation",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/pull/26",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/26",
       "author": {
         "name": "xingsixue123",
         "githubLogin": "xingsixue123",
@@ -444,7 +444,7 @@
     {
       "number": 25,
       "title": "[task] clinical_trial_failure_reasoning",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/pull/25",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/25",
       "author": {
         "name": "xingsixue123",
         "githubLogin": "xingsixue123",
@@ -460,7 +460,7 @@
     {
       "number": 24,
       "title": "[task] eeg_mi_selective_gating",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/pull/24",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/24",
       "author": {
         "name": "xingsixue123",
         "githubLogin": "xingsixue123",
@@ -497,7 +497,7 @@
     {
       "number": 18,
       "title": "[task] pocket-conditioned-synthesizable-ligand-design",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/pull/18",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/18",
       "author": {
         "name": "lulaiao",
         "githubLogin": "lulaiao",
@@ -534,7 +534,7 @@
     {
       "number": 8,
       "title": "[task] synthesis-constrained-molecular-optimization",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/pull/8",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/8",
       "author": {
         "name": "lulaiao",
         "githubLogin": "lulaiao",
