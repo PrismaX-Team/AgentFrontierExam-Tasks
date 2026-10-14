@@ -18,7 +18,7 @@ Proposal 以 Proposals 分类中的 Discussion 提交，以 GitHub 账号确认�
 
 | 用途 | 标签 | 正文必需行 |
 | --- | --- | --- |
-| [新增任务](.github/PULL_REQUEST_TEMPLATE/new_task.md) | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/NUMBER` |
+| [新增任务](.github/PULL_REQUEST_TEMPLATE/new_task.md) | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/NUMBER` |
 | [任务修复](.github/PULL_REQUEST_TEMPLATE/task_fix.md) | `type:task-fix` | `Task: EXISTING_TASK_ID` |
 | [仓库维护](.github/PULL_REQUEST_TEMPLATE/maintenance.md) | `type:maintenance` | 说明维护范围 |
 

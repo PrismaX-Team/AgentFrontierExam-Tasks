@@ -4,8 +4,8 @@
 
 **面向研究 Agent 的动态科学基准 · 任务共建仓库**
 
-[![官网](https://img.shields.io/badge/%E5%AE%98%E7%BD%91-Science%20Innovation%20Exam-333399?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/zh/)
-[![共建页面](https://img.shields.io/badge/%E5%85%B1%E5%BB%BA%E9%A1%B5%E9%9D%A2-%E5%8F%82%E4%B8%8E%E5%85%B1%E5%BB%BA-2ea44f?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/zh/contribute/)
+[![官网](https://img.shields.io/badge/%E5%AE%98%E7%BD%91-Science%20Innovation%20Exam-333399?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/zh/)
+[![共建页面](https://img.shields.io/badge/%E5%85%B1%E5%BB%BA%E9%A1%B5%E9%9D%A2-%E5%8F%82%E4%B8%8E%E5%85%B1%E5%BB%BA-2ea44f?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/zh/contribute/)
 
 **简体中文** | [English](README_EN.md)
 
@@ -38,11 +38,11 @@ Science Innovation Exam（SIE）评测研究 Agent 能否面向**真实、尚未
 </tr>
 </table>
 
-科学标准与任务实例见[官网](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/zh/)。
+科学标准与任务实例见[官网](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/zh/)。
 
 ## 🚀 共建流程
 
-一个任务分两步进入 SIE：先提交公开 **Proposal**，由一位领域专家审核；获批后再提交**任务 PR**，由一位领域专家和一位技术专家双审。全程在 GitHub 上完成，进度同步显示在[官网共建看板](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/zh/contribute/#contribution-activity)。
+一个任务分两步进入 SIE：先提交公开 **Proposal**，由一位领域专家审核；获批后再提交**任务 PR**，由一位领域专家和一位技术专家双审。全程在 GitHub 上完成，进度同步显示在[官网共建看板](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/zh/contribute/#contribution-activity)。
 
 ```mermaid
 flowchart LR
@@ -66,15 +66,15 @@ flowchart LR
 
 | 步骤 | 你要做的 | 入口 |
 | --- | --- | --- |
-| 1. 提出任务 | 描述科学问题、数据来源、指标与授权 | [提交 Proposal](https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/new?category=proposals) |
-| 2. 构建任务包 | Fork 仓库，复制 `tasks/_template/`，或让 AI 编程助手按 Skill 生成，本地跑结构检查 | [共建指南](CONTRIBUTING.md) · [任务合同](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/zh/contribute/task-contract/) |
+| 1. 提出任务 | 描述科学问题、数据来源、指标与授权 | [提交 Proposal](https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/new?category=proposals) |
+| 2. 构建任务包 | Fork 仓库，复制 `tasks/_template/`，或让 AI 编程助手按 Skill 生成，本地跑结构检查 | [共建指南](CONTRIBUTING.md) · [任务合同](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/zh/contribute/task-contract/) |
 | 3. 提交 PR | 从 fork 向 `main` 发起 PR，正文带上 `Proposal:` 行；等待维护者打标签与双审 | [PR 模板](.github/PULL_REQUEST_TEMPLATE/new_task.md) |
 
 PR 按**改动用途**分类，由维护者确认唯一类型标签；标签确认前 Contribution gate 保持 pending 而非失败。
 
 | 用途 | 标签 | 正文必需行 |
 | --- | --- | --- |
-| 新增任务 | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/NUMBER` |
+| 新增任务 | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/NUMBER` |
 | 任务修复 | `type:task-fix` | `Task: EXISTING_TASK_ID` |
 | 仓库维护 | `type:maintenance` | 说明维护范围，无需 Proposal |
 
@@ -101,7 +101,7 @@ tasks/<task-id>/
 - 双 verifier 入口均必需，须离线、确定性运行；旧的 `verifier/run/main.py` 不再使用。
 - 构建历史、baseline 实现与审核报告放在任务包之外。共享的 Run-local `VerifyContext` 由框架提供，本仓库不含评测运行时。
 
-字段级说明与带注释的完整示例见官网[任务合同详情页](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/zh/contribute/task-contract/)；英文工作副本见 [`contributor/build-sie-task-package/task-contract.md`](contributor/build-sie-task-package/task-contract.md)。
+字段级说明与带注释的完整示例见官网[任务合同详情页](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/zh/contribute/task-contract/)；英文工作副本见 [`contributor/build-sie-task-package/task-contract.md`](contributor/build-sie-task-package/task-contract.md)。
 
 ## 🗂️ 仓库导航
 
@@ -119,9 +119,9 @@ tasks/<task-id>/
 
 ## 📮 参与
 
-- 想提出一道任务：[提交 Proposal](https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/new?category=proposals)
+- 想提出一道任务：[提交 Proposal](https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/new?category=proposals)
 - 已有获批 Proposal：阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 并提交任务 PR
-- 了解基准：[官网](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/zh/) · [共建页面](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/zh/contribute/)
+- 了解基准：[官网](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/zh/) · [共建页面](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/zh/contribute/)
 - 对现有任务的问题或修复建议：提交 `type:task-fix` PR，或在对应 Proposal 讨论串中留言
 
 仓库、Proposal、PR 与审核记录均公开，请只提交可再分发的材料。

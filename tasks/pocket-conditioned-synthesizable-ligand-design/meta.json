@@ -4,8 +4,8 @@
   "domain": "biomedicine",
   "task_sources": [
     {
-      "name": "Approved LiveDiscoveryBench Proposal #5",
-      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/5"
+      "name": "Approved Science Innovation Exam Proposal #5",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/5"
     },
     {
       "name": "RCSB PDB structure 3PTB",

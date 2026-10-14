@@ -18,7 +18,7 @@ Always use **Run workflow** for a new decision. **Re-run jobs** is rejected, eve
 
 | Purpose | Label | Required body line |
 | --- | --- | --- |
-| [New task](.github/PULL_REQUEST_TEMPLATE/new_task.md) | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/NUMBER` |
+| [New task](.github/PULL_REQUEST_TEMPLATE/new_task.md) | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/NUMBER` |
 | [Task fix](.github/PULL_REQUEST_TEMPLATE/task_fix.md) | `type:task-fix` | `Task: EXISTING_TASK_ID` |
 | [Maintenance](.github/PULL_REQUEST_TEMPLATE/maintenance.md) | `type:maintenance` | Describe the scope |
 

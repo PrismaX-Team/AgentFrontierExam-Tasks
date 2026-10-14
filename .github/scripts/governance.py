@@ -14,10 +14,14 @@ from datetime import datetime, timezone
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
 
-REPO = "PrismaX-Team/LiveDiscoveryBench-Tasks"
+REPO = "PrismaX-Team/Science-Innovation-Exam-Tasks"
+LEGACY_REPO = "PrismaX-Team/LiveDiscoveryBench-Tasks"
+REPO_NAMES = {REPO, LEGACY_REPO}
+REPO_OWNER, REPO_NAME = REPO.split("/")
 ROOT = f"https://github.com/{REPO}"
 CONTEXT = "Contribution gate"
-MARKER = "<!-- ldb-proposal-decision "
+MARKER = "<!-- sie-proposal-decision "
+LEGACY_MARKER = "<!-- ldb-proposal-decision "
 LABELS = {"approve": "proposal:approved", "changes_requested": "proposal:changes-requested", "decline": "proposal:declined", "submitted": "proposal:submitted", "needs_reapproval": "proposal:needs-reapproval"}
 
 class Pending(ValueError):
@@ -61,13 +65,13 @@ category { slug } labels(first:100) { nodes { id name } pageInfo { hasNextPage }
 
 def discussion(number):
     require(isinstance(number, int) and number > 0, "Invalid Discussion number")
-    row = gql('query($n:Int!){repository(owner:"PrismaX-Team",name:"LiveDiscoveryBench-Tasks"){discussion(number:$n){' + DISCUSSION_FIELDS + '}}}', n=number)["repository"]["discussion"]
+    row = gql('query($n:Int!){repository(owner:"' + REPO_OWNER + '",name:"' + REPO_NAME + '"){discussion(number:$n){' + DISCUSSION_FIELDS + '}}}', n=number)["repository"]["discussion"]
     require(row is not None, "Discussion not found in this repository")
     require(not row["labels"]["pageInfo"]["hasNextPage"], "Too many Discussion labels")
     row["comments"] = []
     cursor = None
     while True:
-        page = gql('query($n:Int!,$cursor:String){repository(owner:"PrismaX-Team",name:"LiveDiscoveryBench-Tasks"){discussion(number:$n){comments(first:100,after:$cursor){nodes{id body createdAt lastEditedAt author{login} } pageInfo{hasNextPage endCursor}}}}}', n=number, cursor=cursor)["repository"]["discussion"]["comments"]
+        page = gql('query($n:Int!,$cursor:String){repository(owner:"' + REPO_OWNER + '",name:"' + REPO_NAME + '"){discussion(number:$n){comments(first:100,after:$cursor){nodes{id body createdAt lastEditedAt author{login} } pageInfo{hasNextPage endCursor}}}}}', n=number, cursor=cursor)["repository"]["discussion"]["comments"]
         row["comments"].extend(page["nodes"])
         if not page["pageInfo"]["hasNextPage"]:
             return row
@@ -122,17 +126,20 @@ def decision_record(row):
     records = []
     for comment in row["comments"]:
         # GraphQL reports the Actions bot as "github-actions"; REST uses "github-actions[bot]".
-        if (comment.get("author") or {}).get("login") not in BOT_LOGINS or comment["lastEditedAt"] or not comment["body"].startswith(MARKER):
+        if (comment.get("author") or {}).get("login") not in BOT_LOGINS or comment["lastEditedAt"]:
+            continue
+        marker = next((value for value in (MARKER, LEGACY_MARKER) if comment["body"].startswith(value)), None)
+        if marker is None:
             continue
         try:
-            record = json.loads(comment["body"].split(" -->", 1)[0][len(MARKER):])
+            record = json.loads(comment["body"].split(" -->", 1)[0][len(marker):])
             run_id = int(record["run"])
             if run_id not in _run_cache:
                 _run_cache[run_id] = api(f"repos/{REPO}/actions/runs/{run_id}")
             run = _run_cache[run_id]
             # A bot comment or a label on its own is never approval authority.
             if (run["path"] == ".github/workflows/proposal-review.yml" and run["event"] == "workflow_dispatch"
-                    and run["head_branch"] == "main" and run["head_repository"]["full_name"] == REPO
+                    and run["head_branch"] == "main" and run["head_repository"]["full_name"] in REPO_NAMES
                     and run["conclusion"] == "success" and run["run_attempt"] == 1
                     and run["actor"]["login"] == run["triggering_actor"]["login"] == record["actor"]
                     and record["discussion"] == row["number"] and record["decision"] in ("approve", "changes_requested", "decline")
@@ -164,7 +171,7 @@ def approved_proposal(pr, row):
 def proposal_number(body):
     links = re.findall(r"^Proposal:\s*(https://[^\s]+)\s*$", body or "", re.M)
     require(len(links) == 1, "Include exactly one Proposal: URL line")
-    match = re.fullmatch(re.escape(ROOT) + r"/discussions/([1-9][0-9]*)", links[0])
+    match = re.fullmatch(r"https://github.com/(?:" + "|".join(re.escape(value) for value in REPO_NAMES) + r")/discussions/([1-9][0-9]*)", links[0])
     require(match, "Proposal must be a Discussion in this repository")
     return int(match[1])
 
@@ -202,7 +209,7 @@ def structure(pr, kind):
     spec = importlib.util.spec_from_file_location("task_structure", Path(__file__).with_name("task_structure.py"))
     policy = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(policy)
-    candidate = Path(os.environ.get("RUNNER_TEMP", ".runtime")) / "ldb-candidate"
+    candidate = Path(os.environ.get("RUNNER_TEMP", ".runtime")) / "sie-candidate"
     candidate.mkdir(parents=True, exist_ok=True)
     def git(*args):
         return subprocess.check_output(["git", "-C", str(candidate), *args], stderr=subprocess.DEVNULL).decode()
@@ -309,7 +316,7 @@ def next_steps(proposal_url):
     Proposal line in its body, so the author only picks their fork and branch."""
     pr_body = urllib.parse.quote(f"Proposal: {proposal_url}\n\n### Implementation / 实现说明\n\n")
     link = f"{ROOT}/compare/main?expand=1&body={pr_body}"
-    portal = "https://prismax-team.github.io/LiveDiscoveryBench-Tasks"
+    portal = "https://prismax-team.github.io/Science-Innovation-Exam-Tasks"
     contract_en, contract_zh = f"{portal}/en/contribute/task-contract/", f"{portal}/zh/contribute/task-contract/"
     guide_en, guide_zh = f"{ROOT}/blob/main/CONTRIBUTING_EN.md", f"{ROOT}/blob/main/CONTRIBUTING.md"
     skill = f"{ROOT}/tree/main/contributor/build-sie-task-package"
@@ -399,7 +406,7 @@ def snapshot():
     result = {"schemaVersion": 1, "repository": REPO, "updatedAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"), "proposals": [], "pullRequests": []}
     cursor = None
     while True:
-        page = gql('query($cursor:String){repository(owner:"PrismaX-Team",name:"LiveDiscoveryBench-Tasks"){discussions(first:100,after:$cursor){nodes{number category{slug}} pageInfo{hasNextPage endCursor}}}}', cursor=cursor)["repository"]["discussions"]
+        page = gql('query($cursor:String){repository(owner:"' + REPO_OWNER + '",name:"' + REPO_NAME + '"){discussions(first:100,after:$cursor){nodes{number category{slug}} pageInfo{hasNextPage endCursor}}}}', cursor=cursor)["repository"]["discussions"]
         for item in page["nodes"]:
             if item["category"]["slug"] != "proposals":
                 continue

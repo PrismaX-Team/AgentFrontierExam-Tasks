@@ -4,7 +4,7 @@ FROM ${SIE_BASE_IMAGE}
 
 USER root
 
-LABEL org.opencontainers.image.title="LiveDiscoveryBench pocket-conditioned ligand-design environment"
+LABEL org.opencontainers.image.title="Science Innovation Exam pocket-conditioned ligand-design environment"
 
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
