@@ -4,8 +4,8 @@
 
 **A live scientific benchmark for research agents · task contribution repository**
 
-[![Official Site](https://img.shields.io/badge/Official%20Site-Science%20Innovation%20Exam-333399?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/)
-[![Contribute](https://img.shields.io/badge/Contribute-Portal%20page-2ea44f?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/contribute/)
+[![Official Site](https://img.shields.io/badge/Official%20Site-Science%20Innovation%20Exam-333399?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/en/)
+[![Contribute](https://img.shields.io/badge/Contribute-Portal%20page-2ea44f?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/en/contribute/)
 
 [简体中文](README.md) | **English**
 
@@ -38,11 +38,11 @@ Most benchmarks measure what a model **knows**; SIE measures what an agent can *
 </tr>
 </table>
 
-Scientific standards and task examples are on the [official portal](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/).
+Scientific standards and task examples are on the [official portal](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/en/).
 
 ## 🚀 How to contribute
 
-A task enters SIE in two steps: a public **Proposal** reviewed by a domain expert, then a **task PR** reviewed by a domain expert and a technical expert. Everything happens on GitHub, and progress is mirrored on the [portal's contribution board](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/contribute/#contribution-activity).
+A task enters SIE in two steps: a public **Proposal** reviewed by a domain expert, then a **task PR** reviewed by a domain expert and a technical expert. Everything happens on GitHub, and progress is mirrored on the [portal's contribution board](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/en/contribute/#contribution-activity).
 
 ```mermaid
 flowchart LR
@@ -66,15 +66,15 @@ flowchart LR
 
 | Step | What you do | Where |
 | --- | --- | --- |
-| 1. Propose a task | Describe the scientific question, data sources, metric and permissions | [Submit Proposal](https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/new?category=proposals) |
-| 2. Build the package | Fork the repository, copy `tasks/_template/` or let an AI coding agent build it with the skill, run the local structural check | [Contributing guide](CONTRIBUTING_EN.md) · [Task contract](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/contribute/task-contract/) |
+| 1. Propose a task | Describe the scientific question, data sources, metric and permissions | [Submit Proposal](https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/new?category=proposals) |
+| 2. Build the package | Fork the repository, copy `tasks/_template/` or let an AI coding agent build it with the skill, run the local structural check | [Contributing guide](CONTRIBUTING_EN.md) · [Task contract](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/en/contribute/task-contract/) |
 | 3. Open the PR | Open a PR from your fork against `main` with the `Proposal:` line in the body; wait for the maintainer label and dual review | [PR template](.github/PULL_REQUEST_TEMPLATE/new_task.md) |
 
 PRs are classified by **what they change**; a maintainer confirms exactly one type label. Until then the Contribution gate stays pending rather than failed.
 
 | Purpose | Label | Required body line |
 | --- | --- | --- |
-| New task | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/NUMBER` |
+| New task | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/NUMBER` |
 | Task fix | `type:task-fix` | `Task: EXISTING_TASK_ID` |
 | Repository maintenance | `type:maintenance` | Describe the scope; no Proposal needed |
 
@@ -101,7 +101,7 @@ tasks/<task-id>/
 - Both verifier entries are required and must run offline and deterministically; the old `verifier/run/main.py` is obsolete.
 - Build history, baseline implementations and review reports stay outside the package. The framework supplies the shared run-local `VerifyContext`; this repository contains no evaluation runtime.
 
-Field-by-field explanations with an annotated full example are on the portal's [task contract page](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/contribute/task-contract/); the working copy of the field rules is [`contributor/build-sie-task-package/task-contract.md`](contributor/build-sie-task-package/task-contract.md).
+Field-by-field explanations with an annotated full example are on the portal's [task contract page](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/en/contribute/task-contract/); the working copy of the field rules is [`contributor/build-sie-task-package/task-contract.md`](contributor/build-sie-task-package/task-contract.md).
 
 ## 🗂️ Repository map
 
@@ -119,9 +119,9 @@ Field-by-field explanations with an annotated full example are on the portal's [
 
 ## 📮 Get involved
 
-- Have a task in mind: [submit a Proposal](https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/new?category=proposals)
+- Have a task in mind: [submit a Proposal](https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/new?category=proposals)
 - Proposal already approved: read [CONTRIBUTING_EN.md](CONTRIBUTING_EN.md) and open the task PR
-- Learn about the benchmark: [portal](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/) · [contribute page](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/contribute/)
+- Learn about the benchmark: [portal](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/en/) · [contribute page](https://prismax-team.github.io/Science-Innovation-Exam-Tasks/en/contribute/)
 - Problems with or fixes for an existing task: open a `type:task-fix` PR or comment on the task's Proposal thread
 
 The repository, Proposals, PRs and review records are all public. Commit only redistributable material.

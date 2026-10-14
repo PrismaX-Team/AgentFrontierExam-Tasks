@@ -15,7 +15,7 @@ spec.loader.exec_module(checker)
 
 class PackageTests(unittest.TestCase):
     def setUp(self):
-        self.temporary = tempfile.TemporaryDirectory(prefix="ldb-structure-test-")
+        self.temporary = tempfile.TemporaryDirectory(prefix="sie-structure-test-")
         self.addCleanup(self.temporary.cleanup)
         self.root = Path(self.temporary.name) / "example_task"
         shutil.copytree(script.parents[2] / "tasks/_template", self.root)
