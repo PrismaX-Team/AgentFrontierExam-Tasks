@@ -1,0 +1,67 @@
+{
+  "instructions": "Construction draft for Synthesizable Scaffold Hopping with Pharmacophore and Pocket-Interaction Retention. Starting from each supplied reference ligand, replace the specified core rather than merely changing an R-group. Design and rank up to ten unique candidate molecules per instance, retaining the specified pharmacophore types and spatial relations, side-chain connections or exit-vector geometry, and any required protein-pocket interactions. Each candidate must satisfy the frozen structural, property and pocket constraints and have a route that replays from allowed starting materials through supplied reaction templates to the same standardized candidate. The final raw metric is the macro-average verified scaffold-hop rate@10: each instance contributes its number of verified new-core clusters among the first ten ranks divided by ten; missing ranks are misses and a new-core cluster counts at most once per instance. Diagnostics cannot offset a failed hard constraint. Research-time validation provides deterministic structure, scaffold, geometry, property, pocket and route feedback and remaining budgets; normal format or scientific rejections do not consume scientific budget, whereas successfully executed scientific evaluations do. Audited reference data currently include an ERK2 reference ligand and unprepared protein heavy atoms in the same deposited coordinate frame, with a zero-based ligand atom-name correspondence. The reference SMILES records the deposited chemical state, not a newly selected protonation or tautomer policy. This draft is not a runnable scientific task: final instance scope, core/feature constraints, prepared scoring receptors, numerical gates, request schema, budgets and starting-material scope are still under external pilot review. The approved submission names are fixed, but their detailed schemas are not yet frozen. Computational predictions and graph-replayed routes are not experimental synthesis or measured binding evidence.",
+  "input": [
+    {
+      "path": "reference_structures.json",
+      "format": "json",
+      "description": "Reference chemical identities, coordinate-frame and preparation-state descriptions, data paths, and zero-based SDF atom indices corresponding to stable reference atom names. This file does not specify scoring gates."
+    },
+    {
+      "path": "structures/erk2_reference.sdf",
+      "format": "sdf",
+      "description": "The ERK2 reference ligand: one experimentally deposited conformer with its checked chemical graph and absolute stereochemistry, in the protein coordinate frame."
+    },
+    {
+      "path": "structures/erk2_protein_unprepared.pdb",
+      "format": "pdb",
+      "description": "Observed ERK2 chain-A protein heavy atoms in the reference coordinate frame. Ligand, water, hydrogen and alternate conformations are removed; missing atoms remain missing. This is not a protonated or scoring-ready docking receptor."
+    }
+  ],
+  "submission": [
+    {
+      "path": "candidates.csv",
+      "format": "csv",
+      "description": "Ranked candidates with task_id, rank, canonical_smiles, new_scaffold_smiles, route_id and self-reported attributes. The approved minimum identity columns are supplied; attribute columns and exact schema remain unfrozen.",
+      "has_template": true
+    },
+    {
+      "path": "aligned_poses.sdf",
+      "format": "sdf",
+      "description": "Candidate conformers aligned to the reference ligand or fixed target-pocket frame. Exact record identities, conformer limits and state/stereo policy remain unfrozen.",
+      "has_template": false
+    },
+    {
+      "path": "scaffold_mapping.json",
+      "format": "json",
+      "description": "Reference/candidate cores, retained/replaced atoms, attachment positions and exit-vector correspondences. Empty construction starter; exact fields and core definitions remain unfrozen.",
+      "has_template": true
+    },
+    {
+      "path": "synthesis_routes.json",
+      "format": "json",
+      "description": "Allowed starting-material IDs, ordered reaction templates, intermediate structures and final candidate products. Empty construction starter; material scope and exact route schema remain unfrozen.",
+      "has_template": true
+    },
+    {
+      "path": "interaction_evidence.json",
+      "format": "json",
+      "description": "Pharmacophore-retention and any required protein-residue interaction evidence. Empty construction starter; exact fields and gates remain unfrozen.",
+      "has_template": true
+    },
+    {
+      "path": "evidence.jsonl",
+      "format": "jsonl",
+      "description": "Execution records including actual tool outputs, errors, retries or alternatives and artifact references. Empty construction starter; exact record schema remains unfrozen.",
+      "has_template": true
+    },
+    {
+      "path": "summary.json",
+      "format": "json",
+      "description": "Final recommendations, ranking rationale and budget-use summary. Empty construction starter; exact fields remain unfrozen and self-reported budget values are not trusted history.",
+      "has_template": true
+    }
+  ],
+  "environment": [],
+  "requirement": [],
+  "limitation": {}
+}

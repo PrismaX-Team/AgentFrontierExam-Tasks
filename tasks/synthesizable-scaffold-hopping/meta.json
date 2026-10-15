@@ -1,0 +1,23 @@
+{
+  "id": "synthesizable-scaffold-hopping",
+  "title": "Synthesizable Scaffold Hopping with Pharmacophore and Pocket-Interaction Retention",
+  "domain": "AI for Drug Discovery; Medicinal Chemistry; Scaffold Hopping",
+  "task_sources": [
+    {
+      "name": "Approved scaffold-hopping task proposal (Discussion 6)",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/6"
+    },
+    {
+      "name": "PDB 4O6E (Yin and Wang): CC0 archive source of the ERK2 reference ligand and protein",
+      "url": "https://www.rcsb.org/structure/4O6E"
+    },
+    {
+      "name": "SMDD-Bench dataset revision 77a71c968917c5dbd4c70b143e96b2753dde35c4: instance-selection source; its predicted poses are not included",
+      "url": "https://huggingface.co/datasets/extremelyconfused/smdd-bench/tree/77a71c968917c5dbd4c70b143e96b2753dde35c4"
+    }
+  ],
+  "metric": {
+    "description": "Macro-average verified scaffold-hop rate@10 over frozen reference-ligand instances, in [0,1], higher is better. Missing ranks are misses; one verified new-core cluster counts at most once per instance. Scientific gates and the Proposal-required linear_maximize display anchors are not yet frozen in this construction draft.",
+    "type": null
+  }
+}

@@ -1,0 +1,28 @@
+ERK2 reference structure data
+
+Numerical structure data are derived directly from PDB archive entry 4O6E.
+Depositors: J. Yin and W. Wang.
+Structure DOI: https://doi.org/10.2210/pdb4o6e/pdb
+Associated primary publication: Blake et al.,
+https://doi.org/10.1016/j.bmcl.2014.04.068
+Archive: https://files.rcsb.org/download/4O6E.cif
+
+PDB archive numerical data are available under CC0 1.0 Universal:
+https://creativecommons.org/publicdomain/zero/1.0/
+Policy: https://www.wwpdb.org/about/usage-policies
+
+The reference SDF reconstructs the deposited 2SH component bonds and absolute
+stereochemistry and uses its deposited heavy-atom coordinates. The protein
+PDB retains model 1, chain A and observed heavy atoms after removal of ligands,
+waters, hydrogens and alternate conformations. Missing atoms are not completed;
+protein protonation, charges and scoring preparation are not implied.
+Trailing horizontal line padding is removed without changing internal PDB/SDF
+columns or deposited scientific coordinates.
+
+SMDD-Bench inspired instance selection. Its dataset card declares Apache-2.0,
+but no SMDD YAML, coordinates, witness, code or score-cache payload is copied
+into this reference-data subset. Selection attribution:
+https://huggingface.co/datasets/extremelyconfused/smdd-bench/tree/77a71c968917c5dbd4c70b143e96b2753dde35c4
+
+These numerical data and computed structures are not experimental evidence
+that a submitted candidate binds or has been synthesized.
