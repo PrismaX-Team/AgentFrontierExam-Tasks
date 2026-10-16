@@ -1,8 +1,29 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/Science-Innovation-Exam-Tasks",
-  "updatedAt": "2026-10-16T14:55:28.072522Z",
+  "updatedAt": "2026-10-16T15:39:01.790787Z",
   "proposals": [
+    {
+      "number": 6,
+      "title": "保留关键药效团与口袋相互作用的可合成骨架跃迁",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/6",
+      "author": {
+        "name": "lulaiao",
+        "githubLogin": "lulaiao",
+        "image": "https://avatars.githubusercontent.com/u/75672201?u=30ff02c18d2c249cd3b1d45af07565175e4aeb03&v=4",
+        "githubUrl": "https://github.com/lulaiao"
+      },
+      "reviewers": [
+        {
+          "name": "vaporhug",
+          "githubLogin": "vaporhug",
+          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
+          "githubUrl": "https://github.com/vaporhug"
+        }
+      ],
+      "status": "approved",
+      "updatedAt": "2026-10-16T15:38:02Z"
+    },
     {
       "number": 11,
       "title": "从初始结构预测大尺寸 MOF 中 CO₂/H₂O 的弛豫吸附能",
@@ -359,27 +380,6 @@
       ],
       "status": "approved",
       "updatedAt": "2026-09-22T02:04:50Z"
-    },
-    {
-      "number": 6,
-      "title": "保留关键药效团与口袋相互作用的可合成骨架跃迁",
-      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/6",
-      "author": {
-        "name": "lulaiao",
-        "githubLogin": "lulaiao",
-        "image": "https://avatars.githubusercontent.com/u/75672201?u=30ff02c18d2c249cd3b1d45af07565175e4aeb03&v=4",
-        "githubUrl": "https://github.com/lulaiao"
-      },
-      "reviewers": [
-        {
-          "name": "vaporhug",
-          "githubLogin": "vaporhug",
-          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
-          "githubUrl": "https://github.com/vaporhug"
-        }
-      ],
-      "status": "approved",
-      "updatedAt": "2026-09-17T08:40:04Z"
     },
     {
       "number": 5,
