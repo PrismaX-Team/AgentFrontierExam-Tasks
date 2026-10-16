@@ -19,14 +19,14 @@ import assignment_bound_contacts as contacts
 import submitted_pose_evaluator as engine
 
 
-PROTOCOL = 'trusted_joint_feature_same_atom_contact_search_draft_v1'
+PROTOCOL = 'trusted_joint_feature_same_atom_contact_search_approved_v1'
 RELATION_POLICIES = frozenset({'preserve_equal_subset_and_nonempty_overlap',
                                'preserve_full_atom_set_relation'})
 
 
 @dataclass(frozen=True)
 class JointGateConfig:
-    """Trusted draft gates; all boundaries are inclusive and values finite.
+    """Contributor-approved gates; all boundaries are inclusive and finite.
 
     Displacement keys cover all labels exactly; plane-angle keys cover only
     aromatic labels; contact keys cover all role IDs exactly. Contact entries
@@ -290,7 +290,7 @@ def _search_joint(anchors, candidates, roles, gates, measure_role):
 def find_joint_feature_contact_assignment(context: engine.VerifiedPoseContext,
                                          role_specs: tuple[dict, ...] | list[dict],
                                          gates: JointGateConfig) -> dict:
-    """Joint draft verifier primitive, accepting only an internally made context.
+    """Approved joint verifier primitive, using only an internally made context.
 
     The engine's unconstrained assignment is integrity checked but is NOT the
     accepted assignment. Its immutable canonical pose/prepared chemistry is the
@@ -326,7 +326,7 @@ def find_joint_feature_contact_assignment(context: engine.VerifiedPoseContext,
                 'Meeko_atom_chemistry_sha256': contacts._sha(context.chemistry_json),
                 'joint_gate_configuration_sha256': contacts._sha(contacts._bytes(gate_payload)),
                 'contact_role_specs_sha256': contacts._sha(contacts._bytes(roles))}
-    payload = {'analysis_only': True, 'official_score': None, 'thresholds_frozen': False,
+    payload = {'analysis_only': True, 'official_score': None, 'thresholds_frozen': True,
                'scientific_thresholds_applied': True, 'protocol': PROTOCOL,
                'assignment_selection_policy': 'minimum_SSE_among_all_jointly_feasible_assignments',
                'no_alignment_H_rotation_preparation_or_scoring_replay': True,
