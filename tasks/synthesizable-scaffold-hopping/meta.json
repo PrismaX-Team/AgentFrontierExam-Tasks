@@ -14,10 +14,30 @@
     {
       "name": "SMDD-Bench dataset revision 77a71c968917c5dbd4c70b143e96b2753dde35c4: instance-selection source; its predicted poses are not included",
       "url": "https://huggingface.co/datasets/extremelyconfused/smdd-bench/tree/77a71c968917c5dbd4c70b143e96b2753dde35c4"
+    },
+    {
+      "name": "Independently authored prepared-material and reaction facts from US10519126B2",
+      "url": "https://patents.google.com/patent/US10519126B2/en"
+    },
+    {
+      "name": "PubChem small-molecule identity records for the admitted amine subset",
+      "url": "https://pubchem.ncbi.nlm.nih.gov/"
+    },
+    {
+      "name": "RDKit graph, standardization, features and descriptors",
+      "url": "https://github.com/rdkit/rdkit/tree/Release_2025_09_6"
+    },
+    {
+      "name": "Meeko fixed-pose preparation and AD4 atom typing",
+      "url": "https://github.com/forlilab/Meeko/tree/v0.8.0"
+    },
+    {
+      "name": "AutoDock Vina fixed-pose score proxy",
+      "url": "https://github.com/ccsb-scripps/AutoDock-Vina/tree/v1.2.7"
     }
   ],
   "metric": {
-    "description": "Macro-average verified scaffold-hop rate@10 over frozen reference-ligand instances, in [0,1], higher is better. Missing ranks are misses; one verified new-core cluster counts at most once per instance. Scientific gates and the Proposal-required linear_maximize display anchors are not yet frozen in this construction draft.",
+    "description": "Macro verified scaffold-hop rate@10, higher is better: each instance credits at most one all-gates-passing candidate per generic selected-core 2-core containment component among ranks1–10, divides the credited count by10, then averages over frozen instances. Missing ranks miss. Computational graph/pose verification is not experimental synthesis or affinity.",
     "type": null
   }
 }

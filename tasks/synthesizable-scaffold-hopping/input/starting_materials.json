@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "materials": [
+    {
+      "material_id": "H_R_mesylate",
+      "smiles": "CS(=O)(=O)O[C@@H](CO[Si](C)(C)C(C)(C)C)c1ccc(F)c(Cl)c1"
+    },
+    {
+      "material_id": "common_pyridone_A",
+      "smiles": "CSc1nccc(-c2cc[nH]c(=O)c2)n1"
+    },
+    {
+      "material_id": "mCPBA",
+      "smiles": "O=C(OO)c1cccc(Cl)c1"
+    },
+    {
+      "material_id": "aminopyrazole_Me",
+      "smiles": "Cn1nccc1N"
+    },
+    {
+      "material_id": "oxetane_linker_0",
+      "smiles": "NC1COC1"
+    },
+    {
+      "material_id": "oxetane_linker_1",
+      "smiles": "NCC1COC1"
+    },
+    {
+      "material_id": "oxetane_linker_2",
+      "smiles": "NCCC1COC1"
+    },
+    {
+      "material_id": "oxetane_linker_3",
+      "smiles": "NCCCC1COC1"
+    },
+    {
+      "material_id": "oxetane_linker_4",
+      "smiles": "NCCCCC1COC1"
+    },
+    {
+      "material_id": "tetrahydropyran_linker_0",
+      "smiles": "NC1CCOCC1"
+    },
+    {
+      "material_id": "tetrahydropyran_linker_1",
+      "smiles": "NCC1CCOCC1"
+    },
+    {
+      "material_id": "tetrahydropyran_linker_2",
+      "smiles": "NCCC1CCOCC1"
+    },
+    {
+      "material_id": "tetrahydropyran_linker_3",
+      "smiles": "NCCCC1CCOCC1"
+    },
+    {
+      "material_id": "tetrahydropyran_linker_4",
+      "smiles": "NCCCCC1CCOCC1"
+    }
+  ]
+}

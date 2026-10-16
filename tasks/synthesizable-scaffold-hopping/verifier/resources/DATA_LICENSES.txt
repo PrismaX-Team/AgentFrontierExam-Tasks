@@ -26,3 +26,36 @@ https://huggingface.co/datasets/extremelyconfused/smdd-bench/tree/77a71c968917c5
 
 These numerical data and computed structures are not experimental evidence
 that a submitted candidate binds or has been synthesized.
+
+Prepared scoring receptor
+
+The statements above about an unprepared heavy-only protein apply specifically
+to input/structures/erk2_protein_unprepared.pdb. The separate erk2_receptor.pdb
+and erk2_receptor.pdbqt are computed preparation products of the same public
+4O6E protein, with fixed hydrogens, atom types and charges. They are not a new
+experimental structure. Identical prepared coordinates are supplied as visible
+scientific input and as trusted verifier resources. No private HER2/10e project
+or witness ligand/pose is included.
+
+Independently authored small structure/reaction facts
+
+The admitted prepared-material graphs and four computational reaction-class
+records are independently encoded from US10519126B2 and the exact public
+PubChem identities cited in the trusted material library. Patent source:
+https://patents.google.com/patent/US10519126B2/en
+PubChem identity sources are the per-material compound URLs in that library.
+No patent PDF, image, source prose or PubChem response payload is distributed.
+No Apache/CC0 patent licence, commercial availability, pure-batch preparation,
+experimental yield, biological activity or freedom-to-operate is asserted.
+New substrate combinations are explicitly computational extrapolations.
+The fourteen graphs, scope and source attribution are in starting_materials.json
+and reaction_templates.json under these trusted verifier resources; visible
+input copies contain only the scientific graph/template fields.
+
+Software dependencies
+
+The environment declares exact upstream PyPI versions and SHA256-locked wheels
+for operator installation. This repository does not redistribute those binary
+wheel payloads. Upstream licences/notices remain applicable to installed tools
+and to any separately redistributed image; this data attribution is not a
+blanket software or patent licence or a legal compliance opinion.
