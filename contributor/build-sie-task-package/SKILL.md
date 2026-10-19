@@ -35,6 +35,7 @@ this skill in the same change.
 | [verifier-api.md](verifier-api.md) | How validation and test are called, shared state, result JSON |
 | [proposal-mapping.md](proposal-mapping.md) | Proposal form fields to package fields |
 | [template/](template/) | Empty but structurally valid package |
+| [base-images.md](base-images.md) | What the default CPU/GPU base images already contain |
 | [examples/environment-containerfile/](examples/environment-containerfile/) | How to add extra software (Containerfile) |
 | [scripts/check_package.py](scripts/check_package.py) | Local structural check |
 
@@ -157,8 +158,9 @@ leave Chinese in the package.
 `.` `_` `-`, max 128 characters. The test stub’s `task_id` must stay equal
 to `meta.json.id`.
 
-The template `environment/` is the default image (`type: default`). Keep
-that, and keep `instruction.json.environment` as `[]`, until **both** the
+The template `environment/` is the default image (`type: default`); what
+that image already contains is listed in [base-images.md](base-images.md).
+Keep that, and keep `instruction.json.environment` as `[]`, until **both** the
 package name and a frozen version are known. A proposal that only names
 RDKit or a git repo is not enough: write the names in `build/`, ask for
 pins, and do not add a Containerfile. When every extra package has a

@@ -1,0 +1,11 @@
+episode_id,dataset_id,classifier_id,n_classes,n_subjects,calibration_trials_per_subject,test_trials_per_subject
+e01,D1,C4,2,54,50,150
+e02,D1,C2,2,54,50,150
+e03,D2,C2,4,9,72,216
+e04,D2,C3,4,9,72,216
+e05,D2,C5,4,9,72,216
+e06,D1,C1,2,54,50,150
+e07,D1,C3,2,54,50,150
+e08,D1,C5,2,54,50,150
+e09,D2,C1,4,9,72,216
+e10,D2,C4,4,9,72,216

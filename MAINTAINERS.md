@@ -10,13 +10,15 @@ Proposal 以 Proposals 分类中的 Discussion 提交，以 GitHub 账号确认�
 
 非作者的维护者在 `main` 上运行 **Proposal review**，填写 Discussion 编号、决定及 20–5000 字符的公开理由。Action 校验权限并记录操作者、决定、正文摘要及运行链接。标签仅用于展示，不能作为批准凭据。修改获批正文（包括修改后还原）须重新批准。随后由原作者创建任务 PR，无需回网站绑定。
 
+**Force / 硬性通过** 只在决定为 `approve` 时生效：跳过表单字段校验，权限、非自审、分类、提案仍开放和公开理由仍然检查。决定评论会写明本次跳过了校验。职业主页仍须为一条 `http://` 或 `https://` 链接；参考材料允许链接、文献引用和说明文字，不限制每行格式。解析表单时会先把 Windows 换行转成 Unix 换行。
+
 每次决定都必须使用 **Run workflow** 新建运行。即使是原审核者，**Re-run jobs** 也会被拒绝；失败后须核对当前提案并重新发起审核。重跑原成功决定会使该运行失去批准效力。
 
 ## PR 类型与审核
 
 | 用途 | 标签 | 正文必需行 |
 | --- | --- | --- |
-| [新增任务](.github/PULL_REQUEST_TEMPLATE/new_task.md) | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/NUMBER` |
+| [新增任务](.github/PULL_REQUEST_TEMPLATE/new_task.md) | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/NUMBER` |
 | [任务修复](.github/PULL_REQUEST_TEMPLATE/task_fix.md) | `type:task-fix` | `Task: EXISTING_TASK_ID` |
 | [仓库维护](.github/PULL_REQUEST_TEMPLATE/maintenance.md) | `type:maintenance` | 说明维护范围 |
 

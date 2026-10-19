@@ -1,0 +1,52 @@
+{
+  "e01": {
+    "n_classes": 2,
+    "n_subjects": 54,
+    "test_trials_per_subject": 150
+  },
+  "e02": {
+    "n_classes": 2,
+    "n_subjects": 54,
+    "test_trials_per_subject": 150
+  },
+  "e03": {
+    "n_classes": 4,
+    "n_subjects": 9,
+    "test_trials_per_subject": 216
+  },
+  "e04": {
+    "n_classes": 4,
+    "n_subjects": 9,
+    "test_trials_per_subject": 216
+  },
+  "e05": {
+    "n_classes": 4,
+    "n_subjects": 9,
+    "test_trials_per_subject": 216
+  },
+  "e06": {
+    "n_classes": 2,
+    "n_subjects": 54,
+    "test_trials_per_subject": 150
+  },
+  "e07": {
+    "n_classes": 2,
+    "n_subjects": 54,
+    "test_trials_per_subject": 150
+  },
+  "e08": {
+    "n_classes": 2,
+    "n_subjects": 54,
+    "test_trials_per_subject": 150
+  },
+  "e09": {
+    "n_classes": 4,
+    "n_subjects": 9,
+    "test_trials_per_subject": 216
+  },
+  "e10": {
+    "n_classes": 4,
+    "n_subjects": 9,
+    "test_trials_per_subject": 216
+  }
+}

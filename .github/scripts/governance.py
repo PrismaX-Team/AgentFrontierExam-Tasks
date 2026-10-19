@@ -14,10 +14,14 @@ from datetime import datetime, timezone
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
 
-REPO = "PrismaX-Team/LiveDiscoveryBench-Tasks"
+REPO = "PrismaX-Team/Science-Innovation-Exam-Tasks"
+LEGACY_REPO = "PrismaX-Team/LiveDiscoveryBench-Tasks"
+REPO_NAMES = {REPO, LEGACY_REPO}
+REPO_OWNER, REPO_NAME = REPO.split("/")
 ROOT = f"https://github.com/{REPO}"
 CONTEXT = "Contribution gate"
-MARKER = "<!-- ldb-proposal-decision "
+MARKER = "<!-- sie-proposal-decision "
+LEGACY_MARKER = "<!-- ldb-proposal-decision "
 LABELS = {"approve": "proposal:approved", "changes_requested": "proposal:changes-requested", "decline": "proposal:declined", "submitted": "proposal:submitted", "needs_reapproval": "proposal:needs-reapproval"}
 
 class Pending(ValueError):
@@ -61,13 +65,13 @@ category { slug } labels(first:100) { nodes { id name } pageInfo { hasNextPage }
 
 def discussion(number):
     require(isinstance(number, int) and number > 0, "Invalid Discussion number")
-    row = gql('query($n:Int!){repository(owner:"PrismaX-Team",name:"LiveDiscoveryBench-Tasks"){discussion(number:$n){' + DISCUSSION_FIELDS + '}}}', n=number)["repository"]["discussion"]
+    row = gql('query($n:Int!){repository(owner:"' + REPO_OWNER + '",name:"' + REPO_NAME + '"){discussion(number:$n){' + DISCUSSION_FIELDS + '}}}', n=number)["repository"]["discussion"]
     require(row is not None, "Discussion not found in this repository")
     require(not row["labels"]["pageInfo"]["hasNextPage"], "Too many Discussion labels")
     row["comments"] = []
     cursor = None
     while True:
-        page = gql('query($n:Int!,$cursor:String){repository(owner:"PrismaX-Team",name:"LiveDiscoveryBench-Tasks"){discussion(number:$n){comments(first:100,after:$cursor){nodes{id body createdAt lastEditedAt author{login} } pageInfo{hasNextPage endCursor}}}}}', n=number, cursor=cursor)["repository"]["discussion"]["comments"]
+        page = gql('query($n:Int!,$cursor:String){repository(owner:"' + REPO_OWNER + '",name:"' + REPO_NAME + '"){discussion(number:$n){comments(first:100,after:$cursor){nodes{id body createdAt lastEditedAt author{login} } pageInfo{hasNextPage endCursor}}}}}', n=number, cursor=cursor)["repository"]["discussion"]["comments"]
         row["comments"].extend(page["nodes"])
         if not page["pageInfo"]["hasNextPage"]:
             return row
@@ -79,6 +83,8 @@ def digest(row):
     return hashlib.sha256(json.dumps(payload, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
 
 def fields(body):
+    # GitHub preserves CRLF from Windows browsers; headings would otherwise keep a trailing CR.
+    body = body.replace("\r\n", "\n").replace("\r", "\n")
     result = {}
     for match in re.finditer(r"^### (.+)\n([\s\S]*?)(?=^### |\Z)", body, re.M):
         label, value = match.groups()
@@ -98,17 +104,12 @@ def validate_proposal(row):
         require(not field["required"] or bool(value), f"Required field missing: {field['id']}")
         require(len(value) <= field["max"], f"Field too long: {field['id']}")
         if field["id"] == "professionalUrl":
-            require(re.fullmatch(r"https://[^\s]+", value), "Professional profile must be HTTPS")
+            require(re.fullmatch(r"https?://\S+", value), "Professional profile must be one http or https URL")
     metric = values.get("Metric type", "").split(" · ")[0]
     require(metric in schema["metrics"], "Invalid metric type")
     if metric in ("custom", "raw_only", "null"):
         explanation = values.get("Additional explanation", "")
         require(explanation and explanation != "_No response_", "This metric requires an explanation")
-    sources = values.get("References", "")
-    if sources and sources != "_No response_":
-        # Authors often separate links with blank lines; only non-empty lines count.
-        links = [line.strip() for line in sources.splitlines() if line.strip()]
-        require(len(links) <= 20 and all(re.fullmatch(r"https://[^\s]+", line) for line in links), "References must be up to 20 HTTPS links, one per line")
     consent_body = values.get("Permissions", "")
     # Markdown checkboxes may wrap onto multiple lines after bilingual layout changes.
     checked = re.findall(r"^- \[[xX]\] ([\s\S]*?)(?=^- \[[ xX]\] |\Z)", consent_body, re.M)
@@ -125,17 +126,20 @@ def decision_record(row):
     records = []
     for comment in row["comments"]:
         # GraphQL reports the Actions bot as "github-actions"; REST uses "github-actions[bot]".
-        if (comment.get("author") or {}).get("login") not in BOT_LOGINS or comment["lastEditedAt"] or not comment["body"].startswith(MARKER):
+        if (comment.get("author") or {}).get("login") not in BOT_LOGINS or comment["lastEditedAt"]:
+            continue
+        marker = next((value for value in (MARKER, LEGACY_MARKER) if comment["body"].startswith(value)), None)
+        if marker is None:
             continue
         try:
-            record = json.loads(comment["body"].split(" -->", 1)[0][len(MARKER):])
+            record = json.loads(comment["body"].split(" -->", 1)[0][len(marker):])
             run_id = int(record["run"])
             if run_id not in _run_cache:
                 _run_cache[run_id] = api(f"repos/{REPO}/actions/runs/{run_id}")
             run = _run_cache[run_id]
             # A bot comment or a label on its own is never approval authority.
             if (run["path"] == ".github/workflows/proposal-review.yml" and run["event"] == "workflow_dispatch"
-                    and run["head_branch"] == "main" and run["head_repository"]["full_name"] == REPO
+                    and run["head_branch"] == "main" and run["head_repository"]["full_name"] in REPO_NAMES
                     and run["conclusion"] == "success" and run["run_attempt"] == 1
                     and run["actor"]["login"] == run["triggering_actor"]["login"] == record["actor"]
                     and record["discussion"] == row["number"] and record["decision"] in ("approve", "changes_requested", "decline")
@@ -167,7 +171,7 @@ def approved_proposal(pr, row):
 def proposal_number(body):
     links = re.findall(r"^Proposal:\s*(https://[^\s]+)\s*$", body or "", re.M)
     require(len(links) == 1, "Include exactly one Proposal: URL line")
-    match = re.fullmatch(re.escape(ROOT) + r"/discussions/([1-9][0-9]*)", links[0])
+    match = re.fullmatch(r"https://github.com/(?:" + "|".join(re.escape(value) for value in REPO_NAMES) + r")/discussions/([1-9][0-9]*)", links[0])
     require(match, "Proposal must be a Discussion in this repository")
     return int(match[1])
 
@@ -205,7 +209,7 @@ def structure(pr, kind):
     spec = importlib.util.spec_from_file_location("task_structure", Path(__file__).with_name("task_structure.py"))
     policy = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(policy)
-    candidate = Path(os.environ.get("RUNNER_TEMP", ".runtime")) / "ldb-candidate"
+    candidate = Path(os.environ.get("RUNNER_TEMP", ".runtime")) / "sie-candidate"
     candidate.mkdir(parents=True, exist_ok=True)
     def git(*args):
         return subprocess.check_output(["git", "-C", str(candidate), *args], stderr=subprocess.DEVNULL).decode()
@@ -312,7 +316,7 @@ def next_steps(proposal_url):
     Proposal line in its body, so the author only picks their fork and branch."""
     pr_body = urllib.parse.quote(f"Proposal: {proposal_url}\n\n### Implementation / 实现说明\n\n")
     link = f"{ROOT}/compare/main?expand=1&body={pr_body}"
-    portal = "https://prismax-team.github.io/LiveDiscoveryBench-Tasks"
+    portal = "https://prismax-team.github.io/Science-Innovation-Exam-Tasks"
     contract_en, contract_zh = f"{portal}/en/contribute/task-contract/", f"{portal}/zh/contribute/task-contract/"
     guide_en, guide_zh = f"{ROOT}/blob/main/CONTRIBUTING_EN.md", f"{ROOT}/blob/main/CONTRIBUTING.md"
     skill = f"{ROOT}/tree/main/contributor/build-sie-task-package"
@@ -346,11 +350,19 @@ def decide():
     require(row["category"]["slug"] == "proposals", "Wrong category")
     reason = os.environ["REASON"].strip()
     require(20 <= len(reason) <= 5000, "Decision reason must contain 20–5000 characters")
+    # Force skips field checks only. Permission, authorship, category and the public reason still apply.
+    force = decision == "approve" and os.environ.get("FORCE", "") == "true"
     if decision == "approve":
-        validate_proposal(row)
+        require(not row["closed"], "Proposal must be open in Proposals")
+        if not force:
+            validate_proposal(row)
     record = {"discussion": row["number"], "actor": actor, "decision": decision, "digest": digest(row), "run": os.environ["GITHUB_RUN_ID"]}
+    if force:
+        record["force"] = True
     body = MARKER + json.dumps(record) + " -->\n"
     body += f"@{row['author']['login']} Decision / 审核决定: **{decision}** by @{actor}\n\n{reason}\n\n"
+    if force:
+        body += "Form checks were skipped at the reviewer's request. / 应审核者要求，本次跳过了表单校验。\n\n"
     body += f"[Audit run / 审核运行]({ROOT}/actions/runs/{record['run']})"
     if decision == "approve":
         body += next_steps(row["url"])
@@ -394,7 +406,7 @@ def snapshot():
     result = {"schemaVersion": 1, "repository": REPO, "updatedAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"), "proposals": [], "pullRequests": []}
     cursor = None
     while True:
-        page = gql('query($cursor:String){repository(owner:"PrismaX-Team",name:"LiveDiscoveryBench-Tasks"){discussions(first:100,after:$cursor){nodes{number category{slug}} pageInfo{hasNextPage endCursor}}}}', cursor=cursor)["repository"]["discussions"]
+        page = gql('query($cursor:String){repository(owner:"' + REPO_OWNER + '",name:"' + REPO_NAME + '"){discussions(first:100,after:$cursor){nodes{number category{slug}} pageInfo{hasNextPage endCursor}}}}', cursor=cursor)["repository"]["discussions"]
         for item in page["nodes"]:
             if item["category"]["slug"] != "proposals":
                 continue
