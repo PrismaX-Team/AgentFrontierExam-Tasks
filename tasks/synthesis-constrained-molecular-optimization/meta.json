@@ -17,14 +17,14 @@
     }
   ],
   "metric": {
-    "description": "Macro-average of three constrained Top-10 AUCs; higher is better. At each property-evaluation checkpoint q=0..16, the best ten observed utilities are zero-padded to denominator 10. Each task's trapezoidal area over the 16 intervals is divided by the fixed perfect-sequence area 0.6875, rounded half-even to 12 decimals, and the macro mean is rounded half-even to 8 decimals. Candidate utility is a weighted geometric mean of five clipped desirabilities and is zero after any route or hard-constraint failure. The theoretical raw bounds are 0 and 1. The linear display transform maps raw 0 to 0 and raw 1 to 1000 without capping; invalid submissions are not ranked and carry the -100 display sentinel.",
+    "description": "Macro-average of three constrained Top-10 AUCs; higher is better. At each property-evaluation checkpoint q=0..16, the best ten observed utilities are zero-padded to denominator 10. Each task's trapezoidal area over the 16 intervals is divided by the fixed perfect-sequence area 0.6875, rounded half-even to 12 decimals, and the macro mean is rounded half-even to 8 decimals. Candidate utility is a weighted geometric mean of five clipped desirabilities and is zero after any route or hard-constraint failure. The theoretical raw bounds are 0 and 1. The linear display transform maps raw 0 to 0 and the retained gpt-6-luna reference-run score 0.69811693 to 1000 without capping; invalid submissions are not ranked and carry the -100 display sentinel.",
     "type": "linear_maximize",
     "transform": {
       "raw_direction": "maximize",
       "parameters": {},
       "anchors": {
         "lower": {"raw_value": "0", "matrix_score": "0"},
-        "reference": {"raw_value": "1", "matrix_score": "1000"}
+        "reference": {"raw_value": "0.69811693", "matrix_score": "1000"}
       },
       "invalid_score": "-100",
       "precision": 50,
@@ -33,9 +33,9 @@
   },
   "baseline": {
     "existing_baseline": true,
-    "name": "Reaction-constrained fixed-seed random search (seed 20260915)",
-    "source": "local manifest sha256:ccc7a5aa891d69b3ceeb7ed82ced303bf0466fad2dfae78f67e900473dbb5d5e; attach the retained evidence to the PR review record",
-    "score": 0.49721719,
+    "name": "gpt-6-luna reference run (Codex 0.147.0, reasoning high)",
+    "source": "Maintainer-retained run 20261008T073243Z-64e8262f, result.json: valid macro_constrained_top10_auc=0.69811693; Docker, 2 CPU, 4096 MiB. Scientific inputs and scoring core unchanged from the tested package; historical runtime/entrypoint adaptations retained in the review record. This is one measured agent reference run, not the fixed-seed random-search result.",
+    "score": 0.69811693,
     "bottom_line_score": 0.0
   }
 }
