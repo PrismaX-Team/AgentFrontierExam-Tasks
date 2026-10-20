@@ -1,0 +1,64 @@
+{
+  "cases": {
+    "pitzDaily_1": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.3",
+      "reference_wall_seconds": 39.21
+    },
+    "pitzDaily_2": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.3",
+      "reference_wall_seconds": 51.63
+    },
+    "pitzDaily_3": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.3",
+      "reference_wall_seconds": 57.65
+    },
+    "pitzDaily_4": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.3",
+      "reference_wall_seconds": 68.22
+    },
+    "pitzDaily_5": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.3",
+      "reference_wall_seconds": 76.12
+    },
+    "pitzDaily_6": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.3",
+      "reference_wall_seconds": 63.68
+    },
+    "pitzDaily_7": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.3",
+      "reference_wall_seconds": 85.22
+    },
+    "pitzDaily_8": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.3",
+      "reference_wall_seconds": 69.25
+    },
+    "pitzDaily_9": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.3",
+      "reference_wall_seconds": 67.63
+    },
+    "pitzDaily_10": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.3",
+      "reference_wall_seconds": 98.58
+    }
+  }
+}
