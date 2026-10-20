@@ -1,0 +1,26 @@
+{
+  "id": "foambench-advanced",
+  "title": "Executable OpenFOAM case generation for unseen geometries and turbulence-model changes (FoamBench Advanced)",
+  "domain": "computational fluid dynamics",
+  "task_sources": [
+    {
+      "name": "Approved Science Innovation Exam Proposal #27",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/27"
+    },
+    {
+      "name": "CFDLLMBench FoamBench: Advanced split (16 cases, OpenFOAM v10 revision provided by the FoamBench authors) and evaluation scripts, BSD-3-Clause",
+      "url": "https://github.com/NLR-Theseus/cfdllmbench"
+    }
+  ],
+  "metric": {
+    "description": "Execution success rate (M_exec in CFDLLMBench) over the 16 FoamBench Advanced cases: the fraction of cases whose submitted OpenFOAM case, run unchanged by the verifier within the case's wall-clock limit, exits with status 0, names the specified solver in system/controlDict, and writes fields after the initial time whose values are all finite. Higher is better; 0 means no case runs. The linear display transform maps 0.0 to 0 and 0.625, the execution success of Foam-Agent with Claude 3.5 Sonnet in CFDLLMBench, to 1000, without capping either end. FoamBench's NMSE diagnostics are reported but not ranked.",
+    "type": "linear_maximize"
+  },
+  "baseline": {
+    "existing_baseline": true,
+    "name": "Foam-Agent (RAG + reviewer) with Claude 3.5 Sonnet, FoamBench Advanced execution success reported in CFDLLMBench (Table 2)",
+    "source": "https://arxiv.org/abs/2509.20374",
+    "score": 0.625,
+    "bottom_line_score": 0.0
+  }
+}

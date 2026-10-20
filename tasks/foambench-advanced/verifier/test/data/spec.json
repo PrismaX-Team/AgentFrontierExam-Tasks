@@ -1,0 +1,100 @@
+{
+  "cases": {
+    "Cavity_LES": {
+      "solver": "pisoFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "10",
+      "reference_wall_seconds": 2.61
+    },
+    "Cavity_SA": {
+      "solver": "pisoFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "10",
+      "reference_wall_seconds": 2.19
+    },
+    "Cavity_geometry_1": {
+      "solver": "pisoFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "10",
+      "reference_wall_seconds": 5.11
+    },
+    "Cylinder_LES": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "2",
+      "reference_wall_seconds": 6.59
+    },
+    "Cylinder_SA": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "2",
+      "reference_wall_seconds": 6.31
+    },
+    "Diamond_Obstacle_KOMEGASST": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "5",
+      "reference_wall_seconds": 52.78
+    },
+    "Diamond_Obstacle_SA": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "5",
+      "reference_wall_seconds": 37.06
+    },
+    "Double_Square_SA": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "5",
+      "reference_wall_seconds": 4.66
+    },
+    "Rectangular_Obstacle_KOMEGASST": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 1020,
+      "reference_final_time": "5",
+      "reference_wall_seconds": 194.98
+    },
+    "Rectangular_Obstacle_SA": {
+      "solver": "pimpleFoam",
+      "wall_clock_limit_seconds": 1020,
+      "reference_final_time": "5",
+      "reference_wall_seconds": 202.27
+    },
+    "counterFlowFlame2D_KE": {
+      "solver": "reactingFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.5",
+      "reference_wall_seconds": 15.41
+    },
+    "counterFlowFlame2D_SA": {
+      "solver": "reactingFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.5",
+      "reference_wall_seconds": 40.75
+    },
+    "nozzleFlow2D_SA": {
+      "solver": "interFoam",
+      "wall_clock_limit_seconds": 1020,
+      "reference_final_time": "1e-05",
+      "reference_wall_seconds": 196.03
+    },
+    "obliqueShock_KE": {
+      "solver": "rhoCentralFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "10",
+      "reference_wall_seconds": 8.72
+    },
+    "obliqueShock_LES": {
+      "solver": "rhoCentralFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "10",
+      "reference_wall_seconds": 7.36
+    },
+    "wedge_SA": {
+      "solver": "rhoCentralFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.2",
+      "reference_wall_seconds": 11.8
+    }
+  }
+}
