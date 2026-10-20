@@ -1,0 +1,12 @@
+{
+  "directional_average": "(kappa_xx+kappa_yy+kappa_zz)/3",
+  "fields": "fc2_supercell/fc3_supercell are integer replication matrices, not force-constant tensors; primitive_matrix is a basis transform; q_point_mesh is an integration setting",
+  "note": "Electronic conduction is excluded. The target is the released finite-temperature calculation, not an experimental total or an infinite-size exact result. See package evidence for source settings and public-data limitations.",
+  "reference_method": "PBE; no non-analytical correction (no-NAC); Wigner transport; single-mode relaxation-time approximation",
+  "research_feedback": "none",
+  "schema_version": "1.0",
+  "structures_count": 103,
+  "target": "directional average of total lattice kappa_P + kappa_C",
+  "temperature_K": 300.0,
+  "units": "W m^-1 K^-1"
+}
