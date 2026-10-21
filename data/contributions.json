@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/Science-Innovation-Exam-Tasks",
-  "updatedAt": "2026-10-21T01:46:51.622797Z",
+  "updatedAt": "2026-10-21T01:58:48.391811Z",
   "proposals": [
     {
       "number": 6,
@@ -426,6 +426,166 @@
   ],
   "pullRequests": [
     {
+      "number": 40,
+      "title": "[task] foambench-pitzdaily",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/40",
+      "author": {
+        "name": "lingyue404",
+        "githubLogin": "lingyue404",
+        "image": "https://avatars.githubusercontent.com/u/32598525?v=4",
+        "githubUrl": "https://github.com/lingyue404"
+      },
+      "kind": "new_task",
+      "state": "open",
+      "gate": "failure",
+      "assignments": [],
+      "updatedAt": "2026-10-21T01:58:40Z"
+    },
+    {
+      "number": 39,
+      "title": "[task] foambench-cavity",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/39",
+      "author": {
+        "name": "lingyue404",
+        "githubLogin": "lingyue404",
+        "image": "https://avatars.githubusercontent.com/u/32598525?v=4",
+        "githubUrl": "https://github.com/lingyue404"
+      },
+      "kind": "new_task",
+      "state": "open",
+      "gate": "failure",
+      "assignments": [],
+      "updatedAt": "2026-10-21T01:58:39Z"
+    },
+    {
+      "number": 38,
+      "title": "[task] mof_adsorption",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/38",
+      "author": {
+        "name": "Zhy-NJU",
+        "githubLogin": "Zhy-NJU",
+        "image": "https://avatars.githubusercontent.com/u/324487898?v=4",
+        "githubUrl": "https://github.com/Zhy-NJU"
+      },
+      "kind": "new_task",
+      "state": "open",
+      "gate": "pending",
+      "assignments": [],
+      "updatedAt": "2026-10-21T01:58:38Z"
+    },
+    {
+      "number": 37,
+      "title": "[task] crystal_stability",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/37",
+      "author": {
+        "name": "Zhy-NJU",
+        "githubLogin": "Zhy-NJU",
+        "image": "https://avatars.githubusercontent.com/u/324487898?v=4",
+        "githubUrl": "https://github.com/Zhy-NJU"
+      },
+      "kind": "new_task",
+      "state": "open",
+      "gate": "pending",
+      "assignments": [],
+      "updatedAt": "2026-10-21T01:58:37Z"
+    },
+    {
+      "number": 36,
+      "title": "[task] thermal_conductivity",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/36",
+      "author": {
+        "name": "Zhy-NJU",
+        "githubLogin": "Zhy-NJU",
+        "image": "https://avatars.githubusercontent.com/u/324487898?v=4",
+        "githubUrl": "https://github.com/Zhy-NJU"
+      },
+      "kind": "new_task",
+      "state": "open",
+      "gate": "pending",
+      "assignments": [],
+      "updatedAt": "2026-10-21T01:58:37Z"
+    },
+    {
+      "number": 35,
+      "title": "[task] foambench-advanced",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/35",
+      "author": {
+        "name": "lingyue404",
+        "githubLogin": "lingyue404",
+        "image": "https://avatars.githubusercontent.com/u/32598525?v=4",
+        "githubUrl": "https://github.com/lingyue404"
+      },
+      "kind": "new_task",
+      "state": "open",
+      "gate": "pending",
+      "assignments": [],
+      "updatedAt": "2026-10-21T01:58:36Z"
+    },
+    {
+      "number": 34,
+      "title": "[task] tm-system-specific-dfa",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/34",
+      "author": {
+        "name": "solin-del",
+        "githubLogin": "solin-del",
+        "image": "https://avatars.githubusercontent.com/u/248100750?v=4",
+        "githubUrl": "https://github.com/solin-del"
+      },
+      "kind": "new_task",
+      "state": "open",
+      "gate": "pending",
+      "assignments": [],
+      "updatedAt": "2026-10-21T01:58:35Z"
+    },
+    {
+      "number": 33,
+      "title": "[task] tm-unseen-ligand-gap",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/33",
+      "author": {
+        "name": "solin-del",
+        "githubLogin": "solin-del",
+        "image": "https://avatars.githubusercontent.com/u/248100750?v=4",
+        "githubUrl": "https://github.com/solin-del"
+      },
+      "kind": "new_task",
+      "state": "open",
+      "gate": "pending",
+      "assignments": [],
+      "updatedAt": "2026-10-21T01:58:34Z"
+    },
+    {
+      "number": 32,
+      "title": "[task] tm-budgeted-spin-discovery",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/32",
+      "author": {
+        "name": "solin-del",
+        "githubLogin": "solin-del",
+        "image": "https://avatars.githubusercontent.com/u/248100750?v=4",
+        "githubUrl": "https://github.com/solin-del"
+      },
+      "kind": "new_task",
+      "state": "open",
+      "gate": "pending",
+      "assignments": [],
+      "updatedAt": "2026-10-21T01:58:34Z"
+    },
+    {
+      "number": 31,
+      "title": "[task] tm-spin-gap-surrogate",
+      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/31",
+      "author": {
+        "name": "solin-del",
+        "githubLogin": "solin-del",
+        "image": "https://avatars.githubusercontent.com/u/248100750?v=4",
+        "githubUrl": "https://github.com/solin-del"
+      },
+      "kind": "new_task",
+      "state": "open",
+      "gate": "pending",
+      "assignments": [],
+      "updatedAt": "2026-10-21T01:58:33Z"
+    },
+    {
       "number": 26,
       "title": "[task] evo_search_budget_allocation",
       "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/26",
@@ -437,7 +597,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-13T03:13:19Z"
     },
@@ -453,7 +613,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-13T03:13:18Z"
     },
@@ -543,7 +703,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
