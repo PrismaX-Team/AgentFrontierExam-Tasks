@@ -17,14 +17,14 @@
     }
   ],
   "metric": {
-    "description": "Macro-average ROC-AUC over three failure modes (poor enrollment, safety, lack of efficacy): for each mode, ROC-AUC of pred_success_prob against the hidden outcome on that mode's test trials (label 1 = success), then the unweighted mean. Higher is better; 0.5 is no skill. The authoritative result is this raw value. The linear display transform maps the constant-prediction bottom line 0.5 to 0 and the published ClinicalReTrial predictor 0.6924 to 1000, without capping either end. Invalid submissions are not ranked.",
+    "description": "Macro-average ROC-AUC over three failure modes (poor enrollment, safety, lack of efficacy): for each mode, ROC-AUC of pred_success_prob against the hidden outcome on that mode's test trials (label 1 = success), then the unweighted mean. Higher is better; 0.5 is no skill. The authoritative result is this raw value. The linear display transform maps the constant-prediction bottom line 0.5 to 0 and the author-reported updated reference 0.80 to 1000, without capping either end. Invalid submissions are not ranked.",
     "type": "linear_maximize"
   },
   "baseline": {
     "existing_baseline": true,
-    "name": "ClinicalReTrial outcome predictor: one LightGBM model per failure mode over BioBERT, MPNN/ADMET, GRAM/ICD and tabular features",
-    "source": "https://github.com/xingsixue123/ClinicalRetrial/tree/c7b70bb8e7f30b4de7e938d07cbb1ff3642e9368/tools/env_simulator",
-    "score": 0.6924389996080497,
+    "name": "Author-reported updated reference confirmed with the maintainer; method and run details not supplied",
+    "source": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/25",
+    "score": 0.8,
     "bottom_line_score": 0.5
   }
 }
