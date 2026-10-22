@@ -7,7 +7,7 @@ class ProtocolError(ValueError):
     pass
 
 def load(path):
-    from isolated_runtime import strict_json
+    from subprocess_runtime import strict_json
     return strict_json(Path(path).read_bytes())
 
 def write(path, value):
