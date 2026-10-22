@@ -1,5 +1,6 @@
 """Replay frozen discovery strategies and write the official result."""
 import argparse
+from functools import partial
 import json
 import sys
 from pathlib import Path
@@ -8,7 +9,7 @@ VERIFIER_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(VERIFIER_ROOT / 'test/run'))
 
 from frozen_graph_contract import ProtocolError, load, p2_replay, result, solution_path, write
-from isolated_runtime import IsolatedSession, SandboxError
+from subprocess_runtime import SubprocessSession, InferenceError
 from science_innovation_exam.verify_context import VerifyContext
 
 
@@ -39,10 +40,17 @@ def main():
     try:
         solution = solution_path(args.submission)
         hidden = load(VERIFIER_ROOT / 'test/data/test.json')
-        values = p2_replay(hidden, solution, context, IsolatedSession)
+        limits = load(args.input / 'protocol.json')['inference_limits']
+        session = partial(SubprocessSession,
+                          timeout=limits['wall_seconds_per_process'],
+                          memory_bytes=limits['address_space_bytes'],
+                          max_line_bytes=limits['json_line_bytes'],
+                          stderr_bytes=limits['stderr_bytes_per_process'],
+                          numerical_threads=limits['numerical_threads'])
+        values = p2_replay(hidden, solution, context, session)
         write_query_log(args.result.parent / 'query_log.jsonl', hidden, context)
         outcome = result(task_id, metric_name, direction, values)
-    except (ProtocolError, SandboxError, ValueError, OSError) as error:
+    except (ProtocolError, InferenceError, ValueError, OSError) as error:
         outcome = result(task_id, metric_name, direction, error=str(error))
     write(args.result, outcome)
 

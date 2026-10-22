@@ -1,15 +1,15 @@
 {
   "version": "1.0",
   "transport": "solution/main.py reads persistent UTF-8 JSON lines and writes exactly one finite JSON object per request. Protocol responses occupy stdout; diagnostics may use stderr.",
-  "execution": "Each final condition uses a fresh process and private chroot as UID/GID 65534. Runtime and solution are read-only; scratch is writable. The trusted scorer, SDK and reference pool stay outside the child filesystem. Network, new processes and namespace access are denied.",
+  "execution": "Each final condition uses a fresh unprivileged Python process with writable temporary scratch. The outer verifier container provides offline execution and total resources. Solution and scorer share the user and filesystem; this trusted-internal runtime does not hide reference files from deliberately inspecting code. Use only the supplied inputs and authorized feedback.",
   "inference_limits": {
     "wall_seconds_per_process": 1800,
     "address_space_bytes": 4294967296,
-    "thread_limit": 64,
     "numerical_threads": 1,
-    "json_line_bytes": 16777216
+    "json_line_bytes": 16777216,
+    "stderr_bytes_per_process": 65536
   },
-  "software": "Offline CPU Python 3.11 with the default numerical libraries. Bundle pure-Python dependencies and model assets inside solution/. The runtime permits threads; forked workers and external executables are unavailable.",
+  "software": "Offline CPU Python 3.11 with the default numerical libraries. Bundle additional pure-Python dependencies and model assets inside solution/. Numerical threads follow inference_limits; the runtime does not impose a separate process or network security boundary inside the offline verifier.",
   "final_inputs": "Each condition sends target-free candidate features, authorized initial labels and accepted query feedback. The reference pool remains under verifier/test/data/.",
   "initialization": {
     "action": "initialize",
