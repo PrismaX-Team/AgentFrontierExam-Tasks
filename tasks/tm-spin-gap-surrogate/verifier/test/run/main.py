@@ -1,6 +1,7 @@
 """Run isolated inference and write the final vertical spin-gap score."""
 import argparse
 import csv
+from functools import partial
 from pathlib import Path
 import sys
 
@@ -8,7 +9,7 @@ VERIFIER_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(VERIFIER_ROOT / "test/run"))
 
 from frozen_graph_contract import ProtocolError, load, result, solution_path, write
-from isolated_runtime import IsolatedSession, SandboxError
+from subprocess_runtime import SubprocessSession, InferenceError
 from p1_scoring import inference
 from science_innovation_exam.verify_context import VerifyContext
 
@@ -20,12 +21,19 @@ def main():
     args = parser.parse_args()
     context = VerifyContext.current()
     try:
+        limits = load(args.input / "protocol.json")["limits"]
+        session_type = partial(
+            SubprocessSession, timeout=limits["wall_seconds"],
+            memory_bytes=limits["address_space_bytes"],
+            max_line_bytes=limits["json_line_bytes"], stderr_bytes=limits["stderr_bytes"],
+            numerical_threads=limits["numerical_threads"],
+        )
         values = inference(
             load(VERIFIER_ROOT / "test/data/test.json"),
             load(VERIFIER_ROOT / "test/data/references.json"),
             solution_path(args.submission),
             context,
-            IsolatedSession,
+            session_type,
         )
         args.result.parent.mkdir(parents=True, exist_ok=True)
         with (args.result.parent / "predictions.csv").open(
@@ -40,7 +48,7 @@ def main():
                 key=lambda row: row["sample_id"],
             ))
         outcome = result("tm-spin-gap-surrogate", "mae_kcal_mol", "minimize", values)
-    except (ProtocolError, SandboxError, ValueError, OSError) as error:
+    except (ProtocolError, InferenceError, ValueError, OSError) as error:
         outcome = result(
             "tm-spin-gap-surrogate", "mae_kcal_mol", "minimize", error=str(error)
         )
