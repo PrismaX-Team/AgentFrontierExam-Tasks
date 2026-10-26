@@ -21,7 +21,7 @@
     {
       "id": "professionalUrl",
       "label": "Academic or professional profile",
-      "required": true,
+      "required": false,
       "max": 2000
     },
     {

@@ -71,6 +71,22 @@
       }
     },
     {
+      "type": "dropdown",
+      "id": "taskLevel",
+      "attributes": {
+        "label": "Task level",
+        "description": "任务等级  \nL1 re-discovers a published finding from existing data · L2 advances an open question with dry work or a few wet experiments · L3 validates an original 0–1 idea in real wet experiments  \nL1 用已有数据重现已发表发现 · L2 干实验或少量湿实验取得可量化进展 · L3 真实湿实验验证原创 0–1 突破",
+        "options": [
+          "L1 · Re-discovery / 成果再发现",
+          "L2 · Research innovation / 求解与创新",
+          "L3 · 0–1 discovery / 原创突破"
+        ]
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
       "type": "input",
       "id": "title",
       "attributes": {
