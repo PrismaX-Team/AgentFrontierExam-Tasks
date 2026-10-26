@@ -4,8 +4,8 @@
   "domain": "biomedicine",
   "task_sources": [
     {
-      "name": "Approved Science Innovation Exam Proposal #5",
-      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/5"
+      "name": "Approved Agent Frontier Exam Proposal #5",
+      "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/5"
     },
     {
       "name": "RCSB PDB structure 3PTB",

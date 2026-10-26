@@ -7,7 +7,7 @@
     {
       "type": "markdown",
       "attributes": {
-        "value": "# Science Innovation Exam Proposal\n\nYou may complete this form in English or Chinese.  \n可使用中文或英文填写此表单。\n\nYour GitHub account identifies the author. The body, links and comments are public. Do not submit private email addresses, sensitive information or materials you cannot publish.  \n作者身份以 GitHub 账号为准。正文、链接和评论均会公开；请勿提交私人邮箱、敏感信息或无权公开的材料。"
+        "value": "# Agent Frontier Exam Proposal\n\nYou may complete this form in English or Chinese.  \n可使用中文或英文填写此表单。\n\nYour GitHub account identifies the author. The body, links and comments are public. Do not submit private email addresses, sensitive information or materials you cannot publish.  \n作者身份以 GitHub 账号为准。正文、链接和评论均会公开；请勿提交私人邮箱、敏感信息或无权公开的材料。"
       }
     },
     {
@@ -314,11 +314,11 @@
         "description": "授权确认",
         "options": [
           {
-            "label": "I confirm that the data, code and other materials I provide have the permissions needed for task construction and evaluation in Science Innovation Exam, and that I have disclosed any attribution, access or redistribution restrictions.  \n我确认所提供的数据、代码及其他材料具有用于 Science Innovation Exam 任务构建与评测的相应权限；如有署名、访问或再分发限制，我已说明。",
+            "label": "I confirm that the data, code and other materials I provide have the permissions needed for task construction and evaluation in Agent Frontier Exam, and that I have disclosed any attribution, access or redistribution restrictions.  \n我确认所提供的数据、代码及其他材料具有用于 Agent Frontier Exam 任务构建与评测的相应权限；如有署名、访问或再分发限制，我已说明。",
             "required": true
           },
           {
-            "label": "If approved, I authorize Science Innovation Exam to use these materials to prepare a public task-repository contribution within the permissions and restrictions stated above.  \n若提案获准，我授权 Science Innovation Exam 在上述权限和限制范围内，使用这些材料整理公开任务仓库贡献。",
+            "label": "If approved, I authorize Agent Frontier Exam to use these materials to prepare a public task-repository contribution within the permissions and restrictions stated above.  \n若提案获准，我授权 Agent Frontier Exam 在上述权限和限制范围内，使用这些材料整理公开任务仓库贡献。",
             "required": true
           }
         ]
