@@ -4,7 +4,7 @@
 
 **A live scientific benchmark for research agents · task contribution repository**
 
-[![Official Site](https://img.shields.io/badge/Official%20Site-Science%20Innovation%20Exam-333399?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/AgentFrontierExam-Tasks/en/)
+[![Official Site](https://img.shields.io/badge/Official%20Site-Agent%20Frontier%20Exam-333399?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/AgentFrontierExam-Tasks/en/)
 [![Contribute](https://img.shields.io/badge/Contribute-Portal%20page-2ea44f?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/AgentFrontierExam-Tasks/en/contribute/)
 
 [简体中文](README.md) | **English**

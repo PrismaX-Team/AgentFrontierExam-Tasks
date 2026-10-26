@@ -4,7 +4,7 @@
 
 **面向研究 Agent 的动态科学基准 · 任务共建仓库**
 
-[![官网](https://img.shields.io/badge/%E5%AE%98%E7%BD%91-Science%20Innovation%20Exam-333399?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/AgentFrontierExam-Tasks/zh/)
+[![官网](https://img.shields.io/badge/%E5%AE%98%E7%BD%91-Agent%20Frontier%20Exam-333399?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/AgentFrontierExam-Tasks/zh/)
 [![共建页面](https://img.shields.io/badge/%E5%85%B1%E5%BB%BA%E9%A1%B5%E9%9D%A2-%E5%8F%82%E4%B8%8E%E5%85%B1%E5%BB%BA-2ea44f?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/AgentFrontierExam-Tasks/zh/contribute/)
 
 **简体中文** | [English](README_EN.md)
