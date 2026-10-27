@@ -1,0 +1,107 @@
+{
+  "instructions": "Clinical trials fail mostly in three ways: they cannot enroll enough patients, the intervention causes unacceptable adverse effects, or it lacks efficacy. Predicting these failures from the protocol before a trial runs would let a flawed protocol be redesigned before patients are screened. Your task is a predictor that, from a trial's protocol record, estimates the probability that the trial is a success rather than a failure in each of these three modes.\n\nThe data come from TrialBench and the ClinicalTrials.gov registry. Public input is under /input, and /input/README.md documents every file and column. For each failure mode m in enrollment, safety and efficacy, /input/m/train.csv.gz holds labelled training trials: label 1 means the trial is a success and label 0 that it failed in that mode, following TrialBench's four failure-reason categories (successful trials, poor enrollment, safety and lack of efficacy). The three train files share the same successful trials, under the same trial_id, and differ in their failed trials; they have 13,771, 9,055 and 9,715 rows. /input/test.csv.gz holds the 4,120 test trials without labels. Every test trial belongs to the test set of one or more modes: a successful trial to all three, a failed trial only to the mode it failed in. Which modes a test trial belongs to is not given. Each row is one protocol: free text (title, summary, description, eligibility criteria with parsed inclusion and exclusion forms, primary outcome, dosage, study-design description), structured design and oversight fields, anticipated enrollment where the registry still lists it, start date, site countries, disease ICD-10 codes and MeSH terms, and intervention names, types, MeSH terms and SMILES strings. Files are gzip-compressed UTF-8 CSV keyed by an opaque trial_id, and registry identifiers inside the text are removed.\n\nSubmit two things. First, results/enrollment.csv, results/safety.csv and results/efficacy.csv, each with the header trial_id,pred_success_prob and exactly one row for each of the 4,120 test trials. pred_success_prob is a finite number in [0, 1]: the predicted probability that the trial is a success rather than a failure in that mode, so higher means more likely to succeed. Templates holding every test trial_id with the value 0.5 are under /input/results. Second, a code/ directory with the prediction pipeline that produced the three files, and code/README.md giving the exact command that regenerates results/ from /input.\n\nFor each mode, ROC-AUC is computed between pred_success_prob and the hidden labels over that mode's test trials only (3,397 for enrollment, 2,268 for safety and 2,441 for efficacy), with label 1 as the positive class and tied predictions sharing their average rank. Predictions for trials outside a mode do not affect that mode. The primary score is the unweighted mean of the three ROC-AUC values; higher is better and 0.5 is no skill. The three per-mode values are also reported. A submission with a missing, duplicated or unknown trial_id, a malformed row, a value that is not a finite number in [0, 1], a file that is not UTF-8 text, a missing or empty code/README.md, or no pipeline source in code/ is invalid and is not ranked. The scorer does not run code/. There is no feedback on test performance before the final score. When all files are complete, send one `test` action as your final submission.",
+  "input": [
+    {
+      "path": "README.md",
+      "format": "Markdown",
+      "description": "File layout, label definition, split and the meaning of every column."
+    },
+    {
+      "path": "enrollment",
+      "format": "directory with train.csv.gz",
+      "description": "Labelled training trials for poor-enrollment failure: 13,771 rows."
+    },
+    {
+      "path": "safety",
+      "format": "directory with train.csv.gz",
+      "description": "Labelled training trials for safety (adverse-effect) failure: 9,055 rows."
+    },
+    {
+      "path": "efficacy",
+      "format": "directory with train.csv.gz",
+      "description": "Labelled training trials for lack-of-efficacy failure: 9,715 rows."
+    },
+    {
+      "path": "test.csv.gz",
+      "format": "gzip-compressed CSV",
+      "description": "The 4,120 test trials of all three modes, pooled, without labels or mode membership."
+    }
+  ],
+  "submission": [
+    {
+      "path": "results/enrollment.csv",
+      "format": "CSV",
+      "description": "trial_id, pred_success_prob for all 4,120 test trials; scored on the enrollment test trials.",
+      "has_template": true
+    },
+    {
+      "path": "results/safety.csv",
+      "format": "CSV",
+      "description": "trial_id, pred_success_prob for all 4,120 test trials; scored on the safety test trials.",
+      "has_template": true
+    },
+    {
+      "path": "results/efficacy.csv",
+      "format": "CSV",
+      "description": "trial_id, pred_success_prob for all 4,120 test trials; scored on the efficacy test trials.",
+      "has_template": true
+    },
+    {
+      "path": "code",
+      "format": "directory",
+      "description": "The prediction pipeline that produced results/, with code/README.md giving the exact command. Checked for presence; not executed by the scorer; subject to audit.",
+      "has_template": false
+    }
+  ],
+  "environment": [
+    {
+      "name": "lightgbm",
+      "version": "4.6.0",
+      "description": "gradient-boosted decision trees; the published baseline uses it"
+    },
+    {
+      "name": "rdkit",
+      "version": "2025.9.1",
+      "description": "cheminformatics for the SMILES strings"
+    },
+    {
+      "name": "transformers",
+      "version": "4.44.0",
+      "description": "pretrained text encoders such as BioBERT; no model weights are pre-installed"
+    },
+    {
+      "name": "tokenizers",
+      "version": "0.19.1",
+      "description": "tokenizers used by transformers"
+    },
+    {
+      "name": "sentence-transformers",
+      "version": "5.1.1",
+      "description": "sentence-embedding models"
+    },
+    {
+      "name": "huggingface-hub",
+      "version": "0.36.2",
+      "description": "downloads pretrained model weights at run time"
+    }
+  ],
+  "requirement": [
+    "Do not download, query or otherwise obtain the outcomes of the trials in this task. Prohibited sources include the TrialBench failure-reason dataset and its mirrors (Zenodo 10.5281/zenodo.15455785), ClinicalTrials.gov and its mirrors including AACT, and any derived dataset or benchmark that contains clinical-trial outcomes, completion status, termination reasons, actual enrollment or reported adverse events. Do not try to re-identify test trials by matching protocol text against public registries. Researching methods, papers, software and pretrained models online is allowed. Network access and final artifacts are subject to audit.",
+    "Fit models only on the data in /input: the labelled train files and, without labels, the test file. Pretrained models that were not trained on trial outcomes may be used.",
+    "Running the command in code/README.md in the task environment must regenerate results/ from /input, up to the floating-point nondeterminism of GPU computation. The scorer does not execute code/; it is subject to audit."
+  ],
+  "limitation": {
+    "cpu": {
+      "cores": 8
+    },
+    "memory": {
+      "gb": 64
+    },
+    "gpu": {
+      "count": 1
+    },
+    "runtime": {
+      "seconds": 28800
+    }
+  }
+}
