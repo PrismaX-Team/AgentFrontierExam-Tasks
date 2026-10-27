@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "transport": "Persistent UTF-8 JSON-lines: solution/main.py reads one request per line and emits exactly one finite JSON response per line. Extra stdout is invalid; stderr may contain diagnostics.",
+  "transport": "UTF-8 JSON-lines: the verifier sends one complete-set select_method request followed by EOF. solution/main.py emits exactly one newline-terminated finite JSON object and exits with code zero. Existing for-line entries remain compatible. Extra stdout is invalid; stderr is bounded diagnostics.",
   "request": {
     "action": "select_method",
     "method_ids": [
@@ -60,12 +60,13 @@
       }
     ]
   },
-  "execution": "Separate UID/GID 65534 private chroot, read-only runtime and solution, writable scratch, no scoring SDK, trusted state, verifier files, network or child processes. CPU Python 3.11; numerical packages are available.",
+  "execution": "Offline unprivileged Python subprocess in the verifier container; frozen solution is read-only and a temporary working directory is writable. Solution and scorer share the same user and filesystem. No root, chroot, UID switch, seccomp or filesystem isolation from reference labels is provided. Intended for trusted internal submissions; answer lookup remains prohibited.",
   "limits": {
     "wall_seconds": 1800,
     "address_space_bytes": 4294967296,
     "numerical_threads": 1,
-    "json_line_bytes": 16777216
+    "json_line_bytes": 16777216,
+    "stderr_bytes": 65536
   },
   "completeness": "Return exactly one allowed method for every final ID. Missing, duplicate, unknown, nonstring IDs and extra fields invalidate the entire submission. Score is record-average absolute error of the trusted selected-method gap against the trusted reference. No mid-run query."
 }
