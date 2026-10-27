@@ -20,20 +20,20 @@ class GovernanceTests(unittest.TestCase):
         g.validate_proposal(row)
         row['body'] = row['body'].replace('### Additional explanation\n\nResearch evidence', '### Additional explanation\n\n_No response_')
         with self.assertRaises(ValueError): g.validate_proposal(row)
-    def test_references_allow_blank_lines_between_links(self):
+    def test_references_allow_links_and_explanatory_text(self):
         row = self.proposal()
         links = '\n\n'.join(f'https://example.org/{i}' for i in range(3))
         base = row['body']
         row['body'] = base + f'\n\n### References / 参考材料\n\n{links}\n'
         g.validate_proposal(row)
-        row['body'] = base + '\n\n### References / 参考材料\n\nhttps://example.org/0\n\nsee the paper above\n'
-        with self.assertRaises(ValueError): g.validate_proposal(row)
+        row['body'] = base + '\n\n### References / 参考材料\n\nDataset: `https://example.org/0`, [paper](https://example.org/1)\n\nDerived model outputs only.\n'
+        g.validate_proposal(row)
     def test_windows_newlines_and_http_links(self):
         row = self.proposal()
         row['body'] = row['body'].replace('https://example.org/profile', 'http://example.org/profile').replace('\n', '\r\n')
         row['body'] += '\r\n\r\n### References\r\n\r\nhttp://example.org/paper\r\n'
         g.validate_proposal(row)
-        row['body'] = self.proposal()['body'] + '\n\n### References\n\nftp://example.org/paper\n'
+        row['body'] = self.proposal()['body'].replace('https://example.org/profile', 'ftp://example.org/profile')
         with self.assertRaises(ValueError): g.validate_proposal(row)
     def test_force_approve_skips_form_checks(self):
         row = self.proposal()
@@ -57,11 +57,11 @@ class GovernanceTests(unittest.TestCase):
         with self.assertRaises(ValueError): g.validate_proposal(row)
 
     def test_rebrand_preserves_legacy_proposals(self):
-        for brand in ('Science Innovation Exam', 'LiveDiscoveryBench'):
+        for brand in ('Agent Frontier Exam', 'Science Innovation Exam', 'LiveDiscoveryBench'):
             for separator in ('  \n', ' / '):
                 with self.subTest(brand=brand, separator=separator):
                     row = self.proposal()
-                    row['body'] = row['body'].replace('Science Innovation Exam', brand).replace('  \n', separator)
+                    row['body'] = row['body'].replace('Agent Frontier Exam', brand).replace('  \n', separator)
                     before = g.digest(row)
                     g.validate_proposal(row)
                     self.assertEqual(before, g.digest(row))
@@ -70,7 +70,7 @@ class GovernanceTests(unittest.TestCase):
 
     def test_rebrand_does_not_accept_other_consent_changes(self):
         row = self.proposal()
-        row['body'] = row['body'].replace('Science Innovation Exam', 'Another Benchmark')
+        row['body'] = row['body'].replace('Agent Frontier Exam', 'Another Benchmark')
         with self.assertRaises(ValueError): g.validate_proposal(row)
 
     def test_current_and_earlier_form_layouts(self):
@@ -89,6 +89,22 @@ class GovernanceTests(unittest.TestCase):
     def test_edit_then_revert_changes_digest(self):
         row = self.proposal(); before = g.digest(row); row['lastEditedAt']='2026-09-08T00:00:00Z'
         self.assertNotEqual(before, g.digest(row))
+    def test_renamed_repository_accepts_existing_proposal_links(self):
+        for repo in g.REPO_NAMES:
+            self.assertEqual(g.proposal_number('Proposal: https://github.com/'+repo+'/discussions/27'), 27)
+
+    def test_rename_preserves_trusted_approval_records(self):
+        row = self.proposal()
+        data = dict(run='1', actor='maintainer', discussion=1, decision='approve', digest=g.digest(row))
+        run = dict(path='.github/workflows/proposal-review.yml', event='workflow_dispatch', head_branch='main', conclusion='success', actor={'login':'maintainer'}, triggering_actor={'login':'maintainer'}, run_attempt=1, created_at='2026-09-08T01:00:00Z', updated_at='2026-09-08T01:00:02Z')
+        for marker in (g.MARKER, *g.LEGACY_MARKERS):
+            row['comments'] = [dict(author={'login':'github-actions[bot]'}, lastEditedAt=None, createdAt='2026-09-08T01:00:01Z', body=marker+json.dumps(data)+' -->')]
+            for repo in (*g.REPO_NAMES, 'other/repo'):
+                g._run_cache.clear()
+                with patch.object(g, 'api', return_value={**run, 'head_repository':{'full_name':repo}}):
+                    self.assertEqual(g.proposal_status(row)[0], 'submitted' if repo == 'other/repo' else 'approved')
+        g._run_cache.clear()
+
     def test_cross_repo_proposal_rejected(self):
         for body in ['Proposal: https://github.com/other/repo/discussions/1', 'Proposal: '+g.ROOT+'/issues/1', 'Proposal: '+g.ROOT+'/discussions/1\nProposal: '+g.ROOT+'/discussions/2']:
             with self.assertRaises(ValueError): g.proposal_number(body)

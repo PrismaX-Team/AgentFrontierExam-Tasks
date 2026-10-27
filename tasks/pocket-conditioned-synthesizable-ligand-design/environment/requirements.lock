@@ -1,0 +1,26 @@
+# Exact CPython 3.11 linux/amd64 wheels downloaded from pypi.org.
+# Hash mode and binary-only resolution fail closed if a release or platform
+# artifact differs from the audited wheel set.
+--require-hashes
+--only-binary=:all:
+
+numpy==2.2.6 \
+    --hash=sha256:ba10f8411898fc418a521833e014a77d3ca01c15b0c6cdcce6a0d2897e6dbbdf
+scipy==1.16.3 \
+    --hash=sha256:0151a0749efeaaab78711c78422d413c583b8cdd2011a3c1d6c794938ee9fdb2
+Pillow==12.3.0 \
+    --hash=sha256:23d27a3e0307ec2244cc51e7287b919aa68d097504ebe19df4e76a98a3eea5bd
+rdkit==2025.9.6 \
+    --hash=sha256:3f4fc084890efb29b51ea4679bb07d28b276b6e73e3381e678a5ba057b4c4222
+gemmi==0.7.4 \
+    --hash=sha256:7ff3f09305f9f7e8c6a4332c8882f3b909b97efc912cd7b376651f4b2e095d42
+meeko==0.8.0 \
+    --hash=sha256:38e73da7f0b11f7f8f0bfb2c481ccd148b8dfb9957522655b5cb0c4f6d68d1d6
+packaging==26.3 \
+    --hash=sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c
+setuptools==84.0.0 \
+    --hash=sha256:51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670
+wheel==0.48.0 \
+    --hash=sha256:3217dcc807155e45db462d7ef2431f5ddda0d7273b700d05a67b271ceb1287ab
+vina==1.2.7 \
+    --hash=sha256:46edb24ad831f586c68bd582f9c0675fb1abf5e49b7e317336b5c1b26949c7de

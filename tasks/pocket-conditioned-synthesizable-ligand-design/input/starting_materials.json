@@ -1,0 +1,439 @@
+{
+  "schema_version": "1.0",
+  "starting_materials": [
+    {
+      "id": "core_trypsin_guanidinobenzoic_acid",
+      "name": "4-guanidinobenzoic acid cation benchmark core",
+      "smiles": "NC(=[NH2+])c1ccc(C(=O)O)cc1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "core_brd4_dimethylisoxazole_acid",
+      "name": "3,5-dimethylisoxazole-4-carboxylic acid benchmark core",
+      "smiles": "Cc1noc(C)c1C(=O)O",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "core_abl_primary_amine",
+      "name": "ABL-oriented primary-amine benchmark core",
+      "smiles": "Cc1ccc(N)cc1Nc1nccc(-c2cccnc2)n1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_aniline",
+      "name": "aniline",
+      "smiles": "Nc1ccccc1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_benzylamine",
+      "name": "benzylamine",
+      "smiles": "NCc1ccccc1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_phenethylamine",
+      "name": "2-phenylethan-1-amine",
+      "smiles": "NCCc1ccccc1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_cyclopropylamine",
+      "name": "cyclopropylamine",
+      "smiles": "NC1CC1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_cyclobutylamine",
+      "name": "cyclobutylamine",
+      "smiles": "NC1CCC1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_cyclohexylamine",
+      "name": "cyclohexylamine",
+      "smiles": "NC1CCCCC1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_p_fluoroaniline",
+      "name": "4-fluoroaniline",
+      "smiles": "Nc1ccc(F)cc1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_m_fluoroaniline",
+      "name": "3-fluoroaniline",
+      "smiles": "Nc1cccc(F)c1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_p_chloroaniline",
+      "name": "4-chloroaniline",
+      "smiles": "Nc1ccc(Cl)cc1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_m_chloroaniline",
+      "name": "3-chloroaniline",
+      "smiles": "Nc1cccc(Cl)c1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_p_methylaniline",
+      "name": "4-methylaniline",
+      "smiles": "Cc1ccc(N)cc1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_p_methoxyaniline",
+      "name": "4-methoxyaniline",
+      "smiles": "COc1ccc(N)cc1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_3_pyridylmethylamine",
+      "name": "pyridin-3-ylmethanamine",
+      "smiles": "NCc1cccnc1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_4_pyridylmethylamine",
+      "name": "pyridin-4-ylmethanamine",
+      "smiles": "NCc1ccncc1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_2_aminopyridine",
+      "name": "pyridin-2-amine",
+      "smiles": "Nc1ccccn1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_3_aminopyridine",
+      "name": "pyridin-3-amine",
+      "smiles": "Nc1cccnc1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_4_aminopyridine",
+      "name": "pyridin-4-amine",
+      "smiles": "Nc1ccncc1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_furfurylamine",
+      "name": "furan-2-ylmethanamine",
+      "smiles": "NCc1ccco1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_thiophenemethylamine",
+      "name": "thiophen-2-ylmethanamine",
+      "smiles": "NCc1cccs1",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "amine_isopropylamine",
+      "name": "propan-2-amine",
+      "smiles": "CC(C)N",
+      "roles": [
+        "primary_amine"
+      ]
+    },
+    {
+      "id": "acid_benzoic_acid",
+      "name": "benzoic acid",
+      "smiles": "O=C(O)c1ccccc1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_p_methylbenzoic_acid",
+      "name": "4-methylbenzoic acid",
+      "smiles": "Cc1ccc(C(=O)O)cc1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_m_methylbenzoic_acid",
+      "name": "3-methylbenzoic acid",
+      "smiles": "Cc1cccc(C(=O)O)c1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_p_fluorobenzoic_acid",
+      "name": "4-fluorobenzoic acid",
+      "smiles": "O=C(O)c1ccc(F)cc1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_m_fluorobenzoic_acid",
+      "name": "3-fluorobenzoic acid",
+      "smiles": "O=C(O)c1cccc(F)c1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_p_chlorobenzoic_acid",
+      "name": "4-chlorobenzoic acid",
+      "smiles": "O=C(O)c1ccc(Cl)cc1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_m_chlorobenzoic_acid",
+      "name": "3-chlorobenzoic acid",
+      "smiles": "O=C(O)c1cccc(Cl)c1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_p_methoxybenzoic_acid",
+      "name": "4-methoxybenzoic acid",
+      "smiles": "COc1ccc(C(=O)O)cc1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_m_methoxybenzoic_acid",
+      "name": "3-methoxybenzoic acid",
+      "smiles": "COc1cccc(C(=O)O)c1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_nicotinic_acid",
+      "name": "pyridine-3-carboxylic acid",
+      "smiles": "O=C(O)c1cccnc1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_isonicotinic_acid",
+      "name": "pyridine-4-carboxylic acid",
+      "smiles": "O=C(O)c1ccncc1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_phenylacetic_acid",
+      "name": "2-phenylacetic acid",
+      "smiles": "O=C(O)Cc1ccccc1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_cyclohexanecarboxylic_acid",
+      "name": "cyclohexane-1-carboxylic acid",
+      "smiles": "O=C(O)C1CCCCC1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_p_dimethylaminobenzoic_acid",
+      "name": "4-(dimethylamino)benzoic acid",
+      "smiles": "CN(C)c1ccc(C(=O)O)cc1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_p_morpholinobenzoic_acid",
+      "name": "4-(morpholin-4-yl)benzoic acid",
+      "smiles": "O=C(O)c1ccc(N2CCOCC2)cc1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_p_piperidinobenzoic_acid",
+      "name": "4-(piperidin-1-yl)benzoic acid",
+      "smiles": "O=C(O)c1ccc(N2CCCCC2)cc1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_p_methylpiperazinobenzoic_acid",
+      "name": "4-(4-methylpiperazin-1-yl)benzoic acid",
+      "smiles": "CN1CCN(c2ccc(C(=O)O)cc2)CC1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_p_methylpiperazinylmethylbenzoic_acid",
+      "name": "4-[(4-methylpiperazin-1-yl)methyl]benzoic acid",
+      "smiles": "CN1CCN(Cc2ccc(C(=O)O)cc2)CC1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_p_trifluoromethylbenzoic_acid",
+      "name": "4-(trifluoromethyl)benzoic acid",
+      "smiles": "O=C(O)c1ccc(C(F)(F)F)cc1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_m_trifluoromethylbenzoic_acid",
+      "name": "3-(trifluoromethyl)benzoic acid",
+      "smiles": "O=C(O)c1cccc(C(F)(F)F)c1",
+      "roles": [
+        "carboxylic_acid"
+      ]
+    },
+    {
+      "id": "acid_o_methylbenzoic_acid",
+      "name": "2-methylbenzoic acid",
+      "smiles": "Cc1ccccc1C(=O)O",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_o_fluorobenzoic_acid",
+      "name": "2-fluorobenzoic acid",
+      "smiles": "O=C(O)c1ccccc1F",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_o_chlorobenzoic_acid",
+      "name": "2-chlorobenzoic acid",
+      "smiles": "O=C(O)c1ccccc1Cl",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_o_methoxybenzoic_acid",
+      "name": "2-methoxybenzoic acid",
+      "smiles": "COc1ccccc1C(=O)O",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_o_trifluoromethylbenzoic_acid",
+      "name": "2-(trifluoromethyl)benzoic acid",
+      "smiles": "O=C(O)c1ccccc1C(F)(F)F",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_2_4_dimethylbenzoic_acid",
+      "name": "2,4-dimethylbenzoic acid",
+      "smiles": "Cc1ccc(C(=O)O)c(C)c1",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_2_5_dimethylbenzoic_acid",
+      "name": "2,5-dimethylbenzoic acid",
+      "smiles": "Cc1ccc(C)c(C(=O)O)c1",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_3_4_dimethylbenzoic_acid",
+      "name": "3,4-dimethylbenzoic acid",
+      "smiles": "Cc1ccc(C(=O)O)cc1C",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_3_5_dimethylbenzoic_acid",
+      "name": "3,5-dimethylbenzoic acid",
+      "smiles": "Cc1cc(C)cc(C(=O)O)c1",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_2_4_difluorobenzoic_acid",
+      "name": "2,4-difluorobenzoic acid",
+      "smiles": "O=C(O)c1ccc(F)cc1F",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_2_5_difluorobenzoic_acid",
+      "name": "2,5-difluorobenzoic acid",
+      "smiles": "O=C(O)c1cc(F)ccc1F",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_3_4_difluorobenzoic_acid",
+      "name": "3,4-difluorobenzoic acid",
+      "smiles": "O=C(O)c1ccc(F)c(F)c1",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_3_5_difluorobenzoic_acid",
+      "name": "3,5-difluorobenzoic acid",
+      "smiles": "O=C(O)c1cc(F)cc(F)c1",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_1_naphthoic_acid",
+      "name": "naphthalene-1-carboxylic acid",
+      "smiles": "O=C(O)c1cccc2ccccc12",
+      "roles": ["carboxylic_acid"]
+    },
+    {
+      "id": "acid_2_naphthoic_acid",
+      "name": "naphthalene-2-carboxylic acid",
+      "smiles": "O=C(O)c1ccc2ccccc2c1",
+      "roles": ["carboxylic_acid"]
+    }
+  ]
+}

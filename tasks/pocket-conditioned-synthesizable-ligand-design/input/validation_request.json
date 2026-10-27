@@ -1,0 +1,47 @@
+[
+  {
+    "schema_version": "1.0",
+    "request_id": "example-property-001",
+    "request_type": "property_evaluation",
+    "target_id": "brd4_3mxf",
+    "candidate_smiles": "Cc1noc(C)c1C(=O)NC1CCC1"
+  },
+  {
+    "schema_version": "1.0",
+    "request_id": "example-route-001",
+    "request_type": "route_validation",
+    "target_id": "brd4_3mxf",
+    "candidate_smiles": "Cc1noc(C)c1C(=O)NC1CCC1",
+    "route": {
+      "schema_version": "1.0",
+      "route_id": "route_example_brd4_001",
+      "target_id": "brd4_3mxf",
+      "candidate_key": "cand_brd4_example_001",
+      "steps": [
+        {
+          "step_id": "step_1",
+          "reaction_template_id": "amide_coupling_v1",
+          "reactants": [
+            {
+              "material_id": "core_brd4_dimethylisoxazole_acid"
+            },
+            {
+              "material_id": "amine_cyclobutylamine"
+            }
+          ],
+          "product_smiles": "Cc1noc(C)c1C(=O)NC1CCC1"
+        }
+      ],
+      "final_product_smiles": "Cc1noc(C)c1C(=O)NC1CCC1"
+    }
+  },
+  {
+    "schema_version": "1.0",
+    "request_id": "example-docking-001",
+    "request_type": "docking_evaluation",
+    "target_id": "brd4_3mxf",
+    "candidate_smiles": "Cc1noc(C)c1C(=O)NC1CCC1",
+    "property_evaluation_id": "example-property-evaluation-id",
+    "route_evaluation_id": "example-route-evaluation-id"
+  }
+]

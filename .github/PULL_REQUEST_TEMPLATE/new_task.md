@@ -1,6 +1,6 @@
 ## New task / 新增任务
 
-Proposal: https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/NUMBER
+Proposal: https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/NUMBER
 
 Use your own currently approved Proposal. Editing the approved content invalidates approval. Title the PR `[task] <task-id>` from a branch such as `task/<task-id>`. / 必须关联本人当前有效获批的 Proposal；修改获批内容须重新批准。PR 标题写 `[task] <task-id>`，分支名建议 `task/<task-id>`。
 
@@ -10,8 +10,8 @@ Describe the task package, how the verifier was validated, and the scientific sc
 
 ### Checklist / 自查
 
-- [ ] I read the [task contract](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/contribute/task-contract/) and this PR changes only `tasks/<task-id>/`. / 已读任务合同；本 PR 只改动 `tasks/<task-id>/`。
-- [ ] `python3 contributor/build-sie-task-package/scripts/check_package.py tasks/<task-id>` passes. / 本地结构检查通过。
+- [ ] I read the [task contract](https://prismax-team.github.io/AgentFrontierExam-Tasks/en/contribute/task-contract/) and this PR changes only `tasks/<task-id>/`. / 已读任务合同；本 PR 只改动 `tasks/<task-id>/`。
+- [ ] `python3 contributor/build-afe-task-package/scripts/check_package.py tasks/<task-id>` passes. / 本地结构检查通过。
 - [ ] The package is English; `input/` holds only agent-visible data; validation and test are self-contained. / 任务包为英文；`input/` 只含 Agent 可见数据；validation 与 test 自包含。
 - [ ] All committed material is redistributable. / 提交的材料均可再分发。
 

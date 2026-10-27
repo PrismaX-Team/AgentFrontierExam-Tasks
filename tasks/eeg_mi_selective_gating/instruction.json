@@ -1,0 +1,31 @@
+{
+  "instructions": "A motor-imagery brain-computer interface (BCI) decodes imagined movements from EEG. A decoder calibrated on one day works worse on a later day, by an amount that varies unpredictably between people. A safe interface therefore acts only on trials it is likely to decode correctly and abstains on the rest. Your task is a gating policy that keeps the error rate among the trials it acts on at or below the target risk r = 0.20 on a later recording session, while acting on as many trials as possible.\n\nThere are 10 episodes: 5 EEG classifier architectures on 2 datasets, one with 2 classes and 54 subjects and one with 4 classes and 9 subjects. Each architecture was trained separately for each subject on that subject's first session, giving 315 frozen subject-specific models that cannot be changed. For every subject you receive the classifier's softmax probabilities on a held-out calibration split of session 1, with the true labels, and on test trials from session 2, recorded on a different day, without labels. Calibration and test data are not exchangeable, so the finite-sample guarantees of conformal prediction and related risk-control methods no longer apply.\n\nPublic input is under /input/data. `episodes.csv` lists each episode's anonymised dataset and classifier identifiers, number of classes K, number of subjects and trials per subject. `<episode_id>/calibration.csv` has the columns subject_id, trial_id, label, p0 ... p{K-1}; `<episode_id>/test.csv` has subject_id, trial_id, p0 ... p{K-1}. Labels are class indices from 0 to K-1. Each probability row is the frozen softmax output and sums to 1 within 1e-6; some values are exactly 0 or 1. The five episodes of a dataset contain the same subjects, but subject identifiers are assigned independently in each episode, and rows are shuffled within each subject in both files; trial_id numbers each subject's rows 0, 1, 2, ... in shuffled order, so neither row order nor trial_id carries temporal information. All test rows are given at once; the unlabelled session-2 probabilities may be used freely, including across subjects and episodes.\n\nSubmit two files. `decisions.csv` has the header episode_id,subject_id,trial_id,prediction and exactly one row for each of the 50,220 test trials, with identifiers copied exactly from test.csv. `prediction` is a class index from 0 to K-1 to act on that trial with that label, or -1 to abstain. `gate.py` is a single Python file, using only software in the task image, that produced decisions.csv when run as `python3 gate.py /input/data decisions.csv`. Both files have templates at the same relative path under /input; the template gate.py abstains on every trial.\n\nFor each subject, with N test trials, A trials acted on and W wrong predictions among them, the subject score is A/N if A > 0 and W <= 0.20 * A, and 0 otherwise. Subject scores are averaged within each episode, and the primary score is the unweighted mean over the 10 episodes; higher is better. Abstaining everywhere scores 0, and acting on every trial with the top class violates the target for most subjects. Reported but not ranked, each averaged the same way: the same quantity at r = 0.10, 0.15, ..., 0.50; decision rate A/N; decisive accuracy (A - W)/A, taken as 0 when A = 0; and F0.5 with decisive accuracy as precision and (A - W)/N as recall. A submission with a file that is not UTF-8 text, a missing, duplicated or unknown test trial, a malformed row, a prediction outside -1 and 0 ... K-1, or a missing, empty or syntactically invalid gate.py is invalid and is not ranked. There is no feedback on session-2 performance before the final score. When both files are complete, send one `test` action as your final submission.",
+  "input": [
+    {
+      "path": "data",
+      "format": "directory of CSV files",
+      "description": "episodes.csv and, for each of the 10 episodes, calibration.csv (session-1 softmax probabilities with labels) and test.csv (session-2 softmax probabilities without labels): 16,740 calibration and 50,220 test trials."
+    }
+  ],
+  "submission": [
+    {
+      "path": "decisions.csv",
+      "format": "CSV",
+      "description": "One row per test trial, 50,220 rows: episode_id, subject_id, trial_id, prediction (a class index to act on, or -1 to abstain). Carries the score.",
+      "has_template": true
+    },
+    {
+      "path": "gate.py",
+      "format": "Python source",
+      "description": "The single Python file that produced decisions.csv. Checked for presence and valid syntax; not executed by the scorer; subject to audit.",
+      "has_template": true
+    }
+  ],
+  "environment": [],
+  "requirement": [
+    "Session-2 labels may not be obtained by any route. Use session 2 only through the unlabelled probabilities in /input/data, and do not try to match released subjects or rows to the public recordings.",
+    "Do not use the internet to access, download or query BCI Competition IV dataset 2a, the OpenBMI motor-imagery dataset (GigaDB 100542), their mirrors, or any derived data that contains the true labels of this task's test trials. Researching methods, papers and software online is allowed. Network access and final artifacts are subject to audit.",
+    "gate.py must compute the decisions from /input/data and reproduce the submitted decisions.csv exactly when run offline in the task environment as `python3 gate.py /input/data decisions.csv`, reading no data other than /input/data. The scorer does not execute it; it is subject to audit."
+  ],
+  "limitation": {}
+}

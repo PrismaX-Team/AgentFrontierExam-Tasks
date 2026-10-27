@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check a five-part Science Innovation Exam task package.
+"""Check a five-part Agent Frontier Exam task package.
 
 Prefers the installed framework loader (the same path as `sie check`).
 If that import is unavailable, applies the same structural rules with the
@@ -180,7 +180,7 @@ def check(root: Path) -> dict:
 
 
 def main(argv=None) -> int:
-    parser = argparse.ArgumentParser(description="Check a five-part SIE task package")
+    parser = argparse.ArgumentParser(description="Check a five-part AFE task package")
     parser.add_argument("task", type=Path)
     args = parser.parse_args(argv)
     try:

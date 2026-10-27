@@ -7,13 +7,13 @@
     {
       "type": "markdown",
       "attributes": {
-        "value": "# Science Innovation Exam Proposal\n\nYou may complete this form in English or Chinese.  \n可使用中文或英文填写此表单。\n\nYour GitHub account identifies the author. The body, links and comments are public. Do not submit private email addresses, sensitive information or materials you cannot publish.  \n作者身份以 GitHub 账号为准。正文、链接和评论均会公开；请勿提交私人邮箱、敏感信息或无权公开的材料。"
+        "value": "# Agent Frontier Exam Proposal\n\nYou may complete this form in English or Chinese.  \n可使用中文或英文填写此表单。\n\nYour GitHub account identifies the author. The body, links and comments are public. Do not submit private email addresses, sensitive information or materials you cannot publish.  \n作者身份以 GitHub 账号为准。正文、链接和评论均会公开；请勿提交私人邮箱、敏感信息或无权公开的材料。"
       }
     },
     {
       "type": "markdown",
       "attributes": {
-        "value": "## 01 Contributor information<br>\n贡献者信息\n\nYour GitHub identity and professional background.  \n确认 GitHub 身份并提供专业背景。"
+        "value": "## 01 Proposing team<br>\n命题团队\n\nThe team proposing this question and its research background.  \n命题团队信息及与本题相关的研究背景。"
       }
     },
     {
@@ -21,8 +21,8 @@
       "id": "fullName",
       "attributes": {
         "label": "Name",
-        "description": "姓名  \n用于贡献署名的姓名",
-        "placeholder": "Your name for contribution credit"
+        "description": "姓名  \n用于命题署名的姓名",
+        "placeholder": "Your name for proposal credit"
       },
       "validations": {
         "required": true
@@ -42,26 +42,14 @@
     },
     {
       "type": "input",
-      "id": "position",
+      "id": "researchArea",
       "attributes": {
-        "label": "Position",
-        "description": "职位  \n例如：博士生、研究员或研究工程师",
-        "placeholder": "For example: PhD student or research engineer"
+        "label": "Research area",
+        "description": "研究方向  \n本题所属的具体研究方向，例如：蛋白热稳定性设计、钙钛矿光伏材料",
+        "placeholder": "For example: protein thermostability design or perovskite photovoltaics"
       },
       "validations": {
         "required": false
-      }
-    },
-    {
-      "type": "input",
-      "id": "professionalUrl",
-      "attributes": {
-        "label": "Academic or professional profile",
-        "description": "学术或职业主页  \nhttp(s):// 学术或职业主页",
-        "placeholder": "http(s):// — profile or ORCID"
-      },
-      "validations": {
-        "required": true
       }
     },
     {
@@ -80,6 +68,22 @@
       "type": "markdown",
       "attributes": {
         "value": "## 02 Scientific question<br>\n科学问题\n\nEvidence that the question is important, unresolved and has measurable headroom.  \n说明问题为何重要、为何仍未解决，以及可衡量的前沿空间。"
+      }
+    },
+    {
+      "type": "dropdown",
+      "id": "taskLevel",
+      "attributes": {
+        "label": "Task level",
+        "description": "任务等级  \nL1 re-discovers a published finding from existing data · L2 advances an open question with dry work or a few wet experiments · L3 validates an original 0–1 idea in real wet experiments  \nL1 用已有数据重现已发表发现 · L2 干实验或少量湿实验取得可量化进展 · L3 真实湿实验验证原创 0–1 突破",
+        "options": [
+          "L1 · Re-discovery / 成果再发现",
+          "L2 · Research innovation / 求解与创新",
+          "L3 · 0–1 discovery / 原创突破"
+        ]
+      },
+      "validations": {
+        "required": true
       }
     },
     {
@@ -300,7 +304,7 @@
       "attributes": {
         "label": "References",
         "description": "参考材料",
-        "placeholder": "Optional: up to 20 http or https links, one per line.\n选填：最多 20 条 http 或 https 链接，每行一条。"
+        "placeholder": "Optional: links, citations and explanatory text.\n选填：链接、文献引用及说明文字。"
       },
       "validations": {
         "required": false
@@ -326,11 +330,11 @@
         "description": "授权确认",
         "options": [
           {
-            "label": "I confirm that the data, code and other materials I provide have the permissions needed for task construction and evaluation in Science Innovation Exam, and that I have disclosed any attribution, access or redistribution restrictions.  \n我确认所提供的数据、代码及其他材料具有用于 Science Innovation Exam 任务构建与评测的相应权限；如有署名、访问或再分发限制，我已说明。",
+            "label": "I confirm that the data, code and other materials I provide have the permissions needed for task construction and evaluation in Agent Frontier Exam, and that I have disclosed any attribution, access or redistribution restrictions.  \n我确认所提供的数据、代码及其他材料具有用于 Agent Frontier Exam 任务构建与评测的相应权限；如有署名、访问或再分发限制，我已说明。",
             "required": true
           },
           {
-            "label": "If approved, I authorize Science Innovation Exam to use these materials to prepare a public task-repository contribution within the permissions and restrictions stated above.  \n若提案获准，我授权 Science Innovation Exam 在上述权限和限制范围内，使用这些材料整理公开任务仓库贡献。",
+            "label": "If approved, I authorize Agent Frontier Exam to use these materials to prepare a public task-repository contribution within the permissions and restrictions stated above.  \n若提案获准，我授权 Agent Frontier Exam 在上述权限和限制范围内，使用这些材料整理公开任务仓库贡献。",
             "required": true
           }
         ]
