@@ -1,0 +1,1 @@
+target_id,rank,candidate_key,canonical_smiles,reported_qed,reported_clogp,reported_vina_affinity_kcal_mol,route_id,pose_id,property_evaluation_id,route_evaluation_id,docking_evaluation_id

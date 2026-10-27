@@ -1,0 +1,30 @@
+{
+  "id": "eeg_mi_selective_gating",
+  "title": "Risk-controlled selective gating for cross-session motor-imagery BCI",
+  "domain": "brain-computer interfaces / neural engineering",
+  "task_sources": [
+    {
+      "name": "Conformal-BCI: conformal gating of frozen motor-imagery EEG decoders (construction prototype)",
+      "url": "https://github.com/xingsixue123/Conformal-BCI/tree/c70b6066de7a313c35f67dee0a1d2ef7667711b5"
+    },
+    {
+      "name": "BCI Competition IV dataset 2a, Graz University of Technology (Brunner, Leeb, Müller-Putz, Schlögl, Pfurtscheller)",
+      "url": "https://www.bbci.de/competition/iv/"
+    },
+    {
+      "name": "Lee et al. 2019, EEG dataset and OpenBMI toolbox for three BCI paradigms (GigaDB 100542, CC0)",
+      "url": "https://doi.org/10.5524/100542"
+    }
+  ],
+  "metric": {
+    "description": "Coverage at target risk r = 0.20, macro-averaged: for each subject, the fraction of session-2 test trials the submission acts on, or 0 if more than 20% of the acted-on trials are wrong; averaged over subjects within each of the 10 episodes, then unweighted over episodes. Higher is better; abstaining everywhere scores 0. The authoritative result is this raw value. The linear display transform maps the always-decide bottom line 0.0833 to 0 and the THR conformal gate (alpha = 0.1) 0.1527 to 1000, without capping either end. Invalid submissions are not ranked.",
+    "type": "linear_maximize"
+  },
+  "baseline": {
+    "existing_baseline": true,
+    "name": "THR conformal gate, alpha = 0.1, calibrated on session 1 (acts on singleton or empty prediction sets)",
+    "source": "https://github.com/xingsixue123/Conformal-BCI/blob/c70b6066de7a313c35f67dee0a1d2ef7667711b5/code/conformal/cp_utils.py",
+    "score": 0.15274691358024692,
+    "bottom_line_score": 0.08333333333333333
+  }
+}

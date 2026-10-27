@@ -1,27 +1,27 @@
 <div align="center">
 
-# Science Innovation Exam · Tasks
+# Agent Frontier Exam · Tasks
 
 **A live scientific benchmark for research agents · task contribution repository**
 
-[![Official Site](https://img.shields.io/badge/Official%20Site-Science%20Innovation%20Exam-333399?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/)
-[![Contribute](https://img.shields.io/badge/Contribute-Portal%20page-2ea44f?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/contribute/)
+[![Official Site](https://img.shields.io/badge/Official%20Site-Agent%20Frontier%20Exam-333399?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/AgentFrontierExam-Tasks/en/)
+[![Contribute](https://img.shields.io/badge/Contribute-Portal%20page-2ea44f?logo=googlechrome&logoColor=white)](https://prismax-team.github.io/AgentFrontierExam-Tasks/en/contribute/)
 
 [简体中文](README.md) | **English**
 
-[What is SIE](#-what-is-science-innovation-exam) · [How to contribute](#-how-to-contribute) · [Task package](#-task-package) · [Repository map](#%EF%B8%8F-repository-map) · [Community](#-contributor-community)
+[What is AFE](#-what-is-agent-frontier-exam) · [How to contribute](#-how-to-contribute) · [Task package](#-task-package) · [Repository map](#%EF%B8%8F-repository-map) · [Community](#-contributor-community)
 
 </div>
 
 ---
 
-Science Innovation Exam (SIE) evaluates whether research agents can independently investigate **real, unresolved frontier scientific problems** in an open environment, propose and validate improvements, and make measurable progress.
+Agent Frontier Exam (AFE) evaluates whether research agents can independently investigate **real, unresolved frontier scientific problems** in an open environment, propose and validate improvements, and make measurable progress.
 
-This repository is the **task contribution entry point** for SIE: task Proposals are discussed and reviewed here in public, task packages enter the benchmark through pull requests, and review records live directly on GitHub. One GitHub account lets you submit, review and be credited.
+This repository is the **task contribution entry point** for AFE: task Proposals are discussed and reviewed here in public, task packages enter the benchmark through pull requests, and review records live directly on GitHub. One GitHub account lets you submit, review and be credited.
 
-## 🔬 What is Science Innovation Exam
+## 🔬 What is Agent Frontier Exam
 
-Most benchmarks measure what a model **knows**; SIE measures what an agent can **do** when the scientific question has no known answer yet. Every task comes from a real research problem that is still moving. The agent receives data, an environment and a scoring contract, not a solution path.
+Most benchmarks measure what a model **knows**; AFE measures what an agent can **do** when the scientific question has no known answer yet. Every task comes from a real research problem that is still moving. The agent receives data, an environment and a scoring contract, not a solution path.
 
 <table>
 <tr>
@@ -38,11 +38,11 @@ Most benchmarks measure what a model **knows**; SIE measures what an agent can *
 </tr>
 </table>
 
-Scientific standards and task examples are on the [official portal](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/).
+Scientific standards and task examples are on the [official portal](https://prismax-team.github.io/AgentFrontierExam-Tasks/en/).
 
 ## 🚀 How to contribute
 
-A task enters SIE in two steps: a public **Proposal** reviewed by a domain expert, then a **task PR** reviewed by a domain expert and a technical expert. Everything happens on GitHub, and progress is mirrored on the [portal's contribution board](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/contribute/#contribution-activity).
+A task enters AFE in two steps: a public **Proposal** reviewed by a domain expert, then a **task PR** reviewed by a domain expert and a technical expert. Everything happens on GitHub, and progress is mirrored on the [portal's contribution board](https://prismax-team.github.io/AgentFrontierExam-Tasks/en/contribute/#contribution-activity).
 
 ```mermaid
 flowchart LR
@@ -66,15 +66,15 @@ flowchart LR
 
 | Step | What you do | Where |
 | --- | --- | --- |
-| 1. Propose a task | Describe the scientific question, data sources, metric and permissions | [Submit Proposal](https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/new?category=proposals) |
-| 2. Build the package | Fork the repository, copy `tasks/_template/` or let an AI coding agent build it with the skill, run the local structural check | [Contributing guide](CONTRIBUTING_EN.md) · [Task contract](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/contribute/task-contract/) |
+| 1. Propose a task | Describe the scientific question, data sources, metric and permissions | [Submit Proposal](https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/new?category=proposals) |
+| 2. Build the package | Fork the repository, copy `tasks/_template/` or let an AI coding agent build it with the skill, run the local structural check | [Contributing guide](CONTRIBUTING_EN.md) · [Task contract](https://prismax-team.github.io/AgentFrontierExam-Tasks/en/contribute/task-contract/) |
 | 3. Open the PR | Open a PR from your fork against `main` with the `Proposal:` line in the body; wait for the maintainer label and dual review | [PR template](.github/PULL_REQUEST_TEMPLATE/new_task.md) |
 
 PRs are classified by **what they change**; a maintainer confirms exactly one type label. Until then the Contribution gate stays pending rather than failed.
 
 | Purpose | Label | Required body line |
 | --- | --- | --- |
-| New task | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/NUMBER` |
+| New task | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/NUMBER` |
 | Task fix | `type:task-fix` | `Task: EXISTING_TASK_ID` |
 | Repository maintenance | `type:maintenance` | Describe the scope; no Proposal needed |
 
@@ -101,7 +101,7 @@ tasks/<task-id>/
 - Both verifier entries are required and must run offline and deterministically; the old `verifier/run/main.py` is obsolete.
 - Build history, baseline implementations and review reports stay outside the package. The framework supplies the shared run-local `VerifyContext`; this repository contains no evaluation runtime.
 
-Field-by-field explanations with an annotated full example are on the portal's [task contract page](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/contribute/task-contract/); the working copy of the field rules is [`contributor/build-sie-task-package/task-contract.md`](contributor/build-sie-task-package/task-contract.md).
+Field-by-field explanations with an annotated full example are on the portal's [task contract page](https://prismax-team.github.io/AgentFrontierExam-Tasks/en/contribute/task-contract/); the working copy of the field rules is [`contributor/build-afe-task-package/task-contract.md`](contributor/build-afe-task-package/task-contract.md).
 
 ## 🗂️ Repository map
 
@@ -109,7 +109,7 @@ Field-by-field explanations with an annotated full example are on the portal's [
 | --- | --- |
 | [`tasks/`](tasks/) | Merged, official task packages, one directory per task |
 | [`tasks/_template/`](tasks/_template/) | Structurally valid empty package; copy it and replace the placeholders |
-| [`contributor/build-sie-task-package/`](contributor/build-sie-task-package/) | Skill for AI coding agents (Cursor, Codex, Claude Code): contract notes, schemas, Containerfile example and the local checker |
+| [`contributor/build-afe-task-package/`](contributor/build-afe-task-package/) | Skill for AI coding agents (Cursor, Codex, Claude Code): contract notes, schemas, Containerfile example and the local checker |
 | [`.github/workflows/`](.github/workflows/) | Actions for structure validation, contribution governance and Proposal review; they check format and governance rules only and never run task code |
 | [`.github/scripts/`](.github/scripts/) | Trusted policy scripts used by the Actions, with tests |
 | [`.github/PULL_REQUEST_TEMPLATE/`](.github/PULL_REQUEST_TEMPLATE/) | PR templates for new task, task fix and maintenance |
@@ -119,17 +119,17 @@ Field-by-field explanations with an annotated full example are on the portal's [
 
 ## 📮 Get involved
 
-- Have a task in mind: [submit a Proposal](https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/new?category=proposals)
+- Have a task in mind: [submit a Proposal](https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/new?category=proposals)
 - Proposal already approved: read [CONTRIBUTING_EN.md](CONTRIBUTING_EN.md) and open the task PR
-- Learn about the benchmark: [portal](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/) · [contribute page](https://prismax-team.github.io/LiveDiscoveryBench-Tasks/en/contribute/)
+- Learn about the benchmark: [portal](https://prismax-team.github.io/AgentFrontierExam-Tasks/en/) · [contribute page](https://prismax-team.github.io/AgentFrontierExam-Tasks/en/contribute/)
 - Problems with or fixes for an existing task: open a `type:task-fix` PR or comment on the task's Proposal thread
 
 The repository, Proposals, PRs and review records are all public. Commit only redistributable material.
 
 ## 💬 Contributor community
 
-Scan the code to join the **SIE contributor WeChat group** and discuss task ideas, task-package building and review questions with maintainers and other contributors.
+Scan the code to join the **AFE contributor WeChat group** and discuss task ideas, task-package building and review questions with maintainers and other contributors.
 
-<p align="center"><img src="community/wechat-group.jpg" alt="WeChat QR code for the SIE contributor group" width="280"></p>
+<p align="center"><img src="community/wechat-group.jpg" alt="WeChat QR code for the AFE contributor group" width="280"></p>
 
 WeChat group codes expire periodically. If the code no longer works, email **vaporhugz@gmail.com** and we will send you the current invitation.

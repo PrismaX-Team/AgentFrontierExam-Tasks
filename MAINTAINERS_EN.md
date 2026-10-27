@@ -10,7 +10,7 @@ Proposals arrive as Discussions in the Proposals category. GitHub accounts ident
 
 A maintainer other than the author runs **Proposal review** on `main`, supplying the Discussion number, the decision and a public reason (20–5000 characters). The Action checks permission and records the actor, decision, exact content fingerprint and run link. Labels display status only and are not approval evidence. Editing approved content, including reverting an edit, requires renewed approval. The original author then opens the task PR; there is no website binding step.
 
-**Force** applies only when the decision is `approve`. It skips form-field checks. Permission, the ban on self-approval, category, an open proposal and the public reason still apply. The decision comment states that form checks were skipped. A professional profile and each reference line may be either `http://` or `https://`. Form parsing converts Windows newlines before reading fields.
+**Force** applies only when the decision is `approve`. It skips form-field checks. Permission, the ban on self-approval, category, an open proposal and the public reason still apply. The decision comment states that form checks were skipped. A professional profile must be one `http://` or `https://` URL; references may contain links, citations and explanatory text without a per-line format requirement. Form parsing converts Windows newlines before reading fields.
 
 Always use **Run workflow** for a new decision. **Re-run jobs** is rejected, even for the original reviewer; after a failure, check the current proposal and start a new dispatch. Re-running a previously successful decision invalidates that run as approval evidence.
 
@@ -18,7 +18,7 @@ Always use **Run workflow** for a new decision. **Re-run jobs** is rejected, eve
 
 | Purpose | Label | Required body line |
 | --- | --- | --- |
-| [New task](.github/PULL_REQUEST_TEMPLATE/new_task.md) | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/NUMBER` |
+| [New task](.github/PULL_REQUEST_TEMPLATE/new_task.md) | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/NUMBER` |
 | [Task fix](.github/PULL_REQUEST_TEMPLATE/task_fix.md) | `type:task-fix` | `Task: EXISTING_TASK_ID` |
 | [Maintenance](.github/PULL_REQUEST_TEMPLATE/maintenance.md) | `type:maintenance` | Describe the scope |
 
@@ -55,7 +55,7 @@ Acceptance-only Discussions and PRs must start with `[ACCEPTANCE]` and carry the
 
 ## Contract sync
 
-`contributor/build-sie-task-package/` (skill, schemas, `check_package.py`) and `tasks/_template/` are copied from the framework repository. When the task contract changes, update both together with `.github/scripts/task_structure.py` in one commit.
+`contributor/build-afe-task-package/` (skill, schemas, `check_package.py`) and `tasks/_template/` are copied from the framework repository. When the task contract changes, update both together with `.github/scripts/task_structure.py` in one commit.
 
 ```sh
 python3 -I .github/scripts/test_task_structure.py

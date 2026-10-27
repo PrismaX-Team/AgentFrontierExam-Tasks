@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "reaction_templates": [
+    {
+      "id": "amide_coupling_v1",
+      "name": "Primary-amine amidation of a carboxylic acid",
+      "reaction_smarts": "[C:1](=[O:2])[O;H1:3].[N;H2;!$(N-[C,S,P]=[O,S,N]):4]>>[C:1](=[O:2])[N:4]",
+      "reactant_roles": [
+        "carboxylic_acid",
+        "primary_amine"
+      ],
+      "max_unique_products": 1,
+      "scientific_scope": "Task-authored graph transformation for a nominal activated carboxylic-acid/primary-amine coupling. It deliberately removes the acid hydroxyl atom. Passing replay does not predict reagents, conditions, chemoselectivity outside the allowlist, yield, purification, safety, or experimental success."
+    }
+  ]
+}
