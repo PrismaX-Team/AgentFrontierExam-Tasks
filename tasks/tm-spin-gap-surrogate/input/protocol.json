@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "transport": "Persistent UTF-8 JSON-lines: solution/main.py reads one request per line and emits exactly one finite JSON response per line. Extra stdout is invalid; stderr may contain diagnostics.",
+  "transport": "UTF-8 JSON-lines: the verifier sends one complete-set request followed by EOF. solution/main.py emits exactly one newline-terminated finite JSON response and exits. Existing for-line persistent entries remain compatible. Extra stdout is invalid; stderr is bounded diagnostics.",
   "request": {
     "action": "predict",
     "records": "All final records with sample_id, group_id, atomic_symbols, coordinates_angstrom, total_charge, low_spin_multiplicity, high_spin_multiplicity; no target or ground-state label."
@@ -13,12 +13,13 @@
       }
     ]
   },
-  "execution": "Separate UID/GID 65534 private chroot, read-only runtime and solution, writable scratch, no scoring SDK, trusted state, verifier files, network or child processes. CPU Python 3.11; numerical packages are available.",
+  "execution": "Offline unprivileged Python subprocess in the verifier container; read-only frozen solution and writable temporary working directory. The interface supplies structures but no references. The solution shares the scorer filesystem/user; no chroot, separate UID, seccomp or label-access isolation is promised. Intended for trusted internal submissions. CPU Python 3.11; operator supplies the numerical runtime.",
   "limits": {
     "wall_seconds": 1800,
     "address_space_bytes": 4294967296,
     "numerical_threads": 1,
-    "json_line_bytes": 16777216
+    "json_line_bytes": 16777216,
+    "stderr_bytes": 65536
   },
   "completeness": "Predict all 103 final IDs exactly once. Missing, duplicate, unknown IDs and nonfinite/boolean values invalidate the submission. Record MAE is primary; formula-group summaries are diagnostics."
 }

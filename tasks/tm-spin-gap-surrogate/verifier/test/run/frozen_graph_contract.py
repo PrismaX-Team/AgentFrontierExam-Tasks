@@ -10,7 +10,7 @@ class ProtocolError(ValueError):
 
 def load(path):
     """Read strict JSON, rejecting duplicate keys and nonfinite constants."""
-    from isolated_runtime import strict_json
+    from subprocess_runtime import strict_json
 
     return strict_json(Path(path).read_bytes())
 
