@@ -8,7 +8,7 @@ class ProtocolError(ValueError):
     pass
 
 def load(path):
-    from isolated_runtime import strict_json
+    from subprocess_runtime import strict_json
     return strict_json(Path(path).read_bytes())
 
 def write(path, value):
@@ -109,7 +109,7 @@ def p2_replay(hidden, solution, context, session_type):
         ):
             raise ProtocolError('trusted initial state integrity failure')
         state_key = 'spin_discovery_v1:test:' + instance['instance_id']
-        # A fresh process, filesystem and strategy memory for every condition.
+        # A fresh process, scratch directory and strategy memory for every condition.
         with session_type(solution) as session:
             initialization = dict(
                 action='initialize',
