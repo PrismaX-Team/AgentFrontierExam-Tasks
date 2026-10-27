@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/AgentFrontierExam-Tasks",
-  "updatedAt": "2026-10-27T07:03:51.167106Z",
+  "updatedAt": "2026-10-27T07:58:13.135899Z",
   "proposals": [
     {
       "number": 6,
@@ -581,7 +581,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:33Z"
     },
@@ -597,7 +597,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
@@ -617,10 +617,10 @@
             "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
             "githubUrl": "https://github.com/vaporhug"
           },
-          "approved": false
+          "approved": true
         }
       ],
-      "updatedAt": "2026-10-21T08:15:52Z"
+      "updatedAt": "2026-10-27T07:58:19Z"
     },
     {
       "number": 25,
@@ -634,7 +634,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
@@ -654,10 +654,10 @@
             "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
             "githubUrl": "https://github.com/vaporhug"
           },
-          "approved": false
+          "approved": true
         }
       ],
-      "updatedAt": "2026-10-21T08:15:34Z"
+      "updatedAt": "2026-10-27T07:58:10Z"
     },
     {
       "number": 24,
@@ -745,7 +745,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
