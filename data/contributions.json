@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/AgentFrontierExam-Tasks",
-  "updatedAt": "2026-10-27T08:01:24.857037Z",
+  "updatedAt": "2026-10-27T08:04:43.773051Z",
   "proposals": [
     {
       "number": 6,
@@ -485,7 +485,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:37Z"
     },
@@ -501,7 +501,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:37Z"
     },
@@ -517,7 +517,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:36Z"
     },
@@ -533,7 +533,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:35Z"
     },
@@ -549,7 +549,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:34Z"
     },
@@ -565,7 +565,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:34Z"
     },
@@ -581,7 +581,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:33Z"
     },
@@ -597,7 +597,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "success",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
@@ -620,7 +620,7 @@
           "approved": true
         }
       ],
-      "updatedAt": "2026-10-27T07:58:19Z"
+      "updatedAt": "2026-10-27T08:04:21Z"
     },
     {
       "number": 25,
@@ -633,7 +633,7 @@
         "githubUrl": "https://github.com/xingsixue123"
       },
       "kind": "new_task",
-      "state": "open",
+      "state": "merged",
       "gate": "success",
       "assignments": [
         {
@@ -657,7 +657,7 @@
           "approved": true
         }
       ],
-      "updatedAt": "2026-10-27T07:58:10Z"
+      "updatedAt": "2026-10-27T08:02:36Z"
     },
     {
       "number": 24,
@@ -745,7 +745,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
@@ -772,6 +772,35 @@
     }
   ],
   "tasks": [
+    {
+      "id": "clinical_trial_failure_prediction",
+      "title": "Clinical Trial Protocols Failure Prediction",
+      "domain": "biomedicine",
+      "source": "pull_request",
+      "pullRequest": 25,
+      "authors": [
+        {
+          "name": "xingsixue123",
+          "githubLogin": "xingsixue123",
+          "image": "https://avatars.githubusercontent.com/u/99207361?v=4",
+          "githubUrl": "https://github.com/xingsixue123"
+        }
+      ],
+      "reviewers": [
+        {
+          "name": "xiaojuncheng87-sys",
+          "githubLogin": "xiaojuncheng87-sys",
+          "image": "https://avatars.githubusercontent.com/u/239080471?v=4",
+          "githubUrl": "https://github.com/xiaojuncheng87-sys"
+        },
+        {
+          "name": "vaporhug",
+          "githubLogin": "vaporhug",
+          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
+          "githubUrl": "https://github.com/vaporhug"
+        }
+      ]
+    },
     {
       "id": "eeg_mi_selective_gating",
       "title": "Risk-controlled selective gating for cross-session motor-imagery BCI",
