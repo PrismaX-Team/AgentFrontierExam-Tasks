@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/AgentFrontierExam-Tasks",
-  "updatedAt": "2026-10-27T08:04:43.773051Z",
+  "updatedAt": "2026-10-27T08:06:26.395692Z",
   "proposals": [
     {
       "number": 6,
@@ -485,7 +485,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:37Z"
     },
@@ -501,7 +501,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:37Z"
     },
@@ -517,7 +517,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:36Z"
     },
@@ -533,7 +533,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:35Z"
     },
@@ -549,7 +549,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:34Z"
     },
@@ -565,7 +565,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:34Z"
     },
@@ -581,7 +581,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:33Z"
     },
@@ -596,8 +596,8 @@
         "githubUrl": "https://github.com/xingsixue123"
       },
       "kind": "new_task",
-      "state": "open",
-      "gate": "pending",
+      "state": "merged",
+      "gate": "success",
       "assignments": [
         {
           "role": "domain",
@@ -620,7 +620,7 @@
           "approved": true
         }
       ],
-      "updatedAt": "2026-10-27T08:04:21Z"
+      "updatedAt": "2026-10-27T08:06:41Z"
     },
     {
       "number": 25,
