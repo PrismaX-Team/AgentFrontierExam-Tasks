@@ -1,0 +1,16 @@
+{
+  "count": 215488,
+  "direction": "maximize",
+  "id_column": "material_id",
+  "invalid_score": 0.0,
+  "label_file": "test/data/labels.csv",
+  "label_max_bytes": 33554432,
+  "label_sha256": "defc68c874f94bee1c1411b73f51c233c31ac9863ea8442e275a1b61609ea77e",
+  "metric": "stability_f1",
+  "nonnegative": false,
+  "prediction_column": "e_form_eV_per_atom",
+  "schema_version": "1.0",
+  "submission_max_bytes": 33554432,
+  "task_id": "crystal_stability",
+  "unit": null
+}
