@@ -1,14 +1,14 @@
 ---
-name: build-afe-task-package
+name: build-task-package
 description: >-
-  Builds and checks a Agent Frontier Exam five-part task package from an
-  approved proposal and contributor materials. Use when the user @-mentions
-  this skill, asks to prepare a formal AFE task package, fill the task-package
-  template, explain the task contract, or run local package checks.
+  Builds and checks a five-part task package from an approved proposal and
+  contributor materials. Use when the user @-mentions this skill, asks to
+  prepare a formal task package, fill the task-package template, explain the
+  task contract, or run local package checks.
 disable-model-invocation: true
 ---
 
-# Build a Agent Frontier Exam task package
+# Build a task package
 
 `contract_revision`: 2026-09-17
 
@@ -21,11 +21,11 @@ especially the verifier (the scoring program).
 On load, read every sibling file in this skill before touching the workspace.
 Do not search the rest of the repository for a second copy of the rules.
 
-In this repository, the Chinese file
-[`任务包合同.md`](../../../任务包合同.md) is the package-contract
-authority. `task-contract.md` is the English working copy used when this
-skill is loaded alone. If they disagree, follow the Chinese file and update
-this skill in the same change.
+The Chinese contract lives on the portal's
+[task contract page](https://prismax-team.github.io/AgentFrontierExam-Tasks/zh/contribute/task-contract/),
+which explains every field with an annotated example. `task-contract.md` is the
+English working copy used when this skill is loaded alone. If they disagree,
+follow the portal page and update this skill in the same change.
 
 | File | What it is |
 |---|---|
