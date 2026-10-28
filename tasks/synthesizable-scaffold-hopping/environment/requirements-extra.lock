@@ -1,0 +1,8 @@
+# Additional wheels only. NumPy/SciPy/Pillow are pinned and checked in SIE base.
+rdkit==2025.9.6 --hash=sha256:3f4fc084890efb29b51ea4679bb07d28b276b6e73e3381e678a5ba057b4c4222
+gemmi==0.7.4 --hash=sha256:7ff3f09305f9f7e8c6a4332c8882f3b909b97efc912cd7b376651f4b2e095d42
+meeko==0.8.0 --hash=sha256:38e73da7f0b11f7f8f0bfb2c481ccd148b8dfb9957522655b5cb0c4f6d68d1d6
+vina==1.2.7 --hash=sha256:46edb24ad831f586c68bd582f9c0675fb1abf5e49b7e317336b5c1b26949c7de
+packaging==25.0 --hash=sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484
+setuptools==80.9.0 --hash=sha256:062d34222ad13e0cc312a4c02d73f059e86a4acbfbdea8f8f76b28c99f306922
+wheel==0.45.1 --hash=sha256:708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248

@@ -1,0 +1,13 @@
+ARG SIE_BASE_IMAGE
+FROM ${SIE_BASE_IMAGE}
+USER root
+# The operator must enable build.network=default for this pinned PyPI build.
+# Runtime validation/test are offline. No binary wheel payload is redistributed
+# in this task repository. Preserve upstream notices in the resulting image.
+RUN python3 -c "import sys,platform,importlib.metadata as m; assert sys.version_info[:2]==(3,11); assert platform.machine()=='x86_64'; assert m.version('numpy')=='2.3.2'; assert m.version('scipy')=='1.17.1'; assert m.version('pillow')=='12.3.0'"
+COPY requirements-extra.lock /tmp/scaffold-requirements-extra.lock
+RUN python3 -m pip install --no-cache-dir --only-binary=:all: --require-hashes --no-deps -r /tmp/scaffold-requirements-extra.lock
+RUN python3 -m pip check
+RUN python3 -c "import rdkit,meeko,vina,gemmi; assert rdkit.__version__=='2025.09.6'; assert meeko.__version__=='0.8.0'; assert vina.__version__=='1.2.7'"
+# VerifyContext is injected by SIE, never replaced by a task-local shim.
+USER 65532:65532
