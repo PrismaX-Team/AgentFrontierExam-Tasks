@@ -1,0 +1,38 @@
+{
+  "id": "tm-system-specific-dfa",
+  "title": "DFA Selection from 116 PBE0 Density Channels on Generated VSS Complexes",
+  "domain": "computational_chemistry",
+  "task_sources": [
+    {
+      "name": "Submitted Proposal 5",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/17"
+    },
+    {
+      "name": "Duan et al., archived VSS method table, v2",
+      "url": "https://doi.org/10.5281/zenodo.7350958"
+    },
+    {
+      "name": "Garrison and Kulik, documented 116-channel HFX density data, v1",
+      "url": "https://doi.org/10.5281/zenodo.17468690"
+    },
+    {
+      "name": "Pinned HFX feature-generation notebook",
+      "url": "https://github.com/hjkgrp/hfx_rec/tree/7bd4e453513449be1e34c064e61a601528ba4bc9"
+    },
+    {
+      "name": "Duan et al., source scientific methods",
+      "url": "https://doi.org/10.1038/s43588-022-00384-0"
+    }
+  ],
+  "metric": {
+    "description": "Mean absolute error of the selected-method gap against the fixed reference, in kcal/mol; lower is better.",
+    "type": "linear_minimize"
+  },
+  "baseline": {
+    "existing_baseline": true,
+    "name": "Training-CV-selected documented116 density mean/std ExtraTrees",
+    "source": "https://github.com/solin-del/LiveDiscoveryBench-Tasks/tree/d0f73389cf7099a94e70645348edbdf65a7b6267/baselines/tm-system-specific-dfa",
+    "score": 2.6460461241067943,
+    "bottom_line_score": 3.163990678933186
+  }
+}
