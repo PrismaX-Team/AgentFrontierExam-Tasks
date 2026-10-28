@@ -75,15 +75,20 @@
       "id": "taskLevel",
       "attributes": {
         "label": "Task level",
-        "description": "任务等级  \nL1 用已有数据重现已发表结论，无湿实验、无专家验证  \nL2 面向未发布的阶段性结果，干实验或 1–3 天短湿实验，形成可集成案例  \nL3 面向未解决的前沿问题，原创假设经真实湿实验或数周至数月验证",
         "options": [
-          "L1 · 科学重发现",
-          "L2 · 创新性科学发现",
-          "L3 · 原创性科学突破"
+          "L1 · 科学重发现（Re-discovery）",
+          "L2 · 创新性科学发现（Innovation）",
+          "L3 · 原创性科学突破（0–1 Discovery）"
         ]
       },
       "validations": {
         "required": true
+      }
+    },
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "<details>\n<summary>L1 科学重发现（Re-discovery） · 无需湿实验与专家单点验证</summary>\n\n对专项要解决的重要科学问题进行锚定，基于已有科学数据，在隐藏原始研究结论的条件下，考察科学智能体独立重现已发表研究中的关键结论的能力。\n\n</details>\n\n<details>\n<summary>L2 创新性科学发现（Innovation） · 短周期取得可量化进展（1–3 天）</summary>\n\n面向专项锚定的重要科学问题，对未发布的阶段性发现结果，借助智能体完成研究方案设计、干实验、模拟或者快速小型、少量的湿实验，并进行适当优化，形成专项内部可集成案例。\n\n</details>\n\n<details>\n<summary>L3 原创性科学突破（0–1 Discovery） · 真实湿实验或长周期验证（大于 1 周乃至数月）</summary>\n\n面向尚未解决、具有高科学价值的前沿问题，自主形成原创性科学假设或研究方法，通过真实实验验证取得 0–1 科学突破。\n\n</details>"
       }
     },
     {
