@@ -1,0 +1,26 @@
+{
+  "id": "evo_search_budget_allocation",
+  "title": "Budget-constrained trajectory allocation for LLM evolutionary search",
+  "domain": "stochastic sequential decision-making / experimental design",
+  "task_sources": [
+    {
+      "name": "Compute Allocation for Self-Evolving LLMs: From Depth-Breadth to Multi-Armed Bandits (construction prototype: trajectories and allocation protocol)",
+      "url": "https://arxiv.org/abs/2605.29268"
+    },
+    {
+      "name": "self-evolving-allocation: the published allocators (MIT)",
+      "url": "https://github.com/keruiwu/self-evolving-allocation/tree/ae7b5da1db39c0fd826adda7893c99d5bda5ac1b"
+    }
+  ],
+  "metric": {
+    "description": "Mean best fitness reached under a 512-iteration budget: for each of 41 hidden configurations, the mean over policy seeds 1-30 of the best running-best fitness observed in 512 pulls across 10 recorded branches, then the unweighted mean over configurations. Fitness is normalised so that 1.0 is the AlphaEvolve reference construction and can exceed 1. Higher is better. The authoritative result is this raw value. The linear display transform maps uniform-random allocation 0.8523 to 0 and UCB1 0.8709 to 1000, without capping either end. Invalid submissions are not ranked.",
+    "type": "linear_maximize"
+  },
+  "baseline": {
+    "existing_baseline": true,
+    "name": "UCB1 allocator, c = sqrt(2)",
+    "source": "https://github.com/keruiwu/self-evolving-allocation/blob/ae7b5da1db39c0fd826adda7893c99d5bda5ac1b/base/policies.py",
+    "score": 0.8708775690922439,
+    "bottom_line_score": 0.8522942492599358
+  }
+}

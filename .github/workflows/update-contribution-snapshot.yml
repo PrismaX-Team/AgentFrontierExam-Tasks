@@ -75,7 +75,7 @@ jobs:
           path: data
       - name: Save public data in this repository
         run: |
-          git config user.name "Science Innovation Exam Data Sync"
+          git config user.name "Agent Frontier Exam Data Sync"
           git config user.email pages@users.noreply.github.com
           git add data/contributions.json
           if ! git diff --cached --quiet; then

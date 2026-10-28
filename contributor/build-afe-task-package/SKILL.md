@@ -1,14 +1,14 @@
 ---
-name: build-sie-task-package
+name: build-afe-task-package
 description: >-
-  Builds and checks a Science Innovation Exam five-part task package from an
+  Builds and checks a Agent Frontier Exam five-part task package from an
   approved proposal and contributor materials. Use when the user @-mentions
-  this skill, asks to prepare a formal SIE task package, fill the task-package
+  this skill, asks to prepare a formal AFE task package, fill the task-package
   template, explain the task contract, or run local package checks.
 disable-model-invocation: true
 ---
 
-# Build a Science Innovation Exam task package
+# Build a Agent Frontier Exam task package
 
 `contract_revision`: 2026-09-17
 

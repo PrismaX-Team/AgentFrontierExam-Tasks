@@ -2,12 +2,12 @@
 
 `contract_revision`: 2026-09-15
 
-Science Innovation Exam (SIE) measures whether a research agent can investigate
+Agent Frontier Exam (AFE) measures whether a research agent can investigate
 and improve an unsolved scientific problem. A research agent is an AI that can
 look things up, write and run code, read results, and try again. The exam does
 not ask the agent to guess a planted answer or replay a fixed workflow.
 
-The product name is Science Innovation Exam. Older names
+The product name is Agent Frontier Exam. Older names
 (LiveDiscoveryBench, LiveSciResearchBench) are only historical path names.
 
 ## Four Live meanings

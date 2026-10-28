@@ -18,7 +18,7 @@ Always use **Run workflow** for a new decision. **Re-run jobs** is rejected, eve
 
 | Purpose | Label | Required body line |
 | --- | --- | --- |
-| [New task](.github/PULL_REQUEST_TEMPLATE/new_task.md) | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/NUMBER` |
+| [New task](.github/PULL_REQUEST_TEMPLATE/new_task.md) | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/NUMBER` |
 | [Task fix](.github/PULL_REQUEST_TEMPLATE/task_fix.md) | `type:task-fix` | `Task: EXISTING_TASK_ID` |
 | [Maintenance](.github/PULL_REQUEST_TEMPLATE/maintenance.md) | `type:maintenance` | Describe the scope |
 
@@ -55,7 +55,7 @@ Acceptance-only Discussions and PRs must start with `[ACCEPTANCE]` and carry the
 
 ## Contract sync
 
-`contributor/build-sie-task-package/` (skill, schemas, `check_package.py`) and `tasks/_template/` are copied from the framework repository. When the task contract changes, update both together with `.github/scripts/task_structure.py` in one commit.
+`contributor/build-afe-task-package/` (skill, schemas, `check_package.py`) and `tasks/_template/` are copied from the framework repository. When the task contract changes, update both together with `.github/scripts/task_structure.py` in one commit.
 
 ```sh
 python3 -I .github/scripts/test_task_structure.py
