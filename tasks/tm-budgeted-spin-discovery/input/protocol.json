@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "transport": "solution/main.py reads persistent UTF-8 JSON lines and writes exactly one finite JSON object per request. Protocol responses occupy stdout; diagnostics may use stderr.",
+  "execution": "Each final condition uses a fresh unprivileged Python process with writable temporary scratch. The outer verifier container provides offline execution and total resources. Solution and scorer share the user and filesystem; this trusted-internal runtime does not hide reference files from deliberately inspecting code. Use only the supplied inputs and authorized feedback.",
+  "inference_limits": {
+    "wall_seconds_per_process": 1800,
+    "address_space_bytes": 4294967296,
+    "numerical_threads": 1,
+    "json_line_bytes": 16777216,
+    "stderr_bytes_per_process": 65536
+  },
+  "software": "Offline CPU Python 3.11 with the default numerical libraries. Bundle additional pure-Python dependencies and model assets inside solution/. Numerical threads follow inference_limits; the runtime does not impose a separate process or network security boundary inside the offline verifier.",
+  "final_inputs": "Each condition sends target-free candidate features, authorized initial labels and accepted query feedback. The reference pool remains under verifier/test/data/.",
+  "initialization": {
+    "action": "initialize",
+    "seed": "fixed integer",
+    "query_budget": 100,
+    "candidates": "list of target-free candidate records",
+    "initial_labels": "50 authorized candidate_id/gap_kcal_mol records"
+  },
+  "initialization_response": {
+    "status": "ready"
+  },
+  "choose_request": {
+    "action": "choose",
+    "remaining": "integer",
+    "feedback": "null initially; previous authorized query response thereafter"
+  },
+  "choose_response": {
+    "candidate_id": "candidate string, or null for normal early stop"
+  },
+  "development_request": {
+    "candidate_id": "one development candidate string"
+  },
+  "query_response": {
+    "status": "ok",
+    "candidate_id": "selected ID",
+    "gap_kcal_mol": "finite signed kcal/mol value",
+    "remaining": "new-query budget left",
+    "cached": "boolean"
+  },
+  "development_accepted_request_limit": 1000,
+  "final_selection_attempt_limit": 1000,
+  "scoring": "Mean unique discoveries satisfying abs(gap)<5 over ten initial conditions on one final candidate pool disjoint from development. Initial labels and cache hits contribute zero discoveries; cached queries spend zero new-query budget. The strict threshold excludes both -5 and +5.",
+  "curve_diagnostic": "For each condition, sum D(q) for q=1..100 divided by 100. After normal early stopping, carry forward the number of discoveries already confirmed.",
+  "first_hit_diagnostic": "First new query with a hit; report budget+1=101 if none."
+}
