@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/AgentFrontierExam-Tasks",
-  "updatedAt": "2026-10-28T02:52:09.068769Z",
+  "updatedAt": "2026-10-28T06:12:20.994802Z",
   "proposals": [
     {
       "number": 6,
@@ -565,7 +565,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:22Z"
     },
@@ -581,7 +581,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:16Z"
     },
@@ -731,7 +731,7 @@
           "approved": true
         }
       ],
-      "updatedAt": "2026-10-13T04:41:56Z"
+      "updatedAt": "2026-10-28T06:11:19Z"
     },
     {
       "number": 8,
@@ -745,7 +745,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
@@ -755,7 +755,7 @@
             "image": "https://avatars.githubusercontent.com/u/37626451?v=4",
             "githubUrl": "https://github.com/DrugD"
           },
-          "approved": false
+          "approved": true
         },
         {
           "role": "technical",
@@ -768,7 +768,7 @@
           "approved": true
         }
       ],
-      "updatedAt": "2026-10-19T03:12:49Z"
+      "updatedAt": "2026-10-28T06:11:57Z"
     }
   ],
   "tasks": [
