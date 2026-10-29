@@ -1,0 +1,11 @@
+# The runner supplies its Python 3.11 operator image. Build context: environment/.
+ARG SIE_BASE_IMAGE
+FROM ${SIE_BASE_IMAGE}
+USER root
+COPY wheelhouse/ /opt/sie-offline-build/wheelhouse/
+COPY wheel_manifest.json dependency_validation.json native_library_validation.json offline_resolution_validation.json requirements-bootstrap.lock requirements-research.lock assemble_wheels.py install_research_environment.py /opt/sie-offline-build/
+RUN python3 /opt/sie-offline-build/install_research_environment.py --source /opt/sie-offline-build --prefix /opt/sie-research \
+    && rm -rf /opt/sie-offline-build
+# Keep the operator Python and PATH intact for the framework SDK and verifiers.
+# Research programs invoke /opt/sie-research/bin/python explicitly.
+USER 65532:65532
