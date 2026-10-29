@@ -2,7 +2,7 @@
 
 ## Scientific target and fields
 
-Predict 300 K total lattice thermal conductivity: particle plus coherence contributions to Wigner transport in the single-mode relaxation-time approximation. Use the scalar average of the xx, yy and zz tensor components, in W m^-1 K^-1. Electronic conductivity is excluded. The target follows frozen PBE calculations without non-analytical corrections (NAC); it is not experimental conductivity or an infinite-size exact result.
+Predict 300 K total lattice thermal conductivity: particle plus coherence contributions to Wigner transport in the single-mode relaxation-time approximation. Use the scalar average of the xx, yy and zz tensor components, in W m^-1 K^-1. Electronic conductivity is excluded. The target follows frozen PBE calculations without non-analytical corrections (NAC), including natural-abundance isotope scattering and the upstream boundary mean free path of 1e6 micrometres (1 m); it is not experimental conductivity or an infinite-size exact result.
 
 The 103 geometries cover 37 rocksalt, 33 zincblende and 33 wurtzite binary crystals. `structures.jsonl.gz` is gzip JSON Lines. Each record contains:
 
@@ -29,7 +29,7 @@ An actionable research route is:
 1. Construct a pymatgen `Structure` from the full lattice, species and Cartesian positions. Evaluate energy/forces/stress and optionally relax with the allowed model.
 2. Construct phono3py atoms using the same geometry and primitive transformation. FC3 uses `supercell_matrix`; FC2 can use a different `phonon_supercell_matrix`. Generate both displacement sets and supply separate forces when these cells differ.
 3. Generate second- and third-order force constants, check finiteness and acoustic behavior, and investigate unstable modes. Acoustic sum rules, displacement choices, convergence control and force-constant corrections are possible research directions.
-4. Solve phonons on the required mesh, using 300 K, `nac_params=None`, and Wigner transport. In phono3py 3.30.0 the API spelling is `transport_type="MS-SMM19"`, with `is_LBTE=False`. Read `kappa_TOT_RTA`, including particle and coherence terms; average the first three tensor components.
+4. Solve phonons on the required mesh, using 300 K, `nac_params=None`, and Wigner transport. In phono3py 3.30.0 use `transport_type="MS-SMM19"`, `is_LBTE=False`, `is_isotope=True`, `mass_variances=None`, and `boundary_mfp=1e6` (in micrometres). Leaving `mass_variances=None` uses the natural-abundance isotope mass variances from the bundled Phonopy isotope table. Read `kappa_TOT_RTA`, including particle and coherence terms; average the first three tensor components.
 5. Produce a complete CSV. Record failures and approximations without using hidden references to choose them.
 
 The reference settings can be computationally demanding. No full-dataset research runtime has been measured; numerical approximations and resource allocations must be disclosed. Public data and anonymous IDs cannot prove absence of model contamination. Published reference conductivities, reference force constants and per-sample model predictions are prohibited research resources.
