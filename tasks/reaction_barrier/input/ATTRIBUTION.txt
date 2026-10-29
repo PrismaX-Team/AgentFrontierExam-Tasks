@@ -1,0 +1,27 @@
+TRANSITION1X DATA ATTRIBUTION
+
+Dataset: Transition1x, Figshare version 4.
+DOI: https://doi.org/10.6084/m9.figshare.19614657.v4
+Source file: Transition1x.h5, file ID 36035789.
+Depositor: Mathias Schreiner.
+Dataset paper authors: Mathias Schreiner, Arghya Bhowmik, Tejs Vegge,
+Jonas Busk and Ole Winther.
+Paper: Transition1x - a dataset for building generalizable reactive machine
+learning potentials. Scientific Data 9, 779 (2022).
+https://doi.org/10.1038/s41597-022-01870-w
+
+The Figshare v4 record declares the dataset license to be MIT:
+https://opensource.org/licenses/MIT
+Retain this source attribution and the accompanying MIT permission/warranty
+notice when redistributing the extracted data. The source record provides no
+separate dataset copyright line; no replacement holder or year is asserted here.
+The associated paper has its own publication license.
+
+Changes in this task: extract the released reactant and product geometries;
+retain transition-state geometry and all three electronic energies for training;
+retain their atom order and official train/val/test membership; replace original
+record identifiers with task identifiers; derive the forward electronic barrier
+from released transition-state energy minus reactant energy; separate validation
+and test labels and transition-state structures from agent-visible inputs.
+No geometry relaxation, energy recalculation or numerical clipping is applied.
+Original authors do not endorse this task or its submitted methods.

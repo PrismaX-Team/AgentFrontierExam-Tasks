@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Reaction barrier development payload, not the framework action envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "predictions_csv"
+  ],
+  "properties": {
+    "predictions_csv": {
+      "type": "string",
+      "maxLength": 2097152,
+      "description": "UTF-8 CSV text with reaction_id,forward_barrier_eV; cover every development ID exactly once. Numbers must be finite decimal values in eV."
+    }
+  }
+}
