@@ -1,0 +1,7 @@
+# Exact CPython 3.11 manylinux x86_64 wheels and SHA-256 digests published by PyPI.
+numpy==2.4.6 \
+    --hash=sha256:89cd468399cfd2504718f0ba50e410dca55a170b61a02ad92bb18c8a65186e93
+Pillow==12.3.0 \
+    --hash=sha256:23d27a3e0307ec2244cc51e7287b919aa68d097504ebe19df4e76a98a3eea5bd
+rdkit==2025.9.6 \
+    --hash=sha256:3f4fc084890efb29b51ea4679bb07d28b276b6e73e3381e678a5ba057b4c4222
