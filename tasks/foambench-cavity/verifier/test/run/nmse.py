@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""FoamBench NMSE diagnostic (reported only; never part of the primary score).
+"""FoamBench NMSE used for the physical-success primary score.
 
 The functions between the markers are copied verbatim from FoamBench
 (https://github.com/NLR-Theseus/cfdllmbench, FoamBench/nmse_report.py and

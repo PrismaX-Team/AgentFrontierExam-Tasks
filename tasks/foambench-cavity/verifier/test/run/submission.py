@@ -41,7 +41,7 @@ def check_path(case_id: str, path: str) -> PurePosixPath:
     if not isinstance(path, str) or not path or len(path) > MAX_PATH_LENGTH:
         raise SubmissionError(f"{case_id}: file paths must be 1-{MAX_PATH_LENGTH} characters")
     parts = path.split("/")
-    if len(parts) > MAX_PATH_DEPTH or not all(SEGMENT.match(part) for part in parts):
+    if len(parts) > MAX_PATH_DEPTH or not all(SEGMENT.fullmatch(part) for part in parts):
         raise SubmissionError(
             f"{case_id}: {path!r} is not a relative path of at most {MAX_PATH_DEPTH} segments "
             "made of letters, digits, '.', '_', '+' and '-' (no '.', '..' or leading '.')"
@@ -60,6 +60,10 @@ def check_case(case_id: str, files: object) -> dict[str, str]:
         paths.add(check_path(case_id, key))
         if not isinstance(value, str):
             raise SubmissionError(f"{case_id}: content of {key!r} must be a string")
+        try:
+            value.encode("utf-8")
+        except UnicodeEncodeError as error:
+            raise SubmissionError(f"{case_id}: content of {key!r} cannot be encoded as UTF-8") from error
     for path in paths:
         for parent in path.parents:
             if parent in paths:
@@ -79,7 +83,7 @@ def load_submission(path: Path, case_ids: list[str]) -> dict[str, dict[str, str]
         raise SubmissionError("cases.json is not UTF-8") from error
     try:
         value = json.loads(text, object_pairs_hook=reject_duplicates, parse_constant=reject_constant)
-    except json.JSONDecodeError as error:
+    except (json.JSONDecodeError, RecursionError) as error:
         raise SubmissionError(f"cases.json is not valid JSON: {error}") from error
     if not isinstance(value, dict):
         raise SubmissionError("cases.json must be a JSON object keyed by case id")
