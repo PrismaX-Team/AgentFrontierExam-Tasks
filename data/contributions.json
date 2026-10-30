@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/AgentFrontierExam-Tasks",
-  "updatedAt": "2026-10-30T15:59:22.189144Z",
+  "updatedAt": "2026-10-30T16:01:08.409736Z",
   "proposals": [
     {
       "number": 6,
@@ -501,7 +501,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:38Z"
     },
@@ -517,7 +517,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:37Z"
     },
@@ -533,7 +533,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-29T09:14:46Z"
     },
@@ -549,7 +549,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-30T15:57:09Z"
     },
@@ -565,7 +565,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:32Z"
     },
@@ -581,7 +581,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:28Z"
     },
@@ -597,7 +597,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:22Z"
     },
@@ -613,7 +613,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "failure",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:16Z"
     },
@@ -777,7 +777,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "pending",
+      "gate": "success",
       "assignments": [
         {
           "role": "domain",
