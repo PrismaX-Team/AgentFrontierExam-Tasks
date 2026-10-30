@@ -1,8 +1,29 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/AgentFrontierExam-Tasks",
-  "updatedAt": "2026-10-30T19:29:53.955330Z",
+  "updatedAt": "2026-10-30T22:07:04.207185Z",
   "proposals": [
+    {
+      "number": 29,
+      "title": "Physically accurate OpenFOAM case generation for dam-break flow with an obstacle (FoamBench damBreakWithObstacle)",
+      "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/29",
+      "author": {
+        "name": "lingyue404",
+        "githubLogin": "lingyue404",
+        "image": "https://avatars.githubusercontent.com/u/32598525?u=3b530e26dad7c2bd69e464d6d5ef5297868454e2&v=4",
+        "githubUrl": "https://github.com/lingyue404"
+      },
+      "reviewers": [
+        {
+          "name": "vaporhug",
+          "githubLogin": "vaporhug",
+          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
+          "githubUrl": "https://github.com/vaporhug"
+        }
+      ],
+      "status": "needs_reapproval",
+      "updatedAt": "2026-10-30T22:06:54Z"
+    },
     {
       "number": 6,
       "title": "保留关键药效团与口袋相互作用的可合成骨架跃迁",
@@ -86,27 +107,6 @@
       ],
       "status": "approved",
       "updatedAt": "2026-10-13T02:47:58Z"
-    },
-    {
-      "number": 29,
-      "title": "Executable OpenFOAM case generation for turbulent flow over a backward-facing step (FoamBench pitzDaily)",
-      "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/29",
-      "author": {
-        "name": "lingyue404",
-        "githubLogin": "lingyue404",
-        "image": "https://avatars.githubusercontent.com/u/32598525?u=3b530e26dad7c2bd69e464d6d5ef5297868454e2&v=4",
-        "githubUrl": "https://github.com/lingyue404"
-      },
-      "reviewers": [
-        {
-          "name": "vaporhug",
-          "githubLogin": "vaporhug",
-          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
-          "githubUrl": "https://github.com/vaporhug"
-        }
-      ],
-      "status": "approved",
-      "updatedAt": "2026-10-13T02:47:11Z"
     },
     {
       "number": 28,
@@ -453,7 +453,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-29T13:54:08Z"
     },
@@ -469,7 +469,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:40Z"
     },
@@ -485,7 +485,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-30T18:55:05Z"
     },
@@ -501,7 +501,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:38Z"
     },
@@ -517,7 +517,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:37Z"
     },
@@ -533,7 +533,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-29T09:14:46Z"
     },
@@ -549,7 +549,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-30T17:53:34Z"
     },
@@ -565,7 +565,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:32Z"
     },
@@ -581,7 +581,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:28Z"
     },
@@ -597,7 +597,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:22Z"
     },
@@ -613,7 +613,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:16Z"
     },
@@ -777,7 +777,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "success",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
