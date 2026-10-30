@@ -60,24 +60,6 @@
       "reference_final_time": "5",
       "reference_wall_seconds": 202.27
     },
-    "counterFlowFlame2D_KE": {
-      "solver": "reactingFoam",
-      "wall_clock_limit_seconds": 600,
-      "reference_final_time": "0.5",
-      "reference_wall_seconds": 15.41
-    },
-    "counterFlowFlame2D_SA": {
-      "solver": "reactingFoam",
-      "wall_clock_limit_seconds": 600,
-      "reference_final_time": "0.5",
-      "reference_wall_seconds": 40.75
-    },
-    "nozzleFlow2D_SA": {
-      "solver": "interFoam",
-      "wall_clock_limit_seconds": 1020,
-      "reference_final_time": "1e-05",
-      "reference_wall_seconds": 196.03
-    },
     "obliqueShock_KE": {
       "solver": "rhoCentralFoam",
       "wall_clock_limit_seconds": 600,

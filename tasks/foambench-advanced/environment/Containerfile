@@ -30,7 +30,7 @@ RUN mkdir -p /tmp/apt-empty \
 COPY --from=docker.io/openfoam/openfoam10-paraview510@sha256:d6ff1f9a2e7bc3c9177f373bebbdeb542fd8b49144afc24d5e3a3cd9bfae253d \
     /opt/openfoam10 /opt/openfoam10
 
-# PyVista/VTK for the FoamBench NMSE diagnostic; exact wheels, hash-checked.
+# PyVista/VTK for FoamBench NMSE scoring; exact wheels, hash-checked.
 COPY requirements.lock /opt/task-environment/requirements.lock
 RUN python -m pip install --no-deps --require-hashes --only-binary=:all: \
         --requirement /opt/task-environment/requirements.lock \

@@ -1,4 +1,4 @@
-# Extra Python packages for the FoamBench NMSE diagnostic (pyvista OpenFOAM reader),
+# Extra Python packages for FoamBench NMSE scoring (pyvista OpenFOAM reader),
 # pinned to the pyvista/vtk versions of Foam-Agent's environment.yml.
 # CPython 3.11 linux/amd64 wheels from pypi.org; installed with --no-deps on top of the
 # SIE base image, which already provides numpy 2.3.2, matplotlib 3.10.8, pillow 12.3.0

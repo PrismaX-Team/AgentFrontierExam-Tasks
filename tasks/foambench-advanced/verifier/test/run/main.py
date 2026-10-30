@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Final score: execution success rate (M_exec) over the 16 FoamBench Advanced cases.
+"""Final score: physical success rate over a 13-case FoamBench Advanced subset.
 
 Each submitted case is written to a scratch directory and run unchanged with
 OpenFOAM v10: its own Allrun when present, otherwise `runApplication blockMesh`
 followed by `runApplication $(getApplication)`. Cases run one at a time. A case
-scores 1 when all of the following hold, and 0 otherwise:
+runs successfully when all of the following hold:
 
   1. the run exits with status 0 within the case's wall-clock limit;
   2. `application` in the submitted system/controlDict is the solver given for
@@ -14,11 +14,11 @@ scores 1 when all of the following hold, and 0 otherwise:
 
 A missing or empty case scores 0. The submitted case may contain at most one
 time directory (the initial conditions); results must come from the run.
-The primary metric is the mean over the 16 cases, higher is better.
+The primary metric is the fraction of the 13 cases that run successfully and
+have NMSE < 0.1, matching FoamBench's Success Ratio. Higher is better.
 
-Diagnostics, never ranked: FoamBench's NMSE against the reference run
-(nmse.py, a verbatim port), FoamBench's NMSE score and success ratio
-(executed and NMSE < 0.1).
+NMSE and the diagnostic 0/0.5/1 NMSE score use FoamBench's implementation
+(nmse.py, a verbatim port). Execution status is only an internal condition.
 """
 from __future__ import annotations
 
@@ -42,7 +42,7 @@ from submission import SubmissionError, load_submission
 TASK_ID = "foambench-advanced"
 HERE = Path(__file__).resolve().parent
 DATA = HERE.parent / "data"
-PRIMARY = "execution_success_rate"
+PRIMARY = "physical_success_rate"
 NMSE_FAILURE = 9999.0
 NMSE_TIMEOUT = 900
 
@@ -71,8 +71,8 @@ def invalid_result(error: str) -> dict:
 
 def load_spec() -> dict[str, dict]:
     spec = json.loads((DATA / "spec.json").read_text(encoding="utf-8"))["cases"]
-    if len(spec) != 16:
-        raise RuntimeError("verifier spec must list the 16 FoamBench Advanced cases")
+    if len(spec) != 13:
+        raise RuntimeError("verifier spec must list the 13 FoamBench Advanced subset cases")
     for case_id in spec:
         if not (DATA / "reference" / f"{case_id}.tar.gz").is_file():
             raise RuntimeError(f"reference data missing for {case_id}")
@@ -196,15 +196,15 @@ def score(submission: Path, work: Path, context: VerifyContext) -> dict:
             case_id, cases[case_id], spec[case_id], work, context
         )
     count = len(case_ids)
-    rate = sum(executed.values()) / count
-    successes = sum(1 for c in case_ids if executed[c] == 1 and nmse_scores[c] == 1.0)
+    succeeded = {c: int(executed[c] == 1 and nmse_scores[c] == 1.0) for c in case_ids}
+    successes = sum(succeeded.values())
+    rate = successes / count
     metrics = [
         {"name": PRIMARY, "value": rate, "unit": None},
-        {"name": "cases_executed", "value": sum(executed.values()), "unit": "cases"},
+        {"name": "cases_succeeded", "value": successes, "unit": "cases"},
         {"name": "nmse_score", "value": sum(nmse_scores.values()) / count, "unit": None},
-        {"name": "nmse_success_ratio", "value": successes / count, "unit": None},
     ]
-    metrics += [{"name": f"executed/{c}", "value": executed[c], "unit": None} for c in case_ids]
+    metrics += [{"name": f"physical_success/{c}", "value": succeeded[c], "unit": None} for c in case_ids]
     metrics += [{"name": f"nmse/{c}", "value": float(f"{nmse[c]:.10g}"), "unit": None} for c in case_ids]
     return {
         "schema_version": "1.0",
