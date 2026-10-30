@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/AgentFrontierExam-Tasks",
-  "updatedAt": "2026-10-30T01:08:34.921062Z",
+  "updatedAt": "2026-10-30T06:41:42.891644Z",
   "proposals": [
     {
       "number": 6,
@@ -157,7 +157,7 @@
       "author": {
         "name": "Rick-zhuang",
         "githubLogin": "Rick-zhuang",
-        "image": "https://avatars.githubusercontent.com/u/247126661?v=4",
+        "image": "https://avatars.githubusercontent.com/u/247126661?u=ece8e1d4d2ff38743044f8fb9e62f9c79580f3b2&v=4",
         "githubUrl": "https://github.com/Rick-zhuang"
       },
       "reviewers": [
@@ -777,7 +777,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "success",
       "assignments": [
         {
           "role": "domain",
