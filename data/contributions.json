@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/AgentFrontierExam-Tasks",
-  "updatedAt": "2026-10-30T16:01:08.409736Z",
+  "updatedAt": "2026-10-30T16:14:03.383077Z",
   "proposals": [
     {
       "number": 6,
@@ -539,7 +539,7 @@
     },
     {
       "number": 35,
-      "title": "[task] foambench-advanced: physical success on a 13-case subset",
+      "title": "[task] foambench-advanced",
       "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/pull/35",
       "author": {
         "name": "lingyue404",
@@ -551,7 +551,7 @@
       "state": "open",
       "gate": "failure",
       "assignments": [],
-      "updatedAt": "2026-10-30T15:57:09Z"
+      "updatedAt": "2026-10-30T16:12:11Z"
     },
     {
       "number": 34,
