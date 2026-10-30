@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Final score: physical success rate over a 13-case FoamBench Advanced subset.
+"""Final score: physical success rate over the FoamBench Advanced tasks.
 
 Each submitted case is written to a scratch directory and run unchanged with
 OpenFOAM v10: its own Allrun when present, otherwise `runApplication blockMesh`
@@ -17,8 +17,8 @@ time directory (the initial conditions); results must come from the run.
 The primary metric is the fraction of the 13 cases that run successfully and
 have NMSE < 0.1, matching FoamBench's Success Ratio. Higher is better.
 
-NMSE and the diagnostic 0/0.5/1 NMSE score use FoamBench's implementation
-(nmse.py, a verbatim port). Execution status is only an internal condition.
+NMSE uses FoamBench's implementation (nmse.py, a verbatim port).
+Execution status is only an internal condition.
 """
 from __future__ import annotations
 
@@ -202,7 +202,6 @@ def score(submission: Path, work: Path, context: VerifyContext) -> dict:
     metrics = [
         {"name": PRIMARY, "value": rate, "unit": None},
         {"name": "cases_succeeded", "value": successes, "unit": "cases"},
-        {"name": "nmse_score", "value": sum(nmse_scores.values()) / count, "unit": None},
     ]
     metrics += [{"name": f"physical_success/{c}", "value": succeeded[c], "unit": None} for c in case_ids]
     metrics += [{"name": f"nmse/{c}", "value": float(f"{nmse[c]:.10g}"), "unit": None} for c in case_ids]

@@ -1,19 +1,26 @@
 {
   "id": "foambench-advanced",
-  "title": "Physically accurate OpenFOAM case generation for unseen geometries and turbulence-model changes (FoamBench Advanced, 13-case subset)",
+  "title": "Physically accurate OpenFOAM case generation for unseen geometries and turbulence-model changes (FoamBench Advanced)",
   "domain": "computational fluid dynamics",
   "task_sources": [
     {
-      "name": "Approved Science Innovation Exam Proposal #27",
-      "url": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/27"
+      "name": "Approved Agent Frontier Exam Proposal #27",
+      "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/27"
     },
     {
-      "name": "CFDLLMBench FoamBench: 13-case subset of the 16-case Advanced split (OpenFOAM v10 revision provided by the authors) and evaluation scripts, BSD-3-Clause",
+      "name": "CFDLLMBench FoamBench Advanced (OpenFOAM v10 revision provided by the authors) and evaluation scripts, BSD-3-Clause",
       "url": "https://github.com/NLR-Theseus/cfdllmbench"
     }
   ],
   "metric": {
-    "description": "Physical success rate over the 13 included FoamBench Advanced cases: the fraction whose submitted case runs successfully within its wall-clock limit and has NMSE < 0.1 against the hidden reference, following CFDLLMBench's FoamBench Success Ratio. NMSE is computed with FoamBench's original implementation over available U, p, rho and T fields. Missing or failed cases count as 0; the denominator is always 13. Higher is better; the raw score is in [0, 1]. No model baseline has been measured for this subset.",
-    "type": null
+    "description": "Physical success rate over the 13 FoamBench Advanced tasks: the fraction whose submitted OpenFOAM case runs successfully within its time limit and has NMSE < 0.1 against the reference solution. NMSE uses the original CFDLLMBench implementation. Missing or failed cases count as 0; the denominator is 13. Higher is better.",
+    "type": "linear_maximize"
+  },
+  "baseline": {
+    "existing_baseline": true,
+    "name": "Foam-Agent with gpt-6-luna, max_loop=15, OpenFOAM v10",
+    "source": "https://github.com/csml-rpi/Foam-Agent/tree/ed8db9415eb7941e47a0a319b611f29e747087f5",
+    "score": 0.6923076923076923,
+    "bottom_line_score": 0.0
   }
 }
