@@ -1,6 +1,6 @@
 {
   "id": "foambench-dambreak",
-  "title": "Physically accurate OpenFOAM case generation for dam-break flow with an obstacle (FoamBench damBreakWithObstacle)",
+  "title": "OpenFOAM case generation for dam-break flow around an obstacle",
   "domain": "computational fluid dynamics",
   "task_sources": [
     {
@@ -13,7 +13,7 @@
     }
   ],
   "metric": {
-    "description": "Physical success rate over all 10 FoamBench Basic damBreakWithObstacle tasks: the fraction whose submitted OpenFOAM case runs successfully within its time limit and has NMSE < 0.1 against the reference solution. NMSE uses the original CFDLLMBench implementation. Missing or failed cases count as 0; the denominator is 10. Higher is better.",
+    "description": "Physical success rate over 10 simulation cases: the fraction whose OpenFOAM run succeeds within its time limit and has NMSE < 0.1 against the reference fields. Missing and failed cases count as zero; the denominator is 10. Higher is better. NMSE uses the CFDLLMBench implementation.",
     "type": "raw_only"
   },
   "baseline": {
