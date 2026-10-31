@@ -1,0 +1,26 @@
+{
+  "id": "foambench-advanced",
+  "title": "OpenFOAM case generation for varied geometries and turbulence models",
+  "domain": "computational fluid dynamics",
+  "task_sources": [
+    {
+      "name": "Agent Frontier Exam Proposal #27",
+      "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/27"
+    },
+    {
+      "name": "CFDLLMBench FoamBench Advanced (OpenFOAM v10 revision provided by the authors) and evaluation scripts, BSD-3-Clause",
+      "url": "https://github.com/NLR-Theseus/cfdllmbench"
+    }
+  ],
+  "metric": {
+    "description": "Physical success rate over 13 simulation cases: the fraction whose OpenFOAM run succeeds within its time limit and has NMSE < 0.1 against the reference fields. Missing and failed cases count as zero; the denominator is 13. Higher is better. NMSE uses the CFDLLMBench implementation.",
+    "type": "linear_maximize"
+  },
+  "baseline": {
+    "existing_baseline": true,
+    "name": "Foam-Agent with gpt-6-luna, max_loop=15, OpenFOAM v10",
+    "source": "https://github.com/csml-rpi/Foam-Agent/tree/ed8db9415eb7941e47a0a319b611f29e747087f5",
+    "score": 0.6923076923076923,
+    "bottom_line_score": 0.0
+  }
+}
