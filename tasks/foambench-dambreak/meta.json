@@ -1,0 +1,26 @@
+{
+  "id": "foambench-dambreak",
+  "title": "OpenFOAM case generation for dam-break flow around an obstacle",
+  "domain": "computational fluid dynamics",
+  "task_sources": [
+    {
+      "name": "Agent Frontier Exam Proposal #29",
+      "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/29"
+    },
+    {
+      "name": "CFDLLMBench FoamBench Basic damBreakWithObstacle cases and evaluation scripts, BSD-3-Clause",
+      "url": "https://github.com/NLR-Theseus/cfdllmbench"
+    }
+  ],
+  "metric": {
+    "description": "Physical success rate over 10 simulation cases: the fraction whose OpenFOAM run succeeds within its time limit and has NMSE < 0.1 against the reference fields. Missing and failed cases count as zero; the denominator is 10. Higher is better. NMSE uses the CFDLLMBench implementation.",
+    "type": "raw_only"
+  },
+  "baseline": {
+    "existing_baseline": true,
+    "name": "Foam-Agent with gpt-6-luna, max_loop=15, OpenFOAM v10",
+    "source": "https://github.com/csml-rpi/Foam-Agent/tree/ed8db9415eb7941e47a0a319b611f29e747087f5",
+    "score": 0.0,
+    "bottom_line_score": 0.0
+  }
+}
