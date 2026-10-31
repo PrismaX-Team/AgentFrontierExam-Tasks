@@ -1,32 +1,11 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/AgentFrontierExam-Tasks",
-  "updatedAt": "2026-10-31T02:32:33.070531Z",
+  "updatedAt": "2026-10-31T02:34:15.020357Z",
   "proposals": [
     {
-      "number": 28,
-      "title": "Physically accurate OpenFOAM case generation for counterflow diffusion flames (FoamBench counterFlowFlame2D)",
-      "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/28",
-      "author": {
-        "name": "lingyue404",
-        "githubLogin": "lingyue404",
-        "image": "https://avatars.githubusercontent.com/u/32598525?u=3b530e26dad7c2bd69e464d6d5ef5297868454e2&v=4",
-        "githubUrl": "https://github.com/lingyue404"
-      },
-      "reviewers": [
-        {
-          "name": "vaporhug",
-          "githubLogin": "vaporhug",
-          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
-          "githubUrl": "https://github.com/vaporhug"
-        }
-      ],
-      "status": "needs_reapproval",
-      "updatedAt": "2026-10-31T00:25:32Z"
-    },
-    {
       "number": 29,
-      "title": "Physically accurate OpenFOAM case generation for dam-break flow with an obstacle (FoamBench damBreakWithObstacle)",
+      "title": "OpenFOAM case generation for dam-break flow around an obstacle",
       "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/29",
       "author": {
         "name": "lingyue404",
@@ -43,7 +22,49 @@
         }
       ],
       "status": "needs_reapproval",
-      "updatedAt": "2026-10-30T22:07:20Z"
+      "updatedAt": "2026-10-31T02:32:40Z"
+    },
+    {
+      "number": 28,
+      "title": "OpenFOAM case generation for counterflow diffusion flames",
+      "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/28",
+      "author": {
+        "name": "lingyue404",
+        "githubLogin": "lingyue404",
+        "image": "https://avatars.githubusercontent.com/u/32598525?u=3b530e26dad7c2bd69e464d6d5ef5297868454e2&v=4",
+        "githubUrl": "https://github.com/lingyue404"
+      },
+      "reviewers": [
+        {
+          "name": "vaporhug",
+          "githubLogin": "vaporhug",
+          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
+          "githubUrl": "https://github.com/vaporhug"
+        }
+      ],
+      "status": "needs_reapproval",
+      "updatedAt": "2026-10-31T02:32:39Z"
+    },
+    {
+      "number": 27,
+      "title": "OpenFOAM case generation for varied geometries and turbulence models",
+      "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/27",
+      "author": {
+        "name": "lingyue404",
+        "githubLogin": "lingyue404",
+        "image": "https://avatars.githubusercontent.com/u/32598525?u=3b530e26dad7c2bd69e464d6d5ef5297868454e2&v=4",
+        "githubUrl": "https://github.com/lingyue404"
+      },
+      "reviewers": [
+        {
+          "name": "vaporhug",
+          "githubLogin": "vaporhug",
+          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
+          "githubUrl": "https://github.com/vaporhug"
+        }
+      ],
+      "status": "needs_reapproval",
+      "updatedAt": "2026-10-31T02:32:37Z"
     },
     {
       "number": 6,
@@ -128,27 +149,6 @@
       ],
       "status": "approved",
       "updatedAt": "2026-10-13T02:47:58Z"
-    },
-    {
-      "number": 27,
-      "title": "OpenFOAM case generation for varied geometries and turbulence models",
-      "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/27",
-      "author": {
-        "name": "lingyue404",
-        "githubLogin": "lingyue404",
-        "image": "https://avatars.githubusercontent.com/u/32598525?u=3b530e26dad7c2bd69e464d6d5ef5297868454e2&v=4",
-        "githubUrl": "https://github.com/lingyue404"
-      },
-      "reviewers": [
-        {
-          "name": "vaporhug",
-          "githubLogin": "vaporhug",
-          "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
-          "githubUrl": "https://github.com/vaporhug"
-        }
-      ],
-      "status": "needs_reapproval",
-      "updatedAt": "2026-10-31T02:32:37Z"
     },
     {
       "number": 23,
@@ -437,7 +437,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-29T13:54:09Z"
     },
@@ -453,7 +453,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-29T13:54:08Z"
     },
