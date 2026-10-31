@@ -1,10 +1,10 @@
 {
   "id": "foambench-advanced",
-  "title": "Physically accurate OpenFOAM case generation for unseen geometries and turbulence-model changes (FoamBench Advanced)",
+  "title": "OpenFOAM case generation for varied geometries and turbulence models",
   "domain": "computational fluid dynamics",
   "task_sources": [
     {
-      "name": "Approved Agent Frontier Exam Proposal #27",
+      "name": "Agent Frontier Exam Proposal #27",
       "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/27"
     },
     {
@@ -13,7 +13,7 @@
     }
   ],
   "metric": {
-    "description": "Physical success rate over the 13 FoamBench Advanced tasks: the fraction whose submitted OpenFOAM case runs successfully within its time limit and has NMSE < 0.1 against the reference solution. NMSE uses the original CFDLLMBench implementation. Missing or failed cases count as 0; the denominator is 13. Higher is better.",
+    "description": "Physical success rate over 13 simulation cases: the fraction whose OpenFOAM run succeeds within its time limit and has NMSE < 0.1 against the reference fields. Missing and failed cases count as zero; the denominator is 13. Higher is better. NMSE uses the CFDLLMBench implementation.",
     "type": "linear_maximize"
   },
   "baseline": {

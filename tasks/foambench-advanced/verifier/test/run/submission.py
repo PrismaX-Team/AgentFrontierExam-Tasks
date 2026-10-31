@@ -85,5 +85,5 @@ def load_submission(path: Path, case_ids: list[str]) -> dict[str, dict[str, str]
         raise SubmissionError("cases.json must be a JSON object keyed by case id")
     unknown = sorted(set(value) - set(case_ids))
     if unknown:
-        raise SubmissionError(f"unknown case ids: {', '.join(unknown)}")
+        raise SubmissionError(f"unknown case ids: {', '.join(repr(case_id) for case_id in unknown)}")
     return {case_id: check_case(case_id, value.get(case_id, {})) for case_id in case_ids}
