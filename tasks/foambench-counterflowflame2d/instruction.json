@@ -1,0 +1,96 @@
+{
+  "instructions": "OpenFOAM case generation for counterflow diffusion flames.\n\nThis task provides nine counterflow diffusion-flame cases with different opposing fuel and air inlet velocities. Generate consistent mesh, chemistry, thermophysical, initial-field and numerical configuration files for OpenFOAM v10 reactingFoam. Use adaptive time stepping with initial deltaT = 1e-6 s and maxCo = 0.4.\n\nInput. /input/problems.json describes the 9 cases, including their solver, wall_clock_limit_seconds and natural-language specification. /input/cases.json is the submission template. Reference cases and fields are hidden.\n\nSoftware. The OpenFOAM Foundation release 10 is installed at /opt/openfoam10; run `source /opt/openfoam10/etc/bashrc` in bash to use it. Its tutorials are in $FOAM_TUTORIALS and its source in $FOAM_SRC. Open MPI is available for parallel runs. You may run and debug your cases in your environment as often as you like.\n\nSubmission. Submit one file, cases.json, using the template /input/cases.json. It is a JSON object that maps a case identifier to an object that maps a path relative to the case directory (for example \"system/controlDict\", \"0/U\", \"constant/physicalProperties\", \"Allrun\") to the complete text of that file. Only text files can be submitted. Paths have at most 8 segments and 255 characters; each segment consists of letters, digits, '.', '_', '+' and '-' and does not start with '.'; a path cannot be both a file and a directory. A case has at most 4096 files and cases.json is at most 64 MiB of UTF-8 JSON. A `usr_requirement` key inside a case is ignored. Unknown case identifiers, duplicate keys, non-string or non-UTF-8 file contents or invalid paths make the whole submission invalid and unranked. An omitted or empty case scores 0. When written, `Allrun` and every file whose text starts with `#!` are executable; all other files are not, so call other scripts through their interpreter or give them a `#!` line.\n\nVerification. The verifier processes the 9 cases one at a time, offline, in the task image. It writes each case's files to an empty directory. The submitted case may contain at most one time directory (its initial conditions, usually 0/); a case with more than one numeric time directory scores 0, because results must come from the verifier's run. `application` in the submitted system/controlDict is read with foamDictionary; if it is not the case's `solver`, the case scores 0 and is not run. Otherwise the verifier sources the OpenFOAM environment and, from the case directory, runs `./Allrun` if the case has one, or else `runApplication blockMesh` followed by `runApplication $(getApplication)`. Each case has its own wall-clock limit; the verifier stops remaining case processes when the run ends. Results must be written in the case directory itself, so reconstruct a parallel run.\n\nScore. A run succeeds when it exits with status 0 within the wall-clock limit, controlDict names the specified solver, and at least one field file (a volume, surface or point field) is written after the initial time, with every value of every such field file finite (no NaN or Inf). The initial time is the submitted time directory, or the earliest time directory after the run when none was submitted. A case scores 1 if its run succeeds and its NMSE against the hidden reference solution is below 0.1; otherwise it scores 0. The primary score, physical_success_rate, is the number of successful cases divided by 9. Missing or failed cases remain in the denominator. Higher is better. NMSE uses the packaged comparison implementation: it compares available U, p, rho and T fields at the reference's final time with the nearest submitted output time, using the original mesh alignment and interpolation. Raw per-case NMSE is also reported.",
+  "input": [
+    {
+      "path": "problems.json",
+      "format": "JSON",
+      "description": "The 9 simulation specifications, keyed by case identifier: solver, wall_clock_limit_seconds and natural-language description."
+    },
+    {
+      "path": "LICENSE-CFDLLMBench.txt",
+      "format": "text",
+      "description": "BSD-3-Clause license and copyright notice of CFDLLMBench, the source of the problem descriptions."
+    }
+  ],
+  "submission": [
+    {
+      "path": "cases.json",
+      "format": "JSON",
+      "description": "Complete OpenFOAM files for the 9 case identifiers: {case identifier: {case-relative path: file text}}. The template contains an empty entry for each case.",
+      "has_template": true
+    }
+  ],
+  "environment": [
+    {
+      "name": "OpenFOAM",
+      "version": "10 (package 20230119)",
+      "description": "OpenFOAM Foundation release 10 at /opt/openfoam10, copied unchanged from the official openfoam/openfoam10-paraview510 image; source /opt/openfoam10/etc/bashrc to use it."
+    },
+    {
+      "name": "Open MPI",
+      "version": "4.1.4-3+b1",
+      "description": "Debian bookworm libopenmpi3 and openmpi-bin, the MPI runtime used by OpenFOAM."
+    },
+    {
+      "name": "PyVista",
+      "version": "0.44.2",
+      "description": "OpenFOAM reader and interpolation used by the FoamBench NMSE scoring."
+    },
+    {
+      "name": "VTK",
+      "version": "9.3.1",
+      "description": "Visualization Toolkit wheel required by PyVista."
+    },
+    {
+      "name": "scooby",
+      "version": "0.12.0",
+      "description": "PyVista runtime dependency."
+    },
+    {
+      "name": "pooch",
+      "version": "1.9.0",
+      "description": "PyVista runtime dependency."
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "description": "PyVista runtime dependency."
+    },
+    {
+      "name": "platformdirs",
+      "version": "4.12.3",
+      "description": "pooch runtime dependency."
+    },
+    {
+      "name": "requests",
+      "version": "2.34.2",
+      "description": "pooch runtime dependency."
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "description": "requests runtime dependency."
+    },
+    {
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "description": "requests runtime dependency."
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "description": "requests runtime dependency."
+    },
+    {
+      "name": "urllib3",
+      "version": "2.8.0",
+      "description": "requests runtime dependency."
+    }
+  ],
+  "requirement": [
+    "Do not access, download or use the FoamBench or CFDLLMBench reference cases or reference results (the NLR-Theseus/cfdllmbench repository, the Kaggle FoamBench dataset, their mirrors, Foam-Agent benchmark outputs, the verifier data of this task, or anything derived from them), and do not reconstruct the hidden reference fields. The OpenFOAM tutorials, the OpenFOAM documentation and general web resources may be used.",
+    "Respect the solver, geometry, grid, boundary conditions, physical parameters, turbulence model and time settings stated in each description. The verifier checks the solver and compares output fields using FoamBench's NMSE implementation; compliance with the other stated requirements is subject to audit.",
+    "Allrun must actually run the case. It must not write precomputed results or fabricated field or log files into the case, read files outside the case directory other than the OpenFOAM installation, or leave processes running after it exits."
+  ],
+  "limitation": {}
+}

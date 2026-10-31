@@ -1,0 +1,47 @@
+{
+  "counterFlowFlame2D_1": {
+    "solver": "reactingFoam",
+    "wall_clock_limit_seconds": 600,
+    "description": "do a counterflow flame simulation using OpenFOAM reactingFoam solver, employing a compressible flow solver for detailed combustion modeling. Define the computational domain as a 2D rectangular region with a width of 0.02 meters and a height of 0.02 meters. Mesh it uniformly with 100 x 40 x 1 cells (100 across the width in x, 40 across the height in y, 1 in z). Use CH4, O2 and N2 as species. Include chemical kinetics using the reaction mechanism. velocity of fuel is 0.1 m/s and velocity of air is -0.1 m/s. Set the simulation runtime from 0 to 0.5 seconds with a write interval of 0.05 seconds and deltaT of 1e-6. Use adaptive time stepping with a maximum Courant number of 0.4, starting from deltaT = 1e-6 s"
+  },
+  "counterFlowFlame2D_2": {
+    "solver": "reactingFoam",
+    "wall_clock_limit_seconds": 600,
+    "description": "do a counterflow flame simulation using OpenFOAM reactingFoam solver, employing a compressible flow solver for detailed combustion modeling. Define the computational domain as a 2D rectangular region with a width of 0.02 meters and a height of 0.02 meters. Mesh it uniformly with 100 x 40 x 1 cells (100 across the width in x, 40 across the height in y, 1 in z). Use CH4, O2 and N2 as species. Include chemical kinetics using the reaction mechanism. velocity of fuel is 0.2 m/s and velocity of air is -0.1 m/s. Set the simulation runtime from 0 to 0.5 seconds with a write interval of 0.05 seconds and deltaT of 1e-6. Use adaptive time stepping with a maximum Courant number of 0.4, starting from deltaT = 1e-6 s"
+  },
+  "counterFlowFlame2D_3": {
+    "solver": "reactingFoam",
+    "wall_clock_limit_seconds": 600,
+    "description": "do a counterflow flame simulation using OpenFOAM reactingFoam solver, employing a compressible flow solver for detailed combustion modeling. Define the computational domain as a 2D rectangular region with a width of 0.02 meters and a height of 0.02 meters. Mesh it uniformly with 100 x 40 x 1 cells (100 across the width in x, 40 across the height in y, 1 in z). Use CH4, O2 and N2 as species. Include chemical kinetics using the reaction mechanism. velocity of fuel is 0.1 m/s and velocity of air is -0.2 m/s. Set the simulation runtime from 0 to 0.5 seconds with a write interval of 0.05 seconds and deltaT of 1e-6. Use adaptive time stepping with a maximum Courant number of 0.4, starting from deltaT = 1e-6 s"
+  },
+  "counterFlowFlame2D_4": {
+    "solver": "reactingFoam",
+    "wall_clock_limit_seconds": 600,
+    "description": "do a counterflow flame simulation using OpenFOAM reactingFoam solver, employing a compressible flow solver for detailed combustion modeling. Define the computational domain as a 2D rectangular region with a width of 0.02 meters and a height of 0.02 meters. Mesh it uniformly with 100 x 40 x 1 cells (100 across the width in x, 40 across the height in y, 1 in z). Use CH4, O2 and N2 as species. Include chemical kinetics using the reaction mechanism. velocity of fuel is 0.3 m/s and velocity of air is -0.1 m/s. Set the simulation runtime from 0 to 0.5 seconds with a write interval of 0.05 seconds and deltaT of 1e-6. Use adaptive time stepping with a maximum Courant number of 0.4, starting from deltaT = 1e-6 s"
+  },
+  "counterFlowFlame2D_5": {
+    "solver": "reactingFoam",
+    "wall_clock_limit_seconds": 600,
+    "description": "do a counterflow flame simulation using OpenFOAM reactingFoam solver, employing a compressible flow solver for detailed combustion modeling. Define the computational domain as a 2D rectangular region with a width of 0.02 meters and a height of 0.02 meters. Mesh it uniformly with 100 x 40 x 1 cells (100 across the width in x, 40 across the height in y, 1 in z). Use CH4, O2 and N2 as species. Include chemical kinetics using the reaction mechanism. velocity of fuel is 0.3 m/s and velocity of air is -0.2 m/s. Set the simulation runtime from 0 to 0.5 seconds with a write interval of 0.05 seconds and deltaT of 1e-6. Use adaptive time stepping with a maximum Courant number of 0.4, starting from deltaT = 1e-6 s"
+  },
+  "counterFlowFlame2D_6": {
+    "solver": "reactingFoam",
+    "wall_clock_limit_seconds": 600,
+    "description": "do a counterflow flame simulation using OpenFOAM reactingFoam solver, employing a compressible flow solver for detailed combustion modeling. Define the computational domain as a 2D rectangular region with a width of 0.02 meters and a height of 0.02 meters. Mesh it uniformly with 100 x 40 x 1 cells (100 across the width in x, 40 across the height in y, 1 in z). Use CH4, O2 and N2 as species. Include chemical kinetics using the reaction mechanism. velocity of fuel is 0.3 m/s and velocity of air is -0.3 m/s. Set the simulation runtime from 0 to 0.5 seconds with a write interval of 0.05 seconds and deltaT of 1e-6. Use adaptive time stepping with a maximum Courant number of 0.4, starting from deltaT = 1e-6 s"
+  },
+  "counterFlowFlame2D_7": {
+    "solver": "reactingFoam",
+    "wall_clock_limit_seconds": 600,
+    "description": "do a counterflow flame simulation using OpenFOAM reactingFoam solver, employing a compressible flow solver for detailed combustion modeling. Define the computational domain as a 2D rectangular region with a width of 0.02 meters and a height of 0.02 meters. Mesh it uniformly with 100 x 40 x 1 cells (100 across the width in x, 40 across the height in y, 1 in z). Use CH4, O2 and N2 as species. Include chemical kinetics using the reaction mechanism. velocity of fuel is 0.4 m/s and velocity of air is -0.1 m/s. Set the simulation runtime from 0 to 0.5 seconds with a write interval of 0.05 seconds and deltaT of 1e-6. Use adaptive time stepping with a maximum Courant number of 0.4, starting from deltaT = 1e-6 s"
+  },
+  "counterFlowFlame2D_8": {
+    "solver": "reactingFoam",
+    "wall_clock_limit_seconds": 600,
+    "description": "do a counterflow flame simulation using OpenFOAM reactingFoam solver, employing a compressible flow solver for detailed combustion modeling. Define the computational domain as a 2D rectangular region with a width of 0.02 meters and a height of 0.02 meters. Mesh it uniformly with 100 x 40 x 1 cells (100 across the width in x, 40 across the height in y, 1 in z). Use CH4, O2 and N2 as species. Include chemical kinetics using the reaction mechanism. velocity of fuel is 0.4 m/s and velocity of air is -0.2 m/s. Set the simulation runtime from 0 to 0.5 seconds with a write interval of 0.05 seconds and deltaT of 1e-6. Use adaptive time stepping with a maximum Courant number of 0.4, starting from deltaT = 1e-6 s"
+  },
+  "counterFlowFlame2D_10": {
+    "solver": "reactingFoam",
+    "wall_clock_limit_seconds": 600,
+    "description": "do a counterflow flame simulation using OpenFOAM reactingFoam solver, employing a compressible flow solver for detailed combustion modeling. Define the computational domain as a 2D rectangular region with a width of 0.02 meters and a height of 0.02 meters. Mesh it uniformly with 100 x 40 x 1 cells (100 across the width in x, 40 across the height in y, 1 in z). Use CH4, O2 and N2 as species. Include chemical kinetics using the reaction mechanism. velocity of fuel is 0.4 m/s and velocity of air is -0.4 m/s. Set the simulation runtime from 0 to 0.5 seconds with a write interval of 0.05 seconds and deltaT of 1e-6. Use adaptive time stepping with a maximum Courant number of 0.4, starting from deltaT = 1e-6 s"
+  }
+}
