@@ -1,0 +1,58 @@
+{
+  "cases": {
+    "counterFlowFlame2D_1": {
+      "solver": "reactingFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.5",
+      "reference_wall_seconds": 36.872
+    },
+    "counterFlowFlame2D_2": {
+      "solver": "reactingFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.5",
+      "reference_wall_seconds": 41.523
+    },
+    "counterFlowFlame2D_3": {
+      "solver": "reactingFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.5",
+      "reference_wall_seconds": 45.694
+    },
+    "counterFlowFlame2D_4": {
+      "solver": "reactingFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.5",
+      "reference_wall_seconds": 45.824
+    },
+    "counterFlowFlame2D_5": {
+      "solver": "reactingFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.5",
+      "reference_wall_seconds": 52.958
+    },
+    "counterFlowFlame2D_6": {
+      "solver": "reactingFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.5",
+      "reference_wall_seconds": 60.498
+    },
+    "counterFlowFlame2D_7": {
+      "solver": "reactingFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.5",
+      "reference_wall_seconds": 51.514
+    },
+    "counterFlowFlame2D_8": {
+      "solver": "reactingFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.5",
+      "reference_wall_seconds": 57.396
+    },
+    "counterFlowFlame2D_10": {
+      "solver": "reactingFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.5",
+      "reference_wall_seconds": 71.114
+    }
+  }
+}

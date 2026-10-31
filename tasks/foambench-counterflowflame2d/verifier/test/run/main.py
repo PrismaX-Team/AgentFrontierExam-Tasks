@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Final score: physical success rate over the 10 FoamBench Basic Cavity cases.
+"""Final score: physical success rate over the 9 FoamBench Basic counterFlowFlame2D cases.
 
 Each submitted case is written to a scratch directory and run unchanged with
 OpenFOAM v10: its own Allrun when present, otherwise `runApplication blockMesh`
@@ -14,7 +14,7 @@ runs successfully when all of the following hold:
 
 A missing or empty case scores 0. The submitted case may contain at most one
 time directory (the initial conditions); results must come from the run.
-The primary metric is the fraction of the 10 cases that run successfully and
+The primary metric is the fraction of the 9 cases that run successfully and
 have NMSE < 0.1, matching FoamBench's Success Ratio. Higher is better.
 
 NMSE uses FoamBench's implementation (nmse.py, a verbatim port).
@@ -39,7 +39,7 @@ import foamfile
 import runner
 from submission import SubmissionError, load_submission
 
-TASK_ID = "foambench-cavity"
+TASK_ID = "foambench-counterflowflame2d"
 HERE = Path(__file__).resolve().parent
 DATA = HERE.parent / "data"
 PRIMARY = "physical_success_rate"
@@ -71,8 +71,9 @@ def invalid_result(error: str) -> dict:
 
 def load_spec() -> dict[str, dict]:
     spec = json.loads((DATA / "spec.json").read_text(encoding="utf-8"))["cases"]
-    if len(spec) != 10:
-        raise RuntimeError("verifier spec must list the 10 FoamBench Basic Cavity cases")
+    expected = {f"counterFlowFlame2D_{i}" for i in [1, 2, 3, 4, 5, 6, 7, 8, 10]}
+    if set(spec) != expected:
+        raise RuntimeError("verifier spec must list counterFlowFlame2D source IDs 1-8 and 10")
     for case_id in spec:
         if not (DATA / "reference" / f"{case_id}.tar.gz").is_file():
             raise RuntimeError(f"reference data missing for {case_id}")

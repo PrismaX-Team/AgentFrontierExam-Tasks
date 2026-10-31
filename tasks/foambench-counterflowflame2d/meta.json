@@ -1,0 +1,26 @@
+{
+  "id": "foambench-counterflowflame2d",
+  "title": "Physically accurate OpenFOAM case generation for counterflow diffusion flames (FoamBench counterFlowFlame2D)",
+  "domain": "computational fluid dynamics",
+  "task_sources": [
+    {
+      "name": "Agent Frontier Exam Proposal #28",
+      "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/28"
+    },
+    {
+      "name": "CFDLLMBench FoamBench Basic counterFlowFlame2D cases and evaluation scripts, BSD-3-Clause",
+      "url": "https://github.com/NLR-Theseus/cfdllmbench"
+    }
+  ],
+  "metric": {
+    "description": "Physical success rate over all 9 FoamBench Basic counterFlowFlame2D tasks: the fraction whose submitted OpenFOAM case runs successfully within its time limit and has NMSE < 0.1 against the reference solution. NMSE uses the original CFDLLMBench implementation. Missing or failed cases count as 0; the denominator is 9. Higher is better.",
+    "type": "raw_only"
+  },
+  "baseline": {
+    "existing_baseline": true,
+    "name": "Foam-Agent with gpt-6-luna, max_loop=15, OpenFOAM v10",
+    "source": "https://github.com/csml-rpi/Foam-Agent/tree/ed8db9415eb7941e47a0a319b611f29e747087f5",
+    "score": 0.0,
+    "bottom_line_score": 0.0
+  }
+}
