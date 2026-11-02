@@ -13,7 +13,7 @@
     }
   ],
   "metric": {
-    "description": "Physical success rate over 13 simulation cases: the fraction whose OpenFOAM run succeeds within its time limit and has NMSE < 0.1 against the reference fields. Missing and failed cases count as zero; the denominator is 13. Higher is better. NMSE uses the CFDLLMBench implementation.",
+    "description": "Physical success rate over 13 simulation cases: the fraction whose OpenFOAM run succeeds within its time limit and has NMSE < 0.1 against the reference fields. Missing and failed cases count as zero; the denominator is 13. Higher is better. NMSE uses a corrected CFDLLMBench comparison requiring complete fields and spatial cell correspondence. The reported author baseline predates this correction and needs rescoring from its existing outputs.",
     "type": "linear_maximize"
   },
   "baseline": {
