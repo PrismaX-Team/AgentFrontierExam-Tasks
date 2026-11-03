@@ -1,0 +1,16 @@
+{
+  "count": 103,
+  "direction": "minimize",
+  "id_column": "material_id",
+  "invalid_score": 2.0,
+  "label_file": "test/data/labels.csv",
+  "label_max_bytes": 33554432,
+  "label_sha256": "75b703698dd6e84229e93fdc4ee4a903f51729f1cf9a0eee95ee88d7c3e78865",
+  "metric": "mean_sre",
+  "nonnegative": true,
+  "prediction_column": "kappa_W_mK",
+  "schema_version": "1.0",
+  "submission_max_bytes": 1048576,
+  "task_id": "thermal_conductivity",
+  "unit": null
+}

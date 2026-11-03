@@ -1,0 +1,8 @@
+{
+  "index_url": "https://download.pytorch.org/whl/cpu/torch/",
+  "url": "https://download-r2.pytorch.org/whl/cpu/torch-2.4.1%2Bcpu-cp311-cp311-linux_x86_64.whl",
+  "filename": "torch-2.4.1+cpu-cp311-cp311-linux_x86_64.whl",
+  "sha256": "2b03e20f37557d211d14e3fb3f71709325336402db132a1e0dd8b47392185baf",
+  "bytes": 194926984,
+  "verification": "SHA256 matches the official PyTorch CPU index anchor"
+}
