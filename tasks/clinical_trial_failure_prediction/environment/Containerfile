@@ -1,0 +1,10 @@
+# Task image: the operator GPU base image plus the pinned packages in requirements.txt.
+# The base image's numpy, pandas, scipy, scikit-learn and torch are left unchanged.
+ARG SIE_BASE_IMAGE
+FROM ${SIE_BASE_IMAGE}
+
+USER root
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt \
+    && rm /tmp/requirements.txt
+USER 65532:65532

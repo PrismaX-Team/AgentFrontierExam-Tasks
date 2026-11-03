@@ -18,7 +18,7 @@ Proposal 以 Proposals 分类中的 Discussion 提交，以 GitHub 账号确认�
 
 | 用途 | 标签 | 正文必需行 |
 | --- | --- | --- |
-| [新增任务](.github/PULL_REQUEST_TEMPLATE/new_task.md) | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/discussions/NUMBER` |
+| [新增任务](.github/PULL_REQUEST_TEMPLATE/new_task.md) | `type:new-task` | `Proposal: https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/NUMBER` |
 | [任务修复](.github/PULL_REQUEST_TEMPLATE/task_fix.md) | `type:task-fix` | `Task: EXISTING_TASK_ID` |
 | [仓库维护](.github/PULL_REQUEST_TEMPLATE/maintenance.md) | `type:maintenance` | 说明维护范围 |
 
@@ -55,7 +55,7 @@ Discussion、PR 与 Review 记录是贡献状态的唯一来源。官网每小�
 
 ## 合同同步
 
-`contributor/build-sie-task-package/`（Skill、schema、`check_package.py`）与 `tasks/_template/` 从框架仓库同步。任务合同变更时，与 `.github/scripts/task_structure.py` 在同一提交中一起更新。
+`contributor/build-afe-task-package/`（Skill、schema、`check_package.py`）与 `tasks/_template/` 从框架仓库同步。任务合同变更时，与 `.github/scripts/task_structure.py` 在同一提交中一起更新。
 
 ```sh
 python3 -I .github/scripts/test_task_structure.py

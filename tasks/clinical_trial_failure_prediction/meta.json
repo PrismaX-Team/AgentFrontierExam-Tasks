@@ -1,0 +1,30 @@
+{
+  "id": "clinical_trial_failure_prediction",
+  "title": "Clinical Trial Protocols Failure Prediction",
+  "domain": "biomedicine",
+  "task_sources": [
+    {
+      "name": "ClinicalReTrial: clinical trial outcome simulation environment (construction prototype)",
+      "url": "https://github.com/xingsixue123/ClinicalRetrial/tree/c7b70bb8e7f30b4de7e938d07cbb1ff3642e9368"
+    },
+    {
+      "name": "TrialBench trial failure reason identification dataset (CC-BY-4.0)",
+      "url": "https://doi.org/10.5281/zenodo.15455785"
+    },
+    {
+      "name": "ClinicalTrials.gov registry records (protocol fields added to TrialBench)",
+      "url": "https://clinicaltrials.gov/"
+    }
+  ],
+  "metric": {
+    "description": "Macro-average ROC-AUC over three failure modes (poor enrollment, safety, lack of efficacy): for each mode, ROC-AUC of pred_success_prob against the hidden outcome on that mode's test trials (label 1 = success), then the unweighted mean. Higher is better; 0.5 is no skill. The authoritative result is this raw value. The linear display transform maps the constant-prediction bottom line 0.5 to 0 and the author-reported updated reference 0.80 to 1000, without capping either end. Invalid submissions are not ranked.",
+    "type": "linear_maximize"
+  },
+  "baseline": {
+    "existing_baseline": true,
+    "name": "Author-reported updated reference confirmed with the maintainer; method and run details not supplied",
+    "source": "https://github.com/PrismaX-Team/Science-Innovation-Exam-Tasks/pull/25",
+    "score": 0.8,
+    "bottom_line_score": 0.5
+  }
+}

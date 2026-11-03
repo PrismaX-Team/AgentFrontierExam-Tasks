@@ -14,14 +14,17 @@ from datetime import datetime, timezone
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError
 
-REPO = "PrismaX-Team/Science-Innovation-Exam-Tasks"
-LEGACY_REPO = "PrismaX-Team/LiveDiscoveryBench-Tasks"
-REPO_NAMES = {REPO, LEGACY_REPO}
+REPO = "PrismaX-Team/AgentFrontierExam-Tasks"
+LEGACY_REPOS = (
+    "PrismaX-Team/Science-Innovation-Exam-Tasks",
+    "PrismaX-Team/LiveDiscoveryBench-Tasks",
+)
+REPO_NAMES = {REPO, *LEGACY_REPOS}
 REPO_OWNER, REPO_NAME = REPO.split("/")
 ROOT = f"https://github.com/{REPO}"
 CONTEXT = "Contribution gate"
-MARKER = "<!-- sie-proposal-decision "
-LEGACY_MARKER = "<!-- ldb-proposal-decision "
+MARKER = "<!-- afe-proposal-decision "
+LEGACY_MARKERS = ("<!-- sie-proposal-decision ", "<!-- ldb-proposal-decision ")
 LABELS = {"approve": "proposal:approved", "changes_requested": "proposal:changes-requested", "decline": "proposal:declined", "submitted": "proposal:submitted", "needs_reapproval": "proposal:needs-reapproval"}
 
 class Pending(ValueError):
@@ -117,7 +120,7 @@ def validate_proposal(row):
     for label in schema["consents"]:
         # Same project, new public name. Accept the exact earlier wording without
         # editing submitted Discussions or changing their approved fingerprints.
-        variants = (label, label.replace("Science Innovation Exam", "LiveDiscoveryBench"))
+        variants = (label, *(label.replace("Agent Frontier Exam", brand) for brand in ("Science Innovation Exam", "LiveDiscoveryBench")))
         require(any(normalize(variant) in [normalize(value) for value in checked] for variant in variants), "Both material permissions and publication consent are required")
 
 BOT_LOGINS = {"github-actions", "github-actions[bot]"}
@@ -128,7 +131,7 @@ def decision_record(row):
         # GraphQL reports the Actions bot as "github-actions"; REST uses "github-actions[bot]".
         if (comment.get("author") or {}).get("login") not in BOT_LOGINS or comment["lastEditedAt"]:
             continue
-        marker = next((value for value in (MARKER, LEGACY_MARKER) if comment["body"].startswith(value)), None)
+        marker = next((value for value in (MARKER, *LEGACY_MARKERS) if comment["body"].startswith(value)), None)
         if marker is None:
             continue
         try:
@@ -316,20 +319,20 @@ def next_steps(proposal_url):
     Proposal line in its body, so the author only picks their fork and branch."""
     pr_body = urllib.parse.quote(f"Proposal: {proposal_url}\n\n### Implementation / 实现说明\n\n")
     link = f"{ROOT}/compare/main?expand=1&body={pr_body}"
-    portal = "https://prismax-team.github.io/Science-Innovation-Exam-Tasks"
+    portal = "https://prismax-team.github.io/AgentFrontierExam-Tasks"
     contract_en, contract_zh = f"{portal}/en/contribute/task-contract/", f"{portal}/zh/contribute/task-contract/"
     guide_en, guide_zh = f"{ROOT}/blob/main/CONTRIBUTING_EN.md", f"{ROOT}/blob/main/CONTRIBUTING.md"
-    skill = f"{ROOT}/tree/main/contributor/build-sie-task-package"
+    skill = f"{ROOT}/tree/main/contributor/build-afe-task-package"
     template = f"{ROOT}/tree/main/tasks/_template"
     return (
         "\n\n### Next steps / 下一步\n\n"
         f"1. Read the [task contract]({contract_en}) to see what each of the five parts is for, and the [contribution guide]({guide_en}) for the full PR procedure.\n"
-        f"2. Fork this repository and create a branch such as `task/<task-id>`. Copy [`tasks/_template/`]({template}) to `tasks/<task-id>/`. To let an AI coding agent help, copy the [`build-sie-task-package` skill]({skill}) into your agent's skills folder and ask it to build the package from this proposal and your materials.\n"
-        f"3. Run `python3 contributor/build-sie-task-package/scripts/check_package.py tasks/<task-id>`, then open the PR from the link below: choose **compare across forks**, select your fork and branch, then **Create pull request**. The description already contains the required `Proposal:` line.\n"
+        f"2. Fork this repository and create a branch such as `task/<task-id>`. Copy [`tasks/_template/`]({template}) to `tasks/<task-id>/`. To let an AI coding agent help, copy the [`build-afe-task-package` skill]({skill}) into your agent's skills folder and ask it to build the package from this proposal and your materials.\n"
+        f"3. Run `python3 contributor/build-afe-task-package/scripts/check_package.py tasks/<task-id>`, then open the PR from the link below: choose **compare across forks**, select your fork and branch, then **Create pull request**. The description already contains the required `Proposal:` line.\n"
         f"4. If you open the PR another way, its description must include exactly this line: `Proposal: {proposal_url}`\n\n"
         f"1. 先看[任务合同详情]({contract_zh})了解五个部分各是做什么的，再看[共建指南]({guide_zh})了解完整的 PR 流程。\n"
-        f"2. Fork 本仓库并新建分支（如 `task/<task-id>`），把 [`tasks/_template/`]({template}) 复制为 `tasks/<task-id>/`。若希望 AI 编程助手协助，把 [`build-sie-task-package` Skill]({skill}) 拷进助手的 skills 目录，让它根据本提案和你的材料构建任务包。\n"
-        f"3. 运行 `python3 contributor/build-sie-task-package/scripts/check_package.py tasks/<task-id>`，然后通过下面的链接创建 PR：点击 **compare across forks**，选择你的 fork 和分支，再点 **Create pull request**；正文已带上必需的 `Proposal:` 行。\n"
+        f"2. Fork 本仓库并新建分支（如 `task/<task-id>`），把 [`tasks/_template/`]({template}) 复制为 `tasks/<task-id>/`。若希望 AI 编程助手协助，把 [`build-afe-task-package` Skill]({skill}) 拷进助手的 skills 目录，让它根据本提案和你的材料构建任务包。\n"
+        f"3. 运行 `python3 contributor/build-afe-task-package/scripts/check_package.py tasks/<task-id>`，然后通过下面的链接创建 PR：点击 **compare across forks**，选择你的 fork 和分支，再点 **Create pull request**；正文已带上必需的 `Proposal:` 行。\n"
         f"4. 若从其他入口创建 PR，正文必须包含这一行：`Proposal: {proposal_url}`\n\n"
         f"[Create task PR / 创建任务 PR]({link})\n\n"
         "Editing this proposal invalidates the approval / 修改提案将使批准失效。"

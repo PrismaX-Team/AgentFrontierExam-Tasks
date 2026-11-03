@@ -1,0 +1,39 @@
+{
+  "instructions": "Large language models can improve programs by evolutionary search: each iteration asks the model for a modified program and keeps the best one found. Runs are expensive and their outcomes vary widely, so a budget is often spread over several parallel runs (branches) of the same configuration. Your task is a branch-allocation policy: given K = 10 branches and a shared budget of 512 iterations, decide at each step which branch to advance so that the best program found when the budget is spent is as good as possible.\n\nThe branches are recorded runs. Advancing a branch replays its next recorded iteration; branches are independent, so the replay is exact whatever the allocation order. After each pull the policy observes that branch's running-best fitness. Fitness is normalised so that 1.0 is the AlphaEvolve reference construction for the task, and it can exceed 1. The tasks are OpenEvolve's Circle Packing (n = 26), MinMaxDist (n = 16) and Heilbronn Triangle (n = 11).\n\nPublic input is under /input. example_cell.jsonl.gz holds one complete configuration (OpenEvolve, MinMaxDist, Gemma-3-12B): 10 branches of 512 iterations with every recorded per-iteration field. allocators.py implements the five published policies (uniform random, round robin, UCB1, EXP3.P and Gaussian Thompson sampling); harness.py replays any policy over the example cell exactly as the scorer does; README.md describes the fields, the grid the hidden configurations are drawn from (7 models x 3 tasks x 4 evolutionary frameworks), the published results and the full policy rules. The 41 scored configurations are hidden.\n\nSubmit policy.py: a self-contained module defining class Policy with __init__(self, k, seed), select(self), which returns a branch index as a Python int in [0, k) (not a bool or float), and update(self, arm, reward), where reward is the selected branch's running-best fitness after the pull. A template implementing the uniform-random policy is at /input/policy.py. policy.py runs in an isolated process without file access. It may import only math, random, heapq, bisect, collections, itertools, functools, statistics and copy, and it may use only the built-ins listed in /input/README.md and none of the names and attributes it forbids; names such as open, eval, exec, getattr and type, the attribute format, and attributes starting with an underscore other than __init__ are rejected. The module-level random generator is seeded with the run's seed before each run, and every run is played by two independent copies of the policy: if their choices ever differ, the submission is invalid. Each 512-pull run must finish within 30 seconds and the whole evaluation within 40 minutes.\n\nFor each scored configuration and each seed from 1 to 30, Policy(10, seed) spends 512 pulls, and the run's score is the best reward seen. A configuration's score is the mean over the 30 seeds; the primary score is the unweighted mean over the 41 configurations, and higher is better. Also reported but not ranked: the sample standard deviation of the configuration scores, the mean cumulative FLOPs of the iterations bought over the configurations whose FLOPs are fully recorded, and every configuration's score. A policy.py that is missing, not UTF-8 text, larger than 256 KiB or not valid Python, that uses a disallowed import, name or attribute, does not define Policy, raises an exception, returns an invalid branch index, is not deterministic or exceeds a time limit makes the submission invalid, and it is not ranked. There is no feedback on the hidden configurations before the final score. When policy.py is complete, send one `test` action as your final submission.",
+  "input": [
+    {
+      "path": "README.md",
+      "format": "Markdown",
+      "description": "Protocol, record fields, the grid of hidden configurations, published results and the policy rules."
+    },
+    {
+      "path": "example_cell.jsonl.gz",
+      "format": "gzip-compressed JSON lines",
+      "description": "One configuration (OpenEvolve, MinMaxDist, Gemma-3-12B): 10 branches x 512 iterations."
+    },
+    {
+      "path": "allocators.py",
+      "format": "Python",
+      "description": "The five published allocators implementing the Policy interface."
+    },
+    {
+      "path": "harness.py",
+      "format": "Python",
+      "description": "Replays a policy over the example cell with the scorer's protocol."
+    }
+  ],
+  "submission": [
+    {
+      "path": "policy.py",
+      "format": "Python source",
+      "description": "class Policy with __init__(k, seed), select() and update(arm, reward); run by the scorer in an isolated process.",
+      "has_template": true
+    }
+  ],
+  "environment": [],
+  "requirement": [
+    "Do not use the trajectories of the scored configurations. Do not read, download or query this task's scorer files, the trajectory dataset behind arXiv:2605.29268 or its source runs, or any copy of them, and do not embed configuration-specific fitness values in policy.py. Researching methods, papers and software online is allowed. Network access and final artifacts are subject to audit.",
+    "policy.py must not try to read files, inspect or escape its execution environment, or circumvent the import, name and attribute restrictions."
+  ],
+  "limitation": {}
+}

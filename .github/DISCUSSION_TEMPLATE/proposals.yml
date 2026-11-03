@@ -7,7 +7,7 @@
     {
       "type": "markdown",
       "attributes": {
-        "value": "# Science Innovation Exam Proposal\n\nYou may complete this form in English or Chinese.  \n可使用中文或英文填写此表单。\n\nYour GitHub account identifies the author. The body, links and comments are public. Do not submit private email addresses, sensitive information or materials you cannot publish.  \n作者身份以 GitHub 账号为准。正文、链接和评论均会公开；请勿提交私人邮箱、敏感信息或无权公开的材料。"
+        "value": "# Agent Frontier Exam Proposal\n\nYou may complete this form in English or Chinese.  \n可使用中文或英文填写此表单。\n\nYour GitHub account identifies the author. The body, links and comments are public. Do not submit private email addresses, sensitive information or materials you cannot publish.  \n作者身份以 GitHub 账号为准。正文、链接和评论均会公开；请勿提交私人邮箱、敏感信息或无权公开的材料。"
       }
     },
     {
@@ -68,6 +68,27 @@
       "type": "markdown",
       "attributes": {
         "value": "## 02 Scientific question<br>\n科学问题\n\nEvidence that the question is important, unresolved and has measurable headroom.  \n说明问题为何重要、为何仍未解决，以及可衡量的前沿空间。"
+      }
+    },
+    {
+      "type": "dropdown",
+      "id": "taskLevel",
+      "attributes": {
+        "label": "Task level",
+        "options": [
+          "L1 · 科学重发现（Re-discovery）",
+          "L2 · 创新性科学发现（Innovation）",
+          "L3 · 原创性科学突破（0–1 Discovery）"
+        ]
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "<details>\n<summary>L1 科学重发现（Re-discovery） · 无需湿实验与专家单点验证</summary>\n\n对专项要解决的重要科学问题进行锚定，基于已有科学数据，在隐藏原始研究结论的条件下，考察科学智能体独立重现已发表研究中的关键结论的能力。\n\n</details>\n\n<details>\n<summary>L2 创新性科学发现（Innovation） · 短周期取得可量化进展（1–3 天）</summary>\n\n面向专项锚定的重要科学问题，对未发布的阶段性发现结果，借助智能体完成研究方案设计、干实验、模拟或者快速小型、少量的湿实验，并进行适当优化，形成专项内部可集成案例。\n\n</details>\n\n<details>\n<summary>L3 原创性科学突破（0–1 Discovery） · 真实湿实验或长周期验证（大于 1 周乃至数月）</summary>\n\n面向尚未解决、具有高科学价值的前沿问题，自主形成原创性科学假设或研究方法，通过真实实验验证取得 0–1 科学突破。\n\n</details>"
       }
     },
     {
@@ -314,11 +335,11 @@
         "description": "授权确认",
         "options": [
           {
-            "label": "I confirm that the data, code and other materials I provide have the permissions needed for task construction and evaluation in Science Innovation Exam, and that I have disclosed any attribution, access or redistribution restrictions.  \n我确认所提供的数据、代码及其他材料具有用于 Science Innovation Exam 任务构建与评测的相应权限；如有署名、访问或再分发限制，我已说明。",
+            "label": "I confirm that the data, code and other materials I provide have the permissions needed for task construction and evaluation in Agent Frontier Exam, and that I have disclosed any attribution, access or redistribution restrictions.  \n我确认所提供的数据、代码及其他材料具有用于 Agent Frontier Exam 任务构建与评测的相应权限；如有署名、访问或再分发限制，我已说明。",
             "required": true
           },
           {
-            "label": "If approved, I authorize Science Innovation Exam to use these materials to prepare a public task-repository contribution within the permissions and restrictions stated above.  \n若提案获准，我授权 Science Innovation Exam 在上述权限和限制范围内，使用这些材料整理公开任务仓库贡献。",
+            "label": "If approved, I authorize Agent Frontier Exam to use these materials to prepare a public task-repository contribution within the permissions and restrictions stated above.  \n若提案获准，我授权 Agent Frontier Exam 在上述权限和限制范围内，使用这些材料整理公开任务仓库贡献。",
             "required": true
           }
         ]
