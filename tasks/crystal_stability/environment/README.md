@@ -1,4 +1,4 @@
-# Offline CHGNet and phonon research runtime
+# Offline CHGNet crystal-stability research runtime
 
 This directory is a self-contained **Linux x86_64 / CPython 3.11** dependency bundle. It installs **54 pinned research distributions plus pip 24.0** into `/opt/sie-research`. Research programs explicitly use `/opt/sie-research/bin/python`. The operator Python, its NumPy 2 environment, PATH, framework SDK and verifier interpreter remain unchanged.
 
@@ -22,10 +22,12 @@ The only locally built wheel is the tiny pure-Python `nvidia-ml-py3==7.352.0`, w
 - Checked all 78 active dependency edges against Linux/Python 3.11 markers and pinned versions, plus Requires-Python constraints.
 - Ran the real pip 24.0 resolver offline, with hashes, targeting the Linux wheel tags: all 55 resolved successfully without using installed host packages.
 - Audited 316 ELF files in 20 native wheels: all are x86_64. The highest referenced glibc symbol version is 2.27; wheel platform tags impose the stated 2.28 floor. Unbundled dependencies are the usual glibc, libgcc, libstdc++ and libz supplied by the documented operator base. No unexpected external shared library was found.
-- The companion scientific evidence separately demonstrates a real CHGNet → finite-displacement FC2/FC3 → Wigner-RTA MgO calculation using these package versions on a macOS CPU host.
+- The companion scientific evidence separately demonstrates CHGNet energy and force prediction and a limited, ten-step atomic-position/cell relaxation for one crystal on a macOS CPU host. That example did not reach its force stopping criterion and does not establish convergence or runtime for the full test set.
 
-**Docker and native Linux execution were not available on the preparation host.** The actual container build, its native import checks, and the scientific smoke inside the final operator image remain required integration checks. The dependency and artifact audits are not represented as a completed container build.
+**Docker and native Linux execution were not available on the original preparation host.** The checks listed above describe that preparation evidence. For an operator deployment, validate the actual container build, native imports, checkpoint loading and a small crystal energy/force calculation inside the final image. Dependency and artifact audits alone do not demonstrate scientific execution or full-set convergence.
 
 ## Offline use
 
-Load the local checkpoint with `CHGNet.from_file(path, mlp_out_bias=False, version="0.3.0")` using `/opt/sie-research/bin/python`. For phono3py 3.30.0, the Wigner API spelling is `transport_type="MS-SMM19"`. Refer to the task's scientific instructions for the target geometry, supercells, q mesh, temperature and output schema. This environment contains no withheld reference labels or prediction archives and uses no path to another task.
+Load the checkpoint supplied in task `input/model_weights` with `CHGNet.from_file(path, mlp_out_bias=False, version="0.3.0")` using `/opt/sie-research/bin/python`, and select CPU. The installed PyTorch is CPU-only; allocating a GPU does not enable GPU execution in this runtime. Only the supplied CHGNet 0.3.0 checkpoint is allowed; other checkpoints bundled with the installed software are not permitted research resources.
+
+Refer to the task's scientific instructions for initial crystal geometries, formation-energy conventions, optional atomic-position/cell relaxation and the output schema. Subtract the supplied composition-weighted elemental reference energies from predicted energy per atom; do not apply MP2020 corrections a second time. This environment contains no withheld reference labels or prediction archives and uses no path to another task.

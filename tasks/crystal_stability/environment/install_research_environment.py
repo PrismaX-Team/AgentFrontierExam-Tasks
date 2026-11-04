@@ -41,7 +41,7 @@ assert torch.version.cuda is None, 'Expected the isolated CPU-only torch wheel'
 assert torch.tensor([1.,2.]).sum().item()==3.
 assert numpy.__version__=='1.26.4'
 assert spglib.get_symmetry_dataset((numpy.eye(3),[[0,0,0]],[1])).number==221
-report={'status':'private_linux_research_venv_installed_and_native_imports_passed','python':platform.python_version(),'platform':platform.platform(),'architecture':platform.machine(),'torch':torch.__version__,'torch_cuda':torch.version.cuda,'numpy':numpy.__version__,'distributions':len(manifest['wheels']),'site_packages_isolated':not any('system-site-packages = true' in line for line in (Path(sys.prefix)/'pyvenv.cfg').read_text().splitlines()),'note':'This is a build-time dependency check. A full scientific CHGNet-to-thermal-conductivity run must use the model weights and geometry from task input.'}
+report={'status':'private_linux_research_venv_installed_and_native_imports_passed','python':platform.python_version(),'platform':platform.platform(),'architecture':platform.machine(),'torch':torch.__version__,'torch_cuda':torch.version.cuda,'numpy':numpy.__version__,'distributions':len(manifest['wheels']),'site_packages_isolated':not any('system-site-packages = true' in line for line in (Path(sys.prefix)/'pyvenv.cfg').read_text().splitlines()),'note':'This is a build-time dependency check, not a crystal-stability calculation or convergence test. Crystal energy/force prediction and optional atomic-position/cell relaxation must use the allowed checkpoint and initial structures from task input.'}
 assert report['site_packages_isolated']
 (Path(sys.prefix)/'ENVIRONMENT_VERIFICATION.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps(report))
