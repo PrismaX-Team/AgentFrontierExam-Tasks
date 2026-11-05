@@ -4,55 +4,129 @@
       "solver": "reactingFoam",
       "wall_clock_limit_seconds": 600,
       "reference_final_time": "0.5",
-      "reference_wall_seconds": 36.872
+      "reference_wall_seconds": 36.872,
+      "required_fields": [
+        "U",
+        "p",
+        "T"
+      ]
     },
     "counterFlowFlame2D_2": {
       "solver": "reactingFoam",
       "wall_clock_limit_seconds": 600,
       "reference_final_time": "0.5",
-      "reference_wall_seconds": 41.523
+      "reference_wall_seconds": 41.523,
+      "required_fields": [
+        "U",
+        "p",
+        "T"
+      ]
     },
     "counterFlowFlame2D_3": {
       "solver": "reactingFoam",
       "wall_clock_limit_seconds": 600,
       "reference_final_time": "0.5",
-      "reference_wall_seconds": 45.694
+      "reference_wall_seconds": 45.694,
+      "required_fields": [
+        "U",
+        "p",
+        "T"
+      ]
     },
     "counterFlowFlame2D_4": {
       "solver": "reactingFoam",
       "wall_clock_limit_seconds": 600,
       "reference_final_time": "0.5",
-      "reference_wall_seconds": 45.824
+      "reference_wall_seconds": 45.824,
+      "required_fields": [
+        "U",
+        "p",
+        "T"
+      ]
     },
     "counterFlowFlame2D_5": {
       "solver": "reactingFoam",
       "wall_clock_limit_seconds": 600,
       "reference_final_time": "0.5",
-      "reference_wall_seconds": 52.958
+      "reference_wall_seconds": 52.958,
+      "required_fields": [
+        "U",
+        "p",
+        "T"
+      ]
     },
     "counterFlowFlame2D_6": {
       "solver": "reactingFoam",
       "wall_clock_limit_seconds": 600,
       "reference_final_time": "0.5",
-      "reference_wall_seconds": 60.498
+      "reference_wall_seconds": 60.498,
+      "required_fields": [
+        "U",
+        "p",
+        "T"
+      ]
     },
     "counterFlowFlame2D_7": {
       "solver": "reactingFoam",
       "wall_clock_limit_seconds": 600,
       "reference_final_time": "0.5",
-      "reference_wall_seconds": 51.514
+      "reference_wall_seconds": 51.514,
+      "required_fields": [
+        "U",
+        "p",
+        "T"
+      ]
     },
     "counterFlowFlame2D_8": {
       "solver": "reactingFoam",
       "wall_clock_limit_seconds": 600,
       "reference_final_time": "0.5",
-      "reference_wall_seconds": 57.396
+      "reference_wall_seconds": 57.396,
+      "required_fields": [
+        "U",
+        "p",
+        "T"
+      ]
     },
     "counterFlowFlame2D_10": {
       "solver": "reactingFoam",
       "wall_clock_limit_seconds": 600,
       "reference_final_time": "0.5",
-      "reference_wall_seconds": 71.114
+      "reference_wall_seconds": 71.114,
+      "required_fields": [
+        "U",
+        "p",
+        "T"
+      ]
     }
+  },
+  "reference_protocol": {
+    "status": "pending_author_confirmation",
+    "assumption": "The fixed hidden references were generated from the tutorial shipped in the pinned task image, changing only the explicit per-case settings below.",
+    "openfoam_release": "Foundation 10 (package 20230119)",
+    "source_image": "docker.io/openfoam/openfoam10-paraview510@sha256:d6ff1f9a2e7bc3c9177f373bebbdeb542fd8b49144afc24d5e3a3cd9bfae253d",
+    "tutorial_path": "/opt/openfoam10/tutorials/combustion/reactingFoam/laminar/counterFlowFlame2D",
+    "override_source": "problems.json: each case description",
+    "overrides": [
+      "solver",
+      "domain width and height",
+      "cell counts along x/y/z",
+      "fuel and air inlet velocities",
+      "start and end times",
+      "write interval",
+      "initial deltaT",
+      "adaptive time stepping and maxCo"
+    ],
+    "inherit_from_tutorial": [
+      "inlet temperatures and species fractions",
+      "initial temperature and species fields, including ignition preparation",
+      "pressure reference and boundary conditions",
+      "chemical reaction mechanism and coefficients",
+      "thermophysical, transport and flow-model settings",
+      "out-of-plane extent and empty boundaries"
+    ],
+    "species_rule": "CH4, O2 and N2 describe the fuel/oxidizer species; retain the tutorial reaction products, including CO2 and H2O. Do not remove species required by its reaction mechanism.",
+    "numerical_rule": "Numerical tolerances and solution strategies may be adjusted to solve the same physical problem; preserve explicitly required solver, mesh and time settings.",
+    "confirmation_note": "The author must confirm that this contract matches all nine existing references before formal evaluation. If it does not, revise the public contract to the actual reference setup; do not silently change hidden answers or guess numerical physical parameters."
   }
 }

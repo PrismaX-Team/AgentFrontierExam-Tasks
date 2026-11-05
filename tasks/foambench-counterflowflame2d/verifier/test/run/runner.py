@@ -8,6 +8,7 @@ run ends, by process group and by an environment marker.
 from __future__ import annotations
 
 import os
+import math
 import re
 import resource
 import secrets
@@ -76,7 +77,10 @@ def time_directories(case_dir: Path) -> dict[str, float]:
     times = {}
     for path in case_dir.iterdir():
         if path.is_dir() and not path.is_symlink() and TIME_NAME.match(path.name):
-            times[path.name] = float(path.name)
+            value = float(path.name)
+            if not math.isfinite(value):
+                raise ValueError(f"non-finite time directory: {path.name}")
+            times[path.name] = value
     return times
 
 
@@ -160,7 +164,10 @@ def read_control_entry(case_dir: Path, entry: str, home: Path, log: Path) -> str
     )
     if code != 0 or timed_out:
         return None
-    lines = [line.strip() for line in log.read_text(encoding="utf-8", errors="replace").splitlines()]
+    with log.open("rb") as handle:
+        handle.seek(max(0, log.stat().st_size - 65536))
+        text = handle.read().decode("utf-8", "replace")
+    lines = [line.strip() for line in text.splitlines()]
     lines = [line for line in lines if line]
     return lines[-1] if lines else None
 
