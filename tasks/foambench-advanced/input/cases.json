@@ -1,0 +1,15 @@
+{
+  "Cavity_LES": {},
+  "Cavity_SA": {},
+  "Cavity_geometry_1": {},
+  "Cylinder_LES": {},
+  "Cylinder_SA": {},
+  "Diamond_Obstacle_KOMEGASST": {},
+  "Diamond_Obstacle_SA": {},
+  "Double_Square_SA": {},
+  "Rectangular_Obstacle_KOMEGASST": {},
+  "Rectangular_Obstacle_SA": {},
+  "obliqueShock_KE": {},
+  "obliqueShock_LES": {},
+  "wedge_SA": {}
+}
