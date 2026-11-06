@@ -60,6 +60,10 @@ def check_case(case_id: str, files: object) -> dict[str, str]:
         paths.add(check_path(case_id, key))
         if not isinstance(value, str):
             raise SubmissionError(f"{case_id}: content of {key!r} must be a string")
+        try:
+            value.encode("utf-8")
+        except UnicodeEncodeError as error:
+            raise SubmissionError(f"{case_id}: content of {key!r} is not valid UTF-8 text") from error
     for path in paths:
         for parent in path.parents:
             if parent in paths:
@@ -79,7 +83,7 @@ def load_submission(path: Path, case_ids: list[str]) -> dict[str, dict[str, str]
         raise SubmissionError("cases.json is not UTF-8") from error
     try:
         value = json.loads(text, object_pairs_hook=reject_duplicates, parse_constant=reject_constant)
-    except json.JSONDecodeError as error:
+    except (json.JSONDecodeError, RecursionError) as error:
         raise SubmissionError(f"cases.json is not valid JSON: {error}") from error
     if not isinstance(value, dict):
         raise SubmissionError("cases.json must be a JSON object keyed by case id")
