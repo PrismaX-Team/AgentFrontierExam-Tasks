@@ -1,8 +1,22 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/AgentFrontierExam-Tasks",
-  "updatedAt": "2026-11-06T02:43:07.929699Z",
+  "updatedAt": "2026-11-06T08:47:47.635021Z",
   "proposals": [
+    {
+      "number": 49,
+      "title": "DNA 二级结构逆折叠方法开发",
+      "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/49",
+      "author": {
+        "name": "Mountablet",
+        "githubLogin": "Mountablet",
+        "image": "https://avatars.githubusercontent.com/u/276544992?v=4",
+        "githubUrl": "https://github.com/Mountablet"
+      },
+      "reviewers": [],
+      "status": "submitted",
+      "updatedAt": "2026-11-06T08:47:35Z"
+    },
     {
       "number": 29,
       "title": "OpenFOAM case generation for dam-break flow around an obstacle",
@@ -453,7 +467,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-29T13:54:08Z"
     },
@@ -469,7 +483,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-31T02:32:45Z"
     },
@@ -485,7 +499,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-31T02:32:43Z"
     },
@@ -501,7 +515,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:38Z"
     },
@@ -517,7 +531,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-11-04T02:14:24Z"
     },
@@ -533,7 +547,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
@@ -570,7 +584,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-31T02:32:41Z"
     },
@@ -586,7 +600,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:32Z"
     },
@@ -602,7 +616,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:28Z"
     },
@@ -618,7 +632,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:22Z"
     },
@@ -634,7 +648,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:16Z"
     },
@@ -798,7 +812,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "success",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
