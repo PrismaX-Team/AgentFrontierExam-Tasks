@@ -76,7 +76,7 @@ def invalid_result(error: str) -> dict:
 def load_spec() -> dict[str, dict]:
     document = json.loads((DATA / "spec.json").read_text(encoding="utf-8"))
     protocol = document.get("reference_protocol", {})
-    if protocol.get("status") != "confirmed":
+    if protocol.get("status") not in ("confirmed", "operator_assumption"):
         raise RuntimeError(
             "reference physical protocol awaits author confirmation; "
             "this draft cannot produce a formal candidate score"

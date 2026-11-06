@@ -51,15 +51,15 @@ of successful cases divided by 9. A failed case earns no partial credit for the 
 produce; it does not invalidate the other cases. Diagnostics record selected times, required
 fields, correspondence method and per-field errors.
 
-## Physical setup and draft status
+## Physical setup for this review run
 
 Use the exact installed tutorial and the explicit override/inheritance rules in
-`PHYSICS.json`. It is a provisional author-confirmation contract, not a claim that
-the historical reference setup has already been verified. While its status is
-`pending_author_confirmation`, the verifier stops with a configuration error
-before any case is run. The operator must confirm the contract with the author,
-then update its public and verifier copies to `confirmed` before formal use.
-Do not infer missing physical values from hidden results.
+`PHYSICS.json`. Its `operator_assumption` status authorizes this review run with
+that fixed contract. The author has not yet confirmed the historical reference
+setup; results remain provisional with respect to that scientific agreement.
+`pending_author_confirmation` without an explicit operator assumption still
+stops evaluation. Neither status claims author confirmation. Do not infer
+missing physical values from hidden results.
 
 ## Failure attribution and diagnostics
 

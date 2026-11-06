@@ -13,7 +13,7 @@
     }
   ],
   "metric": {
-    "description": "Physical success rate over 9 simulation cases: execution and complete finite U/p/T fields must pass, then their spatially matched mean NMSE must be < 0.1. Missing or failed cases count as zero; denominator 9, higher is better. The reported author baseline predates the field/spatial corrections and proposed tutorial contract; it is retained as a historical report, not independently reproduced under the revised rules. The tutorial contract awaits author confirmation before formal scoring.",
+    "description": "Physical success rate over 9 simulation cases: execution and complete finite U/p/T fields must pass, then their spatially matched mean NMSE must be < 0.1. Missing or failed cases count as zero; denominator 9, higher is better. The reported author baseline predates the field/spatial corrections and proposed tutorial contract; it is retained as a historical report, not independently reproduced under the revised rules. This operator-assumed review uses a fixed tutorial contract; scores remain provisional pending author confirmation that the historical references use that contract.",
     "type": "raw_only"
   },
   "baseline": {

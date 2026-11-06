@@ -131,9 +131,26 @@ class ContractChecks(unittest.TestCase):
                 self.assertFalse(foamfile.field_is_finite(path))
 
     def test_unconfirmed_protocol_never_starts_solver(self):
-        with patch.object(runner, "check_openfoam", side_effect=AssertionError("must stop before environment")):
+        doc = json.loads((verifier.DATA / "spec.json").read_text())
+        doc["reference_protocol"]["status"] = "pending_author_confirmation"
+        (self.work / "spec.json").write_text(json.dumps(doc))
+        with patch.object(verifier, "DATA", self.work), patch.object(runner, "check_openfoam", side_effect=AssertionError("must stop before environment")):
             with self.assertRaisesRegex(RuntimeError, "author confirmation"):
                 verifier.score(self.work, self.work, Context())
+
+    def test_operator_assumption_allows_review_without_claiming_confirmation(self):
+        doc = json.loads((verifier.DATA / "spec.json").read_text())
+        self.assertEqual(doc["reference_protocol"]["status"], "operator_assumption")
+        self.assertEqual(doc["reference_protocol"]["author_confirmation"], "pending")
+        self.assertEqual(len(verifier.load_spec()), 9)
+
+    def test_unknown_protocol_status_is_rejected(self):
+        doc = json.loads((verifier.DATA / "spec.json").read_text())
+        doc["reference_protocol"]["status"] = "unknown"
+        (self.work / "spec.json").write_text(json.dumps(doc))
+        with patch.object(verifier, "DATA", self.work):
+            with self.assertRaisesRegex(RuntimeError, "author confirmation"):
+                verifier.load_spec()
 
     def test_confirmed_config_requires_all_three_fields(self):
         doc = json.loads((verifier.DATA / "spec.json").read_text())
