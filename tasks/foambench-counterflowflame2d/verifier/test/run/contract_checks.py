@@ -138,10 +138,10 @@ class ContractChecks(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "author confirmation"):
                 verifier.score(self.work, self.work, Context())
 
-    def test_operator_assumption_allows_review_without_claiming_confirmation(self):
+    def test_author_confirmed_protocol_is_ready(self):
         doc = json.loads((verifier.DATA / "spec.json").read_text())
-        self.assertEqual(doc["reference_protocol"]["status"], "operator_assumption")
-        self.assertEqual(doc["reference_protocol"]["author_confirmation"], "pending")
+        self.assertEqual(doc["reference_protocol"]["status"], "confirmed")
+        self.assertEqual(doc["reference_protocol"]["author_confirmation"], "confirmed")
         self.assertEqual(len(verifier.load_spec()), 9)
 
     def test_unknown_protocol_status_is_rejected(self):

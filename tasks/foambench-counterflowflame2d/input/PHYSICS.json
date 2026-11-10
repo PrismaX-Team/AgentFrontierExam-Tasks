@@ -1,6 +1,5 @@
 {
-  "status": "operator_assumption",
-  "assumption": "The fixed hidden references were generated from the tutorial shipped in the pinned task image, changing only the explicit per-case settings below.",
+  "status": "confirmed",
   "openfoam_release": "Foundation 10 (package 20230119)",
   "source_image": "docker.io/openfoam/openfoam10-paraview510@sha256:d6ff1f9a2e7bc3c9177f373bebbdeb542fd8b49144afc24d5e3a3cd9bfae253d",
   "tutorial_path": "/opt/openfoam10/tutorials/combustion/reactingFoam/laminar/counterFlowFlame2D",
@@ -25,6 +24,7 @@
   ],
   "species_rule": "CH4, O2 and N2 describe the fuel/oxidizer species; retain the tutorial reaction products, including CO2 and H2O. Do not remove species required by its reaction mechanism.",
   "numerical_rule": "Numerical tolerances and solution strategies may be adjusted to solve the same physical problem; preserve explicitly required solver, mesh and time settings.",
-  "confirmation_note": "This review run uses the tutorial contract as an explicit operator-selected assumption. The task author has not yet confirmed that all existing references use this setup. Scores describe this fixed review configuration and remain provisional pending that confirmation; no reference labels are changed.",
-  "author_confirmation": "pending"
+  "confirmation_note": "The task author agreed to this tutorial-based physical contract and the review corrections, as relayed by the maintainer on 2026-11-10. The physical settings and hidden references are unchanged from the reviewed configuration.",
+  "author_confirmation": "confirmed",
+  "reference_setup": "The fixed hidden references were generated from the tutorial shipped in the pinned task image, changing only the explicit per-case settings below."
 }
