@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/AgentFrontierExam-Tasks",
-  "updatedAt": "2026-11-10T01:38:41.267762Z",
+  "updatedAt": "2026-11-10T02:16:04.166098Z",
   "proposals": [
     {
       "number": 49,
@@ -501,7 +501,7 @@
       "state": "open",
       "gate": "failure",
       "assignments": [],
-      "updatedAt": "2026-10-31T02:32:43Z"
+      "updatedAt": "2026-11-10T02:13:40Z"
     },
     {
       "number": 38,
