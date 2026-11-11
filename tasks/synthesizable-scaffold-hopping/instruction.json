@@ -1,0 +1,133 @@
+{
+  "instructions": "Synthesizable Scaffold Hopping with Pharmacophore and Pocket-Interaction Retention. For the ERK2 instance, replace the supplied reference ligand's twenty-atom core while exactly preserving its entire eleven-atom meta-Cl/para-F sidechain, original attachment and native boundary stereochemistry. Design and rank up to ten distinct candidates, each with a fixed heavy-only pocket-frame pose, explicit core mapping and a graph route that independently replays from fourteen allowed starting graphs using four supplied reaction motif classes. Ordinary R-group modification, alternative SMILES, salt/protonation variants or heteroatom-only core edits do not count as new topology. Every candidate must pass explicit chemical/generic core change and no-old-core-embedding, distinct standardized Murcko/Morgan similarity<=0.5, seven-feature coherent spatial matching, three simultaneous same-assignment actual-H protein contacts, DG/planarity/protein-overlap checks, fixed Vina proxy<=-6.683 kcal/mol, and the specified RDKit Ro5-style property filter. The scorer never aligns, redocks, optimizes or repairs submitted heavy coordinates, never executes submitted code, and never trusts self-reported scores or route outcomes. The raw macro verified-scaffold-hop rate@10 counts at most one success per generic selected-core 2-core containment component per instance; missing ranks miss. This conservative grouping is top-set dependent, not a universal scaffold-equivalence claim. Research-time deterministic structure/pose/route feedback has trusted budgets100/50/20 with no-charge normal rejects and exact semantic caching; only test writes the official raw score. Preserve actual execution/error/retry evidence, but editable evidence and summary budget claims cannot override trusted VerifyContext history. Read scoring_and_protocol.md for all inclusive numerical gates, coordinate/state/stereo conventions, seven-file schemas, reaction scope, byte limits and feedback request format. All seven artifacts are required even for a zero-candidate submission. These computational routes and binding proxies are not experimental synthesis or measured binding evidence.",
+  "input": [
+    {
+      "path": "reference_structures.json",
+      "format": "json",
+      "description": "Reference chemical identities, coordinate-frame and preparation-state descriptions, data paths, and zero-based SDF atom indices corresponding to stable reference atom names. This file does not specify scoring gates."
+    },
+    {
+      "path": "structures/erk2_reference.sdf",
+      "format": "sdf",
+      "description": "The ERK2 reference ligand: one experimentally deposited conformer with its checked chemical graph and absolute stereochemistry, in the protein coordinate frame."
+    },
+    {
+      "path": "structures/erk2_protein_unprepared.pdb",
+      "format": "pdb",
+      "description": "Observed ERK2 chain-A protein heavy atoms in the reference coordinate frame. Ligand, water, hydrogen and alternate conformations are removed; missing atoms remain missing. This is not a protonated or scoring-ready docking receptor."
+    },
+    {
+      "path": "scoring_and_protocol.md",
+      "format": "markdown",
+      "description": "Complete version-1 scientific gates, seven-artifact schemas, fixed-pose and exact-core conventions, graph reaction scope, and trusted research-feedback protocol."
+    },
+    {
+      "path": "starting_materials.json",
+      "format": "json",
+      "description": "Fourteen allowed starting graphs, including explicitly admitted prepared intermediates; identity does not assert supply, purity or experimental success."
+    },
+    {
+      "path": "reaction_templates.json",
+      "format": "json",
+      "description": "Four ordered-role reaction SMARTS motif classes; new combinations are computational extrapolations, not exact laboratory recipes."
+    },
+    {
+      "path": "structures/erk2_receptor.pdb",
+      "format": "pdb",
+      "description": "Fixed prepared ERK2 protein coordinates with hydrogens used for actual contact geometry; no candidate-dependent protonation or hydrogen optimization."
+    },
+    {
+      "path": "structures/erk2_receptor.pdbqt",
+      "format": "pdbqt",
+      "description": "The exact fixed prepared rigid scoring receptor used by Vina score-only evaluation."
+    }
+  ],
+  "submission": [
+    {
+      "path": "candidates.csv",
+      "format": "csv",
+      "description": "Exact eleven-column header from the protocol; up to ten unique ranked candidates per instance, recomputed Murcko claim, unique route IDs and finite non-authoritative property claims.",
+      "has_template": true
+    },
+    {
+      "path": "aligned_poses.sdf",
+      "format": "sdf",
+      "description": "One heavy-only fixed-pocket-frame pose per candidate, TASK_ID and RANK properties; original SDF indices bind the core map. Empty file for an empty candidate table.",
+      "has_template": false
+    },
+    {
+      "path": "scaffold_mapping.json",
+      "format": "json",
+      "description": "Version1.0 candidates array with exact reference/candidate scaffold strings, retained/replaced/core atom IDs, attachment pairs and directed exit-vector pairs.",
+      "has_template": true
+    },
+    {
+      "path": "synthesis_routes.json",
+      "format": "json",
+      "description": "Version1.0 routes array; identifier-only ordered reaction DAGs with every intermediate and exact final state asserted for independent replay.",
+      "has_template": true
+    },
+    {
+      "path": "interaction_evidence.json",
+      "format": "json",
+      "description": "Version1.0 candidate-joined diagnostic feature/contact arrays; all success-relevant geometry is independently recomputed.",
+      "has_template": true
+    },
+    {
+      "path": "evidence.jsonl",
+      "format": "jsonl",
+      "description": "Strict finite JSON lines with kind/task_id/rank/artifact/note; actual execution/errors/retries/alternatives, never trusted as validation history.",
+      "has_template": true
+    },
+    {
+      "path": "summary.json",
+      "format": "json",
+      "description": "Version1.0 recommendations array and non-authoritative budget_use object. Neither can override trusted state or scientific gates.",
+      "has_template": true
+    }
+  ],
+  "environment": [
+    {
+      "name": "RDKit",
+      "version": "2025.9.6",
+      "description": "Runtime RDKit2025.09.6 graph, stereo, descriptors, DG and feature calculations."
+    },
+    {
+      "name": "Gemmi",
+      "version": "0.7.4",
+      "description": "Meeko receptor/structure preparation dependency."
+    },
+    {
+      "name": "Meeko",
+      "version": "0.8.0",
+      "description": "Pinned fixed-heavy-pose PDBQT preparation and AD4 eligibility."
+    },
+    {
+      "name": "Vina",
+      "version": "1.2.7",
+      "description": "Single-CPU deterministic fixed-pose score() proxy; no final redocking."
+    },
+    {
+      "name": "packaging",
+      "version": "25.0",
+      "description": "Pinned Vina dependency."
+    },
+    {
+      "name": "setuptools",
+      "version": "80.9.0",
+      "description": "Pinned Vina dependency."
+    },
+    {
+      "name": "wheel",
+      "version": "0.45.1",
+      "description": "Pinned Vina dependency."
+    }
+  ],
+  "requirement": [
+    "Exactly preserve all eleven specified retained atoms and native full-graph boundary stereochemistry; no sidechain-mask relaxation or Cl/F exchange.",
+    "Submit original heavy coordinates in the supplied protein frame; do not label computed poses, graph routes or binding proxies as experimental observations.",
+    "Only supplied material/template IDs establish route eligibility. Submitted SMARTS, executable code, claimed scores and pose labels are never executed or trusted.",
+    "Final scoring is local and offline. Trusted feedback counters cover validation observations, not arbitrary agent-local tool calls."
+  ],
+  "limitation": {}
+}

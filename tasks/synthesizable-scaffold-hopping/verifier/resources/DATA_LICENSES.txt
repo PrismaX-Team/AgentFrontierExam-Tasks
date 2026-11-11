@@ -1,0 +1,61 @@
+ERK2 reference structure data
+
+Numerical structure data are derived directly from PDB archive entry 4O6E.
+Depositors: J. Yin and W. Wang.
+Structure DOI: https://doi.org/10.2210/pdb4o6e/pdb
+Associated primary publication: Blake et al.,
+https://doi.org/10.1016/j.bmcl.2014.04.068
+Archive: https://files.rcsb.org/download/4O6E.cif
+
+PDB archive numerical data are available under CC0 1.0 Universal:
+https://creativecommons.org/publicdomain/zero/1.0/
+Policy: https://www.wwpdb.org/about/usage-policies
+
+The reference SDF reconstructs the deposited 2SH component bonds and absolute
+stereochemistry and uses its deposited heavy-atom coordinates. The protein
+PDB retains model 1, chain A and observed heavy atoms after removal of ligands,
+waters, hydrogens and alternate conformations. Missing atoms are not completed;
+protein protonation, charges and scoring preparation are not implied.
+Trailing horizontal line padding is removed without changing internal PDB/SDF
+columns or deposited scientific coordinates.
+
+SMDD-Bench inspired instance selection. Its dataset card declares Apache-2.0,
+but no SMDD YAML, coordinates, witness, code or score-cache payload is copied
+into this reference-data subset. Selection attribution:
+https://huggingface.co/datasets/extremelyconfused/smdd-bench/tree/77a71c968917c5dbd4c70b143e96b2753dde35c4
+
+These numerical data and computed structures are not experimental evidence
+that a submitted candidate binds or has been synthesized.
+
+Prepared scoring receptor
+
+The statements above about an unprepared heavy-only protein apply specifically
+to input/structures/erk2_protein_unprepared.pdb. The separate erk2_receptor.pdb
+and erk2_receptor.pdbqt are computed preparation products of the same public
+4O6E protein, with fixed hydrogens, atom types and charges. They are not a new
+experimental structure. Identical prepared coordinates are supplied as visible
+scientific input and as trusted verifier resources. No private HER2/10e project
+or witness ligand/pose is included.
+
+Independently authored small structure/reaction facts
+
+The admitted prepared-material graphs and four computational reaction-class
+records are independently encoded from US10519126B2 and the exact public
+PubChem identities cited in the trusted material library. Patent source:
+https://patents.google.com/patent/US10519126B2/en
+PubChem identity sources are the per-material compound URLs in that library.
+No patent PDF, image, source prose or PubChem response payload is distributed.
+No Apache/CC0 patent licence, commercial availability, pure-batch preparation,
+experimental yield, biological activity or freedom-to-operate is asserted.
+New substrate combinations are explicitly computational extrapolations.
+The fourteen graphs, scope and source attribution are in starting_materials.json
+and reaction_templates.json under these trusted verifier resources; visible
+input copies contain only the scientific graph/template fields.
+
+Software dependencies
+
+The environment declares exact upstream PyPI versions and SHA256-locked wheels
+for operator installation. This repository does not redistribute those binary
+wheel payloads. Upstream licences/notices remain applicable to installed tools
+and to any separately redistributed image; this data attribution is not a
+blanket software or patent licence or a legal compliance opinion.
