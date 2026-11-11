@@ -1,0 +1,26 @@
+{
+  "id": "tm-unseen-ligand-gap",
+  "title": "Spin-Splitting Prediction for Transition-Metal Complexes with Unseen Ligands",
+  "domain": "computational_chemistry",
+  "task_sources": [
+    {
+      "name": "Task proposal",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/15"
+    },
+    {
+      "name": "many_body_ml reference data and structures (pinned commit)",
+      "url": "https://github.com/hjkgrp/many_body_ml/tree/27467b5d3d85fa42263d746d514461fa009b3c91/data"
+    }
+  ],
+  "metric": {
+    "description": "Mean absolute adiabatic spin-gap error on the held-out ligand set, in kcal/mol; lower is better.",
+    "type": "linear_minimize"
+  },
+  "baseline": {
+    "existing_baseline": true,
+    "name": "Development-selected three-seed RAC MLP",
+    "source": "https://github.com/solin-del/LiveDiscoveryBench-Tasks/tree/0cf270b18288728affb1ec9c682963d2b2a61562/baselines/tm-unseen-ligand-gap",
+    "score": 5.263004864168261,
+    "bottom_line_score": 19.356138664589047
+  }
+}
