@@ -1,0 +1,416 @@
+{
+  "records": [
+    {
+      "sample_id": "p1v_016cdc104e274129e1c0",
+      "gap_kcal_mol": -42.96843721486084
+    },
+    {
+      "sample_id": "p1v_02cfb32a614e92c873ae",
+      "gap_kcal_mol": -57.11536824804284
+    },
+    {
+      "sample_id": "p1v_089844b810baae4dc094",
+      "gap_kcal_mol": -38.09453677540773
+    },
+    {
+      "sample_id": "p1v_089d8f6d3d279663270e",
+      "gap_kcal_mol": -26.061059881488973
+    },
+    {
+      "sample_id": "p1v_092e5441b57f112c2957",
+      "gap_kcal_mol": -66.65413270691715
+    },
+    {
+      "sample_id": "p1v_0acc6ceb0921cabe609a",
+      "gap_kcal_mol": -50.29110899880493
+    },
+    {
+      "sample_id": "p1v_0f4b2a86a9c33fd68b9f",
+      "gap_kcal_mol": -37.86544307759186
+    },
+    {
+      "sample_id": "p1v_147e956896672c6b3e1a",
+      "gap_kcal_mol": -72.23051207772869
+    },
+    {
+      "sample_id": "p1v_16ec43b6069e982dd840",
+      "gap_kcal_mol": -38.297085224807006
+    },
+    {
+      "sample_id": "p1v_171b07e1ae2cc65f81bc",
+      "gap_kcal_mol": -25.55590670406218
+    },
+    {
+      "sample_id": "p1v_172f83c367126a82b5a5",
+      "gap_kcal_mol": -16.554360248476314
+    },
+    {
+      "sample_id": "p1v_196c4d301ca1d62364dc",
+      "gap_kcal_mol": -36.68475389620767
+    },
+    {
+      "sample_id": "p1v_1d27dad9bf8eec8a65d2",
+      "gap_kcal_mol": -56.80779462007422
+    },
+    {
+      "sample_id": "p1v_1deec16ee2f6a899e35a",
+      "gap_kcal_mol": -33.74048848465122
+    },
+    {
+      "sample_id": "p1v_1f9fabcd6330ccb46e06",
+      "gap_kcal_mol": -33.279439425793385
+    },
+    {
+      "sample_id": "p1v_216e66cf03a1146696be",
+      "gap_kcal_mol": -7.802875916248695
+    },
+    {
+      "sample_id": "p1v_227fea05c2c21e4a0062",
+      "gap_kcal_mol": -45.96735093359598
+    },
+    {
+      "sample_id": "p1v_23e52d31b2a5338b614a",
+      "gap_kcal_mol": -37.37905234667664
+    },
+    {
+      "sample_id": "p1v_257aed1dec5778a05d72",
+      "gap_kcal_mol": -2.158487541404384
+    },
+    {
+      "sample_id": "p1v_2680832c7f7bed5b8aba",
+      "gap_kcal_mol": -27.05529535769756
+    },
+    {
+      "sample_id": "p1v_27765ccd6b3d9394f9fa",
+      "gap_kcal_mol": -38.238340310080616
+    },
+    {
+      "sample_id": "p1v_29d81b79ffe36a28c1ca",
+      "gap_kcal_mol": -33.19182898480449
+    },
+    {
+      "sample_id": "p1v_2c02cf5a10d53fc06670",
+      "gap_kcal_mol": -85.01419650842308
+    },
+    {
+      "sample_id": "p1v_2d6fb057516243e8d29f",
+      "gap_kcal_mol": -32.787705545653125
+    },
+    {
+      "sample_id": "p1v_33e1f86f0b4cb2048f46",
+      "gap_kcal_mol": -34.52503679625238
+    },
+    {
+      "sample_id": "p1v_359ffef88dd3cc330a56",
+      "gap_kcal_mol": -44.68282727012252
+    },
+    {
+      "sample_id": "p1v_407d01725275f9678353",
+      "gap_kcal_mol": -62.88974546597558
+    },
+    {
+      "sample_id": "p1v_429e03119a61b27909cc",
+      "gap_kcal_mol": -63.741917203773255
+    },
+    {
+      "sample_id": "p1v_4367e3186a93466c0f67",
+      "gap_kcal_mol": -35.81959661270105
+    },
+    {
+      "sample_id": "p1v_45cc0e65084d655f57b1",
+      "gap_kcal_mol": -36.70086663627899
+    },
+    {
+      "sample_id": "p1v_4afbccc06bc821299c64",
+      "gap_kcal_mol": -28.347470371634245
+    },
+    {
+      "sample_id": "p1v_4efdd9ad31a994ab8818",
+      "gap_kcal_mol": -37.75564046074692
+    },
+    {
+      "sample_id": "p1v_50dfecc083776012c7a0",
+      "gap_kcal_mol": -48.78563135587683
+    },
+    {
+      "sample_id": "p1v_52bc3774a008756a03bd",
+      "gap_kcal_mol": -40.258112507835904
+    },
+    {
+      "sample_id": "p1v_534c086c0f7f1e2219da",
+      "gap_kcal_mol": -71.4211619214177
+    },
+    {
+      "sample_id": "p1v_57e5599bcc05b57ae4d8",
+      "gap_kcal_mol": -37.21308957398492
+    },
+    {
+      "sample_id": "p1v_5a0e0bd613b01d51db39",
+      "gap_kcal_mol": -9.091503727320289
+    },
+    {
+      "sample_id": "p1v_5abcfaece34948569204",
+      "gap_kcal_mol": -42.569951555897205
+    },
+    {
+      "sample_id": "p1v_5b822efd17cabdedf536",
+      "gap_kcal_mol": -45.98722427364237
+    },
+    {
+      "sample_id": "p1v_5c1c2f31302f2c92eb39",
+      "gap_kcal_mol": -23.24169372190795
+    },
+    {
+      "sample_id": "p1v_62d56e6041a8a0b5c894",
+      "gap_kcal_mol": -43.050224479908366
+    },
+    {
+      "sample_id": "p1v_64fdfbd257db9e06df03",
+      "gap_kcal_mol": -22.421289552326016
+    },
+    {
+      "sample_id": "p1v_6a76bd958adede16f223",
+      "gap_kcal_mol": -50.45200446353192
+    },
+    {
+      "sample_id": "p1v_6df82db692b1d79345a3",
+      "gap_kcal_mol": -48.31369930451047
+    },
+    {
+      "sample_id": "p1v_6e707a62ee5c3d9a419b",
+      "gap_kcal_mol": -43.62580392417726
+    },
+    {
+      "sample_id": "p1v_6f4f94870d29e99ebd95",
+      "gap_kcal_mol": -74.744889215699
+    },
+    {
+      "sample_id": "p1v_73e22bccde79a76afa65",
+      "gap_kcal_mol": -38.5761982101144
+    },
+    {
+      "sample_id": "p1v_7876dc3d5284bdf52859",
+      "gap_kcal_mol": -60.96212688572109
+    },
+    {
+      "sample_id": "p1v_7d3dcc0faf58aacbe288",
+      "gap_kcal_mol": -64.61883431672902
+    },
+    {
+      "sample_id": "p1v_7d64222261f765482f95",
+      "gap_kcal_mol": -30.9660423038622
+    },
+    {
+      "sample_id": "p1v_7f7759a59bb723ab52d7",
+      "gap_kcal_mol": -59.10193731002096
+    },
+    {
+      "sample_id": "p1v_7f88e6054ea622ea8bc2",
+      "gap_kcal_mol": -66.26926088145183
+    },
+    {
+      "sample_id": "p1v_8394ad49d08cc123abae",
+      "gap_kcal_mol": -45.20706486093445
+    },
+    {
+      "sample_id": "p1v_839d58fe1530a8ca0b9d",
+      "gap_kcal_mol": -57.79967010173095
+    },
+    {
+      "sample_id": "p1v_843a24dc8550af6defe1",
+      "gap_kcal_mol": -60.90329166944912
+    },
+    {
+      "sample_id": "p1v_848ad09e594aa9eb2159",
+      "gap_kcal_mol": -29.9401915221722
+    },
+    {
+      "sample_id": "p1v_84b8d9905e0fd8c711bc",
+      "gap_kcal_mol": -4.621928275661276
+    },
+    {
+      "sample_id": "p1v_8583b92a4bf126d0573a",
+      "gap_kcal_mol": -33.45830105037862
+    },
+    {
+      "sample_id": "p1v_86126b5a2dc5fae2d9b9",
+      "gap_kcal_mol": -23.811587659397446
+    },
+    {
+      "sample_id": "p1v_89384b15ba63131c6ada",
+      "gap_kcal_mol": -25.2844805912207
+    },
+    {
+      "sample_id": "p1v_89faa49057e84c66ec00",
+      "gap_kcal_mol": -12.307677751026633
+    },
+    {
+      "sample_id": "p1v_8e8729adb706311a9c7c",
+      "gap_kcal_mol": -9.383505202034712
+    },
+    {
+      "sample_id": "p1v_9013890c77dd568f0907",
+      "gap_kcal_mol": -51.93905650860188
+    },
+    {
+      "sample_id": "p1v_919e3cf524e185a10045",
+      "gap_kcal_mol": -40.72752450162284
+    },
+    {
+      "sample_id": "p1v_93ec1266ae800e23c2e4",
+      "gap_kcal_mol": -59.73315415751415
+    },
+    {
+      "sample_id": "p1v_94b78c148905b0819219",
+      "gap_kcal_mol": -19.51427472645264
+    },
+    {
+      "sample_id": "p1v_95e2f70cba06511b38f6",
+      "gap_kcal_mol": -34.61421872731307
+    },
+    {
+      "sample_id": "p1v_977544a1692a0b246ed7",
+      "gap_kcal_mol": -35.71598253059335
+    },
+    {
+      "sample_id": "p1v_9839ce9827f29881104f",
+      "gap_kcal_mol": -8.098190874379725
+    },
+    {
+      "sample_id": "p1v_9c045281416c916295cc",
+      "gap_kcal_mol": -42.844391328749225
+    },
+    {
+      "sample_id": "p1v_9e25afe6fca68855e731",
+      "gap_kcal_mol": -19.511585696238853
+    },
+    {
+      "sample_id": "p1v_a3e4cfdd289b70ff5a34",
+      "gap_kcal_mol": -1.9218443156944431
+    },
+    {
+      "sample_id": "p1v_a4f88295d3f53d623719",
+      "gap_kcal_mol": -17.16920375995869
+    },
+    {
+      "sample_id": "p1v_a6d0921fbfc1764389c0",
+      "gap_kcal_mol": -11.69659991910521
+    },
+    {
+      "sample_id": "p1v_a736268642ef49876989",
+      "gap_kcal_mol": -60.18933736002964
+    },
+    {
+      "sample_id": "p1v_a98201b042f0f0e07eed",
+      "gap_kcal_mol": -29.76134856073486
+    },
+    {
+      "sample_id": "p1v_aa2b616a2f4c18266699",
+      "gap_kcal_mol": -42.35103042223557
+    },
+    {
+      "sample_id": "p1v_b6827c263256162b9032",
+      "gap_kcal_mol": -63.67472136208448
+    },
+    {
+      "sample_id": "p1v_b9a7a287253dd67f75cf",
+      "gap_kcal_mol": -14.214163429569451
+    },
+    {
+      "sample_id": "p1v_bcdbfa1de696f06995ca",
+      "gap_kcal_mol": -61.53112737110746
+    },
+    {
+      "sample_id": "p1v_c56b192292125eac2ebe",
+      "gap_kcal_mol": -50.413843534217904
+    },
+    {
+      "sample_id": "p1v_c7a1b313dfa79b6b227b",
+      "gap_kcal_mol": -37.823097813362665
+    },
+    {
+      "sample_id": "p1v_cb06caadc56f9a43575b",
+      "gap_kcal_mol": -25.603043186595187
+    },
+    {
+      "sample_id": "p1v_ce2deee97dcf828d6ce8",
+      "gap_kcal_mol": -34.35358973584016
+    },
+    {
+      "sample_id": "p1v_ce9de93d3bea72dd09a9",
+      "gap_kcal_mol": -21.91554771079041
+    },
+    {
+      "sample_id": "p1v_d1a77a16b8b2473be8fd",
+      "gap_kcal_mol": -10.187801119877804
+    },
+    {
+      "sample_id": "p1v_d3ecd3b62137b3d449a1",
+      "gap_kcal_mol": -32.634598354778745
+    },
+    {
+      "sample_id": "p1v_d579fdb1d1a0329cd4cb",
+      "gap_kcal_mol": -10.122000630245791
+    },
+    {
+      "sample_id": "p1v_d99af988871bfccb14d4",
+      "gap_kcal_mol": -57.61925385120776
+    },
+    {
+      "sample_id": "p1v_de6c02e527226327322f",
+      "gap_kcal_mol": -60.60808007793753
+    },
+    {
+      "sample_id": "p1v_e03c9ef82b395b961343",
+      "gap_kcal_mol": -59.96682772037161
+    },
+    {
+      "sample_id": "p1v_e1003c3c9a5533f68b01",
+      "gap_kcal_mol": -65.96134827994149
+    },
+    {
+      "sample_id": "p1v_e51aa866eb451a936545",
+      "gap_kcal_mol": -58.340372579378936
+    },
+    {
+      "sample_id": "p1v_e6fa980bf23c103553a4",
+      "gap_kcal_mol": -4.385422740657532
+    },
+    {
+      "sample_id": "p1v_e89e12218ee6bde5487b",
+      "gap_kcal_mol": -65.8502054672499
+    },
+    {
+      "sample_id": "p1v_f0aea211876f98ef4aa5",
+      "gap_kcal_mol": -39.841834493119
+    },
+    {
+      "sample_id": "p1v_f2b6f7244a0292442402",
+      "gap_kcal_mol": -22.568777338951804
+    },
+    {
+      "sample_id": "p1v_f589bb1789863a1f0747",
+      "gap_kcal_mol": -37.55199917615301
+    },
+    {
+      "sample_id": "p1v_f6d2cabbafe4fdf1a2d3",
+      "gap_kcal_mol": -32.03920488057122
+    },
+    {
+      "sample_id": "p1v_f6f79d5131d708c5023d",
+      "gap_kcal_mol": -26.89794087212306
+    },
+    {
+      "sample_id": "p1v_f82128239ab81ff67e25",
+      "gap_kcal_mol": -22.61084960932521
+    },
+    {
+      "sample_id": "p1v_f9dd8242eedf63d7dbb0",
+      "gap_kcal_mol": -54.2732658457544
+    },
+    {
+      "sample_id": "p1v_ff74cd7c87f8654fd0d1",
+      "gap_kcal_mol": -28.34206665360512
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "version": "archived-generated-vss-v1",
+  "data": "Duan et al., Zenodo 7350958 v2 (CC BY 4.0), VSS-452 author-generated complexes only; no CSD-derived geometries.",
+  "geometry": "Supplied B3LYP high-spin optimized geometry, LANL2DZ on metal/6-31G* on other elements; does not use optimized low-spin geometry.",
+  "target": "Archived B3LYP.vertsse = E_HS(R_HS)-E_LS(R_HS), kcal/mol; def2-TZVP source single-point values.",
+  "comparison_states": "The comparison multiplicities follow the Methods of the same Duan et al. VSS source (doi:10.1038/s43588-022-00384-0; arXiv:2207.10747, Methods, pp.21-23). For the source Cr/Mn/Fe/Co complexes in oxidation states II/III, d3 and d7 use (LS,HS)=(2,4), d4 and d6 use (1,5), and d5 uses (2,6). The d4 singlet is the source's chosen comparison convention; it is not a general claim that octahedral d4 low-spin chemistry is singlet, and the intermediate triplet is not evaluated. Source high-spin multiplicity and electron parity are checked before export. Source single-point singlets use a restricted formalism and non-singlets use an unrestricted formalism; HS geometry optimization is unrestricted. Neither the target sign nor a ground-state label defines the input states. The task compares two source-defined states and does not establish the true ground state over all multiplicities. Original electronic job outputs are unavailable, so SCF convergence and source numerical settings have not been independently recomputed.",
+  "grouping": "Exact whole-complex elemental formula; groups shared across source VSS train/test flags are excluded from final. No target determines group or split.",
+  "partition": "Original source train=0 supplies final; source train=1 formula groups are split by SHA256(p1-vss-dev-20261002-v1|formula) modulo100: <80 train, otherwise development.",
+  "cross_task": "Exclude all formulas found in the budgeted spin-discovery and unseen-ligand gap tasks. The system-specific DFA task preserves source VSS train/test flags; final formulas here are disjoint from its training set. Final chemical records may overlap between the two tasks.",
+  "prohibited_inputs": [
+    "Source names/row indices and XYZ comments",
+    "Ground-state multiplicity or target sign as a feature",
+    "DLPNO references or any other DFA result",
+    "Archived electronic feature arrays from the system-specific DFA task"
+  ],
+  "limitations": [
+    "Generated VSS geometries and archived B3LYP targets differ from the proposed crystal-geometry B3LYP* task.",
+    "Original electronic output files and reference SCF settings remain only partly documented.",
+    "Public targets were already inspected during construction; no uncontaminated holdout claim.",
+    "Formula grouping is conservative; supplied input geometry encodes prior DFT preparation."
+  ],
+  "source_state_convention": {
+    "source_doi": "10.1038/s43588-022-00384-0",
+    "methods_url": "https://arxiv.org/pdf/2207.10747",
+    "methods_location": "Methods: Data set construction, DFT geometry optimization, Single-point energy calculation, pp.21-23",
+    "source_metals": [
+      "Cr",
+      "Mn",
+      "Fe",
+      "Co"
+    ],
+    "source_oxidation_states": [
+      2,
+      3
+    ],
+    "low_high_multiplicities_by_d_count": {
+      "3": [
+        2,
+        4
+      ],
+      "4": [
+        1,
+        5
+      ],
+      "5": [
+        2,
+        6
+      ],
+      "6": [
+        1,
+        5
+      ],
+      "7": [
+        2,
+        4
+      ]
+    },
+    "d4_scope": "Restricted singlet versus quintet is the archived source comparison; intermediate triplet is not evaluated. This is not a universal d4 low-spin assignment.",
+    "single_point_formalism": "Restricted for singlets; unrestricted for non-singlets.",
+    "geometry_formalism": "Unrestricted high-spin B3LYP optimization.",
+    "raw_electronic_jobs_independently_verified": false
+  },
+  "sign_distribution": {
+    "training": {
+      "negative": 166,
+      "positive": 7,
+      "zero": 0
+    },
+    "development": {
+      "negative": 43,
+      "positive": 2,
+      "zero": 0
+    },
+    "final": {
+      "negative": 103,
+      "positive": 0,
+      "zero": 0
+    },
+    "two_state_order_diagnostic_included": false,
+    "limitation": "The frozen final set contains 103 negative gaps and no positive or zero gaps; training contains 166 negative and 7 positive gaps, and development contains 43 negative and 2 positive gaps. The two positive gaps in the original source test partition were removed by the predeclared cross-task elemental-formula exclusion. The split is retained without using target signs to revise inclusion. A constant negative prediction already obtains perfect two-state sign accuracy on this final set, so that diagnostic is omitted. Complete-set continuous-gap MAE remains the primary measure; these records cannot assess balanced spin-order classification."
+  }
+}

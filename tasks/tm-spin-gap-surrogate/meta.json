@@ -1,0 +1,34 @@
+{
+  "id": "tm-spin-gap-surrogate",
+  "title": "Archived B3LYP Vertical Spin-Gap Prediction on Generated VSS Geometries",
+  "domain": "computational_chemistry",
+  "task_sources": [
+    {
+      "name": "Submitted Proposal 1",
+      "url": "https://github.com/PrismaX-Team/LiveDiscoveryBench-Tasks/discussions/13"
+    },
+    {
+      "name": "Duan et al., author-generated VSS records, archived v2",
+      "url": "https://doi.org/10.5281/zenodo.7350958"
+    },
+    {
+      "name": "Original DFA data and geometry protocol, pinned code",
+      "url": "https://github.com/hjkgrp/dfa_recommender/tree/e76c9b3ac3ee3a97fd339fdd9728fcf3aaa35e77"
+    },
+    {
+      "name": "Duan et al., VSS source scientific methods",
+      "url": "https://doi.org/10.1038/s43588-022-00384-0"
+    }
+  ],
+  "metric": {
+    "description": "Mean absolute vertical spin-gap error, in kcal/mol; lower is better.",
+    "type": "linear_minimize"
+  },
+  "baseline": {
+    "existing_baseline": true,
+    "name": "Development-selected three-seed geometry MLP",
+    "source": "https://github.com/solin-del/LiveDiscoveryBench-Tasks/tree/d0f73389cf7099a94e70645348edbdf65a7b6267/baselines/tm-spin-gap-surrogate",
+    "score": 7.793858458391523,
+    "bottom_line_score": 15.373565448535388
+  }
+}
