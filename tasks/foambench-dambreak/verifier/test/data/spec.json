@@ -1,0 +1,64 @@
+{
+  "cases": {
+    "damBreakWithObstacle_1": {
+      "solver": "interFoam",
+      "wall_clock_limit_seconds": 660,
+      "reference_final_time": "0.1",
+      "reference_wall_seconds": 130.31
+    },
+    "damBreakWithObstacle_2": {
+      "solver": "interFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.1",
+      "reference_wall_seconds": 91.484
+    },
+    "damBreakWithObstacle_3": {
+      "solver": "interFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.1",
+      "reference_wall_seconds": 101.507
+    },
+    "damBreakWithObstacle_4": {
+      "solver": "interFoam",
+      "wall_clock_limit_seconds": 660,
+      "reference_final_time": "0.1",
+      "reference_wall_seconds": 127.162
+    },
+    "damBreakWithObstacle_5": {
+      "solver": "interFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.1",
+      "reference_wall_seconds": 84.7
+    },
+    "damBreakWithObstacle_6": {
+      "solver": "interFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.1",
+      "reference_wall_seconds": 100.635
+    },
+    "damBreakWithObstacle_7": {
+      "solver": "interFoam",
+      "wall_clock_limit_seconds": 660,
+      "reference_final_time": "0.1",
+      "reference_wall_seconds": 120.921
+    },
+    "damBreakWithObstacle_8": {
+      "solver": "interFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.1",
+      "reference_wall_seconds": 90.904
+    },
+    "damBreakWithObstacle_9": {
+      "solver": "interFoam",
+      "wall_clock_limit_seconds": 600,
+      "reference_final_time": "0.1",
+      "reference_wall_seconds": 102.426
+    },
+    "damBreakWithObstacle_10": {
+      "solver": "interFoam",
+      "wall_clock_limit_seconds": 660,
+      "reference_final_time": "0.1",
+      "reference_wall_seconds": 129.466
+    }
+  }
+}
