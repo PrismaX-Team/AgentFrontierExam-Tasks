@@ -1,0 +1,25 @@
+{
+  "chemical_accuracy_threshold_eV": 0.0433641,
+  "direction": "minimize",
+  "id_column": "reaction_id",
+  "invalid_score": 0.8001934932388185,
+  "max_validation_calls": 20,
+  "metric": "forward_barrier_mae",
+  "nonnegative": false,
+  "prediction_column": "forward_barrier_eV",
+  "schema_version": "1.0",
+  "submission_max_bytes": 2097152,
+  "task_id": "reaction_barrier",
+  "test": {
+    "count": 287,
+    "label_file": "test/data/test_labels.csv",
+    "label_sha256": "8b05503d621a34e4e1e4e7e452bb4dfd63e352f54e9d62ae57b52e10f454d37e"
+  },
+  "unit": "eV",
+  "validation": {
+    "count": 225,
+    "label_file": "test/data/validation_labels.csv",
+    "label_sha256": "2aa6f46d8c53b370ca368761c05d33a65d2eb030731877073bd476855f8be6cf"
+  },
+  "validation_request_max_bytes": 4194304
+}

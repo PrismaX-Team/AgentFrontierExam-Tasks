@@ -1,0 +1,94 @@
+{
+  "instructions": "Predict forward electronic reaction barriers from mapped reactant and product geometries. For every supplied test reaction, predict E_TS - E_R in eV at the released omegaB97X/6-31G(d) level. Use the fixed atom order of the endpoints. Training includes reference reactant, product and transition-state geometries and their energies for 9,561 reactions. The 225 development and 287 test inputs contain only endpoint geometries and atomic numbers; their energies and transition states are hidden. Splits follow the official Transition1x v4 groups and are disjoint in actual elemental composition. Improve reaction representations, regression, locally trained energy models or internal path approximations using only the allowed data. Test-reaction DFT transition-state searches and test-energy queries are forbidden. The primary scientific result is MAE over all 287 forward barriers, not a successful-path subset. Negative reference or predicted barriers are retained. This task measures released electronic-energy references, not activation free energies, experimental rate constants, or independently verified new saddle points. Development feedback evaluates the complete development set and returns only aggregate MAE, RMSE, linearly interpolated 95th-percentile absolute error and the fraction within 0.0433641 eV. At most 20 valid, newly executed development evaluations are accepted; identical predictions in a new evaluation still count, and malformed or exhausted requests do not consume a round. The task JSON payload contains only predictions_csv, a CSV string using the same two columns as the final predictions, with all development IDs. The framework owns the outer action envelope and request-ID retry cache. Final submissions must include predictions.csv, method.md, sources.json and research_code.zip. Final scoring uses the frozen test labels and trusted VerifyContext history; neither source descriptions nor self-reported scores replace the metric.",
+  "input": [
+    {
+      "path": "train.jsonl.gz",
+      "format": "gzip-jsonl",
+      "description": "9,561 training reactions with endpoint and reference transition-state coordinates, three total electronic energies, and forward barriers."
+    },
+    {
+      "path": "validation.jsonl.gz",
+      "format": "gzip-jsonl",
+      "description": "225 development reactions with endpoint coordinates and atomic numbers only; aggregate feedback is bounded to 20 evaluations."
+    },
+    {
+      "path": "test.jsonl.gz",
+      "format": "gzip-jsonl",
+      "description": "287 final-test reactions with endpoint coordinates and atomic numbers only."
+    },
+    {
+      "path": "README.md",
+      "format": "markdown",
+      "description": "Scientific target, data fields, development payload, artifact formats and resource rules."
+    },
+    {
+      "path": "ATTRIBUTION.txt",
+      "format": "text",
+      "description": "Dataset authors, fixed release, citation and transformation notice."
+    },
+    {
+      "path": "LICENSE-DATA.txt",
+      "format": "text",
+      "description": "Dataset MIT license statement and source attribution."
+    },
+    {
+      "path": "target_convention.json",
+      "format": "json",
+      "description": "Fixed electronic-energy convention, units, chemical scope and development budget."
+    },
+    {
+      "path": "validation_request.json",
+      "format": "json",
+      "description": "Blank development-payload template; fill every blank with a finite eV prediction."
+    },
+    {
+      "path": "schemas",
+      "format": "directory",
+      "description": "Task-local development JSON schema; exact ID and numeric checks are enforced by the verifier."
+    },
+    {
+      "path": "validation_predictions.csv",
+      "format": "csv",
+      "description": "Blank 225-ID development CSV template. Feedback accepts its complete CSV text in predictions_csv, not a filename or attachment."
+    }
+  ],
+  "submission": [
+    {
+      "path": "predictions.csv",
+      "format": "csv",
+      "description": "Exactly reaction_id,forward_barrier_eV, with all 287 test IDs once and finite eV predictions.",
+      "has_template": true
+    },
+    {
+      "path": "method.md",
+      "format": "markdown",
+      "description": "Nonempty UTF-8 method and reproduction description, at most 64 KiB.",
+      "has_template": true
+    },
+    {
+      "path": "sources.json",
+      "format": "json",
+      "description": "Strict JSON object with data, models, software string lists documenting actual sources.",
+      "has_template": true
+    },
+    {
+      "path": "research_code.zip",
+      "format": "zip",
+      "description": "Reproducible research source code archive. No extraction or execution occurs during scalar scoring.",
+      "has_template": false
+    }
+  ],
+  "environment": [],
+  "requirement": [
+    "Use only the supplied scientific data. No external training datasets, pretrained weights, public test-barrier tables or corresponding test transition-state geometries are allowed. Literature and algorithm descriptions may be consulted.",
+    "Do not call DFT or an online quantum-chemistry service for test reactions. Do not read hidden development/test reference energies or transition states to fit a model or select a checkpoint; development model selection is restricted to the declared aggregate feedback.",
+    "Retain the supplied reaction direction, atom order and immutable IDs. Include every required ID exactly once; do not drop difficult or failed cases. Internal search failure requires a finite label-free fallback.",
+    "Preserve code and report actual training, software and model sources. Code and source-manifest validation checks file format only; it does not certify an asserted computational history or a new mechanism.",
+    "Use eV per reaction for forward barriers, without clipping or automatic unit conversion. Predictions must be finite decimal strings of at most 128 characters without surrounding whitespace; CSV files are at most 2 MiB and use the exact two-column header.",
+    "Final artifacts are exactly predictions.csv, method.md, sources.json and research_code.zip. method.md and sources.json are each at most 64 KiB. The source manifest has exactly data, models and software string lists; data/software must be nonempty, and models may be empty.",
+    "The code ZIP is at most 64 MiB compressed, 512 MiB declared uncompressed and 1024 entries. It must contain a regular source file, with unique relative paths, no links, special files, encrypted members or parent traversal. The scorer validates the archive without extracting or executing it.",
+    "The 20-round development budget is stored only in the framework-injected VerifyContext. Final metadata must not be used as a substitute for that trusted history. The raw final test result is not research feedback for a resubmission.",
+    "The released data are public. Anonymous IDs and label isolation do not establish absence of pretraining contamination; this is not a claim of unpublished or contamination-free chemistry."
+  ],
+  "limitation": {}
+}
