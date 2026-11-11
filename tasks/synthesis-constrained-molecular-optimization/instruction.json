@@ -1,0 +1,89 @@
+{
+  "instructions": "Optimize three supplied lead series under separate, fixed property-evaluation, reaction-replay, and repair budgets. Every proposed molecule must be linked to an allowed linear route made from the task-authored starting-material allowlist and the frozen reaction SMARTS. The validation verifier executes the route, canonicalizes the product, recomputes RDKit properties, applies scaffold/similarity/property constraints, and returns a stable evidence record. Never treat a self-reported property or a syntactically valid route as verified.\n\nThe exact instances, objective normalizations, hard constraints, reaction blueprints, budgets, and AUC checkpoints are in /input/tasks.jsonl. Starting-material identities are in /input/starting_materials.json; immutable reaction SMARTS and their ordered reactant roles are in /input/reaction_templates.json. /input/scoring_and_protocol.md is the normative human-readable protocol. Each validation request evaluates one candidate and has exactly the schema shown in /input/validation_request.json. Malformed JSON/schema, unknown identifiers, invalid SMILES, canonical duplicates, cached requests, and exhausted-budget requests do not consume scientific budget. A new executable replay attempt consumes one route-validation unit even when the replay fails. A successful replay of a new canonical candidate additionally consumes one property-evaluation unit. A non-null repair_of_call consumes one repair unit and must reference an earlier rejected route with the same ordered templates and starting materials; changing that rejected synthesis plan's product declarations requires such a reference and a fresh route_id. Hard-constraint failures consume both scientific units and enter scoring history with utility zero.\n\nFor every charged route attempt, append the returned evaluation object unchanged to evidence.jsonl in global call_index order. At the end, candidates.csv must materialize, for each task, the verifier-recomputed best min(10, evaluated-count) candidates ordered by utility descending, canonical SMILES ascending, then original call order. Include the same canonical routes in routes.json. Predicted numeric columns are required for scientific reporting but are ignored by the final score. The test verifier rereads the trusted validation state, checks the complete evidence history, replays every scored route, recomputes every property and utility, and rejects unqueried or altered Top-10 materializations.\n\nThe primary raw metric is macro-averaged constrained Top-10 AUC in [0,1]. Candidate utility is the weighted geometric mean of the five clipped objective desirabilities only when all hard constraints and route replay pass; otherwise it is zero. At every integer property-evaluation checkpoint from 0 through 16, the ten best utilities found so far are summed and divided by 10, so missing or invalid candidates contribute zero. Per-task trapezoidal area is divided by 16 and then by the fixed perfect-sequence ceiling 0.6875; the three normalized task AUCs are averaged and rounded half-even to eight decimal places. Higher is better. Final test feedback cannot be used to revise the frozen submission.\n\nScientific boundary: this benchmark proves formal reachability under small, transparent reaction SMARTS. It does not predict reagents, conditions, selectivity, yield, safety, purity, or experimental synthesizability. Morgan similarity to each supplied lead is explicitly a ligand-based activity-retention surrogate, not experimental or target-specific activity. Because all descriptors and formulas are public, the limited budget governs official validation history; it does not claim to prevent independent local proxy calculations. Evaluation is offline and deterministic under Python 3.11 and RDKit 2025.09.6.",
+  "input": [
+    {
+      "path": "tasks.jsonl",
+      "format": "JSON Lines",
+      "description": "Three lead-optimization instances with public objectives, constraints, route blueprints, budgets, and AUC checkpoints."
+    },
+    {
+      "path": "starting_materials.json",
+      "format": "JSON",
+      "description": "Task-authored benchmark starting materials, canonical SMILES, and allowed reaction roles."
+    },
+    {
+      "path": "reaction_templates.json",
+      "format": "JSON",
+      "description": "Frozen atom-mapped reaction SMARTS, ordered reactant roles, ambiguity caps, and scientific scope statements."
+    },
+    {
+      "path": "scoring_and_protocol.md",
+      "format": "Markdown",
+      "description": "Normative validation, standardization, route-replay, evidence, final-submission, and scoring rules."
+    },
+    {
+      "path": "validation_request.json",
+      "format": "JSON",
+      "description": "A valid public validation-request example using the supplied lead; it is illustrative, not an optimal answer."
+    },
+    {
+      "path": "data_provenance.md",
+      "format": "Markdown",
+      "description": "Data authorship, redistribution basis, dependency attribution, and scientific limitations."
+    }
+  ],
+  "submission": [
+    {
+      "path": "candidates.csv",
+      "format": "CSV",
+      "description": "Per-task final Top-10 materialization with exact header task_id,rank,canonical_smiles,route_id,predicted_qed,predicted_logp,predicted_tpsa,predicted_utility.",
+      "has_template": true
+    },
+    {
+      "path": "routes.json",
+      "format": "JSON",
+      "description": "Exactly one canonical, previously evaluated linear route for every row in candidates.csv.",
+      "has_template": true
+    },
+    {
+      "path": "evidence.jsonl",
+      "format": "JSON Lines",
+      "description": "Every charged validation evaluation object copied unchanged in global call_index order, including failed route attempts and repairs.",
+      "has_template": true
+    }
+  ],
+  "environment": [
+    {
+      "name": "Python",
+      "version": "3.11.16",
+      "description": "Linux/amd64 runtime from the digest-pinned official CPython slim-bookworm base image."
+    },
+    {
+      "name": "RDKit",
+      "version": "2025.09.6",
+      "description": "Cheminformatics toolkit installed from a hash-locked x86_64 wheel for standardization, reaction replay, descriptors, fingerprints, and scaffold checks."
+    },
+    {
+      "name": "NumPy",
+      "version": "2.4.6",
+      "description": "Numerical dependency installed from a hash-locked x86_64 wheel."
+    },
+    {
+      "name": "Pillow",
+      "version": "12.3.0",
+      "description": "Image-processing dependency installed from a hash-locked x86_64 wheel."
+    }
+  ],
+  "requirement": [
+    "Use only the task-provided starting-material identifiers and reaction-template identifiers in submitted routes; submit no executable code or archives.",
+    "Treat validation evaluation objects as immutable records and submit the complete charged-call history; self-reported predictions never replace verifier recomputation.",
+    "Do not use final test output to alter the frozen submission.",
+    "Complete at least one charged property evaluation in every task before final scoring; the verifier preflights every potentially required budget before route replay."
+  ],
+  "limitation": {
+    "cpu": {"cores": 8},
+    "memory": {"gb": 32},
+    "gpu": {"count": 0},
+    "runtime": {"seconds": 14400}
+  }
+}

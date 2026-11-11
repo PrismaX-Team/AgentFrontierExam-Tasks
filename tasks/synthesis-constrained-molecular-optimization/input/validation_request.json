@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "request_id": "public-example-001",
+  "task_id": "scmo_amide_001",
+  "candidate_smiles": "O=C(c1ccc(-c2nccs2)cc1)N1CCOCC1",
+  "route": {
+    "route_id": "public-example-route-001",
+    "task_id": "scmo_amide_001",
+    "starting_material_ids": [
+      "a_core_acid",
+      "amine_morpholine"
+    ],
+    "reaction_template_ids": [
+      "amide_coupling_v1"
+    ],
+    "intermediates": [],
+    "final_product": "O=C(c1ccc(-c2nccs2)cc1)N1CCOCC1"
+  },
+  "repair_of_call": null
+}
