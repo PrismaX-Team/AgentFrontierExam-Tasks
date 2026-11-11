@@ -1,0 +1,15 @@
+{
+  "id": "au-ti-o-force-prediction",
+  "title": "Energy and force prediction on a fixed Au-Ti-O reference dataset",
+  "domain": "Computational chemistry and machine-learned interatomic potentials",
+  "task_sources": [
+    {
+      "name": "Task design and contributor-supplied pre-existing Au-Ti-O reference data described in approved Proposal #22",
+      "url": "https://github.com/PrismaX-Team/AgentFrontierExam-Tasks/discussions/22"
+    }
+  ],
+  "metric": {
+    "description": "Primary raw score is element-balanced force RMSE: sqrt((MSE_Au+MSE_O+MSE_Ti)/3) in unchanged source force units; lower is better. Energy RMSE is diagnostic only. Display conversion is not yet classified.",
+    "type": null
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "instructions": "Develop a method to predict Cartesian atomic forces and total energies for held-out Au-Ti-O configurations using the supplied fixed reference dataset. The primary research objective is improved force prediction on this sampled dataset; this task does not establish transfer to unseen facets, independent trajectories, catalytic performance, or long-time dynamics. Public train and development records include species, positions, cell, periodicity, total energy, and force vectors. You may use both public labelled sets to develop or fit your method. Test records include only structural inputs. Submit predictions.jsonl with exactly one record for every test ID, containing exactly id (string), energy (finite number), and forces (one ordered Cartesian triplet per atom). The template contains nulls that must all be replaced by numerical predictions. Preserve test atom ordering. Record order may vary. Use the source numerical scale: no energy, coordinate, or force conversion has been applied. See data/units.json. Do not assume conventional ASE eV/angstrom units. The primary score is sqrt((MSE_Au + MSE_O + MSE_Ti)/3), where each element MSE averages squared errors over all Cartesian components of all atoms of that element in the test set. Lower is better. Equal element weights prevent the larger support population from overwhelming Au errors; this is a task-design choice, not an experimentally derived physical weighting. Additional diagnostics are the global force-component RMSE, each element force RMSE, and sqrt(mean(((predicted total energy-reference total energy)/number of atoms)^2)) across test structures. Energy error is diagnostic and does not change the primary ranking. Reference values come exclusively from pre-existing calculations. Exact geometries were deduplicated by species and ordered coordinates plus cell and periodicity, keeping the first original record. The fixed split is stratified by composition and is not certified independent across trajectories. Related configurations may remain across splits. Scoring uses deterministic Decimal accumulation and rounds final metrics to 12 decimal places with half-even rounding. Invalid submissions do not receive a valid score.",
+  "input": [
+    {
+      "path": "data",
+      "format": "directory",
+      "description": "Labelled training data in train-001.jsonl and train-002.jsonl (read both), labelled development data, unlabelled test structures, unit declaration, and data-format documentation."
+    }
+  ],
+  "submission": [
+    {
+      "path": "predictions.jsonl",
+      "format": "jsonl",
+      "description": "One record per test structure: id, total energy, and Cartesian forces in unchanged source numerical units.",
+      "has_template": true
+    }
+  ],
+  "environment": [],
+  "requirement": [
+    "Do not access hidden reference labels, the source all.xyz, construction files, or previously fitted model weights that have seen held-out reference labels. Scientific literature and general methods may be researched; source labels or derived answers may not be retrieved.",
+    "The submission must be UTF-8 JSONL, at most 32 MiB, with no blank records, duplicate object keys, duplicate IDs, extra IDs, or missing IDs.",
+    "All energy and force entries must be JSON numbers (not null, boolean, string, NaN, or infinity), with absolute value at most 1e100.",
+    "Each structure must have exactly the ordered number of force triplets specified by the test input. Do not reorder atoms."
+  ],
+  "limitation": {}
+}
