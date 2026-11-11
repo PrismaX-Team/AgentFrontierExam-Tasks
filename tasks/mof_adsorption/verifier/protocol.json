@@ -1,0 +1,16 @@
+{
+  "count": 1768,
+  "direction": "minimize",
+  "id_column": "system_id",
+  "invalid_score": 0.6565553732351735,
+  "label_file": "test/data/labels.csv",
+  "label_max_bytes": 33554432,
+  "label_sha256": "03dbbf0d29c3830f9839320d8361633975569cc4d5b52213c94af3eff528d3e5",
+  "metric": "mean_mae",
+  "nonnegative": false,
+  "prediction_column": "adsorption_energy_eV",
+  "schema_version": "1.0",
+  "submission_max_bytes": 1048576,
+  "task_id": "mof_adsorption",
+  "unit": "eV"
+}

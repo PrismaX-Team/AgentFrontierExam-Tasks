@@ -1,0 +1,48 @@
+{
+  "environment": [],
+  "input": [
+    {
+      "description": "All 162,224 labeled training systems in 15 sorted part-*.jsonl.gz files. Read every shard; storage sharding does not alter records.",
+      "format": "directory of gzip JSON Lines",
+      "path": "train"
+    },
+    {
+      "description": "3,998 labeled development systems for self-directed evaluation.",
+      "format": "gzip JSON Lines",
+      "path": "development.jsonl.gz"
+    },
+    {
+      "description": "1,768 anonymous initial systems from the official ood_big split with no energy, force or relaxed-coordinate labels.",
+      "format": "gzip JSON Lines",
+      "path": "test.jsonl.gz"
+    },
+    {
+      "description": "Fields, whole-system units, split interpretation, scientific limitations and source attribution.",
+      "format": "Markdown",
+      "path": "README.md"
+    },
+    {
+      "description": "All anonymous test system IDs with blank adsorption-energy predictions.",
+      "format": "CSV",
+      "path": "submission.csv"
+    }
+  ],
+  "instructions": "Develop a method that predicts relaxed whole-system adsorption energy in eV from the initial periodic MOF plus CO2/H2O structure. Train on all 162,224 supplied ODAC23 IS2RE training systems and use the 3,998 labeled development systems for internal evaluation. Return predictions for all 1,768 official ood_big test systems, representing 85 source framework names and 66 parent names under the released defect-naming rule. The primary objective is lower whole-system mean absolute error. Initial geometry, element identities and guest membership are supplied; test energy, forces and relaxed reference coordinates are withheld. The source large-framework split is retained even though exported simulation atom-count ranges overlap; do not reconstruct it by atom count. This evaluates a frozen ODAC23 computational target and size extrapolation, not experimental adsorption capacity, selectivity, unseen-linker/topology performance or a corrected ODAC25 reference state.",
+  "limitation": {},
+  "requirement": [
+    "Use only the scientific datasets and pretrained checkpoints explicitly supplied in input. Scientific literature and algorithm ideas may be used, but no additional model weights, training datasets or sample-specific answers may be introduced into this resource track.",
+    "Do not retrieve or use public test target tables, relaxed test reference structures, source ID mappings or archived per-sample benchmark predictions. Do not select a method, checkpoint, hyperparameter or subset using hidden test labels.",
+    "Submit all and only the template IDs exactly once in the declared submission.csv. No extra columns or files, duplicate IDs, missing rows, blanks, NaN or infinity are accepted. Use strict UTF-8 decimal values without surrounding spaces; each numerical field is at most 128 characters.",
+    "The score covers the entire frozen test set. Internal calculation failures need a label-free finite fallback; samples cannot be dropped. Units are interpreted literally without automatic conversion.",
+    "Retain executable research code, dependency versions and training-data/model-source disclosures for reproducibility review. Public source data and anonymous identifiers do not establish absence of pretraining contamination.",
+    "The submitted CSV may not exceed 1048576 bytes."
+  ],
+  "submission": [
+    {
+      "description": "Exactly system_id,adsorption_energy_eV. One finite signed whole-system adsorption energy in eV per test system.",
+      "format": "CSV UTF-8",
+      "has_template": true,
+      "path": "submission.csv"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "bottom_line_score": 0.6565553732351735,
+    "existing_baseline": true,
+    "name": "Training-only median adsorption energy by (nco2, nh2o), with global training median fallback; independently reproduced on every training shard",
+    "score": 0.22528328096993902,
+    "source": "evidence/mof_adsorption/baseline.py and official_results/baseline/result.json in the accompanying reviewer evidence"
+  },
+  "domain": "chemistry; porous materials; molecular adsorption",
+  "id": "mof_adsorption",
+  "metric": {
+    "description": "Mean absolute error in eV over all 1,768 whole-system test energies. Lower is better. No per-atom or per-guest normalization, clipping, filtering or macro-averaging across invented groups. Report mean_mae as raw value. linear_minimize display anchors use the independently reproduced training-only guest-count median and a valid all-zero prediction method.",
+    "type": "linear_minimize"
+  },
+  "task_sources": [
+    {
+      "name": "ODAC23 original IS2RE source dataset, including official ood_big initial structures",
+      "url": "https://dl.fbaipublicfiles.com/dac/datasets/odac23_is2r.tar.gz"
+    },
+    {
+      "name": "Author-released adsorption-energy table and source dataset documentation",
+      "url": "https://github.com/Open-Catalyst-Project/odac-data"
+    }
+  ],
+  "title": "MOF adsorption-energy prediction on the ODAC23 large-framework split"
+}
