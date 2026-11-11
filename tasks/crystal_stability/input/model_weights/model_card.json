@@ -1,0 +1,17 @@
+{
+  "checkpoint_file": "chgnet_0.3.0_e29f68s314m37.pth.tar",
+  "checkpoint_version": "0.3.0",
+  "license": "BSD-3-Clause",
+  "license_file": "LICENSE-CHGNet.txt",
+  "license_scope": "The redistributed checkpoint and accompanying software notices are preserved. The underlying Materials Project training corpus is not redistributed and is not relicensed by this package.",
+  "loading": "CHGNet.from_file(path, mlp_out_bias=False, version=\"0.3.0\").to(\"cpu\")",
+  "model_name": "CHGNet",
+  "model_parameter_count": 412525,
+  "output_units": {
+    "energy": "eV/atom",
+    "forces": "eV/angstrom",
+    "stress": "GPa"
+  },
+  "python_distribution": "chgnet==0.3.8",
+  "training_disclosure": "Pretrained on Materials Project GGA/GGA+U trajectories (about 1.5 million structures from 146,000 compounds), including energy, force, stress and magnetic-moment targets. Energy targets already include MP2020 corrections. Training may overlap chemical systems or the auxiliary MP table; this package does not claim contamination-free or wholly unseen-composition evaluation."
+}
