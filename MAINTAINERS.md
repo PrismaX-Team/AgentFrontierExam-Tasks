@@ -65,4 +65,4 @@ python3 -I .github/scripts/task_structure.py .
 
 ## 文档语言
 
-根目录说明文档采用中英两份文件：中文为默认（`README.md`、`CONTRIBUTING.md`、`MAINTAINERS.md`），英文为 `*_EN.md`。修改任一份时同步更新另一份。Proposal 表单、PR 模板与机器人评论保持单份双语，不拆分。
+根目录说明文档采用中英两份文件：首页默认英文（`README.md`），中文为 `README_ZH.md`；共建与维护指南仍以中文为默认（`CONTRIBUTING.md`、`MAINTAINERS.md`），英文为 `*_EN.md`。修改任一份时同步更新另一份。`README_EN.md` 仅保留旧英文链接入口。Proposal 表单、PR 模板与机器人评论保持单份双语，不拆分。

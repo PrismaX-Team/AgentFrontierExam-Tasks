@@ -65,4 +65,4 @@ python3 -I .github/scripts/task_structure.py .
 
 ## Documentation languages
 
-Root documentation is kept as two files per document: Chinese is the default (`README.md`, `CONTRIBUTING.md`, `MAINTAINERS.md`) and English lives in `*_EN.md`. Update both when changing either. The Proposal form, PR templates and bot comments stay single bilingual files and are not split.
+Root documentation is kept as two files per document. The repository homepage defaults to English (`README.md`), with Chinese in `README_ZH.md`. Contributor and maintainer guides still default to Chinese (`CONTRIBUTING.md`, `MAINTAINERS.md`), with English in `*_EN.md`. Update both languages when changing either. `README_EN.md` only preserves the old English entry link. The Proposal form, PR templates and bot comments stay single bilingual files and are not split.
