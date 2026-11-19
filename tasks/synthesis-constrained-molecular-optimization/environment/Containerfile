@@ -1,0 +1,33 @@
+# The digest is the official linux/amd64 Python 3.11.16 slim-bookworm
+# image manifest published on 2026-09-01.
+FROM --platform=linux/amd64 python:3.11-slim-bookworm@sha256:b1add8a6f2aca6bcfcf0b9c9b522352f7ce0d62a3d556a2f2f32511aa0cca250
+
+LABEL org.opencontainers.image.title="LiveDiscoveryBench molecular optimization environment"
+
+ENV LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONHASHSEED=0 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_ROOT_USER_ACTION=ignore
+
+COPY requirements.lock /opt/task-environment/requirements.lock
+
+RUN python -m pip install \
+        --only-binary=:all: \
+        --require-hashes \
+        --requirement /opt/task-environment/requirements.lock \
+    && python -c "from importlib.metadata import version; import numpy; import PIL; import rdkit; from rdkit import Chem; from rdkit.Chem import Crippen, Descriptors, QED, rdChemReactions, rdMolDescriptors; assert version('numpy') == '2.4.6'; assert version('Pillow') == '12.3.0'; assert version('rdkit') == '2025.9.6'; assert Chem.MolFromSmiles('CCO') is not None; assert rdChemReactions.ReactionFromSmarts('[C:1]>>[C:1]') is not None"
+
+# Evaluation runs with all dependencies already present. PIP_NO_INDEX also makes
+# accidental runtime package resolution fail closed when the sandbox is offline.
+ENV PIP_NO_INDEX=1
+
+RUN groupadd --gid 10001 task \
+    && useradd --uid 10001 --gid task --create-home --home-dir /home/task --shell /usr/sbin/nologin task \
+    && install --directory --owner=task --group=task /workspace
+
+WORKDIR /workspace
+USER task:task

@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "starting_materials": [
+    {"id": "a_core_acid", "name": "4-(thiazol-2-yl)benzoic acid benchmark core", "smiles": "O=C(O)c1ccc(-c2nccs2)cc1", "roles": ["carboxylic_acid"], "provenance": "task-authored benchmark fixture"},
+    {"id": "b_core_chloro_acid", "name": "2-chloropyrimidine-5-carboxylic acid benchmark core", "smiles": "O=C(O)c1cnc(Cl)nc1", "roles": ["heteroaryl_chloride"], "provenance": "task-authored benchmark fixture"},
+    {"id": "c_core_sulfonyl_chloride", "name": "indole-sulfonyl chloride benchmark core", "smiles": "O=S(=O)(Cl)c1ccc2[nH]ccc2c1", "roles": ["sulfonyl_chloride"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_methyl", "name": "methylamine", "smiles": "CN", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_ethyl", "name": "ethylamine", "smiles": "CCN", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_n_propyl", "name": "n-propylamine", "smiles": "CCCN", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_isopropyl", "name": "isopropylamine", "smiles": "CC(C)N", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_n_butyl", "name": "n-butylamine", "smiles": "CCCCN", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_tert_butyl", "name": "tert-butylamine", "smiles": "CC(C)(C)N", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_cyclopropyl", "name": "cyclopropylamine", "smiles": "NC1CC1", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_cyclobutyl", "name": "cyclobutylamine", "smiles": "NC1CCC1", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_cyclopentyl", "name": "cyclopentylamine", "smiles": "NC1CCCC1", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_cyclohexyl", "name": "cyclohexylamine", "smiles": "NC1CCCCC1", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_2_hydroxyethyl", "name": "2-hydroxyethylamine", "smiles": "NCCO", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_2_methoxyethyl", "name": "2-methoxyethylamine", "smiles": "COCCN", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_3_methoxypropyl", "name": "3-methoxypropylamine", "smiles": "COCCCN", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_2_fluoroethyl", "name": "2-fluoroethylamine", "smiles": "NCCF", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_2_2_difluoroethyl", "name": "2,2-difluoroethylamine", "smiles": "NCC(F)F", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_cyanomethyl", "name": "aminoacetonitrile", "smiles": "N#CCN", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_cyclopropylmethyl", "name": "cyclopropylmethylamine", "smiles": "NCC1CC1", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_benzyl", "name": "benzylamine", "smiles": "NCc1ccccc1", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_4_fluorobenzyl", "name": "4-fluorobenzylamine", "smiles": "NCc1ccc(F)cc1", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_3_pyridylmethyl", "name": "pyridin-3-ylmethanamine", "smiles": "NCc1cccnc1", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_piperidine", "name": "piperidine", "smiles": "C1CCNCC1", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_morpholine", "name": "morpholine", "smiles": "C1COCCN1", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_azetidine", "name": "azetidine", "smiles": "C1CNC1", "roles": ["amine"], "provenance": "task-authored benchmark fixture"},
+    {"id": "amine_n_methylpiperazine", "name": "1-methylpiperazine", "smiles": "CN1CCNCC1", "roles": ["amine"], "provenance": "task-authored benchmark fixture"}
+  ]
+}

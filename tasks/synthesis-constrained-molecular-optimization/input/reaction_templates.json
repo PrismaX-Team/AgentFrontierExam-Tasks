@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "reaction_templates": [
+    {
+      "id": "amide_coupling_v1",
+      "name": "Carboxylic-acid/amine amidation",
+      "reaction_smarts": "[C:1](=[O:2])-[O;H1,-].[N;H1,H2;+0;!$(N-[C,S,P]=[O,S,N]):3]>>[C:1](=[O:2])-[N:3]",
+      "reactant_roles": ["carboxylic_acid", "amine"],
+      "max_unique_products": 1,
+      "scientific_scope": "Abstract graph transformation for an activated carboxylic-acid/amine coupling. Reagents, conditions, chemoselectivity, yield, and laboratory success are not predicted."
+    },
+    {
+      "id": "heteroaryl_snar_v1",
+      "name": "Amine substitution on an electron-deficient heteroaryl chloride",
+      "reaction_smarts": "[c:1]-[Cl].[N;H1,H2;+0;!$(N-[C,S,P]=[O,S,N]):2]>>[c:1]-[N:2]",
+      "reactant_roles": ["heteroaryl_chloride", "amine"],
+      "max_unique_products": 1,
+      "scientific_scope": "Abstract graph transformation restricted by the task allowlist to one chloropyrimidine. Reagents, conditions, chemoselectivity, yield, and laboratory success are not predicted."
+    },
+    {
+      "id": "sulfonamide_v1",
+      "name": "Sulfonyl-chloride/amine sulfonamidation",
+      "reaction_smarts": "[S;X4;+0;$([S](=[O])(=[O])-[Cl]):1]-[Cl].[N;H1,H2;+0;!$(N-[C,S,P]=[O,S,N]):2]>>[S:1]-[N:2]",
+      "reactant_roles": ["sulfonyl_chloride", "amine"],
+      "max_unique_products": 1,
+      "scientific_scope": "Abstract graph transformation for sulfonamide formation. Reagents, conditions, chemoselectivity, yield, and laboratory success are not predicted."
+    }
+  ]
+}
