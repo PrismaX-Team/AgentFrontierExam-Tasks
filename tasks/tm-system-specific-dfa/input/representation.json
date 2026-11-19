@@ -1,0 +1,87 @@
+{
+  "version": "2026-10-02-p5-defined-density-pbe0-cross-task-v2",
+  "method_registry": "methods.json",
+  "method_count": 45,
+  "reference_column": "dlpno-CCSD_T.vertsse",
+  "units": "kcal/mol",
+  "views": [
+    "geometry_charge",
+    "density_mean",
+    "density_mean_std"
+  ],
+  "prohibited_inputs": [
+    "Source names, source row IDs, train/test flags as model features",
+    "Reference energy, error/rank or reference-quality diagnostics",
+    "Any candidate DFA energy as a predictor feature",
+    "Undocumented original 181-channel arrays"
+  ],
+  "selection": "Preserve source VSS train/test flags. Minimize training-only five-fold formula-group CV selected-method MAE. Select descriptor among density_mean/density_mean_std on training CV only; geometry is a matched diagnostic comparator.",
+  "fixed_baseline": "Argmin mean absolute error on complete VSS training rows only; method-ID lexicographic tie break",
+  "ridge_alpha": [
+    1,
+    10,
+    100,
+    1000
+  ],
+  "extra_trees": {
+    "n_estimators": 256,
+    "min_samples_leaf": [
+      1,
+      3,
+      8
+    ],
+    "max_features": [
+      0.5,
+      1.0
+    ],
+    "n_jobs": 1,
+    "random_state": 20260930
+  },
+  "target": "45 method absolute errors; train-fold-only StandardScaler for each target; choose argmin predicted error without absolute-value or zero-clipping postprocessing",
+  "input_scaling": "Ridge uses training-fold-only StandardScaler; trees do not use input scaling",
+  "evaluation": "The frozen v2 models are evaluated on these same 58 VSS final records. CSD is not read or evaluated by this v2 candidate. Deterministic repetitions check reconstruction and runtime agreement; final scores do not select the model or descriptor.",
+  "diagnostic_uncertainty": "2000 paired cluster bootstraps grouped by exact formula, seed 20260930; descriptive pilot intervals only, no claim of independent chemical-family generalization",
+  "limitations": [
+    "Public source targets and previous construction results were inspected; this is not a pristine LLM holdout.",
+    "The 175-row subset is conditional on source convergence/spin checks, HFX-curve cleaning, feature availability and complete-method/cross-task eligibility.",
+    "Current training/final elemental-formula groups are disjoint; formula grouping is conservative and does not certify distinct chemical families or canonical chemical identity.",
+    "All-VSS array association is supported by source identifiers and network-group-code sequences; raw wavefunction coordinates and actual-element atom order have not been independently checked for every VSS record.",
+    "Only archived approximate DLPNO-CCSD(T0) values are scored; full PNO/grid/custom-exchange source recipes and fresh wavefunction regeneration remain incomplete.",
+    "The original 181-channel descriptor/model is not reproduced.",
+    "Two PBE0-state SCFs and prior geometry preparation are required in the source workflow; fresh end-to-end cost or computational saving is not measured.",
+    "Density-versus-fixed and density-versus-geometry paired bootstrap intervals span zero; superiority is not established.",
+    "P1/P5 final records can overlap; they are related tasks."
+  ],
+  "target_candidates": [
+    "absolute_error",
+    "signed_error"
+  ],
+  "density_choice": "PBE0 chosen before performance measurement because its archived VSS coverage (348) exceeds B3LYP (235) and SCAN0 (323).",
+  "inputs": [
+    "XYZ element symbols and coordinates in angstrom",
+    "Supplied total charge and source-comparison low/high multiplicities",
+    "116 archived raw atom-local PBE0 density-difference power-spectrum channels"
+  ],
+  "normalization": "Undo original all-VSS atom-type mean/std. New ridge input scaling and per-method target scaling are fitted only on each training fold. Trees see raw pooled features.",
+  "pooling": "For each actual element in fixed ELEMENTS order: atom count and channel means; mean_std also includes per-channel population standard deviations. Append to the same geometry/charge view.",
+  "CSD": "Excluded entirely from this VSS-only candidate; previous construction diagnostic is archived separately.",
+  "original_181_recipe_recovered": false,
+  "cross_task_exclusion": true,
+  "cross_task": "Exclude every whole-complex elemental formula present in released P2/P3 graphs, without target-dependent selection. Final P5 source train=0 rows also share no formula with P1 training/development.",
+  "cohort": "175 author-generated VSS records: 117 source-training and 58 source-test rows; no training/test elemental-formula overlap. P1/P5 final records can overlap; these are related tasks, not independent chemical datasets.",
+  "method_table_source_commit": "e76c9b3ac3ee3a97fd339fdd9728fcf3aaa35e77",
+  "method_table_archive": {
+    "doi": "10.5281/zenodo.7350958",
+    "version": "v2"
+  },
+  "density_source_commit": "7bd4e453513449be1e34c064e61a601528ba4bc9",
+  "density_archive": {
+    "doi": "10.5281/zenodo.17468690",
+    "version": "v1"
+  },
+  "current_v2_configuration_frozen_before_v2_final_scoring": true,
+  "public_targets_and_previous_v1_results_previously_inspected": true,
+  "source_preselection": "The retained subset is conditional on the source SCF/convergence and spin-contamination screening, source HFX-curve cleaning, archived density availability, finite reference and all 45 method gaps, and the cross-task formula exclusion. The source density notebook first requires a finite cleaned PBE HFX25 gap. Its upstream curve-cleaning notebook iteratively removes a point if omitting it changes the interpolating VSSE-versus-HFX spline by more than 5 kcal/mol. These source filters are not a new selection by this recommender's final error; their chemical selection bias is retained.",
+  "mapping_evidence_limit": "For all VSS inputs, the source structures.csv identifiers, atom counts, network-group-code sequence and zero padding were checked against the same-named archived XYZ records. Because P/N, S/O and Cl/F share source group codes, this does not independently certify permutations within a group, exact actual-element atom order, or every original wavefunction coordinate. The sole archived CSD example independently matches actual element order, geometry and the source two-state wavefunction metadata, but remains a local diagnostic and is not redistributed or extrapolated to every VSS record.",
+  "state_definition": "Each supplied low/high multiplicity pair uses formal ionic d-count metadata with the two-state comparison convention stated in Duan et al., arXiv:2207.10747, Methods / Data set construction: d3/d7 doublet-quartet, d4/d6 singlet-quintet, and d5 doublet-sextet. In particular, the archived d4 LS state is a singlet by source convention; this is not a general claim about the lowest octahedral d4 spin state. The source high-spin multiplicity and total-electron parity are checked independently of gap signs. The gap convention is E_HS(R_HS)-E_LS(R_HS), comparing these two source-defined states in every method/reference; no ordering of other spin states is certified."
+}

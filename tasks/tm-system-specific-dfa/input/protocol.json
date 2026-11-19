@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "transport": "UTF-8 JSON-lines: the verifier sends one complete-set select_method request followed by EOF. solution/main.py emits exactly one newline-terminated finite JSON object and exits with code zero. Existing for-line entries remain compatible. Extra stdout is invalid; stderr is bounded diagnostics.",
+  "request": {
+    "action": "select_method",
+    "method_ids": [
+      "bp86",
+      "blyp",
+      "pbe",
+      "tpss",
+      "scan",
+      "m06-l",
+      "mn15-l",
+      "b3p86",
+      "b3pw91",
+      "b3lyp",
+      "tpssh",
+      "scan0",
+      "m06",
+      "m06-2x",
+      "wb97x",
+      "LRC-wPBEh",
+      "b2gpplyp",
+      "pbe0-dh",
+      "dsd-blyp-d3bj",
+      "dsd-pbeb95-d3bj",
+      "dsd-pbep86-d3bj",
+      "blyp_hfx_10",
+      "blyp_hfx_20",
+      "blyp_hfx_30",
+      "blyp_hfx_40",
+      "blyp_hfx_50",
+      "pbe_hfx_10",
+      "pbe_hfx_20",
+      "pbe_hfx_30",
+      "pbe_hfx_40",
+      "pbe_hfx_50",
+      "scan_hfx_10",
+      "scan_hfx_20",
+      "scan_hfx_30",
+      "scan_hfx_40",
+      "scan_hfx_50",
+      "m06-l_hfx_10",
+      "m06-l_hfx_30",
+      "m06-l_hfx_40",
+      "m06-l_hfx_50",
+      "mn15-l_hfx_10",
+      "mn15-l_hfx_20",
+      "mn15-l_hfx_30",
+      "mn15-l_hfx_40",
+      "mn15-l_hfx_50"
+    ],
+    "records": "All 58 final target-free records: sample_id, group_id, atomic_symbols, coordinates_angstrom, total_charge, low_spin_multiplicity, high_spin_multiplicity, density_difference_power_spectrum_raw116."
+  },
+  "response": {
+    "recommendations": [
+      {
+        "sample_id": "required opaque ID",
+        "method_id": "exact allowed method string"
+      }
+    ]
+  },
+  "execution": "Offline unprivileged Python subprocess in the verifier container; frozen solution is read-only and a temporary working directory is writable. Solution and scorer share the same user and filesystem. No root, chroot, UID switch, seccomp or filesystem isolation from reference labels is provided. Intended for trusted internal submissions; answer lookup remains prohibited.",
+  "limits": {
+    "wall_seconds": 1800,
+    "address_space_bytes": 4294967296,
+    "numerical_threads": 1,
+    "json_line_bytes": 16777216,
+    "stderr_bytes": 65536
+  },
+  "completeness": "Return exactly one allowed method for every final ID. Missing, duplicate, unknown, nonstring IDs and extra fields invalidate the entire submission. Score is record-average absolute error of the trusted selected-method gap against the trusted reference. No mid-run query."
+}
