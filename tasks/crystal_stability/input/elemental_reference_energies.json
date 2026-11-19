@@ -1,0 +1,447 @@
+[
+  {
+    "atomic_number": 1,
+    "symbol": "H",
+    "reference_energy_eV_per_atom": -3.392726045
+  },
+  {
+    "atomic_number": 2,
+    "symbol": "He",
+    "reference_energy_eV_per_atom": -0.00905951
+  },
+  {
+    "atomic_number": 3,
+    "symbol": "Li",
+    "reference_energy_eV_per_atom": -1.9089228666666667
+  },
+  {
+    "atomic_number": 4,
+    "symbol": "Be",
+    "reference_energy_eV_per_atom": -3.739412865
+  },
+  {
+    "atomic_number": 5,
+    "symbol": "B",
+    "reference_energy_eV_per_atom": -6.679391770833334
+  },
+  {
+    "atomic_number": 6,
+    "symbol": "C",
+    "reference_energy_eV_per_atom": -9.2286654925
+  },
+  {
+    "atomic_number": 7,
+    "symbol": "N",
+    "reference_energy_eV_per_atom": -8.336494925
+  },
+  {
+    "atomic_number": 8,
+    "symbol": "O",
+    "reference_energy_eV_per_atom": -4.94668871125
+  },
+  {
+    "atomic_number": 9,
+    "symbol": "F",
+    "reference_energy_eV_per_atom": -1.9114789675
+  },
+  {
+    "atomic_number": 10,
+    "symbol": "Ne",
+    "reference_energy_eV_per_atom": -0.02593678
+  },
+  {
+    "atomic_number": 11,
+    "symbol": "Na",
+    "reference_energy_eV_per_atom": -1.3225252934482759
+  },
+  {
+    "atomic_number": 12,
+    "symbol": "Mg",
+    "reference_energy_eV_per_atom": -1.60028005
+  },
+  {
+    "atomic_number": 13,
+    "symbol": "Al",
+    "reference_energy_eV_per_atom": -3.74557583
+  },
+  {
+    "atomic_number": 14,
+    "symbol": "Si",
+    "reference_energy_eV_per_atom": -5.42531803
+  },
+  {
+    "atomic_number": 15,
+    "symbol": "P",
+    "reference_energy_eV_per_atom": -5.413302506666667
+  },
+  {
+    "atomic_number": 16,
+    "symbol": "S",
+    "reference_energy_eV_per_atom": -4.136449866875
+  },
+  {
+    "atomic_number": 17,
+    "symbol": "Cl",
+    "reference_energy_eV_per_atom": -1.84853666
+  },
+  {
+    "atomic_number": 18,
+    "symbol": "Ar",
+    "reference_energy_eV_per_atom": -0.06880822
+  },
+  {
+    "atomic_number": 19,
+    "symbol": "K",
+    "reference_energy_eV_per_atom": -1.110398947
+  },
+  {
+    "atomic_number": 20,
+    "symbol": "Ca",
+    "reference_energy_eV_per_atom": -2.00559988
+  },
+  {
+    "atomic_number": 21,
+    "symbol": "Sc",
+    "reference_energy_eV_per_atom": -6.332469105
+  },
+  {
+    "atomic_number": 22,
+    "symbol": "Ti",
+    "reference_energy_eV_per_atom": -7.895492016666666
+  },
+  {
+    "atomic_number": 23,
+    "symbol": "V",
+    "reference_energy_eV_per_atom": -9.08390607
+  },
+  {
+    "atomic_number": 24,
+    "symbol": "Cr",
+    "reference_energy_eV_per_atom": -9.65304747
+  },
+  {
+    "atomic_number": 25,
+    "symbol": "Mn",
+    "reference_energy_eV_per_atom": -9.162015292068965
+  },
+  {
+    "atomic_number": 26,
+    "symbol": "Fe",
+    "reference_energy_eV_per_atom": -8.47002121
+  },
+  {
+    "atomic_number": 27,
+    "symbol": "Co",
+    "reference_energy_eV_per_atom": -7.108317795
+  },
+  {
+    "atomic_number": 28,
+    "symbol": "Ni",
+    "reference_energy_eV_per_atom": -5.78013668
+  },
+  {
+    "atomic_number": 29,
+    "symbol": "Cu",
+    "reference_energy_eV_per_atom": -4.09920667
+  },
+  {
+    "atomic_number": 30,
+    "symbol": "Zn",
+    "reference_energy_eV_per_atom": -1.2597436100000001
+  },
+  {
+    "atomic_number": 31,
+    "symbol": "Ga",
+    "reference_energy_eV_per_atom": -3.0280960225
+  },
+  {
+    "atomic_number": 32,
+    "symbol": "Ge",
+    "reference_energy_eV_per_atom": -4.623027855
+  },
+  {
+    "atomic_number": 33,
+    "symbol": "As",
+    "reference_energy_eV_per_atom": -4.659118405
+  },
+  {
+    "atomic_number": 34,
+    "symbol": "Se",
+    "reference_energy_eV_per_atom": -3.49591147765625
+  },
+  {
+    "atomic_number": 35,
+    "symbol": "Br",
+    "reference_energy_eV_per_atom": -1.55302833
+  },
+  {
+    "atomic_number": 36,
+    "symbol": "Kr",
+    "reference_energy_eV_per_atom": -0.05671467
+  },
+  {
+    "atomic_number": 37,
+    "symbol": "Rb",
+    "reference_energy_eV_per_atom": -0.9805340725
+  },
+  {
+    "atomic_number": 38,
+    "symbol": "Sr",
+    "reference_energy_eV_per_atom": -1.6894934533333332
+  },
+  {
+    "atomic_number": 39,
+    "symbol": "Y",
+    "reference_energy_eV_per_atom": -6.466471113333333
+  },
+  {
+    "atomic_number": 40,
+    "symbol": "Zr",
+    "reference_energy_eV_per_atom": -8.54770063
+  },
+  {
+    "atomic_number": 41,
+    "symbol": "Nb",
+    "reference_energy_eV_per_atom": -10.10130504
+  },
+  {
+    "atomic_number": 42,
+    "symbol": "Mo",
+    "reference_energy_eV_per_atom": -10.84565011
+  },
+  {
+    "atomic_number": 43,
+    "symbol": "Tc",
+    "reference_energy_eV_per_atom": -10.360638945
+  },
+  {
+    "atomic_number": 44,
+    "symbol": "Ru",
+    "reference_energy_eV_per_atom": -9.27440254
+  },
+  {
+    "atomic_number": 45,
+    "symbol": "Rh",
+    "reference_energy_eV_per_atom": -7.36430787
+  },
+  {
+    "atomic_number": 46,
+    "symbol": "Pd",
+    "reference_energy_eV_per_atom": -5.17988181
+  },
+  {
+    "atomic_number": 47,
+    "symbol": "Ag",
+    "reference_energy_eV_per_atom": -2.8325560033333335
+  },
+  {
+    "atomic_number": 48,
+    "symbol": "Cd",
+    "reference_energy_eV_per_atom": -0.92288976
+  },
+  {
+    "atomic_number": 49,
+    "symbol": "In",
+    "reference_energy_eV_per_atom": -2.75168373
+  },
+  {
+    "atomic_number": 50,
+    "symbol": "Sn",
+    "reference_energy_eV_per_atom": -4.009571855
+  },
+  {
+    "atomic_number": 51,
+    "symbol": "Sb",
+    "reference_energy_eV_per_atom": -4.12900124
+  },
+  {
+    "atomic_number": 52,
+    "symbol": "Te",
+    "reference_energy_eV_per_atom": -3.1433058933333338
+  },
+  {
+    "atomic_number": 53,
+    "symbol": "I",
+    "reference_energy_eV_per_atom": -1.47336635
+  },
+  {
+    "atomic_number": 54,
+    "symbol": "Xe",
+    "reference_energy_eV_per_atom": -0.03617417
+  },
+  {
+    "atomic_number": 55,
+    "symbol": "Cs",
+    "reference_energy_eV_per_atom": -0.8954023720689656
+  },
+  {
+    "atomic_number": 56,
+    "symbol": "Ba",
+    "reference_energy_eV_per_atom": -1.91897494
+  },
+  {
+    "atomic_number": 57,
+    "symbol": "La",
+    "reference_energy_eV_per_atom": -4.936007105
+  },
+  {
+    "atomic_number": 58,
+    "symbol": "Ce",
+    "reference_energy_eV_per_atom": -5.933089155
+  },
+  {
+    "atomic_number": 59,
+    "symbol": "Pr",
+    "reference_energy_eV_per_atom": -4.780905755
+  },
+  {
+    "atomic_number": 60,
+    "symbol": "Nd",
+    "reference_energy_eV_per_atom": -4.7681474325
+  },
+  {
+    "atomic_number": 61,
+    "symbol": "Pm",
+    "reference_energy_eV_per_atom": -4.7505423225
+  },
+  {
+    "atomic_number": 62,
+    "symbol": "Sm",
+    "reference_energy_eV_per_atom": -4.718586135
+  },
+  {
+    "atomic_number": 63,
+    "symbol": "Eu",
+    "reference_energy_eV_per_atom": -10.2570018
+  },
+  {
+    "atomic_number": 64,
+    "symbol": "Gd",
+    "reference_energy_eV_per_atom": -14.07612224
+  },
+  {
+    "atomic_number": 65,
+    "symbol": "Tb",
+    "reference_energy_eV_per_atom": -4.6343661
+  },
+  {
+    "atomic_number": 66,
+    "symbol": "Dy",
+    "reference_energy_eV_per_atom": -4.60678684
+  },
+  {
+    "atomic_number": 67,
+    "symbol": "Ho",
+    "reference_energy_eV_per_atom": -4.58240887
+  },
+  {
+    "atomic_number": 68,
+    "symbol": "Er",
+    "reference_energy_eV_per_atom": -4.56771881
+  },
+  {
+    "atomic_number": 69,
+    "symbol": "Tm",
+    "reference_energy_eV_per_atom": -4.475835423333334
+  },
+  {
+    "atomic_number": 70,
+    "symbol": "Yb",
+    "reference_energy_eV_per_atom": -1.5396082800000002
+  },
+  {
+    "atomic_number": 71,
+    "symbol": "Lu",
+    "reference_energy_eV_per_atom": -4.52095052
+  },
+  {
+    "atomic_number": 72,
+    "symbol": "Hf",
+    "reference_energy_eV_per_atom": -9.95718903
+  },
+  {
+    "atomic_number": 73,
+    "symbol": "Ta",
+    "reference_energy_eV_per_atom": -11.85777763
+  },
+  {
+    "atomic_number": 74,
+    "symbol": "W",
+    "reference_energy_eV_per_atom": -12.95813023
+  },
+  {
+    "atomic_number": 75,
+    "symbol": "Re",
+    "reference_energy_eV_per_atom": -12.444527185
+  },
+  {
+    "atomic_number": 76,
+    "symbol": "Os",
+    "reference_energy_eV_per_atom": -11.22736743
+  },
+  {
+    "atomic_number": 77,
+    "symbol": "Ir",
+    "reference_energy_eV_per_atom": -8.83843418
+  },
+  {
+    "atomic_number": 78,
+    "symbol": "Pt",
+    "reference_energy_eV_per_atom": -6.07113332
+  },
+  {
+    "atomic_number": 79,
+    "symbol": "Au",
+    "reference_energy_eV_per_atom": -3.273882
+  },
+  {
+    "atomic_number": 80,
+    "symbol": "Hg",
+    "reference_energy_eV_per_atom": -0.303680365
+  },
+  {
+    "atomic_number": 81,
+    "symbol": "Tl",
+    "reference_energy_eV_per_atom": -2.3626431466666666
+  },
+  {
+    "atomic_number": 82,
+    "symbol": "Pb",
+    "reference_energy_eV_per_atom": -3.71264707
+  },
+  {
+    "atomic_number": 83,
+    "symbol": "Bi",
+    "reference_energy_eV_per_atom": -3.84048913
+  },
+  {
+    "atomic_number": 89,
+    "symbol": "Ac",
+    "reference_energy_eV_per_atom": -4.1211750075
+  },
+  {
+    "atomic_number": 90,
+    "symbol": "Th",
+    "reference_energy_eV_per_atom": -7.41385825
+  },
+  {
+    "atomic_number": 91,
+    "symbol": "Pa",
+    "reference_energy_eV_per_atom": -9.51466466
+  },
+  {
+    "atomic_number": 92,
+    "symbol": "U",
+    "reference_energy_eV_per_atom": -11.29141001
+  },
+  {
+    "atomic_number": 93,
+    "symbol": "Np",
+    "reference_energy_eV_per_atom": -12.94777968125
+  },
+  {
+    "atomic_number": 94,
+    "symbol": "Pu",
+    "reference_energy_eV_per_atom": -14.26783833
+  }
+]

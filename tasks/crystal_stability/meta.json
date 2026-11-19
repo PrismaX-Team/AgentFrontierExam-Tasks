@@ -1,0 +1,30 @@
+{
+  "baseline": {
+    "bottom_line_score": 0.2652014652014652,
+    "existing_baseline": true,
+    "name": "Archived CHGNet-0.3.0 relaxed formation-energy predictions, re-scored on the entire frozen subset; archive replay, not new full relaxation",
+    "score": 0.611111789635673,
+    "source": "https://ndownloader.figshare.com/files/66646268"
+  },
+  "domain": "materials science; crystal thermodynamics",
+  "id": "crystal_stability",
+  "metric": {
+    "description": "F1 = 2 TP/(2 TP+FP+FN) over the entire 215,488-entry frozen subset; a zero denominator yields zero. Predicted stable iff predicted formation energy <= frozen hull energy; true stable iff signed reference hull distance <= 0. Higher is better. No rounding or outlier/success filter. Report stability_f1 and confusion counts; linear_maximize display anchors use the archived CHGNet replay and a valid all-stable constant-energy method.",
+    "type": "linear_maximize"
+  },
+  "task_sources": [
+    {
+      "name": "WBM initial geometries, fixed unique-prototype mask, corrected energy targets and MP training/reference data",
+      "url": "https://doi.org/10.6084/m9.figshare.22715158"
+    },
+    {
+      "name": "Frozen Matbench Discovery release and construction definitions",
+      "url": "https://github.com/janosh/matbench-discovery/tree/7a7a941d0667bd5d91497f7921d2ae6b2af2aab8"
+    },
+    {
+      "name": "Allowed frozen CHGNet pretrained model",
+      "url": "https://github.com/CederGroupHub/chgnet/tree/b9a6c15860237297a5a5169660e83b2e61a78e76"
+    }
+  ],
+  "title": "Predict thermodynamic stability from initial periodic crystal structures"
+}
