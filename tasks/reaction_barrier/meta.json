@@ -1,0 +1,26 @@
+{
+  "id": "reaction_barrier",
+  "title": "Forward electronic reaction barriers from reactant and product geometries",
+  "domain": "computational chemistry; reaction kinetics; machine learning",
+  "task_sources": [
+    {
+      "name": "Transition1x v4, published final-state geometries and energies",
+      "url": "https://doi.org/10.6084/m9.figshare.19614657.v4"
+    },
+    {
+      "name": "Official Transition1x only_final loader, fixed 08f728925d76e22ce04ec1ab3b75770d32e617ca",
+      "url": "https://gitlab.com/matschreiner/Transition1x/-/blob/08f728925d76e22ce04ec1ab3b75770d32e617ca/transition1x/dataloader.py"
+    }
+  ],
+  "metric": {
+    "description": "Mean absolute error in eV over all 287 forward electronic barriers E_TS - E_R. Lower is better. Preserve negative values and all samples. Auxiliary RMSE, linearly interpolated P95 absolute error and fraction within 0.0433641 eV do not affect ranking. The result is a frozen DFT reference comparison, not an experimental rate or new-saddle validation.",
+    "type": "linear_minimize"
+  },
+  "baseline": {
+    "existing_baseline": true,
+    "name": "Endpoint-pair geometry statistics and ExtraTrees; train-only fit, two fixed candidate configurations and aggregate-development selection",
+    "source": "https://github.com/Zhy-NJU/Science-Innovation-Exam-Tasks/blob/486e2dd495aaa265908a2d264427fb5c6af1b336/evidence/reaction_barrier/baseline_agent_steps.py",
+    "score": 0.41108395831066713,
+    "bottom_line_score": 0.8001934932388185
+  }
+}
