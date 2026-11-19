@@ -1,0 +1,41 @@
+{
+  "instructions": "Predict the vertical spin gap E_HS(R_HS)-E_LS(R_HS), in kcal/mol, from supplied geometry, total charge and comparison multiplicities. Train with 173 labelled records and tune with 45 development records. Submit solution/ containing a JSON-lines solution/main.py and frozen inference assets, following protocol.json. The offline verifier requests all 103 final records and scores complete-set mean absolute error (MAE), using private references outside the inference process. Return every sample exactly once with a finite numeric gap. There is no mid-run scientific query.\n\nThe targets are archived B3LYP/def2-TZVP single-point gaps at B3LYP high-spin geometries optimized with LANL2DZ on the metal and 6-31G* on other atoms. Comparison multiplicities follow Duan et al.'s source Methods (doi:10.1038/s43588-022-00384-0): for Cr/Mn/Fe/Co in oxidation states II/III, d3 and d7 use (LS,HS)=(2,4), d4 and d6 use (1,5), and d5 uses (2,6). The d4 singlet/quintet convention omits the intermediate triplet. Singlet single points use restricted calculations; other single points and high-spin geometry optimizations use unrestricted calculations. Original electronic outputs are unavailable for independent convergence audit. representation.json contains the source and state details.\n\nSource train=0 records supply the final set. Source train=1 elemental-formula groups are divided deterministically into training and development; the three splits contain 173/44/101 disjoint formula groups. Formulas shared with the budgeted spin-discovery and unseen-ligand tasks are excluded. All 103 final gaps are negative; training has 166 negative and 7 positive gaps, and development has 43 negative and 2 positive gaps. The two positive source-test records were excluded by the predefined cross-task formula rule. MAE measures continuous gaps; sign accuracy is omitted because a constant negative prediction already scores perfectly.\n\nData are author-generated VSS structures from Duan et al.'s archived v2 dataset (doi:10.5281/zenodo.7350958), under CC BY 4.0, with attribution preserved in the package notice. Final formulas are disjoint from system-specific DFA training, while final chemical records may overlap with that task's evaluation. Public source targets were inspected during construction, making this a retrospective evaluation. Optimized geometries require prior quantum calculations, whose cost belongs to input preparation.\n\nUse supplied scientific inputs and training/development labels. Exclude source names, row indices, XYZ comments, target-derived features, other DFA outputs and density arrays from model inputs. Final-reference lookup and hard-coded final answers are prohibited.\n\nRuntime: one complete-set JSON-lines request is followed by EOF; emit one response and exit. Inference runs as an ordinary subprocess in the offline verifier container, sharing its filesystem and user. No private chroot or protection against deliberate reference-file access is provided; this initial version trusts internal submissions. Resource and protocol limits are in protocol.json.",
+  "input": [
+    {
+      "path": "data",
+      "format": "directory",
+      "description": "Labelled training and development JSON."
+    },
+    {
+      "path": "representation.json",
+      "format": "json",
+      "description": "Generated-structure source, vertical target, state definitions and partition."
+    },
+    {
+      "path": "protocol.json",
+      "format": "json",
+      "description": "Complete-set unprivileged subprocess inference protocol and limits."
+    },
+    {
+      "path": "solution/main.py",
+      "format": "python",
+      "description": "JSON-lines entry template, compatible with one request followed by EOF."
+    }
+  ],
+  "submission": [
+    {
+      "path": "solution",
+      "format": "directory",
+      "description": "Frozen inference entry and numeric model assets.",
+      "has_template": false
+    }
+  ],
+  "environment": [],
+  "requirement": [
+    "Use supplied scientific features and training/development labels.",
+    "Return every final sample exactly once with a finite numeric gap.",
+    "No reference lookup, target-derived inputs or record exclusion.",
+    "Offline CPU inference; one Python entry process with configured numerical thread limits."
+  ],
+  "limitation": {}
+}
