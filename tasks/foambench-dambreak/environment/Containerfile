@@ -1,0 +1,53 @@
+# Task image: OpenFOAM v10 on the operator's Science Innovation Exam base image.
+ARG SIE_BASE_IMAGE
+FROM ${SIE_BASE_IMAGE}
+
+USER root
+
+LABEL org.opencontainers.image.title="Science Innovation Exam FoamBench damBreakWithObstacle environment"
+
+ENV LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_ROOT_USER_ACTION=ignore
+
+# Open MPI runtime that OpenFOAM's libPstream links against (libmpi.so.40), from a
+# fixed Debian bookworm snapshot so the dependency closure is reproducible.
+RUN mkdir -p /tmp/apt-empty \
+    && echo "deb [check-valid-until=no] http://snapshot.debian.org/archive/debian/20261001T000000Z bookworm main" \
+        > /tmp/apt-snapshot.list \
+    && APT="-o Dir::Etc::SourceList=/tmp/apt-snapshot.list -o Dir::Etc::SourceParts=/tmp/apt-empty" \
+    && apt-get $APT update \
+    && apt-get $APT install -y --no-install-recommends \
+        libopenmpi3=4.1.4-3+b1 \
+        openmpi-bin=4.1.4-3+b1 \
+    && rm -rf /var/lib/apt/lists/* /tmp/apt-snapshot.list /tmp/apt-empty
+
+# OpenFOAM Foundation release 10 (package 20230119), taken unchanged from the official
+# image that Foam-Agent's docker/Dockerfile is built on.
+COPY --from=docker.io/openfoam/openfoam10-paraview510@sha256:d6ff1f9a2e7bc3c9177f373bebbdeb542fd8b49144afc24d5e3a3cd9bfae253d \
+    /opt/openfoam10 /opt/openfoam10
+
+# PyVista/VTK for the FoamBench NMSE diagnostic; exact wheels, hash-checked.
+COPY requirements.lock /opt/task-environment/requirements.lock
+RUN python -m pip install --no-deps --require-hashes --only-binary=:all: \
+        --requirement /opt/task-environment/requirements.lock \
+    && python -m pip check
+
+# Smoke test: mesh and run the icoFoam cavity tutorial, read controlDict, import PyVista.
+RUN bash -c 'source /opt/openfoam10/etc/bashrc \
+        && cp -r "$FOAM_TUTORIALS/incompressible/icoFoam/cavity/cavity" /tmp/cavity \
+        && cd /tmp/cavity \
+        && blockMesh > log.blockMesh \
+        && icoFoam > log.icoFoam \
+        && test "$(foamDictionary -entry application -value system/controlDict)" = icoFoam \
+        && test -d 0.5' \
+    && rm -rf /tmp/cavity \
+    && python -c "import pyvista, vtk; assert pyvista.__version__ == '0.44.2' and vtk.VTK_VERSION == '9.3.1'"
+
+# Evaluation starts with every dependency installed.
+ENV PIP_NO_INDEX=1
+
+USER 65532:65532
