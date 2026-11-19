@@ -1,0 +1,324 @@
+{
+  "environment": [
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "ase",
+      "version": "3.23.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "certifi",
+      "version": "2025.1.31"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "charset-normalizer",
+      "version": "3.3.2"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "chgnet",
+      "version": "0.3.8"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "contourpy",
+      "version": "1.3.1"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "cycler",
+      "version": "0.11.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "cython",
+      "version": "3.0.11"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "filelock",
+      "version": "3.29.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "fonttools",
+      "version": "4.55.3"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "fsspec",
+      "version": "2024.12.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "h5py",
+      "version": "3.11.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "idna",
+      "version": "3.7"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "jinja2",
+      "version": "3.1.5"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "joblib",
+      "version": "1.4.2"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "kiwisolver",
+      "version": "1.4.8"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "latexcodec",
+      "version": "3.0.1"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "markupsafe",
+      "version": "3.0.2"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "matplotlib",
+      "version": "3.10.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "monty",
+      "version": "2024.5.24"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "mpmath",
+      "version": "1.3.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "networkx",
+      "version": "3.4.2"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "numpy",
+      "version": "1.26.4"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "nvidia-ml-py3",
+      "version": "7.352.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "packaging",
+      "version": "24.2"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "palettable",
+      "version": "3.3.3"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "pandas",
+      "version": "2.2.3"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "phono3py",
+      "version": "3.30.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "phonopy",
+      "version": "3.5.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "pillow",
+      "version": "11.1.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "plotly",
+      "version": "5.24.1"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "pybtex",
+      "version": "0.26.1"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "pymatgen",
+      "version": "2024.5.1"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "pyparsing",
+      "version": "3.2.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "python-dateutil",
+      "version": "2.9.0.post0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "pytz",
+      "version": "2024.1"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "pyyaml",
+      "version": "6.0.2"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "requests",
+      "version": "2.32.3"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "ruamel-yaml",
+      "version": "0.18.6"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "ruamel-yaml-clib",
+      "version": "0.2.8"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "scipy",
+      "version": "1.13.1"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "setuptools",
+      "version": "75.1.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "six",
+      "version": "1.16.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "spglib",
+      "version": "2.6.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "symfc",
+      "version": "1.6.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "sympy",
+      "version": "1.13.3"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "tabulate",
+      "version": "0.9.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "tenacity",
+      "version": "9.0.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "torch",
+      "version": "2.4.1+cpu"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "tqdm",
+      "version": "4.67.1"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "typing-extensions",
+      "version": "4.12.2"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "tzdata",
+      "version": "2023.3"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "uncertainties",
+      "version": "3.2.3"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "urllib3",
+      "version": "2.3.0"
+    },
+    {
+      "description": "Installed offline in the isolated /opt/sie-research virtual environment. Invoke /opt/sie-research/bin/python explicitly; the default Python and verifier SDK environment are unchanged.",
+      "name": "wheel",
+      "version": "0.44.0"
+    }
+  ],
+  "input": [
+    {
+      "description": "All 103 anonymous crystal structures and per-crystal replication, primitive-basis and q-point settings; no reference force constants, modes or conductivity labels.",
+      "format": "gzip JSON Lines",
+      "path": "structures.jsonl.gz"
+    },
+    {
+      "description": "Frozen physical target and calculation conventions.",
+      "format": "JSON",
+      "path": "calculation_settings.json"
+    },
+    {
+      "description": "Frozen CHGNet-0.3.0 checkpoint, scientific model card and BSD-3-Clause notice. Energy/force/stress training may overlap these materials.",
+      "format": "directory",
+      "path": "model_weights"
+    },
+    {
+      "description": "Scientific fields, units and an actionable label-free transport workflow.",
+      "format": "Markdown",
+      "path": "README.md"
+    },
+    {
+      "description": "Data attribution, license and modification notice.",
+      "format": "UTF-8 text",
+      "path": "ATTRIBUTION.txt"
+    },
+    {
+      "description": "All anonymous test IDs with blank predictions.",
+      "format": "CSV",
+      "path": "submission.csv"
+    }
+  ],
+  "instructions": "Develop a method to predict the scalar 300 K total lattice thermal conductivity for all 103 supplied binary crystals (37 rocksalt, 33 zincblende, 33 wurtzite). The frozen scientific target is the published PBE/no-NAC Wigner single-mode relaxation-time result, kappa_P + kappa_C, averaged over the three diagonal tensor components, in W m^-1 K^-1. The reference includes natural-abundance isotope scattering and uses a boundary mean free path of 1e6 micrometres (1 m). The supplied structures and replication, primitive-basis and q-point settings define the target calculation, not reference force constants. A frozen CHGNet-0.3.0 energy/force/stress checkpoint and offline scientific libraries support developing or improving force-constant and heat-transport methods. The research objective is lower mean symmetric relative error while returning predictions for every case, including internal phonon failures. This is a downstream transport task for these structural families; it does not claim unseen-material generalization or experimental total conductivity.",
+  "limitation": {},
+  "requirement": [
+    "Use only the scientific datasets and pretrained checkpoints explicitly supplied in input. Scientific literature and algorithm ideas may be used, but no additional model weights, training datasets or sample-specific answers may be introduced into this resource track.",
+    "Do not retrieve or use public test target tables, relaxed test reference structures, source ID mappings or archived per-sample benchmark predictions. Do not select a method, checkpoint, hyperparameter or subset using hidden test labels.",
+    "Submit all and only the template IDs exactly once in the declared submission.csv. No extra columns or files, duplicate IDs, missing rows, blanks, NaN or infinity are accepted. Use strict UTF-8 decimal values without surrounding spaces; each numerical field is at most 128 characters.",
+    "The score covers the entire frozen test set. Internal calculation failures need a label-free finite fallback; samples cannot be dropped. Units are interpreted literally without automatic conversion.",
+    "Retain executable research code, dependency versions and training-data/model-source disclosures for reproducibility review. Public source data and anonymous identifiers do not establish absence of pretraining contamination.",
+    "The submitted CSV may not exceed 1048576 bytes."
+  ],
+  "submission": [
+    {
+      "description": "Exactly material_id,kappa_W_mK. One finite nonnegative conductivity in W m^-1 K^-1 per test ID.",
+      "format": "CSV UTF-8",
+      "has_template": true,
+      "path": "submission.csv"
+    }
+  ]
+}
