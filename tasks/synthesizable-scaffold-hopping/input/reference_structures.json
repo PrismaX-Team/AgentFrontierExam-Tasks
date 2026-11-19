@@ -1,0 +1,172 @@
+{
+  "reference_structures": [
+    {
+      "atom_index_base": 0,
+      "coordinate_frame": "The reference pose and protein share their deposited Cartesian frame in angstroms.",
+      "formal_charge": 0,
+      "heavy_atom_count": 31,
+      "pose_path": "structures/erk2_reference.sdf",
+      "protein_path": "structures/erk2_protein_unprepared.pdb",
+      "protein_state": "Unprepared protein heavy atoms; incomplete residues remain incomplete. No hydrogen, charge, protonation or docking policy is assigned.",
+      "reference_id": "erk2_4o6e_reference",
+      "reference_pose_atoms": [
+        {
+          "atom_index": 0,
+          "atom_name": "C4",
+          "element": "C"
+        },
+        {
+          "atom_index": 1,
+          "atom_name": "C5",
+          "element": "C"
+        },
+        {
+          "atom_index": 2,
+          "atom_name": "C6",
+          "element": "C"
+        },
+        {
+          "atom_index": 3,
+          "atom_name": "C7",
+          "element": "C"
+        },
+        {
+          "atom_index": 4,
+          "atom_name": "C15",
+          "element": "C"
+        },
+        {
+          "atom_index": 5,
+          "atom_name": "C17",
+          "element": "C"
+        },
+        {
+          "atom_index": 6,
+          "atom_name": "C20",
+          "element": "C"
+        },
+        {
+          "atom_index": 7,
+          "atom_name": "C22",
+          "element": "C"
+        },
+        {
+          "atom_index": 8,
+          "atom_name": "C26",
+          "element": "C"
+        },
+        {
+          "atom_index": 9,
+          "atom_name": "C1",
+          "element": "C"
+        },
+        {
+          "atom_index": 10,
+          "atom_name": "C2",
+          "element": "C"
+        },
+        {
+          "atom_index": 11,
+          "atom_name": "C3",
+          "element": "C"
+        },
+        {
+          "atom_index": 12,
+          "atom_name": "C9",
+          "element": "C"
+        },
+        {
+          "atom_index": 13,
+          "atom_name": "O10",
+          "element": "O"
+        },
+        {
+          "atom_index": 14,
+          "atom_name": "N11",
+          "element": "N"
+        },
+        {
+          "atom_index": 15,
+          "atom_name": "C12",
+          "element": "C"
+        },
+        {
+          "atom_index": 16,
+          "atom_name": "O13",
+          "element": "O"
+        },
+        {
+          "atom_index": 17,
+          "atom_name": "N14",
+          "element": "N"
+        },
+        {
+          "atom_index": 18,
+          "atom_name": "C16",
+          "element": "C"
+        },
+        {
+          "atom_index": 19,
+          "atom_name": "C18",
+          "element": "C"
+        },
+        {
+          "atom_index": 20,
+          "atom_name": "N19",
+          "element": "N"
+        },
+        {
+          "atom_index": 21,
+          "atom_name": "N21",
+          "element": "N"
+        },
+        {
+          "atom_index": 22,
+          "atom_name": "C23",
+          "element": "C"
+        },
+        {
+          "atom_index": 23,
+          "atom_name": "N24",
+          "element": "N"
+        },
+        {
+          "atom_index": 24,
+          "atom_name": "C25",
+          "element": "C"
+        },
+        {
+          "atom_index": 25,
+          "atom_name": "C27",
+          "element": "C"
+        },
+        {
+          "atom_index": 26,
+          "atom_name": "O28",
+          "element": "O"
+        },
+        {
+          "atom_index": 27,
+          "atom_name": "C29",
+          "element": "C"
+        },
+        {
+          "atom_index": 28,
+          "atom_name": "C30",
+          "element": "C"
+        },
+        {
+          "atom_index": 29,
+          "atom_name": "CL1",
+          "element": "Cl"
+        },
+        {
+          "atom_index": 30,
+          "atom_name": "F32",
+          "element": "F"
+        }
+      ],
+      "reference_smiles": "O=C(N[C@H](CO)c1ccc(F)c(Cl)c1)N1CCc2cnc(NC3CCOCC3)nc2C1"
+    }
+  ]
+}
