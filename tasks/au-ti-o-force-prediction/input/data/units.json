@@ -1,0 +1,10 @@
+{
+  "numerical_policy": "All values are unchanged from the supplied all.xyz; no unit conversion was performed.",
+  "contributor_statement": "CP2K results in atomic units, without conversion.",
+  "declared_energy_unit": "hartree",
+  "declared_force_unit": "hartree/bohr",
+  "coordinate_unit_status": "Source coordinate and cell scale preserved; the exporter was not supplied. Verify coordinate units separately before physical model reuse.",
+  "verification_status": "Contributor declaration only; export pipeline and original CP2K output not independently checked.",
+  "scoring_energy_unit": "source_energy_unit",
+  "scoring_force_unit": "source_force_unit"
+}
