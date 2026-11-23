@@ -1,15 +1,15 @@
 {
   "baseline": {
     "bottom_line_score": 2.0,
-    "existing_baseline": true,
-    "name": "Archived CHGNet-0.3.0 conductivity, re-scored with a fixed zero fallback for 16 failed cases; archive replay, not new full inference",
-    "score": 1.6958708753402623,
-    "source": "https://ndownloader.figshare.com/files/68221282"
+    "existing_baseline": false,
+    "name": "",
+    "score": 0.6666666666666666,
+    "source": ""
   },
   "domain": "materials science; lattice thermal transport",
   "id": "thermal_conductivity",
   "metric": {
-    "description": "Mean symmetric relative error over all 103 records: 2*abs(prediction-reference)/(prediction+reference), with both zero yielding zero. Lower is better. No subset, clipping, rounding or model-success filter. Report mean_sre as raw value; linear_minimize display anchors use the archived CHGNet replay and valid all-zero method. Invalid submissions are marked invalid independently of the required finite metric placeholder.",
+    "description": "For each of the 103 crystals, compute 2*abs(prediction-reference)/(prediction+reference), assigning zero when both conductivities are zero. The primary metric is the arithmetic mean over all 103 crystals; lower is better. A valid submission reaches the breakthrough target when its unrounded mean_sre is at most 2/3. This author-set target defines the 1000-point display anchor. An all-zero prediction gives mean_sre = 2 and defines the 0-point anchor.",
     "type": "linear_minimize"
   },
   "task_sources": [
