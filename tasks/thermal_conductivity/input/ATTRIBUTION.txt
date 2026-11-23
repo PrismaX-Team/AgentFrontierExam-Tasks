@@ -1,0 +1,27 @@
+THERMAL-CONDUCTIVITY SOURCE ATTRIBUTION
+
+Matbench Discovery - Data Files, Figshare article 22715158, frozen v38
+DOI: https://doi.org/10.6084/m9.figshare.22715158.v38
+License: CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
+License is confirmed in figshare_article.json (official Figshare API snapshot).
+
+The 103 phononDB PBE structures originate with Atsushi Togo and collaborators.
+Thermal transport methodology and benchmark:
+Balazs Pota, Paramvir Ahlawat, Gabor Csanyi and Michele Simoncelli,
+Thermal Conductivity Predictions with Foundation Atomistic Models
+https://arxiv.org/abs/2408.00755
+Matbench Discovery by Janosh Riebesell and collaborators:
+https://arxiv.org/abs/2308.14920
+
+Structure source file 52179965; reference no-NAC conductivity file 68221426.
+Changes: whitelist scientific fields; remove original material names/IDs and all
+reference quantities; preserve Cartesian geometry and numerical setup; map
+anonymous IDs; extract scalar 300 K total-lattice reference into verifier only.
+No source author endorsement is implied.
+
+CHGNet model/code by Bowen Deng and collaborators, CederGroupHub/chgnet.
+https://github.com/CederGroupHub/chgnet
+Model license and exact immutable checkpoint provenance supplied with the
+scientific dependency validation evidence. Foundation pretraining and public
+structure provenance do not imply a contamination-free benchmark.
+

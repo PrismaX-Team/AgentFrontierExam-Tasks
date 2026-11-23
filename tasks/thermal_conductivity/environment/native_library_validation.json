@@ -1,0 +1,5247 @@
+{
+  "scope": "Static ELF DT_NEEDED audit of all shared objects and wheel bin executables; no Linux native code was executed on the macOS build host.",
+  "elf_files": 316,
+  "native_wheels": 20,
+  "all_elf_architectures": "x86_64",
+  "highest_required_glibc_symbol_version": "2.27",
+  "external_system_libraries": [
+    "ld-linux-x86-64.so.2",
+    "libc.so.6",
+    "libdl.so.2",
+    "libgcc_s.so.1",
+    "libm.so.6",
+    "libpthread.so.0",
+    "librt.so.1",
+    "libstdc++.so.6",
+    "libz.so.1"
+  ],
+  "base_system_assumption": "Operator CPython 3.11 base is Debian Bookworm (CPU) or its documented Linux GPU base with build-essential. glibc, libgcc, libstdc++ and libz are required from that base. Build-time native-import checks will fail if any is missing.",
+  "unexpected_external_libraries": [],
+  "wheels": [
+    {
+      "wheel": "Cython-3.0.11-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "Cython/Utils.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "Cython/StringIOTree.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "Cython/Runtime/refnanny.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "Cython/Compiler/FusedNode.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "Cython/Compiler/Code.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "Cython/Compiler/Visitor.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "Cython/Compiler/FlowControl.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "Cython/Compiler/Parsing.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "Cython/Compiler/Scanning.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "Cython/Tempita/_tempita.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "Cython/Plex/Transitions.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "Cython/Plex/Actions.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "Cython/Plex/Scanners.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "Cython/Plex/DFA.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "Cython/Plex/Machines.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "MarkupSafe-3.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "markupsafe/_speedups.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "PyYAML-6.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "yaml/_yaml.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "charset_normalizer-3.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "charset_normalizer/md.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "charset_normalizer/md__mypyc.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "chgnet-0.3.8-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "chgnet/graph/cygraph.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "contourpy-1.3.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "contourpy/_contourpy.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14",
+            "2.16"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "fonttools-4.55.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "fontTools/qu2cu/qu2cu.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "fontTools/pens/momentsPen.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "fontTools/cu2qu/cu2qu.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "fontTools/misc/bezierTools.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "fontTools/varLib/iup.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "fontTools/feaLib/lexer.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "h5py-3.11.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "h5py/_objects.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "h5py/h5f.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/utils.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "h5py/defs.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/h5l.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/h5p.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/h5o.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/h5a.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/h5z.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/h5s.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/h5ac.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/_selector.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "h5py/_conv.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "h5py/h5t.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "h5py/h5fd.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "h5py/h5g.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/_errors.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/h5r.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/_proxy.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "h5py/h5i.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/h5.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "h5py/h5ds.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/h5pl.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "h5py/h5d.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libhdf5_hl-123198ff.so.310.0.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../h5py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "h5py.libs/libhdf5_hl-123198ff.so.310.0.2",
+          "architecture": "x86_64",
+          "needed": [
+            "libhdf5-7f639dcd.so.310.2.0",
+            "libsz-b66d1717.so.2.0.1",
+            "libz.so.1",
+            "libdl.so.2",
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": "libhdf5_hl-123198ff.so.310.0.2",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "h5py.libs/libsz-b66d1717.so.2.0.1",
+          "architecture": "x86_64",
+          "needed": [
+            "libaec-001fb5f0.so.0.0.12",
+            "libc.so.6"
+          ],
+          "soname": "libsz-b66d1717.so.2.0.1",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "h5py.libs/libhdf5-7f639dcd.so.310.2.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libsz-b66d1717.so.2.0.1",
+            "libz.so.1",
+            "libdl.so.2",
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": "libhdf5-7f639dcd.so.310.2.0",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14",
+            "2.17"
+          ]
+        },
+        {
+          "path": "h5py.libs/libaec-001fb5f0.so.0.0.12",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": "libaec-001fb5f0.so.0.0.12",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "kiwisolver-1.4.8-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "kiwisolver/_cext.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "matplotlib-3.10.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "matplotlib/ft2font.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14",
+            "2.16"
+          ]
+        },
+        {
+          "path": "matplotlib/_qhull.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "matplotlib/_c_internal_utils.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libdl.so.2",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "matplotlib/_path.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "matplotlib/_tri.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14",
+            "2.16"
+          ]
+        },
+        {
+          "path": "matplotlib/_image.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14",
+            "2.16"
+          ]
+        },
+        {
+          "path": "matplotlib/backends/_tkagg.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libdl.so.2",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "matplotlib/backends/_backend_agg.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14",
+            "2.16"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "numpy/fft/_pocketfft_internal.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "numpy/linalg/_umath_linalg.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../numpy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "numpy/linalg/lapack_lite.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblas64_p-r0-0cf96a72.3.23.dev.so"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../numpy.libs",
+          "runpath": null,
+          "glibc_version_tags": []
+        },
+        {
+          "path": "numpy/random/_sfc64.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "numpy/random/bit_generator.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "numpy/random/_mt19937.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "numpy/random/_bounded_integers.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "numpy/random/_philox.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "numpy/random/_common.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "numpy/random/mtrand.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "numpy/random/_generator.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "numpy/random/_pcg64.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "numpy/core/_umath_tests.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "numpy/core/_struct_ufunc_tests.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": []
+        },
+        {
+          "path": "numpy/core/_rational_tests.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "numpy/core/_multiarray_tests.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "numpy/core/_operand_flag_tests.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": []
+        },
+        {
+          "path": "numpy/core/_simd.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "numpy/core/_multiarray_umath.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../numpy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.10",
+            "2.14"
+          ]
+        },
+        {
+          "path": "numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libpthread.so.0",
+            "libgfortran-040039e1.so.5.0.0",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": "libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.3.2",
+            "2.3.4",
+            "2.6",
+            "2.7",
+            "2.14"
+          ]
+        },
+        {
+          "path": "numpy.libs/libquadmath-96973f99.so.0.0.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": "libquadmath-96973f99.so.0.0.0",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.10",
+            "2.14"
+          ]
+        },
+        {
+          "path": "numpy.libs/libgfortran-040039e1.so.5.0.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libquadmath-96973f99.so.0.0.0",
+            "libz.so.1",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": "libgfortran-040039e1.so.5.0.0",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.6",
+            "2.7",
+            "2.14",
+            "2.17"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "pandas-2.2.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "pandas/_libs/join.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/reshape.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/internals.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/hashing.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/json.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/missing.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/algos.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/testing.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/parsers.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/arrays.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "pandas/_libs/writers.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/sparse.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/groupby.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/ops_dispatch.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/sas.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/pandas_datetime.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3"
+          ]
+        },
+        {
+          "path": "pandas/_libs/properties.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "pandas/_libs/hashtable.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/interval.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/index.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/ops.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/byteswap.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "pandas/_libs/indexing.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "pandas/_libs/lib.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/pandas_parser.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslib.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/window/indexers.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/window/aggregations.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/offsets.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/ccalendar.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/period.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/timezones.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/timestamps.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/tzconversion.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/nattype.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/timedeltas.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/vectorized.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/strptime.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/dtypes.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/fields.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/np_datetime.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/conversion.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/base.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "pandas/_libs/tslibs/parsing.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "phono3py-3.30.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "phono3py/_phono3py.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libgomp-e985bcbb.so.1.0.0",
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../phono3py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "phono3py/_phononcalc.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libgomp-e985bcbb.so.1.0.0",
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../phono3py.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "phono3py/_recgrid.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "phono3py.libs/libgomp-e985bcbb.so.1.0.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libdl.so.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": "libgomp-e985bcbb.so.1.0.0",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.3.4",
+            "2.4",
+            "2.6",
+            "2.14",
+            "2.16",
+            "2.17"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "phonopy-3.5.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "phonopy/_phonopy.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libgomp-e985bcbb.so.1.0.0",
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../phonopy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "phonopy.libs/libgomp-e985bcbb.so.1.0.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libdl.so.2",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": "libgomp-e985bcbb.so.1.0.0",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.3.4",
+            "2.4",
+            "2.6",
+            "2.14",
+            "2.16",
+            "2.17"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "pillow-11.1.0-cp311-cp311-manylinux_2_28_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "PIL/_imagingcms.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "liblcms2-525547ec.so.2.0.16",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../pillow.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "PIL/_imagingtk.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "PIL/_imaging.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libtiff-a92b430c.so.6.0.2",
+            "libjpeg-0988b44a.so.62.4.0",
+            "libopenjp2-ca16f087.so.2.5.3",
+            "libz.so.1",
+            "libxcb-0b763ed5.so.1.1.0",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../pillow.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "PIL/_webp.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libwebp-0feb04d2.so.7.1.10",
+            "libwebpmux-f0bc54e2.so.3.1.1",
+            "libwebpdemux-e5426797.so.2.0.16",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../pillow.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "PIL/_imagingmorph.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "PIL/_imagingmath.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "PIL/_imagingft.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libfreetype-edd71024.so.6.20.1",
+            "libharfbuzz-07d0ad17.so.0.61010.0",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../pillow.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pillow.libs/libwebpmux-f0bc54e2.so.3.1.1",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libwebp-0feb04d2.so.7.1.10",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": "libwebpmux-f0bc54e2.so.3.1.1",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pillow.libs/libXau-154567c4.so.6.0.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": "libXau-154567c4.so.6.0.0",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.4",
+            "2.4"
+          ]
+        },
+        {
+          "path": "pillow.libs/libpng16-2a828d05.so.16.44.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libz.so.1",
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": "libpng16-2a828d05.so.16.44.0",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pillow.libs/liblzma-a5872208.so.5.6.3",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": "liblzma-a5872208.so.5.6.3",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.2",
+            "2.3.3",
+            "2.3.4",
+            "2.6",
+            "2.14",
+            "2.17"
+          ]
+        },
+        {
+          "path": "pillow.libs/libtiff-a92b430c.so.6.0.2",
+          "architecture": "x86_64",
+          "needed": [
+            "liblzma-a5872208.so.5.6.3",
+            "libjpeg-0988b44a.so.62.4.0",
+            "libz.so.1",
+            "libm.so.6",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": "libtiff-a92b430c.so.6.0.2",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pillow.libs/libjpeg-0988b44a.so.62.4.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": "libjpeg-0988b44a.so.62.4.0",
+          "rpath": "$ORIGIN",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.7",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pillow.libs/libxcb-0b763ed5.so.1.1.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libXau-154567c4.so.6.0.0",
+            "libc.so.6"
+          ],
+          "soname": "libxcb-0b763ed5.so.1.1.0",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.2",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pillow.libs/libbrotlidec-a621e7f2.so.1.1.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libbrotlicommon-5b2eba61.so.1.1.0",
+            "libc.so.6"
+          ],
+          "soname": "libbrotlidec-a621e7f2.so.1.1.0",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pillow.libs/libbrotlicommon-5b2eba61.so.1.1.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": "libbrotlicommon-5b2eba61.so.1.1.0",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "pillow.libs/libopenjp2-ca16f087.so.2.5.3",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": "libopenjp2-ca16f087.so.2.5.3",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.2",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pillow.libs/libharfbuzz-07d0ad17.so.0.61010.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libfreetype-edd71024.so.6.20.1",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": "libharfbuzz-07d0ad17.so.0.61010.0",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pillow.libs/liblcms2-525547ec.so.2.0.16",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": "liblcms2-525547ec.so.2.0.16",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.7",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pillow.libs/libwebpdemux-e5426797.so.2.0.16",
+          "architecture": "x86_64",
+          "needed": [
+            "libwebp-0feb04d2.so.7.1.10",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": "libwebpdemux-e5426797.so.2.0.16",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pillow.libs/libwebp-0feb04d2.so.7.1.10",
+          "architecture": "x86_64",
+          "needed": [
+            "libsharpyuv-f67a7212.so.0.1.1",
+            "libm.so.6",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": "libwebp-0feb04d2.so.7.1.10",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.2",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pillow.libs/libsharpyuv-f67a7212.so.0.1.1",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": "libsharpyuv-f67a7212.so.0.1.1",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14",
+            "2.27"
+          ]
+        },
+        {
+          "path": "pillow.libs/libfreetype-edd71024.so.6.20.1",
+          "architecture": "x86_64",
+          "needed": [
+            "libpng16-2a828d05.so.16.44.0",
+            "libz.so.1",
+            "libm.so.6",
+            "libbrotlidec-a621e7f2.so.1.1.0",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": "libfreetype-edd71024.so.6.20.1",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "pymatgen-2024.5.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "pymatgen/util/coord_cython.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pymatgen/optimization/neighbors.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "pymatgen/optimization/linear_assignment.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "ruamel.yaml.clib-0.2.8-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "_ruamel_yaml.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "scipy-1.13.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "scipy/ndimage/_ni_label.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/ndimage/_ctest.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": []
+        },
+        {
+          "path": "scipy/ndimage/_nd_image.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/ndimage/_cytest.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/cluster/_hierarchy.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/cluster/_optimal_leaf_ordering.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/cluster/_vq.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/odr/__odrpack.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/interpolate/_rbfinterp_pythran.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/interpolate/_fitpack.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libgfortran-040039e1.so.5.0.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/interpolate/interpnd.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/interpolate/_ppoly.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/interpolate/_bspl.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/interpolate/_rgi_cython.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/interpolate/dfitpack.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/fftpack/convolve.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/special/_cdflib.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/special/_ufuncs_cxx.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/special/_specfun.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/special/_comb.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/special/_ellip_harm_2.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libopenblasp-r0-01191904.3.27.so",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/special/_ufuncs.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/special/_test_internal.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/special/cython_special.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "/usr/local/lib",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_direct.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_slsqp.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_minpack2.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_moduleTNC.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_pava_pybind.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_cobyla.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libgfortran-040039e1.so.5.0.0",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_minpack.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_group_columns.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.4"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_zeros.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_lbfgsb.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_bglu_dense.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_lsap.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_trlib/_trlib.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libopenblasp-r0-01191904.3.27.so",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_lsq/givens_elimination.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_highs/_highs_constants.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/_highs/_highs_wrapper.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libpthread.so.0",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/optimize/cython_optimize/_zeros.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/signal/_spectral.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.4"
+          ]
+        },
+        {
+          "path": "scipy/signal/_upfirdn_apply.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/signal/_sigtools.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/signal/_max_len_seq_inner.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.4"
+          ]
+        },
+        {
+          "path": "scipy/signal/_sosfilt.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/signal/_peak_finding_utils.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/signal/_spline.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/fft/_pocketfft/pypocketfft.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libpthread.so.0",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.3.2",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/_csparsetools.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/_sparsetools.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/linalg/_eigen/arpack/_arpack.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../../../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/linalg/_dsolve/_superlu.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libopenblasp-r0-01191904.3.27.so",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/linalg/_propack/_dpropack.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/linalg/_propack/_cpropack.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/linalg/_propack/_spropack.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/linalg/_propack/_zpropack.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/csgraph/_matching.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/csgraph/_tools.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/sparse/csgraph/_min_spanning_tree.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/csgraph/_reordering.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/csgraph/_shortest_path.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/csgraph/_traversal.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/sparse/csgraph/_flow.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/linalg/_solve_toeplitz.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/linalg/_fblas.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/linalg/_flapack.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/linalg/_matfuncs_expm.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/linalg/_interpolative.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/linalg/cython_blas.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/linalg/_decomp_lu_cython.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/linalg/_matfuncs_sqrtm_triu.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/linalg/_decomp_update.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/linalg/cython_lapack.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/linalg/_cythonized_array_utils.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/io/_test_fortran.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libgfortran-040039e1.so.5.0.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/io/_fast_matrix_market/_fmm_core.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14",
+            "2.16"
+          ]
+        },
+        {
+          "path": "scipy/io/matlab/_streams.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/io/matlab/_mio_utils.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/io/matlab/_mio5_utils.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/_lib/messagestream.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/_lib/_test_deprecation_def.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/_lib/_ccallback_c.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/_lib/_test_deprecation_call.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/_lib/_fpumode.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": []
+        },
+        {
+          "path": "scipy/_lib/_test_ccallback.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3"
+          ]
+        },
+        {
+          "path": "scipy/_lib/_uarray/_uarray.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/spatial/_voronoi.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/spatial/_distance_wrap.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/spatial/_hausdorff.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/spatial/_qhull.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/spatial/_ckdtree.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/spatial/_distance_pybind.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/spatial/transform/_rotation.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/integrate/_dop.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/integrate/_lsoda.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/integrate/_test_odeint_banded.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/integrate/_test_multivariate.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/integrate/_vode.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/integrate/_odepack.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/integrate/_quadpack.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libopenblasp-r0-01191904.3.27.so",
+            "libgfortran-040039e1.so.5.0.0",
+            "libm.so.6",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../../scipy.libs",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_stats.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_ansari_swilk_statistics.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_biasedurn.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_sobol.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_qmc_cy.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_mvn.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_stats_pythran.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_rcont/rcont.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_levy_stable/levyst.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "scipy/stats/_unuran/unuran_wrapper.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_boost/beta_ufunc.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_boost/ncx2_ufunc.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_boost/invgauss_ufunc.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_boost/nct_ufunc.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_boost/nbinom_ufunc.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_boost/binom_ufunc.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_boost/ncf_ufunc.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_boost/skewnorm_ufunc.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy/stats/_boost/hypergeom_ufunc.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy.libs/libopenblasp-r0-01191904.3.27.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libpthread.so.0",
+            "libgfortran-040039e1.so.5.0.0",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": "libopenblasp-r0-01191904.3.27.so",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.3.2",
+            "2.3.4",
+            "2.6",
+            "2.7",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy.libs/libquadmath-96973f99.so.0.0.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libc.so.6"
+          ],
+          "soname": "libquadmath-96973f99.so.0.0.0",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.10",
+            "2.14"
+          ]
+        },
+        {
+          "path": "scipy.libs/libgfortran-040039e1.so.5.0.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libquadmath-96973f99.so.0.0.0",
+            "libz.so.1",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": "libgfortran-040039e1.so.5.0.0",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.6",
+            "2.7",
+            "2.14",
+            "2.17"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "spglib-2.6.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "spglib/_spglib.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libsymspg.so.2",
+            "libm.so.6",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/lib64",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "spglib/lib64/libsymspg.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libpthread.so.0",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": "libsymspg.so.2",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "spglib/lib64/libsymspg.so.2",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libpthread.so.0",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": "libsymspg.so.2",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        },
+        {
+          "path": "spglib/lib64/libsymspg.so.2.6.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libm.so.6",
+            "libpthread.so.0",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": "libsymspg.so.2",
+          "rpath": null,
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14"
+          ]
+        }
+      ]
+    },
+    {
+      "wheel": "torch-2.4.1+cpu-cp311-cp311-linux_x86_64.whl",
+      "elf_files": [
+        {
+          "path": "functorch/_C.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch_python.so",
+            "libtorch.so",
+            "libtorch_cpu.so",
+            "libc10.so",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN/../torch/lib:/lib/intel64:/lib/intel64_win:/lib/win-x64",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/_C.cpython-311-x86_64-linux-gnu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch_python.so",
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN:$ORIGIN/lib",
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "torch/bin/FileStoreTest",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch_cpu.so",
+            "libpthread.so.0",
+            "libc10.so",
+            "libm.so.6",
+            "libdl.so.2",
+            "libstdc++.so.6",
+            "libgomp.so.1",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN:/lib/intel64:/lib/intel64_win:/lib/win-x64",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/bin/HashStoreTest",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch_cpu.so",
+            "libpthread.so.0",
+            "libc10.so",
+            "libm.so.6",
+            "libdl.so.2",
+            "libstdc++.so.6",
+            "libgomp.so.1",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN:/lib/intel64:/lib/intel64_win:/lib/win-x64",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/bin/TCPStoreTest",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch_cpu.so",
+            "libpthread.so.0",
+            "libc10.so",
+            "libm.so.6",
+            "libdl.so.2",
+            "libstdc++.so.6",
+            "libgomp.so.1",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN:/lib/intel64:/lib/intel64_win:/lib/win-x64",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/bin/protoc",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libpthread.so.0",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../lib64",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/bin/protoc-3.13.0.0",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libpthread.so.0",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": "$ORIGIN/../lib64",
+          "runpath": null,
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/bin/test_api",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch.so",
+            "libtorch_cpu.so",
+            "libc10.so",
+            "libpthread.so.0",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN:/lib/intel64:/lib/intel64_win:/lib/win-x64",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.2",
+            "2.3.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/bin/test_cpp_rpc",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch.so",
+            "libtorch_cpu.so",
+            "libc10.so",
+            "libpthread.so.0",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN:/lib/intel64:/lib/intel64_win:/lib/win-x64",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/bin/test_dist_autograd",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch.so",
+            "libtorch_cpu.so",
+            "libc10.so",
+            "libpthread.so.0",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN:/lib/intel64:/lib/intel64_win:/lib/win-x64",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/bin/test_edge_op_registration",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch_cpu.so",
+            "libc10.so",
+            "libpthread.so.0",
+            "libdl.so.2",
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgomp.so.1",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN:/lib/intel64:/lib/intel64_win:/lib/win-x64",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/bin/test_jit",
+          "architecture": "x86_64",
+          "needed": [
+            "libjitbackend_test.so",
+            "libbackend_with_compiler.so",
+            "libtorch_cpu.so",
+            "libc10.so",
+            "libpthread.so.0",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN:/lib/intel64:/lib/intel64_win:/lib/win-x64",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.3.2",
+            "2.3.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/bin/test_lazy",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch.so",
+            "libtorch_cpu.so",
+            "libc10.so",
+            "libpthread.so.0",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN:/lib/intel64:/lib/intel64_win:/lib/win-x64",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/bin/test_tensorexpr",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch.so",
+            "libtorch_cpu.so",
+            "libc10.so",
+            "libpthread.so.0",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN:/lib/intel64:/lib/intel64_win:/lib/win-x64",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/bin/torch_shm_manager",
+          "architecture": "x86_64",
+          "needed": [
+            "libshm.so",
+            "librt.so.1",
+            "libc10.so",
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN/../lib",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.4",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/bin/tutorial_tensorexpr",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch.so",
+            "libtorch_cpu.so",
+            "libc10.so",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": null,
+          "rpath": null,
+          "runpath": "$ORIGIN:/lib/intel64:/lib/intel64_win:/lib/win-x64",
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "torch/lib/libbackend_with_compiler.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch.so",
+            "libtorch_cpu.so",
+            "libc10.so",
+            "libpthread.so.0",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": "libbackend_with_compiler.so",
+          "rpath": null,
+          "runpath": "$ORIGIN",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.14",
+            "2.17"
+          ]
+        },
+        {
+          "path": "torch/lib/libc10.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libstdc++.so.6",
+            "libm.so.6",
+            "libgcc_s.so.1",
+            "libpthread.so.0",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": "libc10.so",
+          "rpath": null,
+          "runpath": "$ORIGIN",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.3.2",
+            "2.4",
+            "2.12",
+            "2.14",
+            "2.17"
+          ]
+        },
+        {
+          "path": "torch/lib/libjitbackend_test.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch.so",
+            "libtorch_cpu.so",
+            "libc10.so",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": "libjitbackend_test.so",
+          "rpath": null,
+          "runpath": "$ORIGIN",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/lib/libshm.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch_cpu.so",
+            "librt.so.1",
+            "libc10.so",
+            "libpthread.so.0",
+            "libm.so.6",
+            "libdl.so.2",
+            "libstdc++.so.6",
+            "libgomp-a34b3233.so.1",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": "libshm.so",
+          "rpath": null,
+          "runpath": "$ORIGIN",
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "torch/lib/libtorch.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch_cpu.so"
+          ],
+          "soname": "libtorch.so",
+          "rpath": null,
+          "runpath": "$ORIGIN",
+          "glibc_version_tags": []
+        },
+        {
+          "path": "torch/lib/libtorch_cpu.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libc10.so",
+            "librt.so.1",
+            "libgcc_s.so.1",
+            "libdl.so.2",
+            "libpthread.so.0",
+            "libm.so.6",
+            "libgomp-a34b3233.so.1",
+            "libstdc++.so.6",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": "libtorch_cpu.so",
+          "rpath": null,
+          "runpath": "$ORIGIN",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.3.2",
+            "2.3.3",
+            "2.3.4",
+            "2.4",
+            "2.6",
+            "2.7",
+            "2.9",
+            "2.10",
+            "2.11",
+            "2.12",
+            "2.14",
+            "2.16"
+          ]
+        },
+        {
+          "path": "torch/lib/libtorch_global_deps.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libm.so.6",
+            "libdl.so.2",
+            "libgomp-a34b3233.so.1",
+            "libc.so.6"
+          ],
+          "soname": "libtorch_global_deps.so",
+          "rpath": null,
+          "runpath": "$ORIGIN",
+          "glibc_version_tags": [
+            "2.2.5"
+          ]
+        },
+        {
+          "path": "torch/lib/libtorch_python.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch.so",
+            "libshm.so",
+            "libtorch_cpu.so",
+            "libc10.so",
+            "libpthread.so.0",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "soname": "libtorch_python.so",
+          "rpath": null,
+          "runpath": "$ORIGIN",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.3.2",
+            "2.14",
+            "2.16"
+          ]
+        },
+        {
+          "path": "torch/lib/libtorchbind_test.so",
+          "architecture": "x86_64",
+          "needed": [
+            "libtorch.so",
+            "libtorch_cpu.so",
+            "libc10.so",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "soname": "libtorchbind_test.so",
+          "rpath": null,
+          "runpath": "$ORIGIN",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.14"
+          ]
+        },
+        {
+          "path": "torch/lib/libgomp-a34b3233.so.1",
+          "architecture": "x86_64",
+          "needed": [
+            "libpthread.so.0",
+            "libc.so.6"
+          ],
+          "soname": "libgomp.so.1",
+          "rpath": null,
+          "runpath": "$ORIGIN",
+          "glibc_version_tags": [
+            "2.2.5",
+            "2.3",
+            "2.3.4",
+            "2.4",
+            "2.6",
+            "2.14",
+            "2.17"
+          ]
+        }
+      ]
+    }
+  ]
+}
