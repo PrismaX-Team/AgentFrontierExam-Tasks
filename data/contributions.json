@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "repository": "PrismaX-Team/AgentFrontierExam-Tasks",
-  "updatedAt": "2026-11-23T13:23:37.088286Z",
+  "updatedAt": "2026-11-23T14:05:50.261954Z",
   "proposals": [
     {
       "number": 49,
@@ -515,7 +515,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-21T01:58:38Z"
     },
@@ -531,7 +531,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-11-04T02:14:24Z"
     },
@@ -547,7 +547,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
@@ -567,10 +567,10 @@
             "image": "https://avatars.githubusercontent.com/u/118320894?v=4",
             "githubUrl": "https://github.com/vaporhug"
           },
-          "approved": true
+          "approved": false
         }
       ],
-      "updatedAt": "2026-11-03T07:56:44Z"
+      "updatedAt": "2026-11-23T14:04:06Z"
     },
     {
       "number": 35,
@@ -584,7 +584,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-11-06T20:27:54Z"
     },
@@ -600,7 +600,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:32Z"
     },
@@ -616,7 +616,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:28Z"
     },
@@ -632,7 +632,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:22Z"
     },
@@ -648,7 +648,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "failure",
+      "gate": "pending",
       "assignments": [],
       "updatedAt": "2026-10-27T11:04:16Z"
     },
@@ -812,7 +812,7 @@
       },
       "kind": "new_task",
       "state": "open",
-      "gate": "success",
+      "gate": "pending",
       "assignments": [
         {
           "role": "domain",
